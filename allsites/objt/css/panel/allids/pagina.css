@@ -1,0 +1,122 @@
+body {
+    
+    font-family: Arial;
+    font-size: 13px;
+    margin:0px;
+}
+
+
+.page {
+    background: none repeat scroll 0 0;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+	
+.gris1 {color:#EBEBEB !important;}
+.gris1_BG {background-color:#EBEBEB !important;}	
+
+.cl {clear: both;}
+.page {width: 1200px; }
+
+.nosel {-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;}
+
+.color_BG {background-color: #FF9933 !important;}
+.margen_sup { height: 30px; width: 1200px; background-color: #000000 !important;border:1px solid #000000;}
+.margen_inf { height: 40px; width: 1200px; background-color: #FF9933 !important;border:1px solid #FF9933;}
+
+
+.cont {height:auto; width: 1200px; border:1px solid #bbbbbb; position:relative;}
+
+.menu {position:relative; float:left; width:250px; min-height:700px; border-right:1px solid #bbbbbb; background-color:#EEEEF0; padding-bottom: 50px; }
+
+.seccion {position:relative; float:left; width:948px; min-height:700px;}
+
+
+.iconos {background-image: url("/img/seek/iconos.png");}
+.smenu {position:relative; width:250px; border-bottom:1px solid #bbbbbb; background-image: url("/img/seek/fmenu.png"); background-repeat:repeat-x; overflow:hidden;}
+
+
+.iOf {width:30px; height:30px; position:relative; float:left; margin-left:5px; background-position: -0px -0px; background-repeat: no-repeat;}
+.iGc {width:30px; height:30px; position:relative; float:left; margin-left:5px; background-position: -30px -0px; background-repeat: no-repeat;}
+.iSt {width:30px; height:30px; position:relative; float:left; margin-left:5px; background-position: -60px -0px; background-repeat: no-repeat;}
+.iFc {width:30px; height:30px; position:relative; float:left; margin-left:5px; background-position: -90px -0px; background-repeat: no-repeat;}
+.iCn {width:30px; height:30px; position:relative; float:left; margin-left:5px; background-position: -120px -0px; background-repeat: no-repeat;}
+
+
+.Mg {position:relative; height:30px; width:250px; cursor:pointer;}
+
+.tMg {position:relative; float: left; margin: 9px 0 0 9px; font-family:Arial; font-size:13px; color:#444444;}
+
+.sMg { margin: 1px 0 15px 0;    position: relative;    width: 250px; }
+.stMg {  color: #555555; cursor: pointer; float: left; font-family: Arial; font-size: 12px; height: 17px; padding-left: 45px; padding-top: 3px; position: relative;  width: 205px;}
+
+.ssecc {position:relative; float:left; width:939px; height:35px; border-bottom:1px solid #bbbbbb; padding: 5px 0px 5px 10px;}
+
+.ts_AC {width:30px; height:30px; position:relative; float:left; margin-left:5px; background-position: -0px -30px; background-repeat: no-repeat;}
+.tTss {position:relative; float: left; margin: 9px 0 0 9px; font-family:Arial; font-size:16px; color:#444444;}
+
+
+.sbsecc {position:relative; float:left; width:939px; height:20px; border-bottom:1px solid #bbbbbb;
+	 padding: 5px 0px 5px 10px;background-repeat:repeat-x;  background-image: url("/img/seek/fmenu.png"); overflow: hidden;}
+.fsubS {cursor:pointer; position:relative; float:left; width:907px; height:20px; }
+.fsubS p {position:relative; float:left; font-family: Arial; font-size:14px; margin:2px 0px 0px 10px;}
+
+
+
+.azul {color:#005C9C; }
+.gris {color:#cccccc; cursor:normal !important;}
+
+.icS { 
+width: 17px;
+height: 17px;
+border: 1px solid;
+
+position: relative;
+float: left;
+-webkit-border-radius: 27%;
+border-radius: 27%;
+padding: 0px 0px 0px 1px;
+margin: 0px 0px 0px 11px;}
+
+.icS p {margin:0px; padding:0px; text-align: center;width: 15px;font-family: Arial;font-size: 13px;}
+
+
+.icH { z-index: 999;
+width: 17px;
+height: 17px;
+border: 1px solid;
+
+position: relative;
+float: right;
+-webkit-border-radius: 27%;
+border-radius: 27%;
+padding: 0px 0px 0px 1px;
+margin: 0px 5px 0px 0px;}
+
+
+
+.icH p {margin:0px; padding:0px; text-align: center;width: 15px;font-family: Arial;font-size: 13px; }
+.azul .icH {color:#888888; cursor:pointer; }
+.gris .icH {color:#cccccc; cursor:normal !important;}
+
+
+.help {position:relative; float:left; width:950px; height:0px; border-bottom:1px solid #bbbbbb; border-top:1px solid #bbbbbb; margin: -25px 0 0 -10px; background-color:#dddddd;}
+.icHs {background-color: #DDDDDD;
+    border-left: 1px solid #BBBBBB;
+    float: right;
+    height: 35px;
+    position: relative;
+    right: 0;
+    top: -24px;
+    width: 31px;
+    z-index: 888;}
+
+
