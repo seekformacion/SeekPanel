@@ -23,14 +23,9 @@ if(isset($signed_request["app_data"])){
     $app_data = $signed_request["app_data"];
     }
 
-print_r($_GET);
-
-print_r($_POST);
-
-print_r($app_data);
 
 ?>
 
 
 
-<div style="width: 800px; height:30px; background-color:#E7EBF2; border:1px solid #C4CDE0;"> <?php echo $stat;?> </div>
+<div style="width: 800px; height:30px; background-color:#E7EBF2; border:1px solid #C4CDE0;"> <?php echo $stat . " $app_data";?> </div>
