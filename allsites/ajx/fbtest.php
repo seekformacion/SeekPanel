@@ -1,5 +1,7 @@
-
 <?php
+########## params https://www.facebook.com/cursodecursos?v=app_622071311181276&app_data=jajajajaj
+
+
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 
@@ -16,11 +18,16 @@ $like_status = $signed_request["page"]["liked"];
 if ($like_status) {$stat="Te gusta";}else{$stat="Aun no te gusta";}
 
 
-if (!empty($signed_request) && !empty($signed_request['app_data'])) {
-  $app_data = json_decode($signed_request['app_data'], true);
-}
+$app_data = '';
+if(isset($signed_request["app_data"])){
+    $app_data = $signed_request["app_data"];
+    }
 
 print_r($_GET);
+
+print_r($_POST);
+
+print_r($app_data);
 
 ?>
 
