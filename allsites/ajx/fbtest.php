@@ -83,7 +83,8 @@ if( array_key_exists('publish_actions', $permissions['data'][0]) ) {
 print_r($user_profile);
 
 
-$mensaje='Probando la publicación de mensajes en Facebook...';
+
+$mensaje='Probando la publicación de mensajes en Facebook... \n  http://cursodecursos.com/cursos-de-informatica.html';
  print_r( $facebook->api('/100007329815113/feed', 'post', array('message' => $mensaje)));
 
 
