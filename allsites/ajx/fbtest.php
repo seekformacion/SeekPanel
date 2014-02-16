@@ -4,7 +4,7 @@
 
 ########## params https://www.facebook.com/cursodecursos?v=app_622071311181276&app_data=jajajajaj
 
-
+print_r($_GET);
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 
