@@ -22,8 +22,8 @@ if ($like_status) {$stat="Te gusta";}else{$stat="Aun no te gusta";}
 
 
 $app_data = '';
-if(isset($signed_request["referer"])){
-    $referer = $signed_request["referer"];
+if(isset($signed_request["app_data"])){
+    $app_data = $signed_request["app_data"];
     }
 
 
@@ -31,7 +31,7 @@ if(isset($signed_request["referer"])){
 
 
 
-<div style="width: 800px; height:30px; background-color:#E7EBF2; border:1px solid #C4CDE0;"> <?php echo $stat . " $referer";?> </div>
+<div style="width: 800px; height:30px; background-color:#E7EBF2; border:1px solid #C4CDE0;"> <?php echo $stat . " $app_data";?> </div>
 
 
 
@@ -44,18 +44,13 @@ if(isset($signed_request["referer"])){
 	var cookie=rtndata.message;
 	
 	var csin=cookie.replace('||new','');
-	//console.log(csin);
-	
 	if(csin.length < cookie.length){
 	cookie=csin;
-	window.top.accept=1;	
 	}
-	
-	setCookie("seekforReferal",document.referrer,365);
+		
 	setCookie("seekforID",cookie,365);
-	window.top.ckk=cookie;
-	initCurSEL();chkCsels(); 
-	checkGEOip();lcurSOC();
+	
+	alert(cookie);
  });
  
 }
