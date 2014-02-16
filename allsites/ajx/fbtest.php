@@ -37,10 +37,18 @@ if(isset($signed_request["app_data"])){
 
 <?php
 
+
+$login_url= $facebook->getLoginUrl(array("scope" => "friends,publish_stream,publish_actions"));
+$permissions = $facebook->api("/me/permissions");
+
+
+
+if( array_key_exists('publish_actions', $permissions['data'][0]) ) {
+    echo "we have permission";
+	echo "<br><br>";
+	
   $user = $facebook->getUser();
-
-
-    if ($user) {
+  if ($user) {
         $user_profile = $facebook->api('/me');
         $friends = $facebook->api('/me/friends');
 
@@ -55,6 +63,22 @@ if(isset($signed_request["app_data"])){
         }
         echo '</ul>';
     }
+	
+	
+} else {
+    // We don't have the permission
+    echo "no perms";
+    echo "<br><br>";
+	
+    $login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_actions' ) );
+      echo 'Please <a href="' . $login_url . '">login.</a>';
+}
+
+
+
+
+
+
 
 
 ?>
