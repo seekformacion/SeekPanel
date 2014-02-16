@@ -85,11 +85,11 @@ print_r($user_profile);
 
 
 
-print_r( $facebook->api('/100007329815113/feed', 'post',  array(
-                                      'likes' => 'cursodecursos.com/cursos-de-informatica.html',
-                                      'message' => 'robando la publicación de mensajes en Facebook.'
-                                 ) ));
+$post= $facebook->api('/100007329815113/feed', 'post',  array(
+                                      'link' => 'cursodecursos.com/cursos-de-veterinaria.html',
+                                      'message' => 'Como me gustan estos cursos.'
+                                 ) );
 
-
+print_r($post);
 
 ?>
