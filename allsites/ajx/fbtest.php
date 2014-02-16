@@ -48,6 +48,12 @@ if( array_key_exists('publish_actions', $permissions['data'][0]) ) {
     echo "we have permission";
 	echo "<br><br>";
 	
+ 
+	
+	
+} else {
+    // We don't have the permission
+
   $user = $facebook->getUser();
   if ($user) {
         $user_profile = $facebook->api('/me');
@@ -64,11 +70,8 @@ if( array_key_exists('publish_actions', $permissions['data'][0]) ) {
         }
         echo '</ul>';
     }
-	
-	
-} else {
-    // We don't have the permission
-
+    
+    
     echo "no perms";
     echo "<br><br>";
 	
