@@ -38,10 +38,11 @@ if(isset($signed_request["app_data"])){
 <?php
 
 
-$login_url= $facebook->getLoginUrl(array("scope" => "friends,publish_stream,publish_actions"));
+$login_url= $facebook->getLoginUrl(array("scope" => "publish_stream,publish_actions"));
 $permissions = $facebook->api("/me/permissions");
 
 
+echo $login_url;
 
 if( array_key_exists('publish_actions', $permissions['data'][0]) ) {
     echo "we have permission";
