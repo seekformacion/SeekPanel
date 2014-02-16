@@ -86,7 +86,7 @@ print_r($user_profile);
 
 
 print_r( $facebook->api('/100007329815113/feed', 'post',  array(
-                                      'link' => 'cursodecursos.com/cursos-de-informatica.html',
+                                      'likes' => 'cursodecursos.com/cursos-de-informatica.html',
                                       'message' => 'robando la publicación de mensajes en Facebook.'
                                  ) ));
 
