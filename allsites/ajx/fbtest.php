@@ -38,8 +38,8 @@ if(isset($signed_request["app_data"])){
 <?php
 
 
-//$login_url= $facebook->getLoginUrl(array("scope" => "publish_stream,publish_actions"));
-//$permissions = $facebook->api("/me/permissions");
+
+$permissions = $facebook->api("/me/permissions");
 
 echo "siii";
 echo $login_url;
@@ -68,6 +68,7 @@ if( array_key_exists('publish_actions', $permissions['data'][0]) ) {
 	
 } else {
     // We don't have the permission
+
     echo "no perms";
     echo "<br><br>";
 	
