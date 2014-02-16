@@ -35,3 +35,26 @@ if(isset($signed_request["app_data"])){
 
 <script type="text/javascript" src="<?php echo $http_met;?>://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
+<?php
+
+  $user = $facebook->getUser();
+
+
+    if ($user) {
+        $user_profile = $facebook->api('/me');
+        $friends = $facebook->api('/me/friends');
+
+        echo '<ul>';
+        foreach ($friends["data"] as $value) {
+            echo '<li>';
+            echo '<div class="pic">';
+            echo '<img src="https://graph.facebook.com/' . $value["id"] . '/picture"/>';
+            echo '</div>';
+            echo '<div class="picName">'.$value["name"].'</div>'; 
+            echo '</li>';
+        }
+        echo '</ul>';
+    }
+
+
+?>
