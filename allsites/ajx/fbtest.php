@@ -4,7 +4,7 @@
 
 ########## params https://www.facebook.com/cursodecursos?v=app_715730281795141&app_data=jajajajaj
 
-print_r($_GET);
+print_r($_SERVER['HTTPS']);
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 
@@ -35,31 +35,3 @@ if(isset($signed_request["app_data"])){
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-<script>
-
-
-
-
-
-	function getremotecookie() {
-
-	var surl =  "http://cursodecursos.com:8080/ajx/session.php?callback=?"; 
-	var me = $(this); 
-	$.getJSON(surl,  function(rtndata) { 
-	var cookie=rtndata.message;
-	
-	var csin=cookie.replace('||new','');
-	if(csin.length < cookie.length){
-	cookie=csin;
-	}
-		
-	setCookie("seekforID",cookie,365);
-	
-	alert(cookie);
- });
- 
-}
-
-getremotecookie();	
-	
-</script>
