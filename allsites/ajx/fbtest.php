@@ -41,11 +41,11 @@ if(isset($signed_request["app_data"])){
 
 
 
-$user_permissions = $facebook->api("/me/permissions");
+//$user_permissions = $facebook->api("/me/permissions");
 
 print_r($user_permissions);
 
-if( array_key_exists('publish_actions', $permissions['data'][0]) ) {
+if( array_key_exists('publish_actions', $user_permissions['data'][0]) ) {
     echo "we have permission";
 	echo "<br><br>";
 	
@@ -91,5 +91,7 @@ $post= $facebook->api('/100007329815113/feed', 'post',  array(
                                  ) );
 
 print_r($post);
+$id_del_post=$post['id'];
+
 
 ?>
