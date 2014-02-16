@@ -4,7 +4,7 @@
 
 ########## params https://www.facebook.com/cursodecursos?v=app_715730281795141&app_data=jajajajaj
 
-print_r($_SERVER['HTTPS']);
+if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 
@@ -18,7 +18,7 @@ $facebook = new Facebook(array(
 $signed_request = $facebook->getSignedRequest();
 $like_status = $signed_request["page"]["liked"];
 
-if ($like_status) {$stat="Te gusta";}else{$stat="Aun no te gusta";}
+if ($like_status) {$stat="Te gusta y entras por: $http_met";}else{$stat="Aun no te gusta y entras por: $http_met";}
 
 
 $app_data = '';
@@ -33,5 +33,5 @@ if(isset($signed_request["app_data"])){
 
 <div style="width: 800px; height:30px; background-color:#E7EBF2; border:1px solid #C4CDE0;"> <?php echo $stat . " $app_data";?> </div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $http_met;?>://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
