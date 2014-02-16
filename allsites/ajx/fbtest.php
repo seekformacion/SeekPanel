@@ -38,8 +38,8 @@ if(isset($signed_request["app_data"])){
 <?php
 
 
-$login_url= $facebook->getLoginUrl(array("scope" => "publish_stream,publish_actions"));
-$permissions = $facebook->api("/me/permissions");
+//$login_url= $facebook->getLoginUrl(array("scope" => "publish_stream,publish_actions"));
+//$permissions = $facebook->api("/me/permissions");
 
 echo "siii";
 echo $login_url;
