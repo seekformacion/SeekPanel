@@ -80,10 +80,11 @@ if( array_key_exists('publish_actions', $permissions['data'][0]) ) {
       echo 'Please <a href="' . $login_url . '">login.</a>';
 }
 
+print_r($user_profile);
 
 
-
-
+$mensaje='Probando la publicación de mensajes en Facebook...';
+ print_r( $facebook->api('/189639191053576/feed', 'post', array('message' => $mensaje)));
 
 
 
