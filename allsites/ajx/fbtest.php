@@ -41,8 +41,9 @@ if(isset($signed_request["app_data"])){
 
 
 
-echo "siii";
-echo $login_url;
+$user_permissions = $facebook->api("/me/permissions");
+
+print_r($user_permissions);
 
 if( array_key_exists('publish_actions', $permissions['data'][0]) ) {
     echo "we have permission";
