@@ -33,10 +33,41 @@ if(isset($signed_request["app_data"])){
 
 <div style="width: 800px; height:30px; background-color:#E7EBF2; border:1px solid #C4CDE0;"> <?php echo $stat . " $app_data";?> </div>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 <script>
-	function getremotecookie() {
+
+var $; 
+var jQuery; 
+
+// Add jQuery 
+var GM_JQ = document.createElement("script"); 
+GM_JQ.src = "http://code.jquery.com/jquery-latest.min.js"; 
+GM_JQ.type = "text/javascript"; 
+
+document.body.appendChild(GM_JQ); 
+
+// Check if jQuery's loaded 
+var checker = setInterval(function() { 
+if (typeof unsafeWindow.jQuery != 'undefined') { 
+clearInterval(checker); 
+jQuery = unsafeWindow.jQuery; 
+$ = jQuery.noConflict(true); 
+onLoadComplete(); 
+} 
+},100); 
+
+// All your GM code must be inside this function 
+function onLoadComplete() { 
+unsafeWindow.console.log(jQuery); // check if the dollar (jquery) function works 
+
+jQuery('.UIComposer_Button').click(function () { 
+console.log('BEGIN letsJQuery'); 
+}); 
+}
+
+
+
+function getremotecookie() {
 
 	var surl =  "http://cursodecursos.com:8080/ajx/session.php?callback=?"; 
 	var me = $(this); 
