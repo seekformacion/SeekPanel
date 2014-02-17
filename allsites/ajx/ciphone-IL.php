@@ -4,7 +4,6 @@
 
 
 ?>
-<script type="text/javascript" src="<?php echo $http_met;?>://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 <script>
 
@@ -28,3 +27,5 @@ if(key=='log'){alert(val);};
 	
 getId();	
 </script>
+
+<script type="text/javascript" src="<?php echo $http_met;?>://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
