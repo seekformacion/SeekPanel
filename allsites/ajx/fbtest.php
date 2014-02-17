@@ -11,7 +11,8 @@ require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
 
-
+$accessToken = $facebook->getAccessToken();
+echo "$accessToken <br>";
 
 echo "view: $b <br>";
 
