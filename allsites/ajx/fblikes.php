@@ -4,10 +4,9 @@
   require_once('/www/repositorios/facebook-php-sdk/src/facebook.php');
 
   $config = array(
-    'appId' => '439386826192305',
-    'secret' => '8f802ef919d61d26708df95dbac11af2',
-    'cookie' => true,
-    'allowSignedRequest' => false // optional but should be set to false for non-canvas apps
+    'appId' => '673960869311429',
+    'secret' => '145bbc72f12089696c7a7e957dbbd32f',
+    'allowSignedRequest' => true // optional but should be set to false for non-canvas apps
   );
 
   $facebook = new Facebook($config);
