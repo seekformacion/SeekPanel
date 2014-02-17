@@ -12,19 +12,12 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 
-$app_data = '';
-if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
 
-
-print_r($_GET);
-print_r($_POST);
-
-echo "app_data: $app_data";
-echo "view: $view";
+echo "view: $b";
 
 
 
-if($view=='ciphone'){include('ciphone.php');};
+if($b=='ciphone'){include('ciphone.php');};
 
 
 ?>
