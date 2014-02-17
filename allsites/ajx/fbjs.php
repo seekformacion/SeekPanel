@@ -24,9 +24,13 @@ if(key=='log'){logFB(val);};
 
 function logFB(url){
 	
-var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=420, height=335, top=85, left=140";
-window.open(url,"",opciones);	
-	
+
+cont='<div style=\'width:150px; height:30px; background-color: blue;\' onclick=\'window.open(' 
++ url + ',"","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=42, height=335, top=185, left=180");\' ></div>';	
+
+
+
+document.getElementById('contenido').innerHTML=cont;	
 }
 	
 	
