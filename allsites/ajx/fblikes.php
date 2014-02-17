@@ -3,13 +3,17 @@
   // directory in your application on the server, such as php-sdk/
   require_once('/www/repositorios/facebook-php-sdk/src/facebook.php');
 
-  $config = array(
-    'appId' => '673960869311429',
-    'secret' => '145bbc72f12089696c7a7e957dbbd32f',
-    'allowSignedRequest' => false // optional but should be set to false for non-canvas apps
-  );
 
-  $facebook = new Facebook($config);
+
+
+$app_id = "673960869311429";
+$app_secret = "145bbc72f12089696c7a7e957dbbd32f";
+$facebook = new Facebook(array(
+'appId' => $app_id,
+'secret' => $app_secret,
+'cookie' => true
+));
+
   $user_id = $facebook->getUser();
   
   print_r($facebook);
