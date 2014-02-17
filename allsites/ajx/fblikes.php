@@ -18,6 +18,14 @@ $config['fileUpload'] = false; // optional
 
 $facebook = new Facebook($config);
 
+
+//Get Access Token URL
+$access_token_url = "https://graph.facebook.com/oauth/access_token?client_id=".$config['appId']."&client_secret=".$config['secret']."&grant_type=client_credentials";
+//Get Access Token
+$access_token = file_get_contents($access_token_url);
+echo $access_token;
+
+
 print_r($facebook);
 
 $user = $facebook->getUser();
