@@ -12,32 +12,24 @@ $getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirec
 $content = file_get_contents($getaT);
 $datos=explode('&',$content);
 foreach($datos as $key => $valor){ if(strlen($valor) > strlen(str_replace('access_token=','',$valor)) ) { $access_token=str_replace('access_token=','',$valor);} };
-
-echo "<br>";
-echo "$access_token";
-echo "<br>";
-
-
 $facebook->setAccessToken($access_token);
 }
 
+
+
 $user = $facebook->getUser();
-
-
-
 if(!$user){
 
 $login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_stream,publish_actions') );
-echo $login_url;
+$res['log']= $login_url;
 
 }else{
 
-echo "$user <br>";
+$res['id']=$user;
 	
 }
 
-echo "<br>";echo "<br>";echo "<br>";
-
+echo json_encode($res);
 
 
 

@@ -1,17 +1,30 @@
 <?php
 
-$user = $facebook->getUser();
-  if ($user) {
-        $user_profile = $facebook->api('/me');
-        $friends = $facebook->api('/me/friends');
-         print_r($user_profile);
-  }else{
-  
-  $login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_stream,publish_actions', 'next' => "$http_met://www.facebook.com/cursodecursos/app_715730281795141" ) );
-
-  header("Location: $login_url");	
-}
 
 
 
 ?>
+
+
+<script>
+
+function getId(){
+	
+var url='<?php echo $http_met;?>://seekformacion.com/ajx/fblog.php?aT=<?php echo $accessToken;?>';
+$.getJSON(url, function(data) {
+$.each(data, function(key, val) {
+
+if(key=='id'){alert(val);};			
+
+if(key=='log'){alert(val);};
+	
+});
+});		
+	
+	
+}
+
+	
+	
+getId();	
+</script>
