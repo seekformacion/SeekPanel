@@ -11,7 +11,7 @@
   );
 
   $facebook = new Facebook($config);
-  $user_id = $facebook->getUser();
+  $user = $facebook->getUser();
   
   print_r($facebook);
   echo "<br><br><br>";
@@ -22,36 +22,33 @@
 <html>
   <head></head>
   <body>
+<?php
 
-  <?php
-    if($user_id) {
+if ($user <> '0' && $user <> '') { /*if valid user id i.e. neither 0 nor blank nor null*/
+try {
+// Proceed knowing you have a logged in user who's authenticated.
+$user_profile = $facebook->api('/me');
+} catch (FacebookApiException $e) { /*sometimes it shows user id even if user in not logged in and it results in Oauth exception. In this case we will set it back to 0.*/
+error_log($e);
+$user = '0';
+}
+}
+if ($user <> '0' && $user <> '') { /*So now we will have a valid user id with a valid oauth access token and so the code will work fine.*/
+echo "UserId : " . $user;
 
-      // We have a user ID, so probably a logged in user.
-      // If not, we'll get an exception, which we handle below.
-      try {
+$params = array( 'next' => 'http://www.anujkumar.com' );
+echo "<p><a href='". $facebook->getLogoutUrl($params) . "'>Logout</a>";
 
-        $user_profile = $facebook->api('/me','GET');
-        echo "Name: " . $user_profile['name'];
+$user_profile = $facebook->api('/me');
+echo "<p>Name : " . $user_profile['name'];
+echo "<p>";
+print_r($user_profile);
 
-      } catch(FacebookApiException $e) {
-        // If the user is logged out, you can have a 
-        // user ID even though the access token is invalid.
-        // In this case, we'll get an exception, so we'll
-        // just ask the user to login again here.
-        $login_url = $facebook->getLoginUrl(); 
-        echo 'Please <a href="' . $login_url . '">login.</a>';
-        error_log($e->getType());
-        error_log($e->getMessage());
-      }   
-    } else {
+} else {/*If user id isn't present just redirect it to login url*/
+header("Location:{$facebook->getLoginUrl(array('req_perms' => 'email,offline_access'))}");
+}
 
-      // No user, print a link for the user to login
-      $login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_stream,publish_actions' ) );
-      echo 'Please <a href="' . $login_url . '">login.</a>';
-
-    }
-
-  ?>
+?>
 
   </body>
 </html>
