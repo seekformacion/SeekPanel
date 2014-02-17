@@ -12,8 +12,8 @@ require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 
 
 $config = array();
-$config['appId'] = '715730281795141';
-$config['secret'] = '59d82a1fcc819fc6579aba37ad1ec2c7';
+$config['appId'] = '439386826192305';
+$config['secret'] = '8f802ef919d61d26708df95dbac11af2';
 $config['fileUpload'] = false; // optional
 
 $facebook = new Facebook($config);
@@ -26,8 +26,8 @@ $id_user=$user_profile['id'];
 
 echo $id_user;
 
-$response = $facebook->api("/$id_user/likes");
-print_r($response);
+//$response = $facebook->api("/$id_user/likes");
+//print_r($response);
 
 
 ?>
