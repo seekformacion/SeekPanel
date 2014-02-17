@@ -25,8 +25,8 @@ if(key=='log'){logFB(val);};
 function logFB(url){
 	
 
-cont='<div style=\'width:150px; height:30px; background-color: blue;\' onclick=\'window.open(' 
-+ url + ',"","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=42, height=335, top=185, left=180");\' ></div>';	
+cont='<div style=\'cursor:pointer; width:150px; height:30px; background-color: blue;\' onclick=\'window.open('" 
++ url + '","","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=42, height=335, top=185, left=180");\' ></div>';	
 
 
 
