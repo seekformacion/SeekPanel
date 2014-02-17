@@ -15,14 +15,14 @@ $facebook = new Facebook(array(
 ));
 
 
-$session = $facebook->getSession();
+//$session = $facebook->getSession();
 
 $user_id = $facebook->getUser();
   
-  print_r($session);
+print_r($session);
   echo "<br><br>";
   
-  print_r($user_id);
+print_r($user_id);
   
 ?>
 <html>
