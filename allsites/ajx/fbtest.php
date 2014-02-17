@@ -17,7 +17,7 @@ echo "view: $b";
 
 
 
-if($b=='ciphone'){include('ciphone.php');};
+if($b=='iphone'){include('ciphone.php');};
 
 
 ?>
