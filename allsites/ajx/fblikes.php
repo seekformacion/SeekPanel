@@ -6,8 +6,8 @@
 
 
 
-$app_id = "673960869311429";
-$app_secret = "145bbc72f12089696c7a7e957dbbd32f";
+$app_id = "439386826192305";
+$app_secret = "8f802ef919d61d26708df95dbac11af2";
 $facebook = new Facebook(array(
 'appId' => $app_id,
 'secret' => $app_secret,
