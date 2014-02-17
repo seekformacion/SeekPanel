@@ -15,8 +15,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 
-$app_data = '';
-if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; };
+echo "view: $view";
 
 
 
@@ -35,6 +34,11 @@ if($view=='ciphone'){include('ciphone.php');};
 
 
 /*
+  
+ $app_data = '';
+if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
+  
+ 
 <div style="width: 800px; height:30px; background-color:#E7EBF2; border:1px solid #C4CDE0;"> <?php echo $stat . " $app_data";?> </div>
 /// esto solo funciona si ya se tienen permisos
 //$user_permissions = $facebook->api("/me/permissions");
