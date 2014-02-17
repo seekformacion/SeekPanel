@@ -7,14 +7,7 @@
 if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
-
-$app_id = "715730281795141";
-$app_secret = "59d82a1fcc819fc6579aba37ad1ec2c7";
-$facebook = new Facebook(array(
-'appId' => $app_id,
-'secret' => $app_secret,
-'cookie' => true
-));
+require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 print_r($facebook);
