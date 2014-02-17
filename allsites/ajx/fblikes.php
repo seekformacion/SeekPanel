@@ -5,8 +5,8 @@
 
   $config = array(
     'appId' => '673960869311429',
-    'secret' => '145bbc72f12089696c7a7e957dbbd32f'
-   
+    'secret' => '145bbc72f12089696c7a7e957dbbd32f',
+    'allowSignedRequest' => false // optional but should be set to false for non-canvas apps
   );
 
   $facebook = new Facebook($config);
