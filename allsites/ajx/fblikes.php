@@ -14,9 +14,12 @@ $facebook = new Facebook(array(
 'cookie' => true
 ));
 
-  $user_id = $facebook->getUser();
+
+$session = $facebook->getSession();
+
+$user_id = $facebook->getUser();
   
-  print_r($facebook);
+  print_r($session);
   echo "<br><br>";
   
   print_r($user_id);
