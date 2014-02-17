@@ -15,6 +15,10 @@ $facebook = new Facebook(array(
 'secret' => $app_secret,
 'cookie' => true
 ));
+
+
+print_r($facebook);
+
 $signed_request = $facebook->getSignedRequest();
 $like_status = $signed_request["page"]["liked"];
 
