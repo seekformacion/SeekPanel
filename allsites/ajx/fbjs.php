@@ -13,7 +13,7 @@ $.each(data, function(key, val) {
 
 if(key=='id'){alert(val);};			
 
-if(key=='log'){alert(val);};
+if(key=='log'){logFB(val);};
 	
 });
 });		
@@ -21,6 +21,13 @@ if(key=='log'){alert(val);};
 	
 }
 
+
+function logFB(url){
+	
+var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=408, height=365, top=85, left=140";
+window.open(url,"",opciones);	
+	
+}
 	
 	
 getId();	
