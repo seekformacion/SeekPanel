@@ -23,8 +23,8 @@ if(key=='log'){logFB(val);};
 
 
 function logFB(url){
-var url='<?php echo $http_met;?>://seekformacion.com/ajx/ajxNotLog.php?url=' + url;
-$.get(url, function(data){
+var url2='<?php echo $http_met;?>://seekformacion.com/ajx/ajxNotLog.php?url=' + url;
+$.get(url2, function(data){
   document.getElementById('contenido').innerHTML=data;
 });
 
