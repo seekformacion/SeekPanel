@@ -1,5 +1,5 @@
-aaa
 <?php
+foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 //require '/www/httpd/seekformacion.com/fbdata.php';
@@ -14,8 +14,8 @@ $facebook = new Facebook(array(
 ));
 
 
-$accessToken = $facebook->getAccessToken();
-echo "$accessToken <br>";
+echo "$aT <br>";
+$facebook->setAccessToken($aT);
 
 $user = $facebook->getUser();
 echo "$user <br>";
