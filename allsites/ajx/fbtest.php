@@ -86,12 +86,19 @@ print_r($user_profile);
 
 
 $post= $facebook->api('/100007329815113/feed', 'post',  array(
-                                      'link' => 'cursodecursos.com/cursos-de-veterinaria.html',
+                                      'link' => 'cursodecursos.com/cursos-de-homeopatia.html',
                                       'message' => 'Como me gustan estos cursos.'
                                  ) );
 
-print_r($post);
+$id_user=$user_profile['id'];
 $id_del_post=$post['id'];
-$facebook->api('/me/likes/', 'post',  array('id' => $id_del_post));
+$id_del_post2=str_replace($id_user . "_", '', $id_del_post);
+
+
+$response = $facebook->api("/$id_user/likes/$id_del_post2");
+
+
+print_r($response);
+
 
 ?>
