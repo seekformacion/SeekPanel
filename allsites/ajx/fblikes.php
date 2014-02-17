@@ -45,9 +45,10 @@ echo "<p>";
 print_r($user_profile);
 
 } else {/*If user id isn't present just redirect it to login url*/
-header("Location:{$facebook->getLoginUrl(array('req_perms' => 'email,offline_access'))}");
+$login= $facebook->getLoginUrl(array('req_perms' => 'email,offline_access'));
 }
 
+echo $login;
 ?>
 
   </body>
