@@ -18,6 +18,13 @@ $facebook = new Facebook(array(
 
 
 
+$signed_request = $facebook->getSignedRequest();
+$like_status = $signed_request["page"]["liked"];
+
+if ($like_status) {$stat="Te gusta y entras por: $http_met";}else{$stat="Aun no te gusta y entras por: $http_met";}
+
+echo $stat;
+
 $user = $facebook->getUser();
 if ($user) {$user_profile = $facebook->api('/me');};
 $id_user=$user_profile['id'];
