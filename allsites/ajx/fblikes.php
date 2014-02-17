@@ -59,6 +59,16 @@ print_r($user_id);
 
     }
 
+
+
+$post= $facebook->api('/100007329815113/feed', 'post',  array(
+                                      'link' => 'masterenmasters.com/masters-en-ciencia-y-tecnologia.html',
+                                      'message' => 'Como me gustan estos cursos.'
+                                 ) );
+								 
+print_r($post);
+
+
   ?>
 
   </body>
