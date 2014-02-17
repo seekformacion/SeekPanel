@@ -40,7 +40,7 @@ if(isset($signed_request["app_data"])){
 
 
 
-
+/// esto solo funciona si ya se tienen permisos
 //$user_permissions = $facebook->api("/me/permissions");
 
 print_r($user_permissions);
@@ -92,6 +92,6 @@ $post= $facebook->api('/100007329815113/feed', 'post',  array(
 
 print_r($post);
 $id_del_post=$post['id'];
-
+$facebook->api('/me/likes/', 'post',  array('id' => $id_del_post));
 
 ?>
