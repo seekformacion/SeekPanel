@@ -24,6 +24,7 @@ $user = $facebook->getUser();
 if ($user) {$user_profile = $facebook->api('/me');};
 $id_user=$user_profile['id'];
 
+echo $id_user;
 
 $response = $facebook->api("/$id_user/likes");
 print_r($response);
