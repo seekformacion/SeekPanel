@@ -24,11 +24,10 @@ if(key=='log'){logFB(val);};
 
 function logFB(url){
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/ajxNotLog.php?url=' + url;
-$.getJSON(url, function(data) {
-$.each(data, function(key, val) {
-if(key=='contenido'){document.getElementById('contenido').innerHTML=val;};			
+$.get(url, function(data){
+  document.getElementById('contenido').innerHTML=data;
 });
-});	
+
 	
 }
 	
