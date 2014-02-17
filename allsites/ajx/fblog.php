@@ -5,7 +5,7 @@ require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
 echo "$aT <br>";
-$facebook->setAccessToken($aT);
+$facebook->setAccessToken($code);
 
 $user = $facebook->getUser();
 echo "$user <br>";
