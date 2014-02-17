@@ -6,6 +6,7 @@
   $config = array(
     'appId' => '439386826192305',
     'secret' => '8f802ef919d61d26708df95dbac11af2',
+    'cookie' => true,
     'allowSignedRequest' => false // optional but should be set to false for non-canvas apps
   );
 
