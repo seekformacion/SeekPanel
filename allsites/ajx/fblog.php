@@ -1,17 +1,22 @@
 <?php
+$code="";
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
-echo "$aT <br>";
-$facebook->setAccessToken($code);
+if($aT){
+$facebook->setAccessToken($aT);
+}elseif($code){
+$getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2Ffblog.php&client_secret=$app_secret&code=$code";
+$content = file_get_contents($getaT);
+$aT=str_replace('access_token=', '', $content);
+$facebook->setAccessToken($aT);
+}
 
 $user = $facebook->getUser();
-echo "$user <br>";
 
-$rd="http://seekformacion.com/ajx/fblog.php";
-$rdU=urlencode($rd);
+
 
 if(!$user){
 
@@ -20,19 +25,13 @@ echo $login_url;
 
 }else{
 
-print_r($user);
+echo "$user <br>";
 	
 }
-
-
-$rd="http://seekformacion.com/ajx/fblog.php";
-$rdU=urlencode($rd);
 
 echo "<br>";echo "<br>";echo "<br>";
 
 
-
-echo "https://graph.facebook.com/oauth/access_token?client_id=715730281795141&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2Ffblog.php&client_secret=59d82a1fcc819fc6579aba37ad1ec2c7&code=$code";
 
 
  /*
