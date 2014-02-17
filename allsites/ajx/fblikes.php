@@ -1,7 +1,9 @@
 <?php
-  // Remember to copy files from the SDK's src/ directory to a
-  // directory in your application on the server, such as php-sdk/
-  require_once('/www/repositorios/facebook-php-sdk/src/facebook.php');
+foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
+
+// Remember to copy files from the SDK's src/ directory to a
+ // directory in your application on the server, such as php-sdk/
+require_once('/www/repositorios/facebook-php-sdk/src/facebook.php');
 
 
 
