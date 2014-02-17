@@ -10,6 +10,11 @@ $facebook->setAccessToken($aT);
 }elseif($code){
 $getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2Ffblog.php&client_secret=$app_secret&code=$code";
 $content = file_get_contents($getaT);
+
+echo "<br>";
+echo "$content";
+echo "<br>";
+
 $aT=str_replace('access_token=', '', $content);
 $facebook->setAccessToken($aT);
 }
