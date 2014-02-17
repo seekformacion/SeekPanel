@@ -4,18 +4,7 @@ foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo .
 // Remember to copy files from the SDK's src/ directory to a
  // directory in your application on the server, such as php-sdk/
 require_once('/www/repositorios/facebook-php-sdk/src/facebook.php');
-
-
-
-
-$app_id = "439386826192305";
-$app_secret = "8f802ef919d61d26708df95dbac11af2";
-$facebook = new Facebook(array(
-'appId' => $app_id,
-'secret' => $app_secret,
-'cookie' => true
-));
-
+require '/www/httpd/seekformacion.com/fbdata.php';
 
 //$session = $facebook->getSession();
 
