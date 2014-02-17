@@ -8,6 +8,6 @@ $user = $facebook->getUser();
 
 $permissions = $facebook->api("/me/permissions");
 
-print_r($permissions);
+print_r($user);
 
 ?>
