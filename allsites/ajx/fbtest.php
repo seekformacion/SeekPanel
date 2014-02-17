@@ -13,7 +13,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 
-echo "view: $b";
+echo "view: $b <br>";
 
 
 
