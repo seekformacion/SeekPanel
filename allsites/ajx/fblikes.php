@@ -12,6 +12,12 @@
 
   $facebook = new Facebook($config);
   $user_id = $facebook->getUser();
+  
+  print_r($facebook);
+  echo "<br><br><br>";
+  
+  print_r($user_id);
+  
 ?>
 <html>
   <head></head>
