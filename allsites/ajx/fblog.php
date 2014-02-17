@@ -18,7 +18,7 @@ $accessToken = $facebook->getAccessToken();
 echo "$accessToken <br>";
 
 $user = $facebook->getUser();
-
+echo "$user <br>";
 
 
 if(!$user){
