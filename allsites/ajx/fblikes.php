@@ -18,7 +18,7 @@ $config['fileUpload'] = false; // optional
 
 $facebook = new Facebook($config);
 
-
+print_r($facebook);
 
 $user = $facebook->getUser();
 if ($user) {$user_profile = $facebook->api('/me');};
