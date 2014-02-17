@@ -15,7 +15,7 @@ $rdU=urlencode($rd);
 
 if(!$user){
 
-$login_url = $facebook->getLoginUrl( array( "redirect_uri" => $rdU, 'scope' => 'publish_stream,publish_actions') );
+$login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_stream,publish_actions') );
 echo $login_url;
 
 }else{
