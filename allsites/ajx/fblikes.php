@@ -40,7 +40,7 @@
     } else {
 
       // No user, print a link for the user to login
-      $login_url = $facebook->getLoginUrl();
+      $login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_stream,publish_actions' ) );
       echo 'Please <a href="' . $login_url . '">login.</a>';
 
     }
