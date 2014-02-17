@@ -23,14 +23,13 @@ if(key=='log'){logFB(val);};
 
 
 function logFB(url){
+var url='<?php echo $http_met;?>://seekformacion.com/ajx/ajxNotLog.php?url=' + url;
+$.getJSON(url, function(data) {
+$.each(data, function(key, val) {
+if(key=='contenido'){document.getElementById('contenido').innerHTML=val;};			
+});
+});	
 	
-
-cont='<div style=\'cursor:pointer; width:150px; height:30px; background-color: blue;\' onclick=\'window.open("' 
-+ url + '","","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=42, height=335, top=185, left=180");\' ></div>';	
-
-
-
-document.getElementById('contenido').innerHTML=cont;	
 }
 	
 	
