@@ -1,4 +1,5 @@
 <?php
+foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 ######### add boton   https://www.facebook.com/dialog/pagetab?api_key=715730281795141&next=https%3A%2F%2Fwww.facebook.com%2F
 
@@ -10,33 +11,31 @@ require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
 
-print_r($facebook);
 
-$signed_request = $facebook->getSignedRequest();
-$like_status = $signed_request["page"]["liked"];
 
-if ($like_status) {$stat="Te gusta y entras por: $http_met";}else{$stat="Aun no te gusta y entras por: $http_met";}
 
 
 $app_data = '';
-if(isset($signed_request["app_data"])){
-    $app_data = $signed_request["app_data"];
-    }
+if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; };
+
+
+
+if($view=='ciphone'){include('ciphone.php');};
 
 
 ?>
 
 
 
-<div style="width: 800px; height:30px; background-color:#E7EBF2; border:1px solid #C4CDE0;"> <?php echo $stat . " $app_data";?> </div>
+
 
 <script type="text/javascript" src="<?php echo $http_met;?>://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 <?php
 
 
-
-
+/*
+<div style="width: 800px; height:30px; background-color:#E7EBF2; border:1px solid #C4CDE0;"> <?php echo $stat . " $app_data";?> </div>
 /// esto solo funciona si ya se tienen permisos
 //$user_permissions = $facebook->api("/me/permissions");
 
@@ -88,7 +87,7 @@ $post= $facebook->api('/100007329815113/feed', 'post',  array(
                                  ) );
 
 
-
+*/
 
 
 ?>

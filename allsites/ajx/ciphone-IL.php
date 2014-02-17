@@ -1,0 +1,4 @@
+te gusta
+<?php
+
+?>
