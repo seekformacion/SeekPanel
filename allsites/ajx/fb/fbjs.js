@@ -71,7 +71,7 @@ return a;
 
 function timer(){
 document.getElementById('timer').style.visibility = "visible" ;
-function setCookie('seekforFB_PEM',0,2);
+setCookie('seekforFB_PEM',0,2);
 var a=0;
 while (a >= 0){a=getperm();}
 
