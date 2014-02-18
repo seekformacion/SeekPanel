@@ -11,9 +11,6 @@ if($aT){
 $facebook->setAccessToken($aT);
 }elseif($code){
 $getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2Ffb%2Ffblog.php%3Fdo%3Dout&client_secret=$app_secret&code=$code";
-
-echo $getaT;
-
 $content = file_get_contents($getaT);
 $datos=explode('&',$content);
 foreach($datos as $key => $valor){ if(strlen($valor) > strlen(str_replace('access_token=','',$valor)) ) { $access_token=str_replace('access_token=','',$valor);} };
@@ -23,11 +20,14 @@ $facebook->setAccessToken($access_token);
 $user = $facebook->getUser();
 
 if($do=='out'){
+
+$user_profile = $facebook->api('/' . $user); //user profile
+$user_permissions = $facebook->api("/$user/permissions");	
 	
-echo "<br>";	
-echo $user;	
-	
-	
+print_r($user_permissions);	
+
+$expire=time()+60*60*24*2;
+setcookie("seekforFB_ID", $seekforID, $expire, '/');	
 	
 	
 	
