@@ -2,6 +2,10 @@
 $code="";$do="";
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
+if($do=='out'){
+echo "<script>window.close();</script>";	
+}else{
+
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
@@ -15,12 +19,13 @@ foreach($datos as $key => $valor){ if(strlen($valor) > strlen(str_replace('acces
 $facebook->setAccessToken($access_token);
 }
 
-
+$redirect="https://seekformacion.com/ajx/fblog.php?do=out";
+$redirect=urlencode($redirect);
 
 $user = $facebook->getUser();
 if(!$user){
 
-$login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_stream,publish_actions') );
+$login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'publish_stream,publish_actions') );
 $res['log']= $login_url;
 
 }else{
@@ -29,9 +34,7 @@ $res['id']=$user;
 	
 }
 
-if($do=='out'){
-echo "<script>window.close();</script>";	
-}else{
+
 echo json_encode($res);
 }
 
