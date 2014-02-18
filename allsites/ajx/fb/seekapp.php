@@ -13,7 +13,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 $accessToken = $facebook->getAccessToken();
 
-//echo "$accessToken <br>";
+echo "$accessToken <br>";
 //echo "view: $b <br>";
 
 
