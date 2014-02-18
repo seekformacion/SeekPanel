@@ -1,6 +1,9 @@
 <?php
 
 $signed_request = $facebook->getSignedRequest();
+
+print_r($signed_request);
+
 $like_status = $signed_request["page"]["liked"];
 
 $app_data = '';
