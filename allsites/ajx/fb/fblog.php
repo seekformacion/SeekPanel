@@ -1,5 +1,5 @@
 <?php
-$code="";$do="";
+$code="";$do="";$user=0;
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 
@@ -21,19 +21,24 @@ $user = $facebook->getUser();
 
 if($do=='out'){
 
-$user_profile = $facebook->api('/' . $user); //user profile
+//$user_profile = $facebook->api('/' . $user); //user profile
 $user_permissions = $facebook->api("/$user/permissions");	
-	
-print_r($user_permissions);	
+
+
 
 $expire=time()+60*60*24*2;
-setcookie("seekforFB_ID", $seekforID, $expire, '/');	
+if($user){
+setcookie("seekforFB_ID", $user, $expire, '/');	
+}
+
+if(isset($user_permissions["data"][0]["publish_actions"])){
+setcookie("seekforFB_PEM", 2, $expire, '/');		
+}	
 	
 	
 	
 	
-	
-//echo "<script>window.close();</script>";	
+echo "<script>window.close();</script>";	
 }else{
 
 $redirect="https://seekformacion.com/ajx/fb/fblog.php?do=out";
