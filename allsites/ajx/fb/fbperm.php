@@ -7,23 +7,11 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 //$facebook->setAccessToken($aT);
-$user = $facebook->api('/me','GET');
+$user = $facebook->api('/me');
 
 print_r($user);
 
-if(!$user){
 
-$login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'publish_stream,publish_actions') );
-$res['log']= $login_url;
-
-}else{
-
-$res['id']=$user;
-	
-}
-
-
-echo json_encode($res);
 
 
 ?>
