@@ -29,6 +29,8 @@ $eqP[1424213751150594]=1;
 
 $like_status = $signed_request["page"]["liked"];
 $idpFB = $eqP[$signed_request["page"]["id"]];
+$portal=$portales[$idpFB];
+
 
 $app_data = '';
 if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
