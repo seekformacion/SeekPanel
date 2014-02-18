@@ -43,7 +43,7 @@ var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fblog.php?aT=<?php e
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
 
-if(key=='id'){alert(val);};			
+if(key=='id'){panel(val);};			
 
 if(key=='log'){logFB(val);};
 	
@@ -87,25 +87,33 @@ chk1();
 function chk1(){
 var func='chk2();'
 var st=getperm();
-if(st==0){
-console.log('aun no');
-setTimeout(func, 2000);	
-}else{
-document.getElementById('timer').style.visibility = "hidden" ;	
-}	
+
+if(st==0){setTimeout(func, 2000);}
+if(st==1){document.getElementById('timer').style.visibility = "hidden" ;}
+if(st==2){panel(getCookie('seekforFB_ID'));}	
+
 
 }
 
 function chk2(){
 var func='chk1();'
 var st=getperm();
-if(st==0){
-console.log('aun no2');
-setTimeout(func, 2000);	
-}else{
-document.getElementById('timer').style.visibility = "hidden" ;	
-}
+
+if(st==0){setTimeout(func, 2000);}
+if(st==1){document.getElementById('timer').style.visibility = "hidden" ;}
+if(st==2){panel(getCookie('seekforFB_ID'));}	
+
 	
+}
+
+
+function panel(id){
+//var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/ajxNotLog.php?url=' + encodeURIComponent(url);
+//$.get(url2, function(data){
+//  document.getElementById('contenido').innerHTML=data;
+//});
+	
+document.getElementById('contenido').innerHTML=id;	
 }
 
 	
