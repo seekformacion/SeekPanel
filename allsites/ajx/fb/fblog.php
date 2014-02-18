@@ -10,7 +10,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 if($aT){
 $facebook->setAccessToken($aT);
 }elseif($code){
-$getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2fb%2Ffblog.php&client_secret=$app_secret&code=$code";
+$getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2Ffb%2Ffblog.php&client_secret=$app_secret&code=$code";
 
 echo $getaT;
 
