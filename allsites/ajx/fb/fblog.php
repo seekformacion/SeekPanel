@@ -19,7 +19,7 @@ $facebook->setAccessToken($access_token);
 
 $user = $facebook->getUser();
 
-if($do=='out'){
+if($do=='out'){if($user){
 
 //$user_profile = $facebook->api('/' . $user); //user profile
 $user_permissions = $facebook->api("/$user/permissions");	
@@ -36,7 +36,9 @@ setcookie("seekforFB_PEM", 2, $expire, '/');
 }else{
 setcookie("seekforFB_PEM", 1, $expire, '/');	
 }	
-	
+}else{
+setcookie("seekforFB_PEM", 1, $expire, '/');		
+}	
 	
 	
 	
