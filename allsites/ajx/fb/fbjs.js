@@ -30,6 +30,12 @@ $.get(url2, function(data){
 
 	
 }
+
+
+function timer(){
+	
+alert('siii');	
+}
 	
 	
 getId();	
