@@ -20,7 +20,7 @@ $facebook->setAccessToken($access_token);
 }
 
 $redirect="https://seekformacion.com/ajx/fblog.php?do=out";
-$redirect=urlencode($redirect);
+//$redirect=urlencode($redirect);
 
 $user = $facebook->getUser();
 if(!$user){
