@@ -12,9 +12,9 @@
 <img style="position:absolute; top:0px; left:0px;" border="0" src="http://seekformacion.com/img/<?php echo $portal;?>/fb/AppleCabe.gif">
 
 
+<div id="ranking"></div>
 
-
-<div id="contenido">
+<div style="position: absolute; width: 808px; top: 150px;"  id="contenido">
 	
 	
 	
