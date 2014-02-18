@@ -69,19 +69,45 @@ var a=getCookie('seekforFB_PEM');
 return a;
 }
 
+
+
+
 function timer(){
 document.getElementById('timer').style.visibility = "visible" ;
-alert(getperm());
-
-setCookie('seekforFB_PEM',0,2);
-var a=0;
-
-setTimeout(function() { }, 2000);
-a=getperm();
+setCookie('seekforFB_PEM',0,20);
 
 
-//document.getElementById('timer').style.visibility = "hidden" ;
+
+
+chk1();
+//
 }
+
+
+function chk1(){
+var func='chk2();'
+var st=getperm();
+if(st==0){
+console.log('aun no');
+setTimeout(func, 2000);	
+}else{
+document.getElementById('timer').style.visibility = "hidden" ;	
+}	
+
+}
+
+function chk2(){
+var func='chk1();'
+var st=getperm();
+if(st==0){
+console.log('aun no2');
+setTimeout(func, 2000);	
+}else{
+document.getElementById('timer').style.visibility = "hidden" ;	
+}
+	
+}
+
 	
 	
 getId();	
