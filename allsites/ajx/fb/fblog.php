@@ -33,6 +33,8 @@ setcookie("seekforFB_ID", $user, $expire, '/');
 
 if(isset($user_permissions["data"][0]["publish_actions"])){
 setcookie("seekforFB_PEM", 2, $expire, '/');		
+}else{
+setcookie("seekforFB_PEM", 1, $expire, '/');	
 }	
 	
 	
