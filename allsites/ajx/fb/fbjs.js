@@ -32,9 +32,20 @@ $.get(url2, function(data){
 }
 
 
+function getperm(){
+var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fbperm.php?aT=<?php echo $aT;?>';
+$.getJSON(url, function(data) {
+$.each(data, function(key, val) {
+
+
+	
+});
+});		
+}
+
 function timer(){
 document.getElementById('timer').style.visibility = "visible" ;
-	
+getperm();	
 
 }
 	
