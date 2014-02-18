@@ -17,6 +17,24 @@ $accessToken = $facebook->getAccessToken();
 //echo "view: $b <br>";
 
 
+$signed_request = $facebook->getSignedRequest();
+
+$portales[1]="cursodecursos.com";
+$portales[2]="masterenmasters.com";
+$portales[3]="fp-formacionprofesional.com";
+$portales[4]="oposicionesa.com";
+
+$eqP[1424213751150594]=1;
+
+
+$like_status = $signed_request["page"]["liked"];
+$idpFB = $eqP[$signed_request["page"]["id"]];
+
+$app_data = '';
+if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
+//echo "app_data: $app_data  <br>";
+
+
 
 if($b=='iphone'){include('ciphone.php');};
 

@@ -12,14 +12,14 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 if($aT){
 $facebook->setAccessToken($aT);
 }elseif($code){
-$getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2Ffblog.php&client_secret=$app_secret&code=$code";
+$getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2fb%2Ffblog.php&client_secret=$app_secret&code=$code";
 $content = file_get_contents($getaT);
 $datos=explode('&',$content);
 foreach($datos as $key => $valor){ if(strlen($valor) > strlen(str_replace('access_token=','',$valor)) ) { $access_token=str_replace('access_token=','',$valor);} };
 $facebook->setAccessToken($access_token);
 }
 
-$redirect="https://seekformacion.com/ajx/fblog.php?do=out";
+$redirect="https://seekformacion.com/ajx/fb/fblog.php?do=out";
 //$redirect=urlencode($redirect);
 
 $user = $facebook->getUser();
