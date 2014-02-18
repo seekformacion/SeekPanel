@@ -1,5 +1,5 @@
 <?php
-$code="";
+$code="";$do="";
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
@@ -29,8 +29,11 @@ $res['id']=$user;
 	
 }
 
+if($do=='out'){
+echo "<script>window.close();</script>";	
+}else{
 echo json_encode($res);
-
+}
 
 
  /*
