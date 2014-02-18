@@ -39,6 +39,14 @@ echo json_encode($res);
 }
 
 
+
+
+
+
+
+
+
+
  /*
   * 
 https://graph.facebook.com/oauth/access_token?client_id=715730281795141&redirect_uri=FACEBOOK_REDIRECT_URI&client_secret=59d82a1fcc819fc6579aba37ad1ec2c7&code=TOKEN_VALUE
