@@ -33,8 +33,9 @@ $.get(url2, function(data){
 
 
 function timer(){
+document.getElementById('timer').style.visibility = "visible" ;
 	
-alert('siii');	
+
 }
 	
 	

@@ -10,7 +10,7 @@ $url=$_GET['url'];
 </div>	
 
 
-<div style="position:absolute; top:250px; left:230px;" id="timer" >
+<div style="position:absolute; top:250px; left:230px; visibility: hidden;" id="timer" >
 <img src="http://seekformacion.com/img/global/fb/timer.gif" border="0">		
 </div>	
 
