@@ -5,6 +5,38 @@ foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo .
 
 ?>
 
+
+function setCookie(c_name,value,exdays)
+{
+var exdate=new Date();
+exdate.setDate(exdate.getDate() + exdays);
+if(exdays==0){
+var c_value=escape(value);
+}else{
+var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());	
+}
+
+document.cookie=c_name + "=" + c_value + '; path=/';
+}
+
+
+
+
+function getCookie(w){
+	cName = "";
+	pCOOKIES = new Array();
+	pCOOKIES = document.cookie.split('; ');
+	for(bb = 0; bb < pCOOKIES.length; bb++){
+		NmeVal  = new Array();
+		NmeVal  = pCOOKIES[bb].split('=');
+		if(NmeVal[0] == w){
+			cName = unescape(NmeVal[1]);
+		}
+	}
+	return cName;
+}
+
+
 function getId(){
 	
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fblog.php?aT=<?php echo $aT;?>';
@@ -33,20 +65,17 @@ $.get(url2, function(data){
 
 
 function getperm(){
-var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fbperm.php?aT=<?php echo $aT;?>';
-$.getJSON(url, function(data) {
-$.each(data, function(key, val) {
-
-
-	
-});
-});		
+var a=getCookie('seekforFB_PEM');	
+return a;
 }
 
 function timer(){
 document.getElementById('timer').style.visibility = "visible" ;
-getperm();	
+function setCookie('seekforFB_PEM',0,2);
+var a=0;
+while (a >= 0){a=getperm();}
 
+document.getElementById('timer').style.visibility = "hidden" ;
 }
 	
 	
