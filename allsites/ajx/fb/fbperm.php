@@ -7,8 +7,9 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 //$facebook->setAccessToken($aT);
-$user = $facebook->getUser();
+$user = $facebook->api('/me','GET');
 
+print_r($user);
 
 if(!$user){
 
