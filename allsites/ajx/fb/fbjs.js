@@ -73,7 +73,10 @@ function timer(){
 document.getElementById('timer').style.visibility = "visible" ;
 setCookie('seekforFB_PEM',0,2);
 var a=0;
-while (a >= 0){a=getperm();}
+while (a == 0){
+setTimeout(function() { }, 2000);
+a=getperm();
+}
 
 document.getElementById('timer').style.visibility = "hidden" ;
 }
