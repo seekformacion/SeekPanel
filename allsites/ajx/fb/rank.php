@@ -12,6 +12,10 @@ if(isset($response['data'][0]['id'])){$likes[1]=1;}else{$likes[1]=0;}
 
  //$user_profile = $facebook->api("/$user");
 
-print_r($likes);
+$user_profile = $facebook->api("/$user");
+
+print_r($user_profile); 
+ 
+ 
 
 ?>
