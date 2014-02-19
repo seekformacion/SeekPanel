@@ -18,7 +18,9 @@ $res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;
 
 $user_profile = $facebook->api("/$user");
 $friends = $facebook->api("/$user/friends");
-print_r($user_profile); 
+
+$name=$user_profile['name'];
+//print_r($user_profile); 
  
  
 
@@ -63,7 +65,7 @@ font-family:Arial; font-size:10px; color:#333333; text-align: center}
 <div style="position: absolute; top: 3px; left:326px;" class="miniT">Ranking</div>	
 <div class="rank" style="";>
 <div style="position:relative; float:left;"><img src="https://graph.facebook.com/<?php echo $user; ?>/picture" style="width:30px; height:30px;"/></div>
-<div style="position:relative; float:left; margin-left: 5px; width:155px; height: 50px;">Eduardo buena moya</div>
+<div style="position:relative; float:left; margin-left: 5px; width:155px; height: 50px;"><?php echo $name;?></div>
 </div>	
 	
 <div style="position: absolute; width:40px; left:263px;" class="point">15251</div>	
