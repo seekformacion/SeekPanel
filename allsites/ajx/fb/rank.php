@@ -6,11 +6,12 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 if (isset($_COOKIE["seekforFB_ID"])){$user= $_COOKIE["seekforFB_ID"];};	
 
-echo "/$user/likes/1424213751150594";
+//echo "/$user/likes/1424213751150594";
 $response = $facebook->api("/$user/likes/1424213751150594");
+if(isset($response['data'][0]['id'])){$likes[1]=1;}else{$likes[1]=0;}
 
  //$user_profile = $facebook->api("/$user");
 
-print_r($response);
+print_r($likes);
 
 ?>
