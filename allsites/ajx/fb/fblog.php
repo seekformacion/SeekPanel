@@ -64,7 +64,7 @@ if(isset($user_permissions["data"][0]["publish_actions"])){
 $res['id']=$user;
 
 $inf=DBselect("select PID from Fb_fans where FID='$user';");	
-if(count($inf)>0){$PID=$inf[0]['PID'];$res['PID']=$PID;};
+if(count($inf)>0){$PID=$inf[1]['PID'];$res['PID']=$PID;};
 
 
 	
