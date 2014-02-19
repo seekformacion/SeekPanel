@@ -38,12 +38,27 @@ $friends = $facebook->api("/$user/friends");
 
 .bloque { padding:10px; border:1px solid #CCCCCC;}	
 
-.rank {width:250px; height:70px; position:absolute; top:0px; left:0px;}
+.rank {  background-color: #DDDDDD;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    color: #333333;
+    font-family: Arial;
+    font-size: 12px;
+    height: 51px;
+    left: 0;
+    padding: 4px;
+    position: absolute;
+    top: 1px;
+    width: 410px;
+}
 
 </style>
 
-<div class="bloque shadow rank">
-<img src="https://graph.facebook.com/<?php echo $user;?>/picture"/>
-</div>
+<div class="rank" style="";>
+<div style="position:relative; float:left;"><img src="https://graph.facebook.com/100007329815113/picture"/></div>
+<div style="position:relative; float:left; margin-left: 5px; width:155px; height: 50px;">Eduardo buena moya</div>
+</div>	
+	
+	
 
 
