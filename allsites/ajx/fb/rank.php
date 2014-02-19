@@ -14,8 +14,10 @@ if(isset($response['data'][0]['id'])){$likes[1]=1;}else{$likes[1]=0;}
 
 $user_profile = $facebook->api("/$user");
 
-print_r($user_profile); 
+//print_r($user_profile); 
  
  
 
 ?>
+
+<img src="https://graph.facebook.com/<?php echo $user;?>/picture"/>
