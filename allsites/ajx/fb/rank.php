@@ -74,8 +74,9 @@ position:absolute; top: 80px;}
 
 .dos { left:147px;}
 
-
+.ilogo {position:relative; float:left;}
 .ftab {background-color: #EEEEEE; border:1px solid #BBBBBB; height:40px; width:750px; position:relative; float:left; margin-bottom:10px; }
+.nber {position:relative; float:left; top:13px; width: 20px; text-align: center; font-family:Arial; font-size:14px; color:#444444}
 
 .likA {position:absolute; top:-10px; }
 
@@ -105,22 +106,43 @@ position:absolute; top: 80px;}
 <div id="uno" style="position: absolute; top: 150px; left:20px;">
 	
 
-	
 <div class="ftab" style="margin-top:30px;">
-<img src="https://seekformacion.com/img/global/fb/miniLog1.png" border="0">	
-	
+<img src="https://seekformacion.com/img/global/fb/miniLog1.png" border="0" class="ilogo">	
+
+<div style="left:87px;" class="nber">1</div>		
+<div style="left:202px;" class="nber">22</div>
+<div style="left:331px;" class="nber">145</div>
+
 </div>	
 	
 <div class="ftab">
-<img src="https://seekformacion.com/img/global/fb/miniLog2.png" border="0">
+<img src="https://seekformacion.com/img/global/fb/miniLog2.png" border="0" class="ilogo">
+
+<div style="left:87px;"  class="nber">-</div>		
+<div style="left:202px;" class="nber">-</div>
+<div style="left:331px;" class="nber">-</div>
+
+</div>	
+
+<div class="ftab">
+<img src="https://seekformacion.com/img/global/fb/miniLog3.png" border="0" class="ilogo">
+
+<div style="left:87px;"  class="nber">-</div>		
+<div style="left:202px;" class="nber">-</div>
+<div style="left:331px;" class="nber">-</div>
 	
 </div>	
+
 <div class="ftab">
-<img src="https://seekformacion.com/img/global/fb/miniLog3.png" border="0">	
+<img src="https://seekformacion.com/img/global/fb/miniLog4.png" border="0" class="ilogo">
+
+<div style="left:87px;"  class="nber">-</div>		
+<div style="left:202px;" class="nber">-</div>
+<div style="left:331px;" class="nber">-</div>
+	
 </div>	
-<div class="ftab">
-<img src="https://seekformacion.com/img/global/fb/miniLog4.png" border="0">	
-</div>	
+
+
 	
 <img src="https://seekformacion.com/img/global/fb/likP.png" border="0" class="likA" style="left:250px;">	
 <img src="https://seekformacion.com/img/global/fb/likA.png" border="0" class="likA" style="left:385px;">	
@@ -128,7 +150,3 @@ position:absolute; top: 80px;}
 	
 	
 </div>
-
-	
-
-
