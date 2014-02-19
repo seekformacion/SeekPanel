@@ -37,11 +37,11 @@ $name=$user_profile['name'];
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color='#999999');
 }
 
-.bloque { padding:10px; border:1px solid #CCCCCC;}	
+.bloque { padding:10px; border:1px solid #BBBBBB;}	
 
 .rank {    background-color: #DDDDDD;
-    border-bottom: 1px solid #CCCCCC;
-    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #BBBBBB;
+    border-top: 1px solid #BBBBBB;
     color: #333333;
     font-family: Arial;
     font-size: 12px;
@@ -55,24 +55,29 @@ $name=$user_profile['name'];
 
 .miniT{ font-family:Arial; font-size:10px; color:#333333;}
 
-.point { top: 19px; height:23px; background-color: #FFFFFF; border:1px solid #CCCCCC; border-radius: 20%; padding-top:7px; 
+.point { top: 19px; height:23px; background-color: #FFFFFF; border:1px solid #BBBBBB; border-radius: 20%; padding-top:7px; 
 font-family:Arial; font-size:10px; color:#333333; text-align: center}
 
 
 .contenedor{width:780px; height:450px; position:absolute; top:110px;}
 
-.pest {height: 23px; background-color: #FFFFFF;  border-right: 1px solid #CCCCCC; border-left: 1px solid #CCCCCC; padding:7px 30px 0px 30px;
+.pest {height: 23px; background-color: #FFFFFF;  border-right: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; padding:7px 30px 0px 30px;
 text-align:center; font-family:Arial; font-size:13px; font-style:italic;
- border-top: 1px solid #CCCCCC; position:absolute; top: 80px;}
+ border-top: 1px solid #BBBBBB; position:absolute; top: 80px;}
 
-.pest_off {height: 23px; background-color: #FFFFFF;  border-right: 1px solid #CCCCCC; border-left: 1px solid #CCCCCC; padding:7px 30px 0px 30px;
+.pest_off {height: 23px; padding:7px 30px 0px 30px; cursor:pointer;
 text-align:center; font-family:Arial; font-size:13px; font-style:italic;
- border-top: 1px solid #CCCCCC; position:absolute; top: 80px;}
+position:absolute; top: 80px;}
 
 
-.uno { left:30px;}
+.uno { left:20px;}
 
-.dos { left:230px;}
+.dos { left:147px;}
+
+
+.ftab {background-color: #EEEEEE; border:1px solid #BBBBBB; height:40px; width:750px; position:relative; float:left; margin-bottom:10px; }
+
+.likA {position:absolute; top:-10px; }
 
 </style>
 
@@ -94,7 +99,36 @@ text-align:center; font-family:Arial; font-size:13px; font-style:italic;
 	
 <div class="pest uno">Mis puntos</div>	
 <div class="pest_off dos">Conseguir puntos</div>		
+
+
+
+<div id="uno" style="position: absolute; top: 150px; left:20px;">
 	
+
+	
+<div class="ftab" style="margin-top:30px;">
+<img src="https://seekformacion.com/img/global/fb/miniLog1.png" border="0">	
+	
+</div>	
+	
+<div class="ftab">
+<img src="https://seekformacion.com/img/global/fb/miniLog2.png" border="0">
+	
+</div>	
+<div class="ftab">
+<img src="https://seekformacion.com/img/global/fb/miniLog3.png" border="0">	
+</div>	
+<div class="ftab">
+<img src="https://seekformacion.com/img/global/fb/miniLog4.png" border="0">	
+</div>	
+	
+<img src="https://seekformacion.com/img/global/fb/likP.png" border="0" class="likA" style="left:250px;">	
+<img src="https://seekformacion.com/img/global/fb/likA.png" border="0" class="likA" style="left:385px;">	
+<img src="https://seekformacion.com/img/global/fb/likAA.png" border="0" class="likA" style="left:506px;">		
+	
+	
+</div>
+
 	
 
 
