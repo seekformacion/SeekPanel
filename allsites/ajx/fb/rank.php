@@ -36,9 +36,9 @@ $friends = $facebook->api("/$user/friends");
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color='#999999');
 }
 
-.bloque { padding:10px;}	
+.bloque { padding:10px; border:1px solid #CCCCCC;}	
 
-.rank {width:150px; height:90px; position:absolute; top:0px; left:0px;}
+.rank {width:250px; height:70px; position:absolute; top:0px; left:0px;}
 
 </style>
 
