@@ -18,10 +18,32 @@ $res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;
 
 $user_profile = $facebook->api("/$user");
 $friends = $facebook->api("/$user/friends");
-print_r($friends); 
+//print_r($friends); 
  
  
 
 ?>
 
+<style>
+
+.shadow {
+    -moz-box-shadow: 3px 4px 8px #999;
+    -webkit-box-shadow: 3px 4px 8px #999;
+    box-shadow: 3px 4px 8px #999;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color='#999999')";
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color='#999999');
+}
+
+.bloque { padding:10px;}	
+
+.rank {width:150px; height:90px; position:absolute; top:0px; left:0px;}
+
+</style>
+
+<div class="bloque shadow rank">
 <img src="https://graph.facebook.com/<?php echo $user;?>/picture"/>
+</div>
+
+
