@@ -139,11 +139,7 @@ document.getElementById('contenido').innerHTML=id;
 }
 
 
-<?php
-if ($ref){
-echo "refer($ref);";	
-}
-?>	
+refer('<?php echo $ref;?>');	
 	
 getId();	
 
