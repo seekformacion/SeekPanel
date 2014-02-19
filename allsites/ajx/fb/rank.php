@@ -25,7 +25,6 @@ $name=$user_profile['name'];
  
 
 ?>
-
 <style>
 
 .shadow {
@@ -59,7 +58,24 @@ $name=$user_profile['name'];
 .point { top: 19px; height:23px; background-color: #FFFFFF; border:1px solid #CCCCCC; border-radius: 20%; padding-top:7px; 
 font-family:Arial; font-size:10px; color:#333333; text-align: center}
 
+
+.contenedor{width:780px; height:450px; position:absolute; top:110px;}
+
+.pest {height: 23px; background-color: #FFFFFF;  border-right: 1px solid #CCCCCC; border-left: 1px solid #CCCCCC; padding:7px 30px 0px 30px;
+text-align:center; font-family:Arial; font-size:13px; font-style:italic;
+ border-top: 1px solid #CCCCCC; position:absolute; top: 80px;}
+
+.pest_off {height: 23px; background-color: #FFFFFF;  border-right: 1px solid #CCCCCC; border-left: 1px solid #CCCCCC; padding:7px 30px 0px 30px;
+text-align:center; font-family:Arial; font-size:13px; font-style:italic;
+ border-top: 1px solid #CCCCCC; position:absolute; top: 80px;}
+
+
+.uno { left:30px;}
+
+.dos { left:230px;}
+
 </style>
+
 
 <div style="position: absolute; top: 3px; left:267px;" class="miniT">Puntos</div>	
 <div style="position: absolute; top: 3px; left:326px;" class="miniT">Ranking</div>	
@@ -72,6 +88,12 @@ font-family:Arial; font-size:10px; color:#333333; text-align: center}
 <div style="position: absolute; width:40px; left:324px;" class="point">51</div>		
 	
 	
+<div class="bloque shadow contenedor"></div>	
+	
+	
+	
+<div class="pest uno">Mis puntos</div>	
+<div class="pest_off dos">Conseguir puntos</div>		
 	
 	
 
