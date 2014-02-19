@@ -128,12 +128,13 @@ if(st==2){panel(getCookie('seekforFB_ID'));}
 
 
 function panel(id){
-//var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/ajxNotLog.php?url=' + encodeURIComponent(url);
-//$.get(url2, function(data){
-//  document.getElementById('contenido').innerHTML=data;
-//});
+
+var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/rank.php';
+$.get(url2, function(data){
+  document.getElementById('ranking').innerHTML=data;
+});
+
 	
-document.getElementById('contenido').innerHTML=id;	
 }
 
 
