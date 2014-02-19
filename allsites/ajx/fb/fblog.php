@@ -28,7 +28,13 @@ $user_permissions = $facebook->api("/$user/permissions");
 
 $expire=time()+60*60*24*2;
 if($user){
-setcookie("seekforFB_ID", $user, $expire, '/');	
+setcookie("seekforFB_ID", $user, $expire, '/');
+
+if (isset($_COOKIE["seekforFB_PID"])){
+$pid= $_COOKIE["seekforFB_PID"];
+$res=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");	
+}
+		
 }
 
 if(isset($user_permissions["data"][0]["publish_actions"])){
