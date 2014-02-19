@@ -18,7 +18,7 @@ $res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;
 
 $user_profile = $facebook->api("/$user");
 $friends = $facebook->api("/$user/friends");
-//print_r($friends); 
+print_r($user_profile); 
  
  
 
@@ -38,26 +38,38 @@ $friends = $facebook->api("/$user/friends");
 
 .bloque { padding:10px; border:1px solid #CCCCCC;}	
 
-.rank {  background-color: #DDDDDD;
+.rank {    background-color: #DDDDDD;
     border-bottom: 1px solid #CCCCCC;
     border-top: 1px solid #CCCCCC;
     color: #333333;
     font-family: Arial;
     font-size: 12px;
-    height: 51px;
+    height: 31px;
     left: 0;
     padding: 4px;
     position: absolute;
-    top: 1px;
+    top: 15px;
     width: 410px;
-}
+}    
+
+.miniT{ font-family:Arial; font-size:10px; color:#333333;}
+
+.point { top: 19px; height:23px; background-color: #FFFFFF; border:1px solid #CCCCCC; border-radius: 20%; padding-top:7px; 
+font-family:Arial; font-size:10px; color:#333333; text-align: center}
 
 </style>
 
+<div style="position: absolute; top: 3px; left:267px;" class="miniT">Puntos</div>	
+<div style="position: absolute; top: 3px; left:326px;" class="miniT">Ranking</div>	
 <div class="rank" style="";>
-<div style="position:relative; float:left;"><img src="https://graph.facebook.com/100007329815113/picture"/></div>
+<div style="position:relative; float:left;"><img src="https://graph.facebook.com/<?php echo $user; ?>/picture" style="width:30px; height:30px;"/></div>
 <div style="position:relative; float:left; margin-left: 5px; width:155px; height: 50px;">Eduardo buena moya</div>
 </div>	
+	
+<div style="position: absolute; width:40px; left:263px;" class="point">15251</div>	
+<div style="position: absolute; width:40px; left:324px;" class="point">51</div>		
+	
+	
 	
 	
 
