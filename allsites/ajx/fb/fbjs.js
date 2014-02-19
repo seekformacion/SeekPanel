@@ -63,13 +63,13 @@ function getId(){
 	
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fblog.php?aT=<?php echo $aT;?>';
 $.getJSON(url, function(data) {
+var FID="";	
 $.each(data, function(key, val) {
-
-if(key=='id'){panel(val);};			
-
+if(key=='id'){var FID=val;setCookie('seekforFB_ID',val,400);};			
+if(key=='PID'){setCookie('seekforFB_PID',val,400);};	
 if(key=='log'){logFB(val);};
-	
 });
+if(FID){panel(FID);}
 });		
 	
 	

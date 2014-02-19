@@ -56,6 +56,12 @@ $res['log']= $login_url;
 $user_permissions = $facebook->api("/$user/permissions");
 if(isset($user_permissions["data"][0]["publish_actions"])){
 $res['id']=$user;
+
+$inf=DBselect("select PID from Fb_fans where FID='$user';");	
+if(count($inf)>0){$PID=$inf[0]['PID'];$res['PID']=$PID;};
+
+
+	
 }else{
 $res['log']= $login_url;	
 }
