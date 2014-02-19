@@ -34,7 +34,6 @@ $portal=$portales[$idpFB];
 
 $app_data = '';
 if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
-echo "app_data: $app_data  <br>";
 
 
 

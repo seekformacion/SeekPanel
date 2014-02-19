@@ -37,6 +37,28 @@ function getCookie(w){
 }
 
 
+
+
+function refer(ref){
+var cref=getCookie('seekforFB_REF');
+var pid =getCookie('seekforFB_PID');	
+if((!cref)&&(!pid)){
+
+
+var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fbref.php?ref=' + ref;
+$.getJSON(url, function(data) {
+$.each(data, function(key, val) {
+
+setCookie('seekforFB_REF',ref,20);		
+});
+});
+
+
+
+}
+}
+
+
 function getId(){
 	
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fblog.php?aT=<?php echo $aT;?>';
@@ -116,7 +138,12 @@ function panel(id){
 document.getElementById('contenido').innerHTML=id;	
 }
 
-	
+
+<?php
+if ($ref){
+echo "refer($ref);";	
+}
+?>	
 	
 getId();	
 
