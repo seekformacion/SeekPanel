@@ -6,6 +6,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 if (isset($_COOKIE["seekforFB_FID"])){$user= $_COOKIE["seekforFB_FID"];};	
 
+echo "/$user/likes/1424213751150594";
 $response = $facebook->api("/$user/likes/1424213751150594");
 
  //$user_profile = $facebook->api("/$user");
