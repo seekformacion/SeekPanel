@@ -12,13 +12,13 @@ $cu=0;$ma=0;$fp=0;$op=0;
 $response = $facebook->api("/$user/likes/1424213751150594");
 if(isset($response['data'][0]['id'])){$likes[1]=1;$cu=1;}else{$likes[1]=0;}
 
-$response = $facebook->api("/$user/likes/--");
+$response = $facebook->api("/$user/likes/432712510165494");
 if(isset($response['data'][0]['id'])){$likes[2]=1;$ma=1;}else{$likes[2]=0;}
 
-$response = $facebook->api("/$user/likes/--");
+$response = $facebook->api("/$user/likes/216539681879446");
 if(isset($response['data'][0]['id'])){$likes[3]=1;$fp=1;}else{$likes[3]=0;}
 
-$response = $facebook->api("/$user/likes/--");
+$response = $facebook->api("/$user/likes/591979084222922");
 if(isset($response['data'][0]['id'])){$likes[4]=1;$op=1;}else{$likes[4]=0;}
 
 

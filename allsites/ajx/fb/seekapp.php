@@ -27,7 +27,9 @@ $portales[4]="oposicionesa.com";
 
 
 $eqP[1424213751150594]=1;
-
+$eqP[432712510165494]=2;
+$eqP[216539681879446]=3;
+$eqP[591979084222922]=4;
 
 $like_status = $signed_request["page"]["liked"];
 $idpFB = $eqP[$signed_request["page"]["id"]];
