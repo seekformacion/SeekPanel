@@ -229,6 +229,6 @@ position:absolute; top: 80px;}
 
 <div id="2" style="position: absolute; top: 150px; left:20px; visibility: hidden;">
 
-<div style="position: absolute; top: 150px; left:360px;"><img src="<?php echo $http_met;?>://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>		
+<div style="position: absolute; top: 150px; left:360px;"><img src="https/seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>		
 	
 </div>
