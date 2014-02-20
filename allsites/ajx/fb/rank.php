@@ -143,8 +143,8 @@ position:absolute; top: 80px;}
 
 <div style="position: absolute; top: 3px; left:267px;" class="miniT">Puntos</div>	
 <div style="position: absolute; top: 3px; left:326px;" class="miniT">Ranking</div>	
-<div class="rank" style="";>
-<div style="position:relative; float:left;"><img src="https://graph.facebook.com/<?php echo $user; ?>/picture" style="width:30px; height:30px;"/></div>
+<div class="rank">
+<div style="position:relative; float:left; margin-left: 3px;"><img src="https://graph.facebook.com/<?php echo $user; ?>/picture" style="width:30px; height:30px;"/></div>
 <div style="position:relative; float:left; margin-left: 5px; width:155px; height: 50px;"><?php echo $name;?></div>
 </div>	
 	
@@ -156,12 +156,18 @@ position:absolute; top: 80px;}
 	
 	
 	
-<div class="pest uno">Mis puntos</div>	
-<div class="pest_off dos">Conseguir puntos</div>		
+<div id="p1" class="pest uno" onclick="chkp(1);">Mis puntos</div>	
+<div id="p2" class="pest_off dos" onclick="chkp(2);">Conseguir puntos</div>		
 
 
 
-<div id="uno" style="position: absolute; top: 150px; left:20px;">
+<div id="1" style="position: absolute; top: 150px; left:20px; visibility: visible;">
+
+
+
+<div id="2" style="position: absolute; top: 150px; left:20px; visibility: hidden;">
+
+
 	
 
 <div class="ftab" style="margin-top:30px;">

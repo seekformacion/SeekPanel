@@ -137,6 +137,23 @@ $.get(url2, function(data){
 	
 }
 
+function chkp(v){
+if(v==1){	document.getElementById('2').style.visibility = "hidden";
+			document.getElementById('1').style.visibility = "visible";
+			document.getElementById('p1').className = "pest uno";
+			document.getElementById('p2').className = "pest_off dos"
+			
+			}
+if(v==2){	document.getElementById('1').style.visibility = "hidden";
+			document.getElementById('2').style.visibility = "visible";
+			document.getElementById('p1').className = "pest_off uno"
+			document.getElementById('p2').className = "pest dos"
+			}	
+}
+
+
+
+
 
 refer('<?php echo $ref;?>');	
 	
