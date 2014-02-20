@@ -72,7 +72,7 @@ function FacebookInviteFriends()
 FB.ui({
   method: 'send',
   link: 'https://www.facebook.com/cursodecursos/app_715730281795141?app_data=edededd',
-  message: 'Ayudame a ganar este concurso..' 
+  description: 'ijieojiejf frfrf '
 });
 
 }
