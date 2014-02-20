@@ -69,15 +69,11 @@ if($b=='iphone'){include('ciphone.php');};
    
 function FacebookInviteFriends()
 {
-
-    FB.ui({
-        method: 'send',
-        name: 'Concurso Apple. Iphone 5, IPad, IPad mini ',
-        picture: 'http://cursodecursos.com/img/global/fb/banerconcurso.jpg',
-        link: 'http://cursodecursos.com/ajx/fb/fbredir.php?referer=edefefeffefdedd',
-        description: 'Dale a `Me gusta` a esta página y ayúdame a ganar este concurso.'
-    });
-
+FB.ui({
+  method: 'send',
+  link: 'http://cursodecursos.com/ajx/fbredir.php?referer=edefefeffefdedd',
+  message: 'Ayudame a ganar este concurso..' 
+});
 
 }
    
