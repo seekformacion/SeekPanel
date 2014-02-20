@@ -50,6 +50,15 @@ foreach($friendStack as $friend_data) {
           status     : true,
           xfbml      : true
         });
+        
+        
+             FB.ui(
+ {
+  method: 'feed'
+ }
+);
+        
+        
       };
 
       (function(d, s, id){
@@ -60,11 +69,7 @@ foreach($friendStack as $friend_data) {
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
 
-     FB.ui(
- {
-  method: 'feed'
- }
-);
+
 
 
     </script>
