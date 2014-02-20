@@ -71,7 +71,7 @@ $res=DBUpIns("UPDATE Fb_fans SET puntos=$PTOT WHERE FID=$user;");
 
 $pos=1;
 $rk=DBselect("select distinct puntos as rk from Fb_fans ORDER BY rk DESC;");
-if(count($rk)>0){foreach($rk as $k => $val){$rank[$val]=$pos; $pos++;}}
+if(count($rk)>0){foreach($rk as $k => $val){$rank[$val['rk']]=$pos; $pos++;}}
 
 $ranking=$rank[$PTOT];
 ?>
