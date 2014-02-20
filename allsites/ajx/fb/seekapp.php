@@ -79,12 +79,6 @@ message: 'Ayudame a ganar este concurso..'
 </script>
 
 
-<script type='text/javascript'>
-if (top.location!= self.location)
-{
-top.location = self.location
-}
-</script>
 
 
 
