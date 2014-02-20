@@ -16,7 +16,7 @@
 
 <div style="position: absolute; width: 808px; top: 150px;"  id="contenido">
 	
-	
+<div style="position: absolute; top: 150px; left:400px;"><img src="<?php echo $http_met;?>://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>	
 	
 </div>
 
