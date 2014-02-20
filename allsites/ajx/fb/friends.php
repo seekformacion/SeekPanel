@@ -9,9 +9,9 @@ if (isset($_COOKIE["seekforFB_ID"])){$user= $_COOKIE["seekforFB_ID"];};
 
 //$response = $facebook->api("/$user/likes/1424213751150594");
 
-$friends = $facebook->api("/$user/friends"); echo "/$user/friends";
+$friends = $facebook->api("/$user/friends"); //echo "/$user/friends";
 
-print_r($friends);
+//print_r($friends);
 
 $attachment = array(
     'message' => 'hola hola',
@@ -40,7 +40,8 @@ foreach($friendStack as $friend_data) {
 
 
 ?>
-
+<html>
+<body>
 <div id="fb-root"></div>
     <script>
       window.fbAsyncInit = function() {
@@ -55,16 +56,34 @@ foreach($friendStack as $friend_data) {
          var js, fjs = d.getElementsByTagName(s)[0];
          if (d.getElementById(id)) {return;}
          js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/all.js";
+         js.src = "//connect.facebook.net/en_US/all/debug.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
 
-FB.ui({method: 'apprequests',
-  message: 'My Great Request'
-}, requestCallback);
+
 
 
     </script>
+
+
+
+
+joijiij
+
+
+<script>
+	FB.ui({method: 'apprequests',
+  message: 'My Great Request'
+}, requestCallback);
+</script>
+
+
+
+
+</body>
+</html>
+
+
 
 
 
