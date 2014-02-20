@@ -52,11 +52,19 @@ sum(op) as sop
 FROM Fb_fans WHERE REF IN (SELECT PID FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user'));");	
 if(count($inf)>0){	$DAA_CU=$inf[1]['scu']; $DAA_MA=$inf[1]['sma']; $DAA_FP=$inf[1]['sfp']; $DAA_OP=$inf[1]['sop']; } 
  
+$SUMP=($cu + $ma + $fp + $op)*100;
+
+ 
 $contL=0;  
-if(!$cu){$cu='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_CU="-"; $DAA_CU="-";$contL++;} 
-if(!$ma){$ma='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_MA="-"; $DAA_MA="-";$contL++;} 
-if(!$fp){$fp='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_FP="-"; $DAA_FP="-";$contL++;} 
-if(!$op){$op='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_OP="-"; $DAA_OP="-";$contL++;}  
+if(!$cu){$cu='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_CU="-"; $DAS_CU=0; $DAAS_CU=0; $DAA_CU="-";$contL++;}else{$DAS_CU=$DA_CU;$DAAS_CU=$DAA_CU;};
+if(!$ma){$ma='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_MA="-"; $DAS_MA=0; $DAAS_MA=0; $DAA_MA="-";$contL++;}else{$DAS_MA=$DA_MA;$DAAS_MA=$DAA_MA;};
+if(!$fp){$fp='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_FP="-"; $DAS_FP=0; $DAAS_FP=0; $DAA_FP="-";$contL++;}else{$DAS_FP=$DA_FP;$DAAS_FP=$DAA_FP;};
+if(!$op){$op='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_OP="-"; $DAS_OP=0; $DAAS_OP=0; $DAA_OP="-";$contL++;}else{$DAS_OP=$DA_OP;$DAAS_OP=$DAA_OP;};
+
+$SUMA=($DAS_CU + $DAS_MA + $DAS_FP + $DAS_OP)*30; 
+$SUMAA=($DAAS_CU + $DAAS_MA + $DAAS_FP + $DAAS_OP)*5; 
+
+$PTOT=$SUMP+$SUMA+$SUMAA;
 
 ?>
 <style>
@@ -124,7 +132,7 @@ position:absolute; top: 80px;}
 <div style="position:relative; float:left; margin-left: 5px; width:155px; height: 50px;"><?php echo $name;?></div>
 </div>	
 	
-<div style="position: absolute; width:40px; left:263px;" class="point">15251</div>	
+<div style="position: absolute; width:40px; left:263px;" class="point"><?php echo $PTOT;?></div>	
 <div style="position: absolute; width:40px; left:324px;" class="point">51</div>		
 	
 	
@@ -174,6 +182,22 @@ position:absolute; top: 80px;}
 <div style="left:202px;" class="nber"><?php echo $DA_OP;?></div>
 <div style="left:331px;" class="nber"><?php echo $DAA_OP;?></div>
 	
+</div>	
+
+
+<div class="ftab">
+
+
+<div style="left:6px;"   class="nber">Subtotales:</div>
+<div style="left:278px;" class="nber"><?php echo $SUMP;?></div>		
+<div style="left:394px;" class="nber"><?php echo $SUMA;?></div>
+<div style="left:524px;" class="nber"><?php echo $SUMAA;?></div>
+	
+</div>	
+
+
+<div class="ftabB">
+<div style="left:32px;"   class="nberB">Total puntos: <?php echo $PTOT;?></div>
 </div>	
 
 
