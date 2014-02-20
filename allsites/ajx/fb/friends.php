@@ -3,14 +3,7 @@
     <head>
     <title>Test</title>
 
-    <script type="text/javascript">
-    function facebook(){
-    	
-    FB.ui({method: 'apprequests', data: "https://www.facebook.com/cursodecursos/app_715730281795141?app_data=edededd" ,message: 'Ayudame a ganar este concurso..'}, requestCallback);	        
   
-    }
-    </script>
-
     </head>
 
     <body>
@@ -39,7 +32,7 @@ function FacebookInviteFriends()
 {
 FB.ui({
 method: 'apprequests',
-data: "https://www.facebook.com/cursodecursos/app_715730281795141?app_data=edededd" ,
+data: "bbb" ,
 message: 'Ayudame a ganar este concurso..'
 });
 }
