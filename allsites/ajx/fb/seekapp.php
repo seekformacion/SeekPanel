@@ -24,6 +24,8 @@ $portales[2]="masterenmasters.com";
 $portales[3]="fp-formacionprofesional.com";
 $portales[4]="oposicionesa.com";
 
+
+
 $eqP[1424213751150594]=1;
 
 
@@ -31,6 +33,7 @@ $like_status = $signed_request["page"]["liked"];
 $idpFB = $eqP[$signed_request["page"]["id"]];
 $portal=$portales[$idpFB];
 
+echo $idpFB;
 
 $app_data = '';
 if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
