@@ -71,7 +71,8 @@ function FacebookInviteFriends()
 {
 FB.ui({
 method: 'apprequests',
-message: 'Ayudame a ganar este concurso..'
+message: 'Ayudame a ganar este concurso..' ,
+data: 'daaatos'
 });
 }
    
