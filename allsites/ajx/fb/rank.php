@@ -66,6 +66,10 @@ $SUMAA=($DAAS_CU + $DAAS_MA + $DAAS_FP + $DAAS_OP)*5;
 
 $PTOT=$SUMP+$SUMA+$SUMAA;
 
+
+$res=DBUpIns("UPDATE Fb_fans SET puntos=$PTOT WHERE FID=$user;");
+
+
 ?>
 <style>
 
