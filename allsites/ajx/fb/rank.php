@@ -54,7 +54,9 @@ if(count($inf)>0){	$DAA_CU=$inf[1]['scu']; $DAA_MA=$inf[1]['sma']; $DAA_FP=$inf[
  
   
 if(!$cu){$cu=""; $DA_CU="-"; $DAA_CU="-";} 
- 
+if(!$ma){$ma=""; $DA_MA="-"; $DAA_MA="-";} 
+if(!$fp){$fp=""; $DA_FP="-"; $DAA_FP="-";} 
+if(!$op){$op=""; $DA_OP="-"; $DAA_OP="-";}  
 
 ?>
 <style>
@@ -141,7 +143,7 @@ position:absolute; top: 80px;}
 <div class="ftab" style="margin-top:30px;">
 <img src="https://seekformacion.com/img/global/fb/miniLog1.png" border="0" class="ilogo">	
 
-<div style="left:87px;" class="nber">1</div>		
+<div style="left:87px;" class="nber"><?php echo $cu;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_CU;?></div>
 <div style="left:331px;" class="nber"><?php echo $DAA_CU;?></div>
 
@@ -150,7 +152,7 @@ position:absolute; top: 80px;}
 <div class="ftab">
 <img src="https://seekformacion.com/img/global/fb/miniLog2.png" border="0" class="ilogo">
 
-<div style="left:87px;"  class="nber">-</div>		
+<div style="left:87px;"  class="nber"><?php echo $ma;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_MA;?></div>
 <div style="left:331px;" class="nber"><?php echo $DAA_MA;?></div>
 
@@ -159,7 +161,7 @@ position:absolute; top: 80px;}
 <div class="ftab">
 <img src="https://seekformacion.com/img/global/fb/miniLog3.png" border="0" class="ilogo">
 
-<div style="left:87px;"  class="nber">-</div>		
+<div style="left:87px;"  class="nber"><?php echo $fp;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_FP;?></div>
 <div style="left:331px;" class="nber"><?php echo $DAA_FP;?></div>
 	
@@ -168,7 +170,7 @@ position:absolute; top: 80px;}
 <div class="ftab">
 <img src="https://seekformacion.com/img/global/fb/miniLog4.png" border="0" class="ilogo">
 
-<div style="left:87px;"  class="nber">-</div>		
+<div style="left:87px;"  class="nber"><?php echo $op;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_OP;?></div>
 <div style="left:331px;" class="nber"><?php echo $DAA_OP;?></div>
 	
