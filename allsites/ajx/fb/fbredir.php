@@ -1,9 +1,25 @@
 <?php
 
+require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 
-print_r($_POST);
+$app_id = "457903137645239";
+$app_secret = "49d4a51a4b2febedecd26e28c6d71e27";
+$facebook = new Facebook(array(
+'appId' => $app_id,
+'secret' => $app_secret,
+'cookie' => true
+));
 
-print_r($_GET);
+$signed_request = $facebook->getSignedRequest();
+$app_data = '';
+if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
+
+
+print_r($signed_request);
+
+echo "<br>";
+
+echo $app_data;
 
 
 ?>
