@@ -70,10 +70,10 @@ if($b=='iphone'){include('ciphone.php');};
 function FacebookInviteFriends()
 {
 FB.ui({
-method: 'apprequests',
-message: 'Ayudame a ganar este concurso..' ,
-app_data: 'daaatos'
+  method: 'send',
+  link: 'https://www.facebook.com/cursodecursos/app_715730281795141?app_data=edededd',
 });
+
 }
    
 </script>
