@@ -60,7 +60,11 @@ foreach($friendStack as $friend_data) {
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
 
-
+     FB.ui(
+ {
+  method: 'feed'
+ }
+);
 
 
     </script>
