@@ -70,14 +70,14 @@ if($b=='iphone'){include('ciphone.php');};
 function FacebookInviteFriends()
 {
 FB.api('https://graph.facebook.com/', 'post', {
-    id: 'https://www.facebook.com/cursodecursos/app_715730281795141?app_data=edefefeffefdedd',
+    id: 'http://seekformacion.com/ajx/fb/fbredir.php?referer=edefefeffefdedd',
     scrape: true
 }, function(response) {
     FB.ui({
         method: 'send',
         name: 'Concurso Apple. Iphone 5, IPad, IPad mini ',
         picture: 'http://seekformacion.com/img/global/fb/banerconcurso.jpg',
-        link: 'https://www.facebook.com/cursodecursos/app_715730281795141?app_data=edefefeffefdedd',
+        link: 'http://seekformacion.com/ajx/fb/fbredir.php?referer=edefefeffefdedd',
         description: 'Dale a "Me gusta" a esta página y ayúdame a ganar este concurso.'
     });
 });
