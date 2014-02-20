@@ -14,8 +14,8 @@ $user_id="1018154356";
 $apprequest_url ="https://graph.facebook.com/" .
     $user_id .
     "/apprequests?message=AAAAAAAA’" . 
-    "&data=BBBBBBBB"  .   
-    $app_access_token . "&method=post";
+    "&data=BBBBBBBB&"  .   
+    $accessToken . "&method=post";
 
 
 echo $apprequest_url;
