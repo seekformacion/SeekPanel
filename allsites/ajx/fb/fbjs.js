@@ -136,6 +136,8 @@ $.get(url2, function(data){
   panel2();
 });
 
+}
+
 function panel2(){
 var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/friends.php';
 $.get(url2, function(data){
