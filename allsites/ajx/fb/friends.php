@@ -52,11 +52,9 @@ foreach($friendStack as $friend_data) {
         });
         
         
-             FB.ui(
- {
-  method: 'feed'
- }
-);
+FB.ui({method: 'apprequests',
+  message: 'My Great Request'
+}, requestCallback);
         
         
       };
@@ -65,7 +63,7 @@ foreach($friendStack as $friend_data) {
          var js, fjs = d.getElementsByTagName(s)[0];
          if (d.getElementById(id)) {return;}
          js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/all/debug.js";
+         js.src = "//connect.facebook.net/es_ES/all/debug.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
 
@@ -77,10 +75,7 @@ foreach($friendStack as $friend_data) {
 
 
 
-joijiij
 
-
-<div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
 
 
 </body>
