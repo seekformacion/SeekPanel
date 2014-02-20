@@ -128,7 +128,7 @@ if(st==2){panel(getCookie('seekforFB_ID'));}
 
 
 function panel(id){
-
+document.getElementById('contenido').innerHTML='';
 var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/rank.php';
 $.get(url2, function(data){
   document.getElementById('ranking').innerHTML=data;
