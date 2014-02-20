@@ -69,10 +69,7 @@ if($b=='iphone'){include('ciphone.php');};
    
 function FacebookInviteFriends()
 {
-FB.api('https://graph.facebook.com/', 'post', {
-    id: 'http://seekformacion.com/ajx/fb/fbredir.php?referer=edefefeffefdedd',
-    scrape: true
-}, function(response) {
+
     FB.ui({
         method: 'send',
         name: 'Concurso Apple. Iphone 5, IPad, IPad mini ',
@@ -80,7 +77,7 @@ FB.api('https://graph.facebook.com/', 'post', {
         link: 'http://seekformacion.com/ajx/fb/fbredir.php?referer=edefefeffefdedd',
         description: 'Dale a "Me gusta" a esta página y ayúdame a ganar este concurso.'
     });
-});
+
 
 }
    
