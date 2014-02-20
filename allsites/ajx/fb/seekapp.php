@@ -45,7 +45,7 @@ if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"];
 if($b=='iphone'){include('ciphone.php');};
 
 
-$friends = $facebook->api('friends.get');
+$friends = $facebook->api('/me/friends');
 print_r($friends);
 
 ?>
