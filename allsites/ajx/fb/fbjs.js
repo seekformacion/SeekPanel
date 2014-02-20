@@ -65,7 +65,7 @@ var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fblog.php?aT=<?php e
 $.getJSON(url, function(data) {
 	
 $.each(data, function(key, val) {
-if(key=='id'){setCookie('seekforFB_ID',val,400);panel(val);};			
+if(key=='id'){setCookie('seekforFB_ID',val,400);pasnel(val);};			
 if(key=='PID'){setCookie('seekforFB_PID',val,400);};	
 if(key=='log'){logFB(val);};
 });});		
