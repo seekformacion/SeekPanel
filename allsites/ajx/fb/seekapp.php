@@ -52,7 +52,7 @@ if($b=='iphone'){include('ciphone.php');};
 <script type="text/javascript">
           window.fbAsyncInit = function() {
         FB.init({
-          appId      : '457903137645239',
+          appId      : '715730281795141',
           status     : true,
           xfbml      : true
         });
@@ -71,8 +71,6 @@ function FacebookInviteFriends()
 {
 FB.ui({
 method: 'apprequests',
-data: "tgtgtgtg" ,
-message: 'Ayudame a ganar este concurso..'
 });
 }
    
