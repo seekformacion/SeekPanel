@@ -52,7 +52,7 @@ if($b=='iphone'){include('ciphone.php');};
 <script type="text/javascript">
           window.fbAsyncInit = function() {
         FB.init({
-          appId      : '715730281795141',
+          appId      : '457903137645239',
           status     : true,
           xfbml      : true
         });
