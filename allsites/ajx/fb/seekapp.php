@@ -73,9 +73,9 @@ function FacebookInviteFriends()
     FB.ui({
         method: 'send',
         name: 'Concurso Apple. Iphone 5, IPad, IPad mini ',
-        picture: 'http://seekformacion.com/img/global/fb/banerconcurso.jpg',
-        link: 'http://seekformacion.com/ajx/fb/fbredir.php?referer=edefefeffefdedd',
-        description: 'Dale a "Me gusta" a esta página y ayúdame a ganar este concurso.'
+        picture: 'http://cursodecursos.com/img/global/fb/banerconcurso.jpg',
+        link: 'http://cursodecursos.com/ajx/fb/fbredir.php?referer=edefefeffefdedd',
+        description: 'Dale a `Me gusta` a esta página y ayúdame a ganar este concurso.'
     });
 
 
