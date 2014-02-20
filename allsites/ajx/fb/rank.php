@@ -30,7 +30,7 @@ $user_profile = $facebook->api("/$user");
 $friends = $facebook->api("/$user/friends");
 
 $name=$user_profile['name'];
-//print_r($user_profile); 
+print_r($friends); 
  
 $DA_CU=0;$DA_MA=0;$DA_FP=0;$DA_OP=0; 
 $DAA_CU=0;$DAA_MA=0;$DAA_FP=0;$DAA_OP=0; 
