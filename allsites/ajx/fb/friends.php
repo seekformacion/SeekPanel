@@ -1,10 +1,34 @@
 
 
+<?php
+
+
+require '/www/repositorios/facebook-php-sdk/src/facebook.php';
+require '/www/httpd/seekformacion.com/fbdata.php';
+
+
+$accessToken = $facebook->getAccessToken();
+
+$user_id="1018154356";
+
+$apprequest_url ="https://graph.facebook.com/" .
+    $user_id .
+    "/apprequests?message=AAAAAAAA’" . 
+    "&data=BBBBBBBB"  .   
+    $app_access_token . "&method=post";
+
+
+echo $apprequest_url;
+$result = file_get_contents($apprequest_url);
+ echo("Request id number: " . $result);
 
 
 
+?>
 
 
+
+<!--
 
    <!DOCTYPE html>
     <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
@@ -73,5 +97,5 @@ Facebook Invite Friends Link
     </body>
     </html>
 
-
+-->
 
