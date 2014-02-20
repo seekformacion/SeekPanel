@@ -23,6 +23,10 @@ $attachment = array(
   
 );
 
+
+
+//www.facebook.com/dialog/apprequests?app_id=715730281795141&message=Facebook%20Dialogs%20are%20so%20easy!&redirect_uri=http://www.example.com/response
+
 //$result = $facebook->api("/1018154356/feed/",'post',$attachment);
 
 /*
@@ -36,3 +40,31 @@ foreach($friendStack as $friend_data) {
 
 
 ?>
+
+<div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '715730281795141',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+FB.ui({method: 'apprequests',
+  message: 'My Great Request'
+}, requestCallback);
+
+
+    </script>
+
+
+
