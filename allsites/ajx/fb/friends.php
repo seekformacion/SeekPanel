@@ -7,7 +7,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 if (isset($_COOKIE["seekforFB_ID"])){$user= $_COOKIE["seekforFB_ID"];};	
 
 
-$response = $facebook->api("/$user/likes/1424213751150594");
+//$response = $facebook->api("/$user/likes/1424213751150594");
 
 $friends = $facebook->api("/$user/friends"); echo "/$user/friends";
 
