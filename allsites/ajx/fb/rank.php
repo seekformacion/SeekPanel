@@ -112,17 +112,25 @@ text-align:center; font-family:Arial; font-size:13px; font-style:italic;
 position:absolute; top: 80px;}
 
 
+
 .uno { left:20px;}
 
 .dos { left:147px;}
 
 .ilogo {position:relative; float:left;}
 .ftab {background-color: #EEEEEE; border:1px solid #BBBBBB; height:40px; width:750px; position:relative; float:left; margin-bottom:10px; }
+
+.ftabB {background-color: #EEEEEE; border:1px solid #BBBBBB; height:40px; width:200px; position:relative; float:right; margin-bottom:10px; margin-right: 36px; }
+
 .nber {position:relative; float:left; top:13px; width: 20px; text-align: center; font-family:Arial; font-size:14px; color:#444444}
+
+.nberB {position:relative; float:left; top:13px;  text-align: center; font-family:Arial; font-size: 15px;  color:#444444}
+
 
 .likA {position:absolute; top:-10px; }
 
 </style>
+
 
 
 <div style="position: absolute; top: 3px; left:267px;" class="miniT">Puntos</div>	
