@@ -69,7 +69,11 @@ $PTOT=$SUMP+$SUMA+$SUMAA;
 
 $res=DBUpIns("UPDATE Fb_fans SET puntos=$PTOT WHERE FID=$user;");
 
+$pos=1;
+$rk=DBselect("select distinct puntos as rk from Fb_fans ORDER BY rk DESC;");
+if(count($rk)>0){foreach($rk as $k => $val){$rank[$val]=$pos; $pos++;}}
 
+$ranking=$rank[$PTOT];
 ?>
 <style>
 
@@ -145,7 +149,7 @@ position:absolute; top: 80px;}
 </div>	
 	
 <div style="position: absolute; width:40px; left:263px;" class="point"><?php echo $PTOT;?></div>	
-<div style="position: absolute; width:40px; left:324px;" class="point">51</div>		
+<div style="position: absolute; width:40px; left:324px;" class="point"><?php echo $ranking;?></div>		
 	
 	
 <div class="bloque shadow contenedor"></div>	
