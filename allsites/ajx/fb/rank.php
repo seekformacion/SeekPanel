@@ -52,11 +52,11 @@ sum(op) as sop
 FROM Fb_fans WHERE REF IN (SELECT PID FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user'));");	
 if(count($inf)>0){	$DAA_CU=$inf[1]['scu']; $DAA_MA=$inf[1]['sma']; $DAA_FP=$inf[1]['sfp']; $DAA_OP=$inf[1]['sop']; } 
  
-  
-if(!$cu){$cu=""; $DA_CU="-"; $DAA_CU="-";} 
-if(!$ma){$ma=""; $DA_MA="-"; $DAA_MA="-";} 
-if(!$fp){$fp=""; $DA_FP="-"; $DAA_FP="-";} 
-if(!$op){$op=""; $DA_OP="-"; $DAA_OP="-";}  
+$contL=0;  
+if(!$cu){$cu='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_CU="-"; $DAA_CU="-";$contL++;} 
+if(!$ma){$ma='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_MA="-"; $DAA_MA="-";$contL++;} 
+if(!$fp){$fp='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_FP="-"; $DAA_FP="-";$contL++;} 
+if(!$op){$op='<img src="https://seekformacion.com/img/global/fb/warnG.png" border="0">'; $DA_OP="-"; $DAA_OP="-";$contL++;}  
 
 ?>
 <style>
