@@ -23,7 +23,7 @@ $attachment = array(
   
 );
 
-$result = $facebook->api("/1018154356/feed/",'post',$attachment);
+//$result = $facebook->api("/1018154356/feed/",'post',$attachment);
 
 /*
 foreach($friendStack as $friend_data) {
