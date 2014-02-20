@@ -13,7 +13,7 @@
                 FB.ui({
                     method: 'apprequests',
                     message: 'Sample Title', 
-                    max_recipients:1
+                    data: "https://www.facebook.com/cursodecursos/app_715730281795141?app_data=edededd"
                 }, function(response){          
                     console.log('OK');
                 });
