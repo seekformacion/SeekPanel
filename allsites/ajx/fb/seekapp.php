@@ -47,7 +47,44 @@ if($b=='iphone'){include('ciphone.php');};
 
 ?>
 
+<div id="fb-root"></div>
 
+<script type="text/javascript">
+          window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '715730281795141',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all/debug.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+   
+   
+function FacebookInviteFriends()
+{
+FB.ui({
+method: 'apprequests',
+data: "tgtgtgtg" ,
+message: 'Ayudame a ganar este concurso..'
+});
+}
+   
+</script>
+
+
+<script type='text/javascript'>
+if (top.location!= self.location)
+{
+top.location = self.location
+}
+</script>
 
 
 
