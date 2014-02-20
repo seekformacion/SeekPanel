@@ -1,24 +1,21 @@
 
 
+
+
+
+
+
+
    <!DOCTYPE html>
     <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
     <head>
     <title>Test</title>
 
     <script type="text/javascript">
-    function facebook(){        
-        FB.login(function(response) {
-            if (response.authResponse) {
-                var access_token = FB.getAuthResponse()['accessToken'];
-                FB.ui({
-                    method: 'apprequests',
-                    message: 'Ayudame a ganar este concurso..', 
-                    data: "https://www.facebook.com/cursodecursos/app_715730281795141?app_data=edededd"
-                }, function(response){          
-                    console.log('OK');
-                });
-            }
-        }, {scope: 'publish_stream'});
+    function facebook(){
+    	
+    FB.ui({method: 'apprequests', data: "https://www.facebook.com/cursodecursos/app_715730281795141?app_data=edededd" ,message: 'Ayudame a ganar este concurso..'}, requestCallback);	        
+  
     }
     </script>
 
@@ -44,10 +41,34 @@
          js.src = "//connect.facebook.net/en_US/all/debug.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
-    </script>
+   
+   
+function FacebookInviteFriends()
+{
+FB.ui({
+method: 'apprequests',
+data: "https://www.facebook.com/cursodecursos/app_715730281795141?app_data=edededd" ,
+message: 'Ayudame a ganar este concurso..'
+});
+}
+   
+   
+ </script>
 
 
-<p><a href="javascript:facebook();">Test</a></p>
+<script type='text/javascript'>
+if (top.location!= self.location)
+{
+top.location = self.location
+}
+</script>
+
+
+//HTML Code
+<div id="fb-root"></div>
+<a href='#' onclick="FacebookInviteFriends();"> 
+Facebook Invite Friends Link
+</a>
 
     </body>
     </html>
