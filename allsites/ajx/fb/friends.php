@@ -32,7 +32,7 @@ function FacebookInviteFriends()
 {
 FB.ui({
 method: 'apprequests',
-data: "bbb" ,
+link: "http://seekformacion.com" ,
 message: 'Ayudame a ganar este concurso..'
 });
 }
