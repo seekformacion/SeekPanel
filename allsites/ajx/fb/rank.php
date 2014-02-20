@@ -12,6 +12,16 @@ $cu=0;$ma=0;$fp=0;$op=0;
 $response = $facebook->api("/$user/likes/1424213751150594");
 if(isset($response['data'][0]['id'])){$likes[1]=1;$cu=1;}else{$likes[1]=0;}
 
+$response = $facebook->api("/$user/likes/--");
+if(isset($response['data'][0]['id'])){$likes[2]=1;$ma=1;}else{$likes[2]=0;}
+
+$response = $facebook->api("/$user/likes/--");
+if(isset($response['data'][0]['id'])){$likes[3]=1;$fp=1;}else{$likes[3]=0;}
+
+$response = $facebook->api("/$user/likes/--");
+if(isset($response['data'][0]['id'])){$likes[4]=1;$op=1;}else{$likes[4]=0;}
+
+
 $res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;");
 
  //$user_profile = $facebook->api("/$user");
@@ -22,6 +32,28 @@ $friends = $facebook->api("/$user/friends");
 $name=$user_profile['name'];
 //print_r($user_profile); 
  
+$DA_CU=0;$DA_MA=0;$DA_FP=0;$DA_OP=0; 
+$DAA_CU=0;$DAA_MA=0;$DAA_FP=0;$DAA_OP=0; 
+ 
+$inf=DBselect("select 
+sum(cu) as scu, 
+sum(ma) as sma, 
+sum(fp) as sfp, 
+sum(op) as sop 
+FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user');");	
+if(count($inf)>0){	$DA_CU=$inf[1]['scu']; $DA_MA=$inf[1]['sma']; $DA_FP=$inf[1]['sfp']; $DA_OP=$inf[1]['sop']; } 
+ 
+
+$inf=DBselect("select 
+sum(cu) as scu, 
+sum(ma) as sma, 
+sum(fp) as sfp, 
+sum(op) as sop 
+FROM Fb_fans WHERE REF IN (SELECT PID FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user'));");	
+if(count($inf)>0){	$DAA_CU=$inf[1]['scu']; $DAA_MA=$inf[1]['sma']; $DAA_FP=$inf[1]['sfp']; $DAA_OP=$inf[1]['sop']; } 
+ 
+  
+if(!$cu){$cu=""; $DA_CU="-"; $DAA_CU="-";} 
  
 
 ?>
@@ -110,8 +142,8 @@ position:absolute; top: 80px;}
 <img src="https://seekformacion.com/img/global/fb/miniLog1.png" border="0" class="ilogo">	
 
 <div style="left:87px;" class="nber">1</div>		
-<div style="left:202px;" class="nber">22</div>
-<div style="left:331px;" class="nber">145</div>
+<div style="left:202px;" class="nber"><?php echo $DA_CU;?></div>
+<div style="left:331px;" class="nber"><?php echo $DAA_CU;?></div>
 
 </div>	
 	
@@ -119,8 +151,8 @@ position:absolute; top: 80px;}
 <img src="https://seekformacion.com/img/global/fb/miniLog2.png" border="0" class="ilogo">
 
 <div style="left:87px;"  class="nber">-</div>		
-<div style="left:202px;" class="nber">-</div>
-<div style="left:331px;" class="nber">-</div>
+<div style="left:202px;" class="nber"><?php echo $DA_MA;?></div>
+<div style="left:331px;" class="nber"><?php echo $DAA_MA;?></div>
 
 </div>	
 
@@ -128,8 +160,8 @@ position:absolute; top: 80px;}
 <img src="https://seekformacion.com/img/global/fb/miniLog3.png" border="0" class="ilogo">
 
 <div style="left:87px;"  class="nber">-</div>		
-<div style="left:202px;" class="nber">-</div>
-<div style="left:331px;" class="nber">-</div>
+<div style="left:202px;" class="nber"><?php echo $DA_FP;?></div>
+<div style="left:331px;" class="nber"><?php echo $DAA_FP;?></div>
 	
 </div>	
 
@@ -137,8 +169,8 @@ position:absolute; top: 80px;}
 <img src="https://seekformacion.com/img/global/fb/miniLog4.png" border="0" class="ilogo">
 
 <div style="left:87px;"  class="nber">-</div>		
-<div style="left:202px;" class="nber">-</div>
-<div style="left:331px;" class="nber">-</div>
+<div style="left:202px;" class="nber"><?php echo $DA_OP;?></div>
+<div style="left:331px;" class="nber"><?php echo $DAA_OP;?></div>
 	
 </div>	
 
