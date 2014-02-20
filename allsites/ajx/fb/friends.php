@@ -9,7 +9,7 @@ if (isset($_COOKIE["seekforFB_ID"])){$user= $_COOKIE["seekforFB_ID"];};
 
 $response = $facebook->api("/$user/likes/1424213751150594");
 
-$friends = $facebook->api('/me/friends');
+$friends = $facebook->api('/$user/friends'); echo "'/$user/friends'";
 
 print_r($friends);
 
