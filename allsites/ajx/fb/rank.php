@@ -164,12 +164,6 @@ position:absolute; top: 80px;}
 <div id="1" style="position: absolute; top: 150px; left:20px; visibility: visible;">
 
 
-
-<div id="2" style="position: absolute; top: 150px; left:20px; visibility: hidden;">
-
-
-	
-
 <div class="ftab" style="margin-top:30px;">
 <img src="https://seekformacion.com/img/global/fb/miniLog1.png" border="0" class="ilogo">	
 
@@ -230,3 +224,7 @@ position:absolute; top: 80px;}
 	
 	
 </div>
+
+
+
+<div id="2" style="position: absolute; top: 150px; left:20px; visibility: hidden;"></div>
