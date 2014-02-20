@@ -27,10 +27,10 @@ $res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;
  //$user_profile = $facebook->api("/$user");
 
 $user_profile = $facebook->api("/$user");
-$friends = $facebook->api("/$user/friends");
+//$friends = $facebook->api("/$user/friends");
 
 $name=$user_profile['name'];
-print_r($friends); 
+//print_r($friends); 
  
 $DA_CU=0;$DA_MA=0;$DA_FP=0;$DA_OP=0; 
 $DAA_CU=0;$DAA_MA=0;$DAA_FP=0;$DAA_OP=0; 
