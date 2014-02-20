@@ -71,13 +71,7 @@ foreach($friendStack as $friend_data) {
 joijiij
 
 
-<script>
-	FB.ui({method: 'apprequests',
-  message: 'My Great Request'
-}, requestCallback);
-</script>
-
-
+<div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
 
 
 </body>
