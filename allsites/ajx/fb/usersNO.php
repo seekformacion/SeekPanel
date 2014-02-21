@@ -19,7 +19,7 @@ if(count($rk)>0){foreach($rk as $kk =>$dato){$idIN=$dato['FID']; $usserSI[$idIN]
 }}
 
 $listNO=""; $NoC=0;
-foreach ($usserT as $nus => $un) {if(!array_key_exists($nus, $usserSI)){$listNO.=$nus . ", ";$NoC++;}}
+foreach ($usserT as $nus => $un) {if(!array_key_exists($nus, $usserSI)){$listNO.=$nus . ",";$NoC++;}}
 $listNO=substr($listNO, 0,-2);
 
 
@@ -28,7 +28,11 @@ $res['play']=$allC;
 $res['nplay']=$NoC;
 
 if($NoC>0){
-$res['filter']="{name: 'Amigos que aun no juegan', user_ids: [$listNO]}";
+
+$fil['name']='Amigos que aun no juegan';	
+$fil['user_ids']=explode(','$listNO);
+	
+$res['filter']=json_encode($fil) //"{name: 'Amigos que aun no juegan', user_ids: [$listNO]}";
 }else{
 $res['nomore']="1";		
 }
