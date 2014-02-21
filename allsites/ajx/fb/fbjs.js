@@ -192,6 +192,46 @@ if(v==2){	document.getElementById('1').style.visibility = "hidden";
 
 
 
+function FacebookInviteFriends()
+{
+ref=getCookie('seekforFB_PID');	
+
+var filts="";
+
+var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/usersNO.php';
+
+
+$.getJSON(url, function(data) {	
+$.each(data, function(key, val) {
+
+console.log[key + " : " + val];			
+
+if(key=='filter'){filts=val;};
+
+});});	
+
+
+FB.ui({
+  method: 'apprequests',
+  data: ref, 
+  message: 'Ayudame a ganar el concurso Apple', 
+  filters: [{name: 'Amigos que no concursan', user_ids: [filts]}]	
+});
+
+//filters: [{name: 'Amigos que aun no juegan', user_ids: [1018154356, 100007329815113]}]
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 refer('<?php echo $ref;?>');	
