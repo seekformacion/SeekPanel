@@ -33,7 +33,7 @@ $res['play']=$allC;
 $res['nplay']=$NoC;
 
 if($NoC>0){
-$res['filter']="[{name: 'Aún no concursan', user_ids: [$listNO]}]";	
+$res['filter']=$listNO;	
 }else{
 $res['nomore']="1";		
 }
