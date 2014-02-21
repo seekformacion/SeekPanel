@@ -215,7 +215,7 @@ if(key=='filter'){filts=val;};
 
 
 console.info(filts);
-filt = JSON.parse(filts);
+filt =  eval('('+filts+')');;
 console.info(filt);
 
 
