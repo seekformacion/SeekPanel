@@ -195,38 +195,25 @@ if(v==2){	document.getElementById('1').style.visibility = "hidden";
 function FacebookInviteFriends()
 {$.ajaxSetup({'async': false});
 ref=getCookie('seekforFB_PID');	
-
 var filts="";
-
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/usersNO.php';
-
-console.log("--- aqui si --");
-	
 $.getJSON(url, function(data) {
-$.each(data, function(key, val) {
-if(key=="filter"){setCookie('sekf_fNO',val,1);};
-console.log(key + " : " + val);	
+$.each(data, function(key, val) {if(key=="filter"){setCookie('sekf_fNO',val,1);};
 });
 });
 
 
 filts=getCookie('sekf_fNO');	
-console.info(filts);
-
-
 var filt="[{name: 'Amigos que aun no juegan', user_ids: [" + filts + "]}]";
 
-
-console.info(filt);
-
-
+if(filts){
 FB.ui({
   method: 'apprequests',
   data: ref, 
   message: 'Ayudame a ganar el concurso Apple', 
   filters: filt	
 });
-
+}
 
 //var json = '{"result":true,"count":1}',
 //obj = JSON.parse(fill);
