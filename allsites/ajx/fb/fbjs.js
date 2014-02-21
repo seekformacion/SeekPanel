@@ -215,7 +215,11 @@ if(key=='filter'){filts=val;};
 
 
 console.info(filts);
-filt =  eval('('+filts+')');;
+
+
+var filt="[{name: 'Amigos que aun no juegan', user_ids: [" + filts + "]}]";
+
+
 console.info(filt);
 
 
@@ -223,7 +227,7 @@ FB.ui({
   method: 'apprequests',
   data: ref, 
   message: 'Ayudame a ganar el concurso Apple', 
-  filters: [filts]	
+  filters: filt	
 });
 
 

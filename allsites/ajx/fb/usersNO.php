@@ -32,7 +32,7 @@ if($NoC>0){
 $fil['name']='Amigos que aun no juegan';	
 $fil['user_ids']=$listNO;
 	
-$res['filter']=json_encode($fil); //"{name: 'Amigos que aun no juegan', user_ids: [$listNO]}";
+$res['filter']=$listNO; //"{name: 'Amigos que aun no juegan', user_ids: [$listNO]}";
 }else{
 $res['nomore']="1";		
 }
