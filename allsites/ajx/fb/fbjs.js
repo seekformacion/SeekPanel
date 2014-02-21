@@ -213,8 +213,8 @@ if(key=='filter'){filts=val;};
 });
 
 
-fill = JSON.parse(filts);
-console.info(fill)
+//fill = JSON.parse(filts);
+console.info(filts)
 
 var user_ids=
 
@@ -222,7 +222,7 @@ FB.ui({
   method: 'apprequests',
   data: ref, 
   message: 'Ayudame a ganar el concurso Apple', 
-  filters: obj	
+  filters: filts	
 });
 
 
