@@ -14,7 +14,7 @@ $allC=0;$allusers="";
 foreach ($friends as $da => $uus) {foreach($uus as $key => $val){$allusers .=$val['id'] . ","; $allC++;} $usserT[$val['id']]=1;}
 $allusers=substr($allusers, 0,-1);
 
-$rk=DBselect("SELECT FID from Fb_fans WHERE FID IN ($allusers);");
+$rk=DBselect("SELECT FID from Fb_fans WHERE FID IN ($allusers);"); echo "<br><br>SELECT FID from Fb_fans WHERE FID IN ($allusers);<br><br>";
 if(count($rk)>0){foreach($rk as $kk =>$dato){$idIN=$dato['FID']; $usserSI[$idIN]=1;
 }}
 
