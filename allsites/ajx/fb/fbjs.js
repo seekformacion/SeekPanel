@@ -204,7 +204,7 @@ console.log("--- aqui si --");
 	
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
-if(key=='filter'){var filts=val; console.info(filts);};
+if(key=="filter"){var filts=val; console.info(filts);};
 console.log(key + " : " + val);	
 });
 });
