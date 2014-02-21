@@ -42,7 +42,7 @@ function getCookie(w){
 function refer(){
 var pid =getCookie('seekforFB_PID');	
 
-if((!pid){
+if(!pid){
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fbref.php';
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
