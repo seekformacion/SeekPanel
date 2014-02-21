@@ -10,11 +10,26 @@ $user= $_COOKIE["seekforFB_ID"];
 
 $friends = $facebook->api("/$user/friends");
 
-print_r($friends);
+$allC=0;$allusers="";
+foreach ($friends as $da => $uus) {foreach($uus as $key => $val){$allusers .=$val['id'] . ","; $allC++;} $usserT[$val['id']]=1;}
+$allusers=substr($allusers, 0,-1);
+
+$rk=DBselect("SELECT FID from Fb_fans WHERE FID IN ($allusers);");
+if(count($rk)>0){foreach($rk as $kk =>$dato){$idIN=$dato['FID']; $usserSI[$idIN]=1;
+}}
+
+$listNO=""; $NoC=0;
+foreach ($usserT as $nus => $un) {if(!array_key_exists($nus, $usserSI)){$listNO.=$nus . ",";$NoC++;}}
+$listNO=substr($listNO, 0,-1);
 
 
-//$rk=DBselect("select distinct puntos as rk from Fb_fans ORDER BY rk DESC;");
-};
+
+echo "$allC --> $NoC <br><br>";
+
+echo "$listNO <br><br>";
+echo "$allusers <br><br>";
+
+}
 
 
 ?>
