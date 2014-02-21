@@ -53,6 +53,6 @@ echo $app_data;
 
 <script type="text/javascript">
 
-document.location.href ="<?php echo $req_data;?>";
+parent.document.location.href ="<?php echo $req_data;?>";
 
 </script>
