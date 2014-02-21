@@ -28,7 +28,7 @@ $res['play']=$allC;
 $res['nplay']=$NoC;
 
 if($NoC>0){
-$res['filter']=$listNO;	
+$res['filter']="[{name: 'Amigos que no concursan', user_ids: [$listNO]}]";
 }else{
 $res['nomore']="1";		
 }
