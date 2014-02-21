@@ -28,7 +28,8 @@ function FacebookInviteFriends()
 {
 FB.ui({
   method: 'apprequests',
-  link: 'http://cursodecursos.com/ajx/fbredir.php?referer=edefefeffefdedd',
+  data: 'https://seekformacion.com/ajx/fb/fbredir.php?datos=111111', 
+  redirect_uri: 'https://seekformacion.com/ajx/fb/fbredir.php?datos=22222', 
   message: 'Ayudame a ganar el concurso Apple'
 });
 

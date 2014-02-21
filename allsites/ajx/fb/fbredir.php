@@ -14,6 +14,11 @@ $signed_request = $facebook->getSignedRequest();
 $app_data = '';
 if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
 
+print_r($_GET);
+echo "<br>";
+print_r($_POST);
+
+echo "<br>";
 
 print_r($signed_request);
 
