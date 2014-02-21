@@ -200,7 +200,8 @@ var filts="";
 
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/usersNO.php';
 
-
+console.log[key + " : " + val];
+	
 $.getJSON(url, function(data) {	
 $.each(data, function(key, val) {
 
