@@ -14,7 +14,7 @@ $allC=0;$allusers="";
 foreach($friends['data'] as $key => $val){$allusers .=$val['id'] . ","; $allC++; $usserT[$val['id']]=1;} 
 $allusers=substr($allusers, 0,-1);
 
-$rk=DBselect("SELECT FID from Fb_fans WHERE FID IN ($allusers);"); echo "<br><br>SELECT FID from Fb_fans WHERE FID IN ($allusers);<br><br>";
+$rk=DBselect("SELECT FID from Fb_fans WHERE FID IN ($allusers);"); //echo "<br><br>SELECT FID from Fb_fans WHERE FID IN ($allusers);<br><br>";
 if(count($rk)>0){foreach($rk as $kk =>$dato){$idIN=$dato['FID']; $usserSI[$idIN]=1;
 }}
 
@@ -24,11 +24,22 @@ $listNO=substr($listNO, 0,-1);
 
 
 
-echo "$allC --> $NoC <br><br>";
+//echo "$allC --> $NoC <br><br>";
 
-echo "$listNO <br><br>";
-echo "$allusers <br><br>";
+//echo "$listNO <br><br>";
+//echo "$allusers <br><br>";
 
+$res['play']=$allC;
+$res['nplay']=$NoC;
+
+if($NoC>0){
+$res['filter']="[{name: 'Aún no concursan', user_ids: [$listNO]}]";	
+}else{
+$res['nomore']="1";		
+}
+
+
+echo json_encode($res);
 }
 
 
