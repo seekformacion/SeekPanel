@@ -204,13 +204,13 @@ console.log("--- aqui si --");
 	
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
-if(key=="filter"){var filts=val; console.info(filts);};
+if(key=="filter"){setCookie('sekf_fNO',val,1);};
 console.log(key + " : " + val);	
 });
 });
 
 
-
+filts=getCookie('sekf_fNO');	
 console.info(filts);
 
 
