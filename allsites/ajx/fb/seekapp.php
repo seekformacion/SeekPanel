@@ -74,7 +74,7 @@ ref=getCookie('seekforFB_PID');
 console.log(ref);	
 FB.ui({
   method: 'apprequests',
-  data: 'dddd', 
+  data: 'https://seekformacion.com/ajx/fb/fbredir.php?datos=' + ref, 
   message: 'Ayudame a ganar el concurso Apple'
 });
 
