@@ -16,8 +16,12 @@ return $code;
 function create_new_user($ref){
 
 
+
+
+if (isset($_COOKIE["seekforFB_REFDE"])){$REF= $_COOKIE["seekforFB_REFDE"];}
+
 $PID=strtoupper(getUniqueCode(9));
-$res=DBUpIns("INSERT INTO Fb_fans (PID,REF) values ('$PID','$ref');");
+$res=DBUpIns("INSERT INTO Fb_fans (PID,REF) values ('$PID','$REF');");
 
 return $PID;
 
