@@ -68,8 +68,10 @@ if($b=='iphone'){include('ciphone.php');};
        }(document, 'script', 'facebook-jssdk'));
    
    
-function FacebookInviteFriends(ref)
+function FacebookInviteFriends()
 {
+ref=getCookie('seekforFB_PID');	
+console.log(ref);	
 FB.ui({
   method: 'apprequests',
   data: ref, 
