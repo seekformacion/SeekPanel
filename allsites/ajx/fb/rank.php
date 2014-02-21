@@ -232,16 +232,6 @@ position:absolute; top: 80px;}
 	
 </div>
 
-
-
-<div id="2" style="position: absolute; top: 150px; left:20px; visibility: hidden;">
-
-<div style="position: absolute; top: 150px; left:334px;"><img src="https://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>		
-	
-</div>
-
-
-
 <script type="text/javascript">
 	
 function FacebookInviteFriends()
@@ -255,5 +245,15 @@ FB.ui({
 }
 	
 </script>
+
+<div id="2" style="position: absolute; top: 150px; left:20px; visibility: hidden;">
+
+<div style="position: absolute; top: 150px; left:334px;"><img src="https://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>		
+	
+</div>
+
+
+
+
 
 
