@@ -29,7 +29,6 @@ function FacebookInviteFriends()
 FB.ui({
   method: 'apprequests',
   data: 'https://seekformacion.com/ajx/fb/fbredir.php?datos=111111', 
-  redirect_uri: 'https://seekformacion.com/ajx/fb/fbredir.php?datos=22222', 
   message: 'Ayudame a ganar el concurso Apple'
 });
 
