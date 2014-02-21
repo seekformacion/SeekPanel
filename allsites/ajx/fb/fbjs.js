@@ -200,16 +200,17 @@ var filts="";
 
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/usersNO.php';
 
-console.log[key + " : " + val];
+console.log("--- aqui si --");
 	
-$.getJSON(url, function(data) {	
+$.getJSON(url, function(data) {
 $.each(data, function(key, val) {
 
-console.log[key + " : " + val];			
+console.log(key + " : " + val);			
 
 if(key=='filter'){filts=val;};
 
-});});	
+});
+});
 
 
 FB.ui({
