@@ -91,7 +91,7 @@ FB.ui({
   method: 'apprequests',
   data: ref, 
   message: 'Ayudame a ganar el concurso Apple', 
-  filters: [{name: 'Aún no concursan', user_ids: [filts]}]	
+  filters: [{name: 'Amigos que no concursan', user_ids: [filts]}]	
 });
 
 //filters: [{name: 'Amigos que aun no juegan', user_ids: [1018154356, 100007329815113]}]
