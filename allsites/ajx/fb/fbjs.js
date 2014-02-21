@@ -193,7 +193,7 @@ if(v==2){	document.getElementById('1').style.visibility = "hidden";
 
 
 function FacebookInviteFriends()
-{
+{$.ajaxSetup({'async': false});
 ref=getCookie('seekforFB_PID');	
 
 var filts="";
