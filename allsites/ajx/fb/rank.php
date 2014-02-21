@@ -34,6 +34,27 @@ $name=$user_profile['name'];
  
 $DA_CU=0;$DA_MA=0;$DA_FP=0;$DA_OP=0; 
 $DAA_CU=0;$DAA_MA=0;$DAA_FP=0;$DAA_OP=0; 
+
+
+$portales[1]="https://www.facebook.com/cursodecursos/app_715730281795141";
+$portales[2]="https://www.facebook.com/cursodecursos/app_715730281795141";
+$portales[3]="https://www.facebook.com/cursodecursos/app_715730281795141";
+$portales[4]="https://www.facebook.com/cursodecursos/app_715730281795141";
+
+$signed_request = $facebook->getSignedRequest();
+$eqP[1424213751150594]=1;
+$eqP[432712510165494]=2;
+$eqP[216539681879446]=3;
+$eqP[591979084222922]=4;
+$idpFB = $eqP[$signed_request["page"]["id"]];
+
+
+
+
+$inf=DBselect("SELECT PID from Fb_fans WHERE FID='$user';");
+if(count($inf)>0){	$PID=$inf[1]['PID'];}
+$redire= =$PID . "|" .$portales[$idpFB];
+ 
  
 $inf=DBselect("select 
 sum(cu) as scu, 
@@ -232,3 +253,21 @@ position:absolute; top: 80px;}
 <div style="position: absolute; top: 150px; left:334px;"><img src="https://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>		
 	
 </div>
+
+
+
+<script>
+	
+	function FacebookInviteFriends()
+{
+FB.ui({
+  method: 'apprequests',
+  data: '<?php echo $redire; ?>', 
+  message: 'Ayudame a ganar el concurso Apple'
+});
+
+}
+	
+</script>
+
+

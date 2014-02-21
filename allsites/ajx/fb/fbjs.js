@@ -24,15 +24,7 @@ window.fbAsyncInit = function() {
        }(document, 'script', 'facebook-jssdk'));
    
    
-function FacebookInviteFriends()
-{
-FB.ui({
-  method: 'apprequests',
-  data: 'https://seekformacion.com/ajx/fb/fbredir.php?datos=111111', 
-  message: 'Ayudame a ganar el concurso Apple'
-});
 
-}
 
 
 

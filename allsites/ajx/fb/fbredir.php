@@ -11,48 +11,19 @@ $facebook = new Facebook(array(
 ));
 
 $signed_request = $facebook->getSignedRequest();
-$app_data = '';
-if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
-
-//$fbid = $facebook->getUser();
-
-
 $request_ids = $_GET['request_ids'];
 $request_ids = explode(",", $request_ids);
 foreach($request_ids as $request_id)
-    {
-        $request_object = $facebook->api($request_id);
-         if(isset($request_object['data'])) $req_data = $request_object['data']; //$req_data will be '12345' as per your request data set.
-       // after getting the data, you may like to delete the request.
-          // $full_request_id = $request_id."_".$fbid; //$fbid is current user facebook id
-          //$facebook->api("$full_request_id","DELETE");
-     }
-	
-	
+    {$request_object = $facebook->api($request_id);
+     if(isset($request_object['data'])) $req_data = $request_object['data']; //$req_data will be '12345' as per your request data set.
+    }
 
-echo "<br>";
-print_r($req_data);
-
-echo "<br>";
-
-
-print_r($_GET);
-echo "<br>";
-print_r($_POST);
-
-echo "<br>";
-
-print_r($signed_request);
-
-echo "<br>";
-
-echo $app_data;
-
+echo $req_data;
 
 ?>
 
 <script type="text/javascript">
 
-top.location.href ="<?php echo $req_data;?>";
+//top.location.href ="<?php echo $req_data;?>";
 
 </script>
