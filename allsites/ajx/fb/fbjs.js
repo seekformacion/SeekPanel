@@ -213,12 +213,21 @@ if(key=='filter'){filts=val;};
 });
 
 
+fill = JSON.parse(filts);
+console.info(fill)
+
+var user_ids=
+
 FB.ui({
   method: 'apprequests',
   data: ref, 
   message: 'Ayudame a ganar el concurso Apple', 
-  filters: [{name: 'Amigos que no concursan', user_ids: [100006051094341, 100007780393344]}]	
+  filters: obj	
 });
+
+
+var json = '{"result":true,"count":1}',
+obj = JSON.parse(fill);
 
 //filters: [{name: 'Amigos que aun no juegan', user_ids: [1018154356, 100007329815113]}]
 
