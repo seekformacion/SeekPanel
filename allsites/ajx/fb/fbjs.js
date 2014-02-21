@@ -207,12 +207,7 @@ filts=getCookie('sekf_fNO');
 var filt="[{name: 'Amigos que aun no juegan', user_ids: [" + filts + "]}]";
 
 if(filts){
-FB.ui({
-  method: 'apprequests',
-  data: ref, 
-  message: 'Ayudame a ganar el concurso Apple', 
-  filters: filt	
-});
+FB.ui({  method: 'apprequests',  data: ref,  message: 'Listado de amigos que no participan aún en el concurso.',  filters: filt });
 }
 
 //var json = '{"result":true,"count":1}',
