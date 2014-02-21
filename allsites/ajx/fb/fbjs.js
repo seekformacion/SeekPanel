@@ -6,6 +6,38 @@ foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo .
 ?>
 
 
+
+window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '457903137645239',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/es_ES/all/debug.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+   
+   
+function FacebookInviteFriends()
+{
+FB.ui({
+  method: 'apprequests',
+  link: 'http://cursodecursos.com/ajx/fbredir.php?referer=edefefeffefdedd',
+  message: 'Ayudame a ganar el concurso Apple'
+});
+
+}
+
+
+
+
+
 function setCookie(c_name,value,exdays)
 {
 var exdate=new Date();
