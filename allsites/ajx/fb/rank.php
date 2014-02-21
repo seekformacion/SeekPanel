@@ -41,19 +41,19 @@ $portales[2]="https://www.facebook.com/cursodecursos/app_715730281795141";
 $portales[3]="https://www.facebook.com/cursodecursos/app_715730281795141";
 $portales[4]="https://www.facebook.com/cursodecursos/app_715730281795141";
 
-$signed_request = $facebook->getSignedRequest();
-$eqP[1424213751150594]=1;
-$eqP[432712510165494]=2;
-$eqP[216539681879446]=3;
-$eqP[591979084222922]=4;
-$idpFB = $eqP[$signed_request["page"]["id"]];
+//$signed_request = $facebook->getSignedRequest();
+//$eqP[1424213751150594]=1;
+//$eqP[432712510165494]=2;
+//$eqP[216539681879446]=3;
+//$eqP[591979084222922]=4;
+//$idpFB = $eqP[$signed_request["page"]["id"]];
 
 
 
 
 $inf=DBselect("SELECT PID from Fb_fans WHERE FID='$user';");
-if(count($inf)>0){	$PID=$inf[1]['PID'];}
-$redire= =$PID . "|" .$portales[$idpFB];
+if(count($inf)>0){	$PID=$inf[1]['PID'];};
+$redire=$PID . "|" .$portales[$idpFB];
  
  
 $inf=DBselect("select 
