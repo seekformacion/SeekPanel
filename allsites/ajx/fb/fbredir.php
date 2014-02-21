@@ -53,6 +53,6 @@ echo $app_data;
 
 <script type="text/javascript">
 
-window.location = "https://www.facebook.com/cursodecursos/app_715730281795141"
+document.location.href ="<?php echo $req_data;?>";
 
 </script>
