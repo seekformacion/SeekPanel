@@ -19,7 +19,7 @@ if(count($rk)>0){foreach($rk as $kk =>$dato){$idIN=$dato['FID']; $usserSI[$idIN]
 }}
 
 $listNO=""; $NoC=0;
-foreach ($usserT as $nus => $un) {if(!array_key_exists($nus, $usserSI)){$listNO.=$nus . "|";$NoC++;}}
+foreach ($usserT as $nus => $un) {if(!array_key_exists($nus, $usserSI)){$listNO.=$nus . ",";$NoC++;}}
 $listNO=substr($listNO, 0,-1);
 
 
