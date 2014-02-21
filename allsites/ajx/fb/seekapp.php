@@ -74,7 +74,7 @@ ref=getCookie('seekforFB_PID');
 console.log(ref);	
 FB.ui({
   method: 'apprequests',
-  data: ref, 
+  data: 'dddd', 
   message: 'Ayudame a ganar el concurso Apple'
 });
 
