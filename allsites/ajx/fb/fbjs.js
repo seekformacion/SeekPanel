@@ -216,9 +216,8 @@ if(key=='filter'){filts=val;};
 
 console.info(filts);
 filt = JSON.parse(filts);
-console.info(filt)
+console.info(filt);
 
-var user_ids=
 
 FB.ui({
   method: 'apprequests',
