@@ -63,28 +63,18 @@ function getCookie(w){
 
 
 
-function refer(ref){
-var cref=getCookie('seekforFB_REF');
+function refer(){
 var pid =getCookie('seekforFB_PID');	
 
-
-if((!cref)&&(!pid)){
-
-
-var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fbref.php?ref=' + ref;
-
-console.log(url);
-
+if((!pid){
+var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fbref.php';
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
 if(key=='PID'){setCookie('seekforFB_PID',val,400);setCookie('seekforFB_REF',ref,400);	}
-
 });
 });
-
-
-
 }
+
 }
 
 
@@ -192,37 +182,32 @@ if(v==2){	document.getElementById('1').style.visibility = "hidden";
 
 
 
-function FacebookInviteFriends()
-{
+function FacebookInviteFriends(){
 ref=getCookie('seekforFB_PID');	
 var filts="";
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/usersNO.php';
 $.getJSON(url, function(data) {
-$.each(data, function(key, val) {if(key=="filter"){dialogInv(val)};
+$.each(data, function(key, val) {
+	if(key=="filter"){dialogInv(val)};
+	if(key=="nomore"){nomoreF()};
 });
 });
 
 }
-
 
 
 
 function dialogInv(filts){
-
 var filt="[{name: 'Amigos que aun no juegan', user_ids: [" + filts + "]}]";
 if(filts){
 FB.ui({  method: 'apprequests',  data: ref,  message: 'Listado de amigos que no participan aún en el concurso.',  filters: filt });
 }	
-	
 }
 
 
 
 
-
-
-
-refer('<?php echo $ref;?>');	
+refer();	
 	
 getId();	
 

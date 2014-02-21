@@ -1,8 +1,6 @@
 <?php
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
-
 ######### add boton   https://www.facebook.com/dialog/pagetab?api_key=715730281795141&next=https%3A%2F%2Fwww.facebook.com%2F
-
 ########## params https://www.facebook.com/cursodecursos?v=app_715730281795141&app_data=jajajajaj
 
 if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
@@ -12,11 +10,6 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 $accessToken = $facebook->getAccessToken();
-
-//echo "$accessToken <br>";
-//echo "view: $b <br>";
-
-
 $signed_request = $facebook->getSignedRequest();
 
 $portales[1]="cursodecursos.com";
@@ -51,24 +44,21 @@ if($b=='iphone'){include('ciphone.php');};
 <div id="fb-root"></div>
 
 <script type="text/javascript">
-        window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '457903137645239',
-          status     : true,
-          xfbml      : true
-        });
-      };
+window.fbAsyncInit = function() {
+FB.init({
+appId      : '457903137645239',
+status     : true,
+xfbml      : true
+});
+};
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/es_LA/all/debug.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-   
-   
-
+(function(d, s, id){
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) {return;}
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/es_LA/all/debug.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
    
 </script>
 
