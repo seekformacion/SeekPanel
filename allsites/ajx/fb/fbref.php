@@ -13,7 +13,7 @@ return $code;
 }
 
 
-function create_new_user($ref){
+function create_new_user(){
 
 
 
@@ -28,7 +28,7 @@ return $PID;
 }
 
 
-if($ref){$val['PID']=create_new_user($ref);};
+$val['PID']=create_new_user($ref);
 
 echo json_encode($val);
 
