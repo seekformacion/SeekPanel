@@ -153,7 +153,7 @@ if(st==2){panel();}
 
 function panel(){
 document.getElementById('contenido').innerHTML='<div style="position: absolute; top: 150px; left:360px;"><img src="<?php echo $http_met;?>://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>	';
-var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/rank.php?idpFB=<?php echo $idpFB;?>';
+var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/rank.php';
 $.get(url2, function(data){
   document.getElementById('contenido').innerHTML="";	
   document.getElementById('ranking').innerHTML=data;
