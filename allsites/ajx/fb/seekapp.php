@@ -77,7 +77,8 @@ filts="";
 
 $.getJSON(url, function(data) {	
 $.each(data, function(key, val) {
-if(key=='filter'){filts=val;};			
+if(key=='filter'){filts=val;};
+console.log[key + " : " + val];			
 });});	
 
 if(filts){	
