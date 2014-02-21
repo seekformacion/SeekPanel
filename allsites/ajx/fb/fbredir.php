@@ -14,7 +14,7 @@ $signed_request = $facebook->getSignedRequest();
 $app_data = '';
 if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
 
-$fbid = $facebook->getUser();
+//$fbid = $facebook->getUser();
 
 
 $request_ids = $_GET['request_ids'];
@@ -24,8 +24,8 @@ foreach($request_ids as $request_id)
         $request_object = $facebook->api($request_id);
          if(isset($request_object['data'])) $req_data = $request_object['data']; //$req_data will be '12345' as per your request data set.
        // after getting the data, you may like to delete the request.
-           $full_request_id = $request_id."_".$fbid; //$fbid is current user facebook id
-          $facebook->api("$full_request_id","DELETE");
+          // $full_request_id = $request_id."_".$fbid; //$fbid is current user facebook id
+          //$facebook->api("$full_request_id","DELETE");
      }
 	
 	
