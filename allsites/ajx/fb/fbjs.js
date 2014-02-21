@@ -223,7 +223,7 @@ FB.ui({
   method: 'apprequests',
   data: ref, 
   message: 'Ayudame a ganar el concurso Apple', 
-  filters: filt	
+  filters: [filts]	
 });
 
 
