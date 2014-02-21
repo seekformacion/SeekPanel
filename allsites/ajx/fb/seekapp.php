@@ -68,7 +68,15 @@ if($b=='iphone'){include('ciphone.php');};
        }(document, 'script', 'facebook-jssdk'));
    
    
+function FacebookInviteFriends(ref)
+{
+FB.ui({
+  method: 'apprequests',
+  data: ref, 
+  message: 'Ayudame a ganar el concurso Apple'
+});
 
+}
    
 </script>
 

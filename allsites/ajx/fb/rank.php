@@ -234,15 +234,7 @@ position:absolute; top: 80px;}
 
 <script type="text/javascript">
 	
-function FacebookInviteFriends()
-{
-FB.ui({
-  method: 'apprequests',
-  data: '<?php echo $redire; ?>', 
-  message: 'Ayudame a ganar el concurso Apple'
-});
 
-}
 	
 </script>
 
