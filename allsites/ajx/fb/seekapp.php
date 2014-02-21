@@ -75,8 +75,12 @@ console.log(ref);
 FB.ui({
   method: 'apprequests',
   data: ref, 
-  message: 'Ayudame a ganar el concurso Apple'
+  message: 'Ayudame a ganar el concurso Apple', 
+  filters: [{name: 'Usuarios que aun no participan', user_ids: [1018154356, 100007329815113,]}]	
 });
+
+//filters: [{name: 'Usuarios que aun no participan', user_ids: [1, 2, 3]}
+
 
 }
    
