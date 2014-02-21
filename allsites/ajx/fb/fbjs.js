@@ -193,35 +193,28 @@ if(v==2){	document.getElementById('1').style.visibility = "hidden";
 
 
 function FacebookInviteFriends()
-{$.ajaxSetup({'async': false});
+{
 ref=getCookie('seekforFB_PID');	
 var filts="";
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/usersNO.php';
 $.getJSON(url, function(data) {
-$.each(data, function(key, val) {if(key=="filter"){setCookie('sekf_fNO',val,1);};
+$.each(data, function(key, val) {if(key=="filter"){dialogInv(val)};
 });
 });
 
+}
 
-filts=getCookie('sekf_fNO');	
+
+
+
+function dialogInv(filts){
+
 var filt="[{name: 'Amigos que aun no juegan', user_ids: [" + filts + "]}]";
-
 if(filts){
 FB.ui({  method: 'apprequests',  data: ref,  message: 'Listado de amigos que no participan aún en el concurso.',  filters: filt });
+}	
+	
 }
-
-//var json = '{"result":true,"count":1}',
-//obj = JSON.parse(fill);
-
-//filters: [{name: 'Amigos que aun no juegan', user_ids: [1018154356, 100007329815113]}]
-
-
-}
-
-
-
-
-
 
 
 
