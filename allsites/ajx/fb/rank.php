@@ -36,11 +36,14 @@ $DA_CU=0;$DA_MA=0;$DA_FP=0;$DA_OP=0;
 $DAA_CU=0;$DAA_MA=0;$DAA_FP=0;$DAA_OP=0; 
 
 
-
+/*
 $inf=DBselect("SELECT PID from Fb_fans WHERE FID='$user';");
 if(count($inf)>0){	$PID=$inf[1]['PID'];};
-$redire=$PID;
- 
+
+$expire=time()+60*60*24*2;
+setcookie("seekforFB_PEM", $PID, $expire, '/'); 
+*/
+
  
 $inf=DBselect("select 
 sum(cu) as scu, 
@@ -232,11 +235,7 @@ position:absolute; top: 80px;}
 	
 </div>
 
-<script type="text/javascript">
-	
 
-	
-</script>
 
 <div id="2" style="position: absolute; top: 150px; left:20px; visibility: hidden;">
 
