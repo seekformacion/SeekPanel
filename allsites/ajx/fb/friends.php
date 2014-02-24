@@ -39,7 +39,7 @@ $ref=$_COOKIE["seekforFB_PID"];
     left: 120px;
     position: absolute;
     top: 267px;
-    width: 551px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?></div>    
+    width: 551px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?>&idp=<?php echo $idp;?></div>    
 
 
 
