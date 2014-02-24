@@ -36,10 +36,10 @@ $ref=$_COOKIE["seekforFB_PID"];
 <div style=" color: #0000FF;
     font-family: Arial;
     font-size: 13px;
-    left: 120px;
+    left: 105px;
     position: absolute;
     top: 267px;
-    width: 551px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?>&idp=<?php echo $idp;?></div>    
+    width: 570px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?>&idp=<?php echo $idp;?></div>    
 
 
 
