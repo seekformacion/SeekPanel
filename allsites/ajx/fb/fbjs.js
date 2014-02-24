@@ -129,7 +129,7 @@ $.get(url2, function(data){
 }
 
 function panel2(){
-var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/friends.php';
+var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/friends.php?idp=<?php echo $idp;?>';
 $.get(url2, function(data){
    document.getElementById('2').innerHTML=data;
  });
@@ -154,7 +154,7 @@ if(v==2){	document.getElementById('1').style.visibility = "hidden";
 
 
 function FacebookInviteFriends(){
-ref=getCookie('seekforFB_PID');	
+
 var filts="";
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/usersNO.php';
 $.getJSON(url, function(data) {
@@ -169,6 +169,7 @@ $.each(data, function(key, val) {
 
 
 function dialogInv(filts){
+ref=getCookie('seekforFB_PID');		
 var filt="[{name: 'Amigos que aun no juegan', user_ids: [" + filts + "]}]";
 if(filts){
 FB.ui({  method: 'apprequests',  data: ref,  message: 'Listado de amigos que no participan aún en el concurso.',  filters: filt });

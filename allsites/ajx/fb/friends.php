@@ -1,5 +1,15 @@
 <?php
 
+foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
+
+$portales[1]="cursodecursos.com";
+$portales[2]="masterenmasters.com";
+$portales[3]="fp-formacionprofesional.com";
+$portales[4]="oposicionesa.com";
+
+
+
+
 if (isset($_COOKIE["seekforFB_PID"])){
 $ref=$_COOKIE["seekforFB_PID"];	
 }
@@ -23,7 +33,13 @@ $ref=$_COOKIE["seekforFB_PID"];
     
     
     
-<div style="left: 158px;position: absolute;top: 314px; font-size: 15px; font-family: Arial; color: blue">http://cursodecursos.com/ajx/cApple.php?ref=<?php echo $ref;?></div>    
+<div style=" color: #0000FF;
+    font-family: Arial;
+    font-size: 13px;
+    left: 120px;
+    position: absolute;
+    top: 267px;
+    width: 551px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?></div>    
 
 
 
