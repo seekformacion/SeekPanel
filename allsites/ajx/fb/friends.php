@@ -15,7 +15,7 @@ $ref=$_COOKIE["seekforFB_PID"];
 }
 
 ?>
-<img src="https://seekformacion.com/img/global/fb/friends.gif" style="float: left;    left: 84px;    position: absolute;    top: 0px; " border="0">
+<img src="https://seekformacion.com/img/global/fb/friends.gif" style="float: left;left: 10px;position: absolute;top: 0px; " border="0">
 
 <div style="  cursor: pointer;
     height: 40px;
