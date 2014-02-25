@@ -24,6 +24,25 @@ $ref=$_COOKIE["seekforFB_PID"];
     top: 115px;
     width: 251px;" onclick="postWall();"></div>
 
+<div style=" 
+    height: 20px;
+    left: 92px;
+    position: absolute;
+    top: 165px;
+    width: 251px;
+    text-align: center" id="mtim"><img src="http://seekformacion.com/img/global/fb/mtimer.gif"></div>
+
+<div style=" 
+    height: 20px;
+    left: 92px;
+    position: absolute;
+    top: 165px;
+    width: 251px;
+    text-align: center
+    font-family:Arial;
+    font-size:11px; color:#336600" id="mtim2">!Enlace publicado en tu muro correctamente! </div>
+
+
 <div style="   cursor: pointer;
     height: 40px;
     left: 428px;
