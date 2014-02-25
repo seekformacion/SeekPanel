@@ -187,9 +187,9 @@ $.each(data, function(key, val) {
 
 function dialogInv(filts){
 ref=getCookie('seekforFB_PID');		
-var filt="[{name: 'A&uacute;n no juegan', user_ids: [" + filts + "]}]";
+var filt="[{name: 'Aun no juegan', user_ids: [" + filts + "]}]";
 if(filts){
-FB.ui({  method: 'apprequests',  data: ref,  message: 'Listado de amigos que no participan a&uacute;n en el concurso.',  filters: filt });
+FB.ui({  method: 'apprequests',  data: ref,  message: 'Listado de amigos que no estan participando aun en el concurso.',  filters: filt });
 }	
 }
 
