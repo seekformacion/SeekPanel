@@ -26,6 +26,6 @@ $post= $facebook->api("/$user/feed", 'post',  array(
 
 echo $url;
 
-echo $post;
+print_r($post);
 
 ?>
