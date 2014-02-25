@@ -16,7 +16,7 @@ $portales[3]="fp-formacionprofesional.com";
 $portales[4]="oposicionesa.com";
 
 
-$url="https://" . $portales[$idp] . "/ajx/cApple.php?ref=$ref&idp=" . $idp;
+$url="http://" . $portales[$idp] . "/ajx/cApple.php?ref=$ref&idp=" . $idp;
 
 $post= $facebook->api("/$user/feed", 'post',  array(
                                       'link' => $url,
