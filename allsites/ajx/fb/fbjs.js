@@ -154,18 +154,13 @@ if(v==2){	document.getElementById('1').style.visibility = "hidden";
 
 
 function postWall(){
-
-var filts="";
+document.getElementById('mtim').style.visibility = "visible";
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/postwall.php?idp=<?php echo $idp;?>';
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
-
-
-
+if(key=='id'){document.getElementById('mtim').style.visibility = "hidden";document.getElementById('mtim2').style.visibility = "visible";}
 });
 });
-	
-	
 }
 
 
