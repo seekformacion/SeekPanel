@@ -158,6 +158,7 @@ position:absolute; top: 80px;}
     top: 343px;
     width: 739px;}
 
+.pend {position: relative; float:left; margin-right:30px;}
 </style>
 
 
@@ -261,14 +262,16 @@ $pend="";
 foreach ($likes as $idpp => $vale) {if($vale==0){
 		$porti=$ports[$idpp]['i'];
 		$portii=$ports[$idpp]['ii'];   
+		$pend .="<div class='pend'><a href='https://www.facebook.com/$porti/app_715730281795141'>Seekformación $portii</a></div>";
 		$pend .="<div class='pend'><a href='https://www.facebook.com/$porti/app_715730281795141'>Seekformación $portii</a></div>"; 
+		$pend .="<div class='pend'><a href='https://www.facebook.com/$porti/app_715730281795141'>Seekformación $portii</a></div>";   
 }}
 
 ?>
 
 <div class="alert">
 
-<img src="https://seekformacion.com/img/global/fb/warnO.png" border="0">
+<img src="https://seekformacion.com/img/global/fb/warnO.png" border="0" style="position:relative; float:left">
 Aun puedes conseguir puntos dando "Me gusta" a otros portales del grupo Seekformación.. Y conseguir así también puntos por los "Me gusta" que tus amigos y sus amigos den a esos portales.	
 
 <p><?php echo $pend;?></p>	
