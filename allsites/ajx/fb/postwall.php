@@ -20,7 +20,7 @@ $url="http://" . $portales[$idp] . "/ajx/cApple.php?ref=$ref&idp=" . $idp;
 
 $post= $facebook->api("/$user/feed", 'post',  array(
                                       'link' => $url,
-                                      'message' => 'Ayudadme a ganar este concurso, solo teneis que dar a "Me gusta"'
+                                      'message' => 'Ayudadme a ganar este concurso, solo teneis que seguir el enlace y dar a "Me gusta"'
                                  ) );
 
 
