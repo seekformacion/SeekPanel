@@ -8,18 +8,18 @@ if (isset($_COOKIE["seekforFB_ID"])){$user= $_COOKIE["seekforFB_ID"];};
 
 //echo "/$user/likes/1424213751150594";
 
-$cu=0;$ma=0;$fp=0;$op=0;
+$cu=0;$ma=0;$fp=0;$op=0; $qedan=0;
 $response = $facebook->api("/$user/likes/1424213751150594");
-if(isset($response['data'][0]['id'])){$likes[1]=1;$cu=1;}else{$likes[1]=0;}
+if(isset($response['data'][0]['id'])){$likes[1]=1;$cu=1;}else{$likes[1]=0;$qedan++;}
 
 $response = $facebook->api("/$user/likes/432712510165494");
-if(isset($response['data'][0]['id'])){$likes[2]=1;$ma=1;}else{$likes[2]=0;}
+if(isset($response['data'][0]['id'])){$likes[2]=1;$ma=1;}else{$likes[2]=0;$qedan++;}
 
 $response = $facebook->api("/$user/likes/216539681879446");
-if(isset($response['data'][0]['id'])){$likes[3]=1;$fp=1;}else{$likes[3]=0;}
+if(isset($response['data'][0]['id'])){$likes[3]=1;$fp=1;}else{$likes[3]=0;$qedan++;}
 
 $response = $facebook->api("/$user/likes/591979084222922");
-if(isset($response['data'][0]['id'])){$likes[4]=1;$op=1;}else{$likes[4]=0;}
+if(isset($response['data'][0]['id'])){$likes[4]=1;$op=1;}else{$likes[4]=0;$qedan++;}
 
 
 $res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;");
@@ -175,7 +175,7 @@ position:absolute; top: 80px;}
 
 
 <div class="ftab" style="margin-top:30px;">
-<img src="https://seekformacion.com/img/global/fb/miniLog1.png" border="0" class="ilogo">	
+<a href="https://www.facebook.com/cursodecursos/app_715730281795141"><img src="https://seekformacion.com/img/global/fb/miniLog1.png" border="0" class="ilogo"></a>	
 
 <div style="left:87px;" class="nber"><?php echo $cu;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_CU;?></div>
@@ -184,7 +184,7 @@ position:absolute; top: 80px;}
 </div>	
 	
 <div class="ftab">
-<img src="https://seekformacion.com/img/global/fb/miniLog2.png" border="0" class="ilogo">
+<a href="https://www.facebook.com/masterenmasters/app_715730281795141"><img src="https://seekformacion.com/img/global/fb/miniLog2.png" border="0" class="ilogo"></a>	
 
 <div style="left:87px;"  class="nber"><?php echo $ma;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_MA;?></div>
@@ -193,7 +193,7 @@ position:absolute; top: 80px;}
 </div>	
 
 <div class="ftab">
-<img src="https://seekformacion.com/img/global/fb/miniLog3.png" border="0" class="ilogo">
+<a href="https://www.facebook.com/fpformacionprofesional/app_715730281795141"><img src="https://seekformacion.com/img/global/fb/miniLog3.png" border="0" class="ilogo"></a>	
 
 <div style="left:87px;"  class="nber"><?php echo $fp;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_FP;?></div>
@@ -202,7 +202,7 @@ position:absolute; top: 80px;}
 </div>	
 
 <div class="ftab">
-<img src="https://seekformacion.com/img/global/fb/miniLog4.png" border="0" class="ilogo">
+<a href="https://www.facebook.com/oposicionesa/app_715730281795141"><img src="https://seekformacion.com/img/global/fb/miniLog4.png" border="0" class="ilogo"></a>	
 
 <div style="left:87px;"  class="nber"><?php echo $op;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_OP;?></div>
@@ -232,7 +232,41 @@ position:absolute; top: 80px;}
 <img src="https://seekformacion.com/img/global/fb/likA.png" border="0" class="likA" style="left:385px;">	
 <img src="https://seekformacion.com/img/global/fb/likAA.png" border="0" class="likA" style="left:506px;">		
 	
-	
+
+<?php
+$ports[1]['i']="cursodecursos";
+$ports[1]['ii']="Cursos";
+
+$ports[2]['i']="masterenmasters";
+$ports[2]['ii']="Masters";
+
+$ports[3]['i']="fpformacionprofesional";
+$ports[3]['ii']="Fp";
+
+$ports[4]['i']="oposicionesa";
+$ports[4]['ii']="Oposiciones";
+if($qedan){
+$pend="";
+foreach ($likes as $idpp => $vale) {if($vale==0){
+		$porti=$ports[$idpp]['i'];
+		$portii=$ports[$idpp]['ii'];   
+		$pend .="<div class='pend'><a href='https://www.facebook.com/$porti/app_715730281795141'>Seekformación $portii</a></div>"; 
+}}
+
+?>
+
+<div class="alert">
+<img src="https://seekformacion.com/img/global/fb/warnO.png" border="0">'
+<p>
+Aun puedes conseguir puntos dando "Me gusta a otros portales del grupo Seekformación.. Y conseguir así también puntos por los "Me gusta que tus amigos y sus amigos den a estos portales.	
+</p>
+<p><?php echo $pend;?></p>	
+</div>
+
+
+<?php
+}
+?>	
 </div>
 
 
