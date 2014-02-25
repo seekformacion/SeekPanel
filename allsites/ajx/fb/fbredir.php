@@ -30,7 +30,17 @@ $expire=time()+60*60*24*2;
 setcookie("seekforFB_REFDE", $req_data, $expire, '/');	
 }
 
-$url="https://www.facebook.com/cursodecursos/app_715730281795141";
+$portales[1]="cursodecursos";
+$portales[2]="cursodecursos";
+$portales[3]="cursodecursos";
+$portales[4]="masterenmasters";
+$portales[5]="masterenmasters";
+$portales[6]="fpformacionprofesional";
+$portales[7]="oposicionesa";
+
+$rndP=rand(1,7);
+
+$url="https://www.facebook.com/" . $portales[$rndP] . "/app_715730281795141";
 
 ?>
 
