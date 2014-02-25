@@ -51,13 +51,13 @@ $ref=$_COOKIE["seekforFB_PID"];
     
     
     
-<div style=" color: #0000FF;
+<div style="  color: #0000FF;
     font-family: Arial;
     font-size: 13px;
-    left: 105px;
+    left: 34px;
     position: absolute;
-    top: 267px;
-    width: 570px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?>&idp=<?php echo $idp;?></div>    
+    top: 241px;
+    width: 691px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?>&idp=<?php echo $idp;?></div>    
 
 
 
