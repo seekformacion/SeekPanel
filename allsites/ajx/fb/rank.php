@@ -147,18 +147,18 @@ position:absolute; top: 80px;}
 
 .likA {position:absolute; top:-10px; }
 
-.alert {   background-color: #FFF5EB;
+.alert {  background-color: #FFF5EB;
     border: 1px dotted #E86C19;
     font-family: arial;
     font-size: 11px;
-    height: 72px;
+    height: 57px;
     left: 0;
     padding: 5px;
     position: absolute;
     top: 343px;
-    width: 739px;}
+    width: 740px;}
 
-.pend {position: relative; float:left; margin-right:30px;}
+.pend {position: relative; float:left; margin-left:29px;}
 </style>
 
 
@@ -271,7 +271,7 @@ foreach ($likes as $idpp => $vale) {if($vale==0){
 
 <div class="alert">
 
-<img src="https://seekformacion.com/img/global/fb/warnO.png" border="0" style="position:relative; float:left">
+<img src="https://seekformacion.com/img/global/fb/warnO.png" border="0" style="position:relative; float:left; margin-right: 11px;">
 Aun puedes conseguir puntos dando "Me gusta" a otros portales del grupo Seekformación.. Y conseguir así también puntos por los "Me gusta" que tus amigos y sus amigos den a esos portales.	
 
 <p><?php echo $pend;?></p>	
