@@ -263,8 +263,7 @@ foreach ($likes as $idpp => $vale) {if($vale==0){
 		$porti=$ports[$idpp]['i'];
 		$portii=$ports[$idpp]['ii'];   
 		$pend .="<div class='pend'><a href='https://www.facebook.com/$porti/app_715730281795141'>Seekformación $portii</a></div>";
-		$pend .="<div class='pend'><a href='https://www.facebook.com/$porti/app_715730281795141'>Seekformación $portii</a></div>"; 
-		$pend .="<div class='pend'><a href='https://www.facebook.com/$porti/app_715730281795141'>Seekformación $portii</a></div>";   
+		
 }}
 
 ?>
