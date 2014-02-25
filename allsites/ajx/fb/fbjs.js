@@ -138,6 +138,9 @@ $.get(url2, function(data){
 }
 
 function chkp(v){
+document.getElementById('mtim').style.visibility = "hidden";
+document.getElementById('mtim2').style.visibility = "hidden";	
+	
 if(v==1){	document.getElementById('2').style.visibility = "hidden";
 			document.getElementById('1').style.visibility = "visible";
 			document.getElementById('p1').className = "pest uno";
