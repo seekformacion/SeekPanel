@@ -24,8 +24,6 @@ $post= $facebook->api("/$user/feed", 'post',  array(
                                  ) );
 
 
-echo $url;
 
-print_r($post);
-
+echo json_encode($post);
 ?>
