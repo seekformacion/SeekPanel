@@ -26,21 +26,20 @@ $ref=$_COOKIE["seekforFB_PID"];
 
 <div style=" 
     height: 20px;
-    left: 92px;
+    left: 185px;
     position: absolute;
-    top: 165px;
-    width: 251px;
-    text-align: center" id="mtim"><img src="http://seekformacion.com/img/global/fb/mtimer.gif"></div>
+    text-align: center;
+    top: 127px;
+    width: 251px; visibility: hidden;" id="mtim"><img src="http://seekformacion.com/img/global/fb/mtimer.gif"></div>
 
 <div style=" 
+     color: #336600;
+    font-size: 11px;
     height: 20px;
-    left: 92px;
+    left: 99px;
     position: absolute;
-    top: 165px;
-    width: 251px;
-    text-align: center
-    font-family:Arial;
-    font-size:11px; color:#336600" id="mtim2">!Enlace publicado en tu muro correctamente! </div>
+    top: 159px;
+    width: 251px;  visibility: hidden;" id="mtim2">!Enlace publicado en tu muro correctamente! </div>
 
 
 <div style="   cursor: pointer;
