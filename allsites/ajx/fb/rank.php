@@ -272,7 +272,7 @@ foreach ($likes as $idpp => $vale) {if($vale==0){
 <div class="alert">
 
 <img src="https://seekformacion.com/img/global/fb/warnO.png" border="0" style="position:relative; float:left; margin-right: 11px;">
-Aun puedes conseguir puntos dando "Me gusta" a otros portales del grupo Seekformación.. Y conseguir así también puntos por los "Me gusta" que tus amigos y sus amigos den a esos portales.	
+Aún puedes conseguir puntos dando "Me gusta" a otros portales del grupo Seekformación.. Y conseguir así también puntos por los "Me gusta" que tus amigos y sus amigos den a esos portales:	
 
 <p><?php echo $pend;?></p>	
 </div>
