@@ -153,6 +153,23 @@ if(v==2){	document.getElementById('1').style.visibility = "hidden";
 
 
 
+function postWall(){
+
+var filts="";
+var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/postwall.php?idp=<?php echo $idp;?>';
+$.getJSON(url, function(data) {
+$.each(data, function(key, val) {
+
+
+
+});
+});
+	
+	
+}
+
+
+
 function FacebookInviteFriends(){
 
 var filts="";
