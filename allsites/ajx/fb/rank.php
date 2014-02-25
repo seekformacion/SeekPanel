@@ -147,6 +147,8 @@ position:absolute; top: 80px;}
 
 .likA {position:absolute; top:-10px; }
 
+.alert {position: absolute; width: 700px; top: 500px; height:50px; left:0px; background-color:#FFF5EB; border:1px dotted #E86C19; font-size: 12px;}
+
 </style>
 
 
@@ -258,7 +260,7 @@ foreach ($likes as $idpp => $vale) {if($vale==0){
 <div class="alert">
 <img src="https://seekformacion.com/img/global/fb/warnO.png" border="0">'
 <p>
-Aun puedes conseguir puntos dando "Me gusta a otros portales del grupo Seekformación.. Y conseguir así también puntos por los "Me gusta que tus amigos y sus amigos den a estos portales.	
+Aun puedes conseguir puntos dando "Me gusta" a otros portales del grupo Seekformación.. Y conseguir así también puntos por los "Me gusta que tus amigos y sus amigos den a estos portales.	
 </p>
 <p><?php echo $pend;?></p>	
 </div>
