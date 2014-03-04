@@ -1,8 +1,8 @@
 
 
 function spandM(id){
-if(id==1){var he='106px';};
-if(id==2){var he='86px';};
+if(id==1){var he='86px';};
+if(id==2){var he='106px';};
 if(id==3){var he='86px';};
 if(id==4){var he='86px';};
 if(id==5){var he='86px';};
@@ -28,18 +28,28 @@ function spandS(id,N){
 if(document.getElementById('sub'+id).className=='sbsecc azul'){	
 	
 var h = $("#sub" + id).height();	
-if(h==20){h=N+'px'}else{
-h='20px';
-if(document.getElementById('help'+id).style.display=='block'){
-$("#help" + id).animate({ height: '0px' }, 100, function() {
-document.getElementById('help'+id).style.display = 'none';
-document.getElementById('bh'+id).style.display = 'none';
-														  });	
-}}
+if(h==20){
+	
+	h=N+'px'
+	
+	}else{
 
-$("#sub" + id).animate({ height: h }, 200, function() { // Animation complete.
-														  });	
-}}
+	h='20px';
+	
+	if(document.getElementById('help'+id)){
+	if(document.getElementById('help'+id).style.display=='block'){
+			$("#help" + id).animate({ height: '0px' }, 100, function() {
+			document.getElementById('help'+id).style.display = 'none';
+			document.getElementById('bh'+id).style.display = 'none';  });	
+	}}
+	
+	
+	}
+
+$("#sub" + id).animate({ height: h }, 200, function() { });	
+
+}
+}
 
 
 

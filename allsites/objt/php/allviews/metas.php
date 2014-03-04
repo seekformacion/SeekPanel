@@ -38,9 +38,11 @@ createCSS();
 
 
 ##########################################
+//$v['JSpostPROCESS']['%listHTML%']=$java;
+loadJS('objt','init');
 
 
-
+$Datos['codTittle']=$v['where']['pagTittle'];
 
 $Datos['links_css']=$v['linksCSS'];
 $Datos['links_cssIE']=$v['linksCSSIE'];

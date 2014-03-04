@@ -1,0 +1,38 @@
+body {
+    
+    font-family: Arial;
+    font-size: 13px;
+    margin:0px;
+}
+
+
+.page {
+    background: none repeat scroll 0 0;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+	
+.gris1 {color:#EBEBEB !important;}
+.gris1_BG {background-color:#EBEBEB !important;}	
+
+.cl {clear: both;}
+.page {width: 1200px; }
+
+.nosel {-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;}
+
+.color_BG {background-color: #FF9933 !important;}
+.margen_sup { height: 30px; width: 1200px; background-color: #000000 !important;border:1px solid #000000;}
+.margen_inf { height: 40px; width: 1200px; background-color: #FF9933 !important;border:1px solid #FF9933;}
+
+
+.cont {height:auto; width: 1200px; position:relative;}
+
+
