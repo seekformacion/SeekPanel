@@ -3,7 +3,6 @@
 global $v;
 
 
-
 if(array_key_exists('q', $_GET)){
 $v['where']['url']=$_GET['q'];
 }else{

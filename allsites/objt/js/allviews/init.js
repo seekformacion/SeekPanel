@@ -1,3 +1,12 @@
+window.top.he=new Array; window.top.opM=new Array;
+window.top.he[1]=86;
+window.top.he[2]=106;
+window.top.he[3]=86;
+window.top.he[4]=86;
+window.top.he[5]=86;
+
+function lK(url){window.location.href =	url;}
+
 function dologin(){
 var user=document.getElementById('user').value;
 var pass=document.getElementById('pass').value;	
@@ -58,7 +67,7 @@ var skpUID=getCookie('skpUID');
 if(skpUID){	
 var url='/ajx/logUID.php?skpUID=' + skpUID;	
 $.getJSON(url, function(data) {$.each(data, function(key, val) {
-if(key=="on"){window.top.skpUID=val;}else{logout();}
+if(key=="on"){window.top.skpUID=val;mlat();}else{logout();}
 });
 });		
 }else{logout();}
@@ -66,4 +75,42 @@ if(key=="on"){window.top.skpUID=val;}else{logout();}
 
 	
 }
+
+function oMenu(id){
+var opens=window.top.opM;
+id=id.slice(1,3);
+var opp="";
+for(a=0 ; a<opens.length ; a++){if(opens[a]){ 
+opp=opp+a+',';
+}}
+if(!opp){opp="0";}else{opp=opp.slice(0, -1);}; 
+var mlat=id + "|" + opp;
+setCookie('mlat',mlat,0);
+lK(window.top.urls[id]);	
+}
+
+
+function mlat(){
+var mlat=getCookie('mlat');
+if(!mlat){
+var mlat="5|1,2";	
+}
+var op=mlat.split('|'); var current=op[0]; var open=op[1].split(','); window.top.current=current;
+
+if(current>0){document.getElementById('o'+ current).style.backgroundColor='#cccccc';}	
+
+for(a=0; a < open.length ; a++){var id=open[a];
+if(id>0){var h=window.top.he[id]; window.top.opM[id]=1;
+$("#sm" + id).height(h);
+
+}}
+
+
+
+}
+
+
+
+
+
 
