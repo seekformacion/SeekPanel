@@ -33,11 +33,11 @@ user-select: none;}
 .margen_inf { height: 40px; width: 1200px; background-color: #FF9933 !important;border:1px solid #FF9933;}
 
 
-.cont {height:auto; width: 1200px; border:1px solid #bbbbbb; position:relative;}
+.cont {height:auto; width: 1200px; border:1px solid #bbbbbb; position:relative;  background-color: #EEEEEE;}
 
-.menu {position:relative; float:left; width:250px; min-height:700px; border-right:1px solid #bbbbbb; background-color:#EEEEF0; padding-bottom: 50px; }
+.menu {position:relative; float:left; width:250px; min-height:700px;  background-color:#EEEEF0; }
 
-.seccion {position:relative; float:left; width:948px; min-height:700px;}
+.seccion {position:relative; float:left; width:948px; min-height:700px; min-height:700px;background-color: #FFFFFF; border-left: 1px solid #CCCCCC;}
 
 
 .iconos {background-image: url("/img/seek/iconos.png");}
@@ -107,6 +107,12 @@ margin: 0px 5px 0px 0px;}
 .azul .icH {color:#888888; cursor:pointer; }
 .gris .icH {color:#cccccc; cursor:normal !important;}
 
+.contM { color: #444444;
+    float: left;
+    margin: 5px 5px 5px 41px;
+    padding: 5px 5px 5px 0;
+    position: relative;
+    width: 862px;}
 
 .help {position:relative; float:left; width:950px; height:0px; border-bottom:1px solid #bbbbbb; border-top:1px solid #bbbbbb; margin: -25px 0 0 -10px; background-color:#dddddd;}
 .icHs {background-color: #DDDDDD;
@@ -118,5 +124,21 @@ margin: 0px 5px 0px 0px;}
     top: -24px;
     width: 31px;
     z-index: 888;}
+
+.selCentros {position:relative; float:right;margin-right: 20px; margin-top: 7px;}
+.selCentSEL {background-color: #FF9933; border: 1px solid white; font-family:Arial; font-size:14px; color:white; padding:4px;
+			text-shadow: 0.1em 0.1em 0.1em #666666;
+    		}
+
+
+.catGO	{position: relative; float:left; font-size:9px;  width: 118px; height:30px; padding-top:3px; }
+.catFIN	{position: relative; float:left; font-size:9px;  width: 118px; height:30px; padding-top:3px; }
+
+.clkCAT	{cursor: pointer; color:#005C9C; position: relative; float:left;  width: 97px;height:27px; text-decoration: underline;}
+.noclkCAT	{  position: relative; float:left;  width:97px;height:27px;}
+
+.rdCAT {position: relative; float:left; margin-left:2px; margin-top:0px;}
+
+
 
 

@@ -1,12 +1,12 @@
 <?php 
 includeFUNC('submods');
-
+includeFUNC('campos');
 
 $idsec=$v['where']['id'];
 $nomsec=$v['where']['codTittle'];
 
 $submods=getsubmod($idsec);
-
+$optComTip=getOPTcomTIP();
 
 global $ids; global $tit; global $hM; global $st; global $expand;
 $modulos="";
@@ -16,6 +16,7 @@ foreach ($submods as $ids => $vals) {
 
 
 $Datos['nomsec']=$nomsec;
-$Datos['modulos']=$modulos;
+$Datos['modulos']=$optComTip . $modulos;
+
 
 ?>

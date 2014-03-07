@@ -7,16 +7,24 @@
 %metas%
 
 
-
+<script src="/ckeditor/ckeditor.js"></script>
+<script src="/ckeditor/adapters/jquery.js"></script>
 </head>
 
-
-<body onload="autent();">
+<script>autent();</script>
+<body onload="loadC();">
 
 <div class="page">
 	
 <div id="header" class="margen_sup"></div>	
-<div id="header" class="margen_inf"></div>	
+<div id="header" class="margen_inf">
+
+<div class="selCentros">
+	<select id="selCentros" class="selCentSEL" onchange="chgCent(this.value);"></select>
+</div>
+	
+	
+</div>	
 <div class="cont">
 
 <div class="menu nosel">

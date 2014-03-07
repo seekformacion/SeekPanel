@@ -5,7 +5,7 @@ var he=window.top.he[id]
 	
 var h = $("#sm" + id).height();
 if(h==30){h=he; window.top.opM[id]=1;}else{h='30px'; window.top.opM[id]=0;}
-$("#sm" + id).animate({ height: h }, 200, function() { // Animation complete.
+$("#sm" + id).animate({ height: h }, 100, function() { // Animation complete.
 														  });		
 }
 
@@ -21,6 +21,15 @@ document.getElementById(ido).style.backgroundColor='#cccccc';
 oMenu(ido);	
 }
 
+
+function deblock(id){
+if(document.getElementById('sub'+id).className!='sbsecc azul'){
+document.getElementById('sub'+id).className='sbsecc azul';
+var N=window.top.altos[id];
+spandS(id,N);	
+}
+
+}
 
 function spandS(id,N){
 if(document.getElementById('sub'+id).className=='sbsecc azul'){	
@@ -42,7 +51,7 @@ if(h==20){
 	
 	}
 
-$("#sub" + id).animate({ height: h }, 200, function() { });	
+$("#sub" + id).animate({ height: h }, 100, function() { });	
 
 }
 }
@@ -72,3 +81,25 @@ $("#sub" + id).animate({ height: N }, 100, function() {});
 	
 	
 }}
+
+
+
+
+
+
+
+
+
+$( document ).ready( function() {
+$( '#editor1' ).ckeditor(); // Use CKEDITOR.replace() if element is <textarea>.
+//$( '#editable' ).ckeditor(); // Use CKEDITOR.inline().
+} );
+
+function setValue() {
+$( '#editor1' ).val( $( 'input#val' ).val() );
+}
+
+function GetContents() {
+var editor = CKEDITOR.instances.editor1;
+console.log( editor.getData() );
+}
