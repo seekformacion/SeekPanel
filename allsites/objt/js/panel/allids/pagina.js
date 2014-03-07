@@ -22,14 +22,6 @@ oMenu(ido);
 }
 
 
-function deblock(id){
-if(document.getElementById('sub'+id).className!='sbsecc azul'){
-document.getElementById('sub'+id).className='sbsecc azul';
-var N=window.top.altos[id];
-spandS(id,N);	
-}
-
-}
 
 function spandS(id,N){
 if(document.getElementById('sub'+id).className=='sbsecc azul'){	

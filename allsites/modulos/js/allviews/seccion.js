@@ -14,6 +14,17 @@ str = str.replace(/[^a-z0-9 -]/g, '')
 };
 
 
+function deblock(id){
+if(document.getElementById('sub'+id).className!='sbsecc azul'){
+document.getElementById('sub'+id).className='sbsecc azul';
+var N=window.top.altos[id];
+spandS(id,N);	
+}
+
+}
+
+
+
 function chkCOMBtip(id){
 if(id==1){loadCAT(1);}
 if(id==2){loadCAT(1183);}
@@ -28,7 +39,7 @@ function doURL(val){if((!val)&&(document.getElementById('nom').value)){document.
 function chkMET(v){
 if(v<=3){document.getElementById('blockSED').style.display='none';}else{document.getElementById('blockSED').style.display='block';}
 	
-deblock(6);	
+deblock(3);	
 }
 
 
@@ -42,4 +53,50 @@ if(!no){deblock(2);}
 
 
 
+
+function loadSEDES(){
+var skpUID=getCookie('skpUID');
+var idc=getCookie('selC');
+if(skpUID){	
+	var url='/ajx/loadSEDES.php?skpUID=' + skpUID + '&idc=' + idc;	
+	$.getJSON(url, function(data) {$.each(data, function(key, val) {if(key=="sedes"){document.getElementById('sedesL').innerHTML=val;}});});
+}else{
+	logout();}	
+}
+
+
+
+function loadCAT(id){$.ajaxSetup({ cache: false });
+window.top.CATSEL=0;
+var skpUID=getCookie('skpUID');
+var idc=getCookie('selC');
+if(skpUID){	
+	var url='/ajx/getCAT.php?skpUID=' + skpUID + '&idcat=' + id;	
+	$.getJSON(url, function(data) {$.each(data, function(key, val) {if(key=="cats"){document.getElementById('subCats').innerHTML=val;}});});
+}else{
+	logout();}	
+}
+
+
+function selCAT(idc){
+window.top.CATSEL=idc;
+deblock(6);	
+}
+
+function chgCent(idc){
+setCookie('selC',idc,1);
+var mlat="0|0";
+setCookie('mlat',mlat,0);	
+lK('/panel');	
+}
+
+function loadC(){$.ajaxSetup({ cache: false });
+var skpUID=getCookie('skpUID');
+if(skpUID){	
+	var url='/ajx/loadC.php?skpUID=' + skpUID;	
+	$.getJSON(url, function(data) {$.each(data, function(key, val) {if(key=="opc"){document.getElementById('selCentros').innerHTML=val;}});});
+}else{
+	logout();}	
+
+}
 

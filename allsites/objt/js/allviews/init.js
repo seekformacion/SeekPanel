@@ -58,48 +58,6 @@ document.cookie=c_name + "=" + c_value + '; path=/';
 }
 
 
-function loadSEDES(){
-var skpUID=getCookie('skpUID');
-var idc=getCookie('selC');
-if(skpUID){	
-	var url='/ajx/loadSEDES.php?skpUID=' + skpUID + '&idc=' + idc;	
-	$.getJSON(url, function(data) {$.each(data, function(key, val) {if(key=="sedes"){document.getElementById('sedesL').innerHTML=val;}});});
-}else{
-	logout();}	
-}
-
-
-
-function loadCAT(id){$.ajaxSetup({ cache: false });
-var skpUID=getCookie('skpUID');
-var idc=getCookie('selC');
-if(skpUID){	
-	var url='/ajx/getCAT.php?skpUID=' + skpUID + '&idcat=' + id;	
-	$.getJSON(url, function(data) {$.each(data, function(key, val) {if(key=="cats"){document.getElementById('subCats').innerHTML=val;}});});
-}else{
-	logout();}	
-}
-
-
-
-
-function chgCent(idc){
-setCookie('selC',idc,1);
-var mlat="0|0";
-setCookie('mlat',mlat,0);	
-lK('/panel');	
-}
-
-function loadC(){$.ajaxSetup({ cache: false });
-var skpUID=getCookie('skpUID');
-if(skpUID){	
-	var url='/ajx/loadC.php?skpUID=' + skpUID;	
-	$.getJSON(url, function(data) {$.each(data, function(key, val) {if(key=="opc"){document.getElementById('selCentros').innerHTML=val;}});});
-}else{
-	logout();}	
-
-}
-
 
 function logout(){
 window.location="/login";	
