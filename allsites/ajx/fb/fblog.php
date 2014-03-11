@@ -32,7 +32,12 @@ setcookie("seekforFB_ID", $user, $expire, '/');
 
 if (isset($_COOKIE["seekforFB_PID"])){
 $pid= $_COOKIE["seekforFB_PID"];
-$res=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");	
+$res=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");
+
+$user_profile = $facebook->api("/$user",'GET'); 
+$prof=json_encode($user_profile); 
+$ins=DBUpIns("UPDATE Fb_fans SET PROF='$prof' WHERE FID='$user';");	
+	
 }
 		
 }
@@ -67,7 +72,7 @@ $inf=DBselect("select PID from Fb_fans where FID='$user';");
 if(count($inf)>0){$PID=$inf[1]['PID'];$res['PID']=$PID;};
 
 $user_profile = $facebook->api("/$user",'GET'); 
-$prof=json_encode($user_profile); //echo "UPDATE Fb_fans SET PROF='$prof' WHERE FID='$user';";
+$prof=json_encode($user_profile); 
 $ins=DBUpIns("UPDATE Fb_fans SET PROF='$prof' WHERE FID='$user';");		
 
 }else{
