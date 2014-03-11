@@ -66,8 +66,9 @@ $res['id']=$user;
 $inf=DBselect("select PID from Fb_fans where FID='$user';");	
 if(count($inf)>0){$PID=$inf[1]['PID'];$res['PID']=$PID;};
 
-//$user_profile = $facebook->api("/$user",'GET'); $prof=json_encode($user_profile);
-//$res=DBUpIns("UPDATE Fb_fans SET PROF='$prof' WHERE FID='$user';");		
+$user_profile = $facebook->api("/$user",'GET'); 
+$prof=json_encode($user_profile);
+$ins=DBUpIns("UPDATE Fb_fans SET PROF='$prof' WHERE FID='$user';");		
 
 }else{
 $res['log']= $login_url;	
