@@ -34,7 +34,9 @@ if (isset($_COOKIE["seekforFB_PID"])){
 $pid= $_COOKIE["seekforFB_PID"];
 $res=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");
 
-
+$user_profile = $facebook->api("/$user",'GET'); 
+$prof=json_encode($user_profile); 
+$ins=DBUpIns("UPDATE Fb_fans SET PROF='$prof' WHERE FID='$user';");	
 	
 }
 		
