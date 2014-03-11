@@ -54,7 +54,7 @@ echo "<script>window.close();</script>";
 $redirect="https://seekformacion.com/ajx/fb/fblog.php?do=out";
 //$redirect=urlencode($redirect);
 
-$login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'email,user_birthday,publish_stream,publish_actions', 'display' => 'popup') );
+$login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'email,education,work,publish_stream,publish_actions', 'display' => 'popup') );
 
 if(!$user){
 $res['log']= $login_url;
