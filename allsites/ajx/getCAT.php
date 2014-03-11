@@ -20,7 +20,7 @@ if($skpUID){
 $datos=getDatSKUID($skpUID);
 if($datos){			
 ##########################
-$quitos=array('Cursos de ','Cursos para el ','Cursos para la ','Cursos para ','Cursos ', 'Masters en ', 'Masters para ', 'Masters de ', 'Fp: ','Oposiciones a la ', 'Oposiciones a ', 'Oposiciones al ', 'Oposiciones para ');
+$quitos=array('Cursos de ','Cursos para el ','Cursos para la ','Cursos para ','Cursos ', 'Masters en ', 'Masters sobre ', 'Masters para ', 'Masters de ', 'Fp: ','Oposiciones a la ', 'Oposiciones a ', 'Oposiciones al ', 'Oposiciones para ');
 includeFUNC('categorias');
 
 
