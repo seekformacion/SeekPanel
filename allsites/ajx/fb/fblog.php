@@ -32,7 +32,7 @@ setcookie("seekforFB_ID", $user, $expire, '/');
 
 if (isset($_COOKIE["seekforFB_PID"])){
 $pid= $_COOKIE["seekforFB_PID"];
-$res=DBUpIns("UPDATE Fb_fans SET FID='$user' SET accTK='$access_token' WHERE PID='$pid';");	
+$res=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");	
 }
 		
 }
