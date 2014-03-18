@@ -102,7 +102,7 @@ $v['vars']['certi'][8]="Convalidación";
 $v['vars']['certi'][9]="Otros";
 $v['vars']['certi'][10]="Acreditado";
 
-$v['vars']['esmin'][0]="Estudios no requeridos";
+
 $v['vars']['esmin'][1]="Estudios no requeridos";
 $v['vars']['esmin'][10]="Certificado de escolaridad";
 $v['vars']['esmin'][11]="Graduado escolar, EGB, 2ºBUP";

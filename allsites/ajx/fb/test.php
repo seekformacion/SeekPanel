@@ -7,7 +7,8 @@ require '/www/fbdata.php';
 
 
 $user_permissions = $facebook->api("/1018154356/permissions");
-$user_profile = $facebook->api('/1018154356/likes','GET');
+$user_profile = $facebook->api('/1018154356/','GET');
+
 
 print_r($user_profile);
 ?>

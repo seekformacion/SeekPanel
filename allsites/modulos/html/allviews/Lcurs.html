@@ -1,0 +1,131 @@
+<!-- Lcurs -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<style>
+.lCur {border:1px solid #888888; width:600px; height: 40px; position:relative; float:left; margin-bottom:5px;}	
+.v1 {opacity: 1}
+.v0 {opacity: 0.4}
+
+
+.nomC {width:450px; height: 40px; font-size:12px; font-family:Arial; padding:5px; color:#005C9C; cursor:pointer; position:relative; float:left; margin-top:2px;}
+.show {position:relative; float:left; width: 50px; text-align: center; font-size:10px; font-family:Arial; margin-top:2px;}
+.CPL {position:relative; float:left; width: 50px; text-align: center; font-size:10px; font-family:Arial; margin-top:2px; }
+.iCPL {width:30px; height:17px; font-size:10px; font-family:Arial; margin:1px 0px 0px 0px; border:1px solid #888888; text-align: center}
+.ishow {width:10px; height:10px;margin:3px 0px 0px 0px; border:1px solid #888888;}
+.trash {  background-image: url("/img/seek/trash.png");    float: left;    height: 22px;    left: 9px;    position: relative;    top: 10px;    width: 18px; cursor:pointer;}
+
+</style>
+
+<script>
+
+function getCookie(w){
+	cName = "";
+	pCOOKIES = new Array();
+	pCOOKIES = document.cookie.split('; ');
+	for(bb = 0; bb < pCOOKIES.length; bb++){
+		NmeVal  = new Array();
+		NmeVal  = pCOOKIES[bb].split('=');
+		if(NmeVal[0] == w){
+			cName = unescape(NmeVal[1]);
+		}
+	}
+	return cName;
+}
+
+
+
+function setCookie(c_name,value,exdays)
+{
+var exdate=new Date();
+exdate.setDate(exdate.getDate() + exdays);
+if(exdays==0){
+var c_value=escape(value);
+}else{
+var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());	
+}
+
+document.cookie=c_name + "=" + c_value + '; path=/';
+}
+
+
+function showC(id){
+var shw= document.getElementById('CC_'+id).className;
+var shw2=shw.replace('v1','');
+var shw3=shw.replace('v0','');
+
+if(shw2.length < shw.length){document.getElementById('CC_'+id).className=shw2 + ' v0'; doShowC(id,0);}
+if(shw3.length < shw.length){document.getElementById('CC_'+id).className=shw3 + ' v1'; doShowC(id,1);}	
+}
+
+function doShowC(id,v){
+var skpUID=getCookie('skpUID');
+var idc=getCookie('selC');
+if(skpUID){	
+	var url='/ajx/showC.php?skpUID=' + skpUID + '&idc=' + idc + '&id=' + id + '&showC=' +v;	
+	$.getJSON(url, function(data) {$.each(data, function(key, val) { });});
+}else{
+	logout();}		
+}
+
+function chgCPL(id,cpl){
+var cpl2=cpl.replace(',','.');	 console.log(cpl2);
+document.getElementById(id).value=cpl2;	
+var skpUID=getCookie('skpUID');
+var idc=getCookie('selC');
+if(skpUID){	
+	var url='/ajx/chgCPL.php?skpUID=' + skpUID + '&idc=' + idc + '&id=' + id + '&cpl=' + cpl2;	
+	$.getJSON(url, function(data) {$.each(data, function(key, val) { });});
+}else{
+	logout();}		
+}
+
+function delC(id){
+if(confirm('Esta opción borrara por completo el curso.\nSi lo desea puede simplemente ocultarlo desactivando la visibilidad.\n¿Está seguro de que desea borrar por completo el curso?.')){	
+var skpUID=getCookie('skpUID');
+var idc=getCookie('selC');
+if(skpUID){	
+	var url='/ajx/delCUR.php?skpUID=' + skpUID + '&idc=' + idc + '&id=' + id;	
+	$.getJSON(url, function(data) {$.each(data, function(key, val) { 
+		if(key=='borrado'){document.getElementById('CC_'+val).style.display='none';}		
+		});});
+}else{
+	logout();}			
+	
+}}
+
+
+function editC(id){
+window.top.location='/panel/editCur#' + id;	
+}
+	
+</script>
+
+
+<!-- listC -->
+
+
+<div class="lCur v%showC%" id="CC_%id%">
+
+<div class="nomC" onclick="editC(%id%)">
+%nombre%	
+</div>
+
+<div class="CPL">
+CPL<br>
+<input type="text" class="iCPL" onchange="chgCPL(this.id,this.value)" id="%id%" value="%CPLA%">	
+</div>
+
+
+<div class="show">
+Visible<br>
+<input type="checkbox" class="ishow" onclick="showC(%id%)" %checked%>	
+</div>
+
+<div class="trash" onclick="delC(%id%)"></div>
+
+
+</div>
+
+<!-- fin listC -->
+
+
+<!-- fin Lcurs -->

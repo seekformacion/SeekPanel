@@ -20,7 +20,7 @@ if($skpUID){
 $datos=getDatSKUID($skpUID);
 if($datos){			
 ##########################
-$quitos=array('Cursos de ','Cursos para el ','Cursos para la ','Cursos para ','Cursos ', 'Masters en ', 'Masters sobre ', 'Masters para ', 'Masters de ', 'Fp: ','Oposiciones a la ', 'Oposiciones a ', 'Oposiciones al ', 'Oposiciones para ');
+$quitos=array('Cursos de ','Cursos para el ','Cursos para la ','Cursos para ','Cursos ', 'Masters en ', 'Masters del ', 'Masters sobre ', 'Masters para ', 'Masters de ', 'Fp: ','Oposiciones a la ', 'Oposiciones a ', 'Oposiciones al ', 'Oposiciones para ');
 includeFUNC('categorias');
 
 
@@ -35,6 +35,8 @@ $nom=str_replace($quitos, '', $nom);
 
 $nom=str_replace('Grado medio en ', 'G med:', $nom);
 $nom=str_replace('Grado superior en ', 'G sup:', $nom);
+$nom=str_replace('grado medio en ', 'G med:', $nom);
+$nom=str_replace('grado superior en ', 'G sup:', $nom);
 
 $sub=count(catsINF($idcc));
 $cats[$nom]['id']=$idcc;
