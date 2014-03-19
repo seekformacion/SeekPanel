@@ -23,8 +23,11 @@ $Datos['urls'].="window.top.urls[$id]='$url';";
 }
 $Datos['urls'].="</script>";
 
+if($v['where']['id']>0){
 $Datos['seccion']=loadChild('modulos','seccion');
-
+}else{
+$Datos['seccion']="";	
+}
 
 $Datos['metas']=loadChild('objt','metas');
 ?>

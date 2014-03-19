@@ -1,4 +1,15 @@
 
+function loadC(){$.ajaxSetup({ cache: false });
+var skpUID=getCookie('skpUID');
+if(skpUID){	
+	var url='/ajx/loadC.php?skpUID=' + skpUID;	
+	$.getJSON(url, function(data) {$.each(data, function(key, val) {if(key=="opc"){document.getElementById('selCentros').innerHTML=val;}});});
+}else{
+	logout();}	
+
+}
+
+
 
 function spandM(id){
 var he=window.top.he[id]

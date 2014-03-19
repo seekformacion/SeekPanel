@@ -60,7 +60,11 @@ user-select: none;}
 
 .ssecc {position:relative; float:left; width:939px; height:35px; border-bottom:1px solid #bbbbbb; padding: 5px 0px 5px 10px;}
 
-.ts_AC {width:30px; height:30px; position:relative; float:left; margin-left:5px; background-position: -0px -30px; background-repeat: no-repeat;}
+.ts_AC {width:0px; height:0px; position:relative; float:left; margin-left:5px; background-position: -0px -30px; background-repeat: no-repeat;}
+
+.ts_GE {width:0px; height:0px; position:relative; float:left; margin-left:5px; background-position: -0px -30px; background-repeat: no-repeat;}
+
+
 .tTss {position:relative; float: left; margin: 9px 0 0 9px; font-family:Arial; font-size:16px; color:#444444;}
 
 

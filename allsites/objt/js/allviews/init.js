@@ -94,7 +94,7 @@ lK(window.top.urls[id]);
 function mlat(){
 var mlat=getCookie('mlat');
 if(!mlat){
-var mlat="5|1,2";	
+//var mlat="5|1,2";	
 }
 var op=mlat.split('|'); var current=op[0]; var open=op[1].split(','); window.top.current=current;
 
