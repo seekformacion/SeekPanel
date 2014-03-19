@@ -1,6 +1,7 @@
 <?php
-session_start(); $idSES = session_id();$id=""; $retC="";
+#session_start(); $idSES = session_id();$id=""; $retC="";
 
+echo "siii";
 $user="";$pass="";$skpUID="";
 //foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 if(array_key_exists('pass', $_GET)){
@@ -14,6 +15,7 @@ $skpUID=$_GET['skpUID'];
 
 $v['where']['view']='panel';
 $v['where']['id']=1; 
+
 require_once ('iniAJX.php');
 
 includeCORE('funcs/funcSESSION');
