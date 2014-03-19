@@ -18,36 +18,36 @@ $v['where']['id']=1;
 
 require_once ('iniAJX.php');
 
-echo "1";
+
 
 includeCORE('funcs/funcSESSION');
-echo "2";
 
+echo "1";
 if(($user)&&($pass)){
-
+echo "2";
 $res=DBselect("SELECT id, egestora FROM skP_users WHERE user='$user' AND pass='$pass';");	
 if(count($res)>0){$id=$res[1]['id']; $id_acc=$res[1]['egestora'];
 
 $sesionData['id']=$id;
 $sesionData['idSES']=$idSES;	
 $sesionData['id_acc']=$id_acc;
-
+echo "3";
 $res=DBselect("SELECT id_cent FROM skP_relAccCent WHERE id_acc=$id_acc;");	$cents="";
 if(count($res)>0){foreach($res as $kk => $val){$idcc=$val['id_cent'];;
 $sesionData['idcs'][]=$idcc; 
 $cents.=$idcc . ",";
 }};
 $cents=substr($cents,0,-1); $firstC=$sesionData['idcs'][0];
-
+echo "4";
 if (!isset($_COOKIE["selC"])){
 $expire=time()+60*60*24*2;
 setcookie("selC", $firstC, $expire, '/');
 }
-
+echo "5";
 $cod=json_encode($sesionData);
 $cod=encryptIt($cod);
 }
-
+echo "6";
 
 if($id){
 $resu['on']=$cod;	
@@ -55,13 +55,13 @@ $resu['on']=$cod;
 $resu['off']=1;	
 }
 
-	
+echo "7";	
 }elseif($skpUID){$retC="";
 
-
+echo "8";
 //echo decryptIt($skpUID);
 //echo "\n_________________________________\n";
-echo "3";
+
 $datos=json_decode(decryptIt($skpUID), TRUE);
 
 //print_r($datos);
@@ -95,7 +95,7 @@ $resu['off']=1;
 }
 
 
-echo "4";
+
 
 
 
