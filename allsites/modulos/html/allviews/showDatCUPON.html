@@ -1,0 +1,100 @@
+<!-- showDatCUPON -->
+
+<style>
+.titD {position:relative; float:left; color:#005C9C; font-family:Arial; font-size:14px; min-width:20px; margin-left:20px; height: 20px; }
+.valD {position:relative; float:left; color:#444444; font-family:Arial; font-size:14px; min-width:20px; margin-left:10px; height: 20px;}	
+.cabecup {position:relative; float:left; width:610px; background-color:#EEEEF0; height: 20px; margin-left:20px; margin-bottom: 10px; font-family:Arial; font-size:11px; padding:10px;}
+.radio {margin-top:2px; margin-left:0px; display:block; position: relative; float:left;} 
+.txtR  {margin-top:2px; margin-left:5px; display:block; position: relative; float:left;} 
+</style>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+
+
+function getCookie(w){
+	cName = "";
+	pCOOKIES = new Array();
+	pCOOKIES = document.cookie.split('; ');
+	for(bb = 0; bb < pCOOKIES.length; bb++){
+		NmeVal  = new Array();
+		NmeVal  = pCOOKIES[bb].split('=');
+		if(NmeVal[0] == w){
+			cName = unescape(NmeVal[1]);
+		}
+	}
+	return cName;
+}
+
+
+function matricula(idcupon){
+if(document.getElementById('ma').checked){var m=1;}else{var m=0;};	
+var skpUID=getCookie('skpUID');
+var idc=getCookie('selC');
+if(skpUID){	
+var url='/ajx/validacupon.php?valido=1&matricula=1&skpUID=' + skpUID + '&idc=' + idc + '&idcup=' + idcupon + '&roi=' + m;
+$.getJSON(url, function(data) {$.each(data, function(key, val) {	
+if(key=='ok'){
+
+parent.document.getElementById('f_uno').src='/ajx/cupPen.php';	
+parent.document.getElementById('f_dos').src='/ajx/cupGest.php';		
+
+document.getElementById('v1').checked=true;	
+document.getElementById('v2').checked=false;	
+}
+});});
+		
+}else{
+	logout();}		
+	
+}	
+
+
+
+function valida(idcupon,v){
+var skpUID=getCookie('skpUID');
+var idc=getCookie('selC');
+if(skpUID){	
+var url='/ajx/validacupon.php?skpUID=' + skpUID + '&idc=' + idc + '&idcup=' + idcupon + '&valido=' + v;
+$.getJSON(url, function(data) {$.each(data, function(key, val) {	
+if(key=='ok'){
+
+parent.document.getElementById('f_uno').src='/ajx/cupPen.php';	
+parent.document.getElementById('f_dos').src='/ajx/cupGest.php';		
+	
+	
+}
+});});
+		
+}else{
+	logout();}		
+	
+}	
+	
+</script>
+
+<div class="cabecup">
+<span class="txtR">Datos validos:</span> <input id="v1" type="radio" name="vali" class="radio" onclick="valida(%idcupon%,1);" %cv1C%/> <span class="txtR">Datos falsos:</span> <input id="v2" type="radio" name="vali" class="radio" onclick="valida(%idcupon%,2);" %cv2C% />	
+<span class="txtR" style="margin-left:313px;">Realiza matrícula:</span> <input type="checkbox" name="vali" id="ma" class="radio" onclick="matricula(%idcupon%);" %MA%/>
+</div>
+<div style="clear:both;"></div>
+
+<div class="titD">Nombre: </div> <div class="valD">%nombre% %apellidos%</div> 
+<div class="titD">Sexo: </div> <div class="valD">%sexo%</div>
+<div class="titD">F.Nacimiento: </div> <div class="valD">%naci%</div> <div style="clear:both;"></div>
+
+<div class="titD">Teléfono: </div> <div class="valD">%tel%</div>
+<div class="titD">Mail: </div> <div class="valD">%mail%</div><div style="clear:both;"></div>
+
+<div class="titD">Dirección: </div> <div class="valD">%direccion%  %localidad% %cp% %provi%</div><div style="clear:both;"></div>
+
+<div class="titD">Nivel de estudios: </div> <div class="valD">%estudi% </div><div style="clear:both;"></div>
+
+<div style="margin-top: 20px;" class="titD">Informacion solicitada: </div> <div style="clear:both;"></div>
+<div style="margin-left:20px;" class="valD">%cupones%</div>
+
+
+
+
+<!-- fin showDatCUPON -->

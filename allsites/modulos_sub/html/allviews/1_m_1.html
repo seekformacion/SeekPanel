@@ -1,0 +1,55 @@
+{"tit":"Cupones recibidos","h":"660","st":"1","expand":"1"}
+
+<!-- 1_m_1 -->
+
+<script>window.top.altos[1]=660;
+
+function onP(p){if(p=='uno'){var alt='dos';}else{var alt='uno';};
+var cnm=document.getElementById(p).className;	
+var cnmSIN=cnm.replace('of','');
+if(cnm.length > cnmSIN.length){
+document.getElementById(p).className='on pesta ' + p; document.getElementById('f_' + p).style.display='block';
+document.getElementById(alt).className='of pesta ' + alt;	 document.getElementById('f_' + alt).style.display='none';
+}}
+
+
+
+
+</script>
+
+<style>
+.pesta {margin-top:20px;  position: relative; float: left; width: 200px;  z-index: 999; padding:5px; text-align: center;   user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none; }
+
+.uno {margin-left:10px;}
+.dos {margin-left:250px;}
+
+.on { border: 1px solid #888888;border-bottom: none; background-color: white; color:#444444; cursor: auto; height:21px;padding-top:5px;}
+.of {border: none;background-color: transparent;color:#888888; cursor: pointer; height:22px; padding-top:6px;}
+.fram {margin-left:20px; margin-top:20px }
+</style>
+
+<div class="on pesta uno" id="uno" onclick="onP('uno')">Pendientes</div>
+<div class="of pesta dos" id="dos" onclick="onP('dos')">Gestionados</div>
+
+<div style=" border: 1px solid #888888;    float: left;    height: 221px;    margin-top: -2px;    position: relative;    width: 699px;  z-index: 899">
+
+<iframe width="657" scrolling="auto" height="180" class="fram" id="f_uno" frameborder="0" marginheight="0" border="0" src="/ajx/cupPen.php" style="display:block"></iframe>
+<iframe width="657" scrolling="auto" height="180" class="fram" id="f_dos" frameborder="0" marginheight="0" border="0" src="/ajx/cupGest.php" style="display:none"></iframe>
+
+</div>	
+
+
+
+<div style=" border: 1px solid #888888;    float: left;    height: 281px;    margin-top: 30px;    position: relative;    width: 699px;  z-index: 899">
+
+<iframe width="667" scrolling="auto" height="240" class="fram" id="dcup" frameborder="0" marginheight="0" border="0" src="" style="margin-left:10px;"></iframe>
+
+</div>	
+
+
+
+
+
+<!-- fin 1_m_1 -->
