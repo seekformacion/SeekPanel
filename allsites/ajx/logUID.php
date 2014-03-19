@@ -45,7 +45,7 @@ setcookie("selC", $firstC, $expire, '/');
 }
 
 $cod=json_encode($sesionData);
-//$cod=encryptIt($cod);
+$cod=encryptIt($cod);
 }
 
 
