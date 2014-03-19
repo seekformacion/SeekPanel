@@ -15,11 +15,13 @@ $skpUID=$_GET['skpUID'];
 
 $v['where']['view']='panel';
 $v['where']['id']=1; 
-echo "siii";
+
 require_once ('iniAJX.php');
 
-includeCORE('funcs/funcSESSION');
+echo "1";
 
+includeCORE('funcs/funcSESSION');
+echo "2";
 
 if(($user)&&($pass)){
 
@@ -59,7 +61,7 @@ $resu['off']=1;
 
 //echo decryptIt($skpUID);
 //echo "\n_________________________________\n";
-
+echo "3";
 $datos=json_decode(decryptIt($skpUID), TRUE);
 
 //print_r($datos);
@@ -93,7 +95,7 @@ $resu['off']=1;
 }
 
 
-
+echo "4";
 
 
 
