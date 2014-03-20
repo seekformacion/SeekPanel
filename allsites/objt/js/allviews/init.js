@@ -68,16 +68,16 @@ var skpUID=getCookie('skpUID');
 if(skpUID){	
 var url='/ajx/logUID.php?skpUID=' + skpUID;	
 
-//console.log(url);
+console.log(url);
 
 $.getJSON(url, function(data) {$.each(data, function(key, val) {
 if(key=="on"){window.top.skpUID=val;mlat();}else{
-	logout();
+	//logout();
 	}
 });
 });		
 }else{
-	logout();
+	//logout();
 	}
 
 
