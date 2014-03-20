@@ -104,5 +104,5 @@ $( '#editor1' ).val( $( 'input#val' ).val() );
 
 function GetContents() {
 var editor = CKEDITOR.instances.editor1;
-console.log( editor.getData() );
+//console.log( editor.getData() );
 }
