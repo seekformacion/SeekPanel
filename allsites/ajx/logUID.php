@@ -37,6 +37,7 @@ $sesionData['id_acc']=$id_acc;
 
 $res=DBselect("SELECT id_cent FROM skP_relAccCent WHERE id_acc=$id_acc;"); 
 $cents="";
+print_r($res);
 if(count($res)>0){foreach($res as $kk => $val){$idcc=$val['id_cent'];;
 $sesionData['idcs'][]=$idcc; 
 $cents.=$idcc . ",";
