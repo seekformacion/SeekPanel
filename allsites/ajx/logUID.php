@@ -63,7 +63,7 @@ $resu['off']=1;
 
 $datos=json_decode(decryptIt($skpUID), TRUE);
 
-//print_r($datos);
+print_r($datos);
 if(is_array($datos)){
 if(array_key_exists('idSES', $datos)){
 $chkSES=$datos['idSES'];
