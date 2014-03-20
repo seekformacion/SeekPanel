@@ -1,7 +1,8 @@
 <?php
-session_start(); $idSES = session_id();$id=""; $retC="";
+session_start(); 
+$idSES = session_id();$id=""; $retC="";
 
-echo $idSES;
+//echo $idSES;
 
 $user="";$pass="";$skpUID="";
 //foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
@@ -53,7 +54,7 @@ $cod=encryptIt($cod);
 if($id){
 $resu['on']=$cod;	
 }else{
-$resu['off']=1;	
+$resu['off']="A " . $idSES;	
 }
 
 	
@@ -87,7 +88,7 @@ $retC=$skpUID;
 if($retC){
 $resu['on']=$retC;	
 }else{
-$resu['off']=1;	
+$resu['off']="B " . $idSES;	
 }
 
 
