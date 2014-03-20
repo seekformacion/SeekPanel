@@ -67,7 +67,8 @@ lK('/panel');
 
 
 
-function logout(){console.log('logout');
+function logout(){
+console.log('logout');
 //window.location="/login";	
 }
 
@@ -111,6 +112,7 @@ lK(window.top.urls[id]);
 
 function mlat(){
 var mlat=getCookie('mlat');
+
 if(!mlat){
 //var mlat="5|1,2";	
 }else{
@@ -121,7 +123,6 @@ if(current>0){document.getElementById('o'+ current).style.backgroundColor='#cccc
 for(a=0; a < open.length ; a++){var id=open[a];
 if(id>0){var h=window.top.he[id]; window.top.opM[id]=1;
 $("#sm" + id).height(h);
-
 }}
 
 
