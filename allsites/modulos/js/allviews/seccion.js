@@ -134,7 +134,7 @@ if(skpUID){
 
 
 }else{
-	logout();}		
+	//logout();}		
 }
 
 function initLISTtip(t){
