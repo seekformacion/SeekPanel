@@ -1,6 +1,7 @@
 <?php
 session_start(); $idSES = session_id();$id=""; $retC="";
 
+echo $idSES;
 
 $user="";$pass="";$skpUID="";
 //foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
