@@ -71,7 +71,9 @@ var url='/ajx/logUID.php?skpUID=' + skpUID;
 console.log(url);
 
 $.getJSON(url, function(data) {$.each(data, function(key, val) {
-if(key=="on"){window.top.skpUID=val;mlat();}else{logout();}
+if(key=="on"){window.top.skpUID=val;mlat();}else{
+	//logout();
+	}
 });
 });		
 }else{
