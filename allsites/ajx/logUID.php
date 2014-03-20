@@ -66,7 +66,7 @@ $resu['off']="A " . $idSES;
 
 $datos=json_decode(decryptIt($skpUID), TRUE);
 
-print_r($datos);
+//print_r($datos);
 if(is_array($datos)){
 //$chkSES=$datos['idSES'];
 $cents="";
