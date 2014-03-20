@@ -69,7 +69,7 @@ lK('/panel');
 
 function logout(){
 console.log('logout');
-//window.location="/login";	
+window.location="/login";	
 }
 
 function autent(){$.ajaxSetup({ cache: false });
