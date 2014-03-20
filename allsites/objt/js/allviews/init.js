@@ -58,6 +58,14 @@ document.cookie=c_name + "=" + c_value + '; path=/';
 }
 
 
+function chgCent(idc){
+setCookie('selC',idc,1);
+var mlat="0|0";
+setCookie('mlat',mlat,0);	
+lK('/panel');	
+}
+
+
 
 function logout(){
 window.location="/login";	

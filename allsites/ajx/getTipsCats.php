@@ -8,7 +8,8 @@ require_once ('iniAJX.php');		//$v['conf']['db']="seekformacion"; // cargo otra 
 includeCORE('funcs/funcSESSION');
 ##########################
 global $idSES; 
-$idSES = session_id();$id=""; $idcat="";
+$idSES = session_id();
+$id=""; $idcat="";
 $user="";$pass="";$skpUID="";
 if(array_key_exists('skpUID', $_GET)){$skpUID=$_GET['skpUID'];}
 if(array_key_exists('idc', $_GET)){$idc=$_GET['idc'];}

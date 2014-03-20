@@ -193,12 +193,6 @@ window.top.CATSEL=idc;
 deblock(4);	
 }
 
-function chgCent(idc){
-setCookie('selC',idc,1);
-var mlat="0|0";
-setCookie('mlat',mlat,0);	
-lK('/panel');	
-}
 
 
 
