@@ -23,6 +23,8 @@ $skpUID=$_GET['skpUID'];
 
 if($skpUID){$datos=getDatSKUID($skpUID);		
 
+print_r($datos);
+
 if($datos['lcents']){
 	
 $lcents=$datos['lcents'];
