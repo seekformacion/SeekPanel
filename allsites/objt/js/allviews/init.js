@@ -76,7 +76,6 @@ var skpUID=getCookie('skpUID');
 if(skpUID){	
 var url='/ajx/logUID.php?skpUID=' + skpUID;	
 
-//console.log(url);
 
 $.getJSON(url, function(data) {$.each(data, function(key, val) {
 if(key=="on"){window.top.skpUID=val;mlat();}
@@ -84,12 +83,12 @@ else if(key=="slc"){
 if(!getCookie('selC')){setCookie('selC',val,2);}
 	
 }else{
-	logout();
+	//logout();
 	}
 });
 });		
 }else{
-	logout();
+	//logout();
 	}
 
 
