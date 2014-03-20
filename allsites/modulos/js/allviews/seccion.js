@@ -1,3 +1,6 @@
+
+
+
 var slug = function(str) {
 str = str.replace(/^\s+|\s+$/g, '');
 str = str.toLowerCase();
@@ -11,7 +14,7 @@ str = str.replace(/[^a-z0-9 -]/g, '')
     .replace(/-+/g, '-'); 
 
   return str;
-};
+}
 
 
 function deblock(id){
@@ -315,7 +318,7 @@ if(document.getElementById('sede_'+a)){
 if(document.getElementById('sede_'+a).checked){
 sedes=sedes
 +document.getElementById('sede_'+a).value+',';}}	
-}sedes=sedes.trim();//console.log(sedes);}
+}sedes=sedes.trim();console.log(sedes);}
 //////// categoria
 var id_cat=window.top.CATSEL;								
 //////// detalles
@@ -439,7 +442,7 @@ if(document.getElementById('sede_'+a)){
 if(document.getElementById('sede_'+a).checked){
 sedes=sedes
 +document.getElementById('sede_'+a).value+',';}}	
-}sedes=sedes.trim();//console.log(sedes);}
+}sedes=sedes.trim();console.log(sedes);}
 //////// categoria
 var id_cat=window.top.CATSEL;								
 //////// detalles
