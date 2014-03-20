@@ -68,8 +68,7 @@ $datos=json_decode(decryptIt($skpUID), TRUE);
 
 print_r($datos);
 if(is_array($datos)){
-if(array_key_exists('idSES', $datos)){
-$chkSES=$datos['idSES'];
+//$chkSES=$datos['idSES'];
 $cents="";
 foreach ($datos['idcs'] as $key => $idc) {
 $cents.=$idc . ",";	
@@ -84,7 +83,7 @@ setcookie("selC", $firstC, $expire, '/');
 
 
 $retC=$skpUID;	
-}}
+}
 
 if($retC){
 $resu['on']=$retC;	
