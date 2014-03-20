@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+//session_start(); 
 
 ################# basico
 $v['where']['view']='panel';
@@ -7,8 +7,9 @@ $v['where']['id']=1;
 require_once ('iniAJX.php');		//$v['conf']['db']="seekformacion"; // cargo otra bd
 includeCORE('funcs/funcSESSION');
 ##########################
-global $idSES; 
-$idSES = session_id();
+//global $idSES; 
+//$idSES = session_id();
+
 $id=""; $idcat="";
 $user="";$pass="";$skpUID="";
 if(array_key_exists('skpUID', $_GET)){$skpUID=$_GET['skpUID'];}
