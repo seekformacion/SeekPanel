@@ -11,7 +11,9 @@ includeCORE('funcs/funcSESSION');
 
 
 global $idSES;
-$idSES = session_id();$id=""; $retC="";
+$idSES = session_id();
+
+$id=""; $retC="";
 $user="";$pass="";$skpUID="";
 if(array_key_exists('skpUID', $_GET)){
 $skpUID=$_GET['skpUID'];
