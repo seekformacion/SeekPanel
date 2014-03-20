@@ -19,7 +19,7 @@ if(array_key_exists('skpUID', $_GET)){
 $skpUID=$_GET['skpUID'];
 }
 
-
+echo $skpUID;
 
 if($skpUID){$datos=getDatSKUID($skpUID);		
 
