@@ -19,12 +19,12 @@ if(array_key_exists('skpUID', $_GET)){
 $skpUID=$_GET['skpUID'];
 }
 
-echo $skpUID;
+//echo $skpUID;
 
 if($skpUID){$datos=getDatSKUID($skpUID);		
 
 
-print_r($datos);
+//print_r($datos);
 
 if($datos['lcents']){
 	
