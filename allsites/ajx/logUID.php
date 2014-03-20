@@ -7,10 +7,9 @@ $id=""; $retC="";
 
 $user="";$pass="";$skpUID="";
 //foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
-if(array_key_exists('pass', $_GET)){
-$pass=$_GET['pass'];
-$user=$_GET['user'];
-}
+
+if(array_key_exists('user', $_GET)){$user=$_GET['user'];}
+if(array_key_exists('pass', $_GET)){$pass=$_GET['pass'];}
 
 if(array_key_exists('skpUID', $_GET)){
 $skpUID=$_GET['skpUID'];
@@ -52,13 +51,15 @@ $resu['slc']=$firstC;
 
 $cod=json_encode($sesionData);
 $cod=encryptIt($cod);
+}else{
+$resu['off']="A ";	
 }
 
 
 if($id){
 $resu['on']=$cod;	
 }else{
-$resu['off']="A " . $idSES;	
+$resu['off']="A ";	
 }
 
 	
@@ -91,11 +92,13 @@ $retC=$skpUID;
 if($retC){
 $resu['on']=$retC;	
 }else{
-$resu['off']="B " . $idSES;	
+$resu['off']="B ";	
 }
 
 
 
+}else{
+$resu['off']="C ";		
 }
 
 

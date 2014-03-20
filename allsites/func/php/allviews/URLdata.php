@@ -8,8 +8,6 @@ $eqp=$v['vars']['provN'];
 
 															
 
-
-
 $res=DBselect("SELECT tipo, t_id, codTittle, pagTittleC FROM skP_urls where idp=$idp AND url='$url';");
 $v['where']['view']=$eqtempl[$res[1]['tipo']];
 $v['where']['id']=	$res[1]['t_id'];

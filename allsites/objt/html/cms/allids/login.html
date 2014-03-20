@@ -1,8 +1,29 @@
 <!-- login -->
 
+<style>
+.cajaLogin {  background-color: #C1D7DD;
+    height: 170px;
+    margin: 0 auto;
+    position: relative;
+    top: 41px;
+    width: 300px; padding: 20px; font-size: 14px; font-family:Arial; line-height: 1.4}
+	
+.cajaLogin input{margin-left:-2px; margin-bottom: 10px;}	
+.logE {position:  relative; margin-top:0px; font-size:12px; color:red; font-family: Arial}
+</style>
 
-<input type="text" id="user" />
-<input type="password" id="pass" />
 
-<input type="submit" value="Login" onclick="dologin();" />
+<div class="cajaLogin">
+	
+Usuario:<br>	
+<input type="text" id="user" /><br>
+Contraseña:<br>
+<input type="password" id="pass" /><br>
+
+<input type="submit" value="Login" onclick="dologin();"  style="margin-top:10px;"/>
+
+<div class="logE" id="logE" style="visibility: hidden;">¡El usuario o la contraseña no son válidos!</div>	
+</div>
+
+
 <!-- fin login -->

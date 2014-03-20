@@ -19,7 +19,7 @@ body {
 .gris1_BG {background-color:#EBEBEB !important;}	
 
 .cl {clear: both;}
-.page {width: 1200px; }
+.page {width: 899px; }
 
 .nosel {-webkit-touch-callout: none;
 -webkit-user-select: none;
@@ -29,10 +29,10 @@ body {
 user-select: none;}
 
 .color_BG {background-color: #FF9933 !important;}
-.margen_sup { height: 30px; width: 1200px; background-color: #000000 !important;border:1px solid #000000;}
-.margen_inf { height: 40px; width: 1200px; background-color: #FF9933 !important;border:1px solid #FF9933;}
+.margen_sup { height: 40px; width: 899px; background-color: #000000 !important;border:1px solid #000000;}
+.margen_inf { height: 30px; width: 899px; background-color: #FF9933 !important;border:1px solid #FF9933;}
 
 
-.cont {height:auto; width: 1200px; position:relative;}
+.cont {height:auto; width: 899px; position:relative;}
 
 

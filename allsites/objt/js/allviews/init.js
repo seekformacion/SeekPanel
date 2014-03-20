@@ -13,7 +13,8 @@ var pass=document.getElementById('pass').value;
 
 var url='/ajx/logUID.php?user=' + user + '&pass=' + pass;	
 $.getJSON(url, function(data) {$.each(data, function(key, val) {
-if(key=="on"){load(val)}else{logout();}
+if(key=="on"){load(val)}
+if(key=="off"){document.getElementById('logE').style.visibility="visible";}
 });
 });	
 
@@ -68,7 +69,7 @@ lK('/panel');
 
 
 function logout(){
-console.log('logout');
+//console.log('logout');
 window.location="/login";	
 }
 
