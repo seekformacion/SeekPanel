@@ -67,8 +67,8 @@ lK('/panel');
 
 
 
-function logout(){
-window.location="/login";	
+function logout(){console.log('logout');
+//window.location="/login";	
 }
 
 function autent(){$.ajaxSetup({ cache: false });
@@ -83,12 +83,12 @@ else if(key=="slc"){
 if(!getCookie('selC')){setCookie('selC',val,2);}
 	
 }else{
-	//logout();
+	logout();
 	}
 });
 });		
 }else{
-	//logout();
+	logout();
 	}
 
 
