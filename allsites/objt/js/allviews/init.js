@@ -102,7 +102,7 @@ function mlat(){
 var mlat=getCookie('mlat');
 if(!mlat){
 //var mlat="5|1,2";	
-}
+}else{
 var op=mlat.split('|'); var current=op[0]; var open=op[1].split(','); window.top.current=current;
 
 if(current>0){document.getElementById('o'+ current).style.backgroundColor='#cccccc';}	
@@ -114,7 +114,7 @@ $("#sm" + id).height(h);
 }}
 
 
-
+}
 }
 
 
