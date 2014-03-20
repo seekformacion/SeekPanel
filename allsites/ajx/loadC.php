@@ -34,6 +34,9 @@ $res=DBselect("SELECT id, nombre FROM skP_centros WHERE id IN ($lcents) ORDER BY
 $opC="";
 if(count($res)>0){foreach($res as $kk => $val){
 $idc=$val['id']; $nomc=$val['nombre']; if($idc==$datos['cent_sel']){$sel="selected";}else{$sel="";}
+
+//if(!$opC){$fcentnt=$idc;};
+
 $opC.="<option value='$idc' $sel>$nomc</option>";	
 }}
 $opC=substr($opC, 0,-1);
