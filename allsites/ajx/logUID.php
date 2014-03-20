@@ -37,7 +37,6 @@ $sesionData['id_acc']=$id_acc;
 
 $res=DBselect("SELECT id_cent FROM skP_relAccCent WHERE id_acc=$id_acc;"); 
 $cents="";
-print_r($res);
 if(count($res)>0){foreach($res as $kk => $val){$idcc=$val['id_cent'];;
 $sesionData['idcs'][]=$idcc; 
 $cents.=$idcc . ",";
@@ -48,6 +47,8 @@ if (!isset($_COOKIE["selC"])){
 $expire=time()+60*60*24*2;
 setcookie("selC", $firstC, $expire, '/');
 }
+$resu['slc']=$firstC;
+
 
 $cod=json_encode($sesionData);
 $cod=encryptIt($cod);
@@ -81,7 +82,7 @@ if (!isset($_COOKIE["selC"])){
 $expire=time()+60*60*24*2;
 setcookie("selC", $firstC, $expire, '/');
 }
-
+$resu['slc']=$firstC;
 
 
 $retC=$skpUID;	
