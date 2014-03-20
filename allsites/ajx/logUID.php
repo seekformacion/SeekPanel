@@ -1,5 +1,5 @@
 <?php
-//session_start(); //
+session_start(); //
 //$idSES = session_id();
 $id=""; $retC="";
 
@@ -35,7 +35,8 @@ $sesionData['id']=$id;
 //$sesionData['idSES']=$idSES;	
 $sesionData['id_acc']=$id_acc;
 
-$res=DBselect("SELECT id_cent FROM skP_relAccCent WHERE id_acc=$id_acc;");	$cents="";
+$res=DBselect("SELECT id_cent FROM skP_relAccCent WHERE id_acc=$id_acc;"); 
+$cents="";
 if(count($res)>0){foreach($res as $kk => $val){$idcc=$val['id_cent'];;
 $sesionData['idcs'][]=$idcc; 
 $cents.=$idcc . ",";
