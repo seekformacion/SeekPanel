@@ -1,6 +1,7 @@
 <?php
-session_start(); 
-$idSES = session_id();$id=""; $retC="";
+//session_start(); //
+//$idSES = session_id();
+$id=""; $retC="";
 
 //echo $idSES;
 
@@ -31,7 +32,7 @@ $res=DBselect("SELECT id, egestora FROM skP_users WHERE user='$user' AND pass='$
 if(count($res)>0){$id=$res[1]['id']; $id_acc=$res[1]['egestora'];
 
 $sesionData['id']=$id;
-$sesionData['idSES']=$idSES;	
+//$sesionData['idSES']=$idSES;	
 $sesionData['id_acc']=$id_acc;
 
 $res=DBselect("SELECT id_cent FROM skP_relAccCent WHERE id_acc=$id_acc;");	$cents="";
@@ -69,7 +70,7 @@ print_r($datos);
 if(is_array($datos)){
 if(array_key_exists('idSES', $datos)){
 $chkSES=$datos['idSES'];
-if($chkSES==$idSES){$cents="";
+$cents="";
 foreach ($datos['idcs'] as $key => $idc) {
 $cents.=$idc . ",";	
 }	
@@ -83,7 +84,7 @@ setcookie("selC", $firstC, $expire, '/');
 
 
 $retC=$skpUID;	
-}}}
+}}
 
 if($retC){
 $resu['on']=$retC;	
