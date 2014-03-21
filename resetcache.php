@@ -1,8 +1,42 @@
 <?php
 
 $excludes["cursodecursos.com"]=1;
-
 $v['path']['httpd']="/www/httpd";
+
+
+
+
+$urls[]="/panel";
+$urls[]="/login";
+$urls[]="/panel/cupones";
+$urls[]="/panel/ad_curso";
+$urls[]="/panel/listcur";
+$urls[]="/panel/editCur";
+$urls[]="/contacto";
+$urls[]="/";
+
+
+
+print_r($urls);
+
+
+foreach ($urls as $key => $value) {
+$url="http://www.seekformacion.com" . $value;	
+refress('www.seekformacion.com',$url,$value);	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 $directories = glob($v['path']['httpd'] . '/*' , GLOB_ONLYDIR);
@@ -34,24 +68,6 @@ limpia($dir, $v['path']['httpd'], $dom);
 	
 }
 
-$urls[]="/panel";
-$urls[]="/login";
-$urls[]="/panel/cupones";
-$urls[]="/panel/ad_curso";
-$urls[]="/panel/listcur";
-$urls[]="/panel/editCur";
-$urls[]="/contacto";
-$urls[]="/";
-
-
-
-print_r($urls);
-
-
-foreach ($urls as $key => $value) {
-$url="http://www.seekformacion.com" . $value;	
-refress('www.seekformacion.com',$url,$value);	
-}
 
 
 function limpia($arr, $quito, $dom){
