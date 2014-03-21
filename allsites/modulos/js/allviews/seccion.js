@@ -28,16 +28,21 @@ spandS(id,N);
 
 
 
-function chkCOMBtip(id){window.top.idtip=id;
+function chkCOMBtip(id){
+	window.top.idtip=id;
 if(id==1){loadCAT(1);}
 if(id==2){loadCAT(1183);}
 if(id==3){loadCAT(2365);}
 if(id==4){loadCAT(3547);}
-document.getElementById('tipo').innerHTML='<option value="0">Seleccione</option>' + window.top.combos[id];chk_TIP();}
+var val='<option value="0">Seleccione</option>' + window.top.combos[id];chk_TIP();
+swapInnerHTML('tipo',val);
+}
 
 
-function chkCOMBtip2(id){window.top.idtip=id;
-document.getElementById('tipo').innerHTML='<option value="0">Seleccione</option>' + window.top.combos[id];
+function chkCOMBtip2(id){
+window.top.idtip=id;
+var val='<option value="0">Seleccione</option>' + window.top.combos[id];
+swapInnerHTML('tipo',val);
 }
 
 
@@ -62,16 +67,16 @@ function doURL(){
 			
 			});});
 		}else{
-		logout();}	
-		
-		
-}}
+	logout();}	
+}
+
+}
 
 
 
-function chkMET(v){window.top.idmet=v;
+function chkMET(v){
+window.top.idmet=v;
 if(v<=3){document.getElementById('blockSED').style.display='none';}else{document.getElementById('blockSED').style.display='block';}
-	
 deblock(3);	
 }
 
@@ -118,7 +123,8 @@ if(skpUID){
 }
 
 
-function initLIST(){window.top.opCAT=new Array;
+function initLIST(){
+window.top.opCAT=new Array;
 var skpUID=getCookie('skpUID');
 var idc=getCookie('selC');
 if(skpUID){	
@@ -143,7 +149,8 @@ if(skpUID){
 function initLISTtip(t){
 $.ajaxSetup({ cache: false });	
 window.top.idtipi=t;
-document.getElementById('cats').innerHTML=window.top.opCAT[t];
+//document.getElementById('cats').innerHTML=window.top.opCAT[t];
+swapInnerHTML('cats',window.top.opCAT[t]); 
 loadCurs(0)	
 }
 
@@ -160,7 +167,8 @@ document.getElementById('listcur').src='/ajx/listaCur.php?skpUID=' + skpUID + '&
 
 
 
-function loadCAT(id){$.ajaxSetup({ cache: false });
+function loadCAT(id){
+	$.ajaxSetup({ cache: false });
 window.top.CATSEL=0;
 var skpUID=getCookie('skpUID');
 var idc=getCookie('selC');
@@ -313,12 +321,16 @@ var cd4=document.getElementById('cd4').value;
 //////// metodo y sedes		
 var id_met=window.top.idmet;								
 var sedes="";
-if(id_met<=3){for (var a=1; a<=70 ; a++){
+
+if(id_met<=3){
+for (var a=1; a<=70 ; a++){
 if(document.getElementById('sede_'+a)){
 if(document.getElementById('sede_'+a).checked){
 sedes=sedes
 +document.getElementById('sede_'+a).value+',';}}	
-}sedes=sedes.trim();//console.log(sedes);}
+}}
+
+sedes=sedes.trim();//console.log(sedes);}
 //////// categoria
 var id_cat=window.top.CATSEL;								
 //////// detalles
@@ -327,7 +339,9 @@ if(document.getElementById('show').checked){
 var show=1;	
 }else{
 show=0;	
-}															
+}											
+
+				
 var ayu=document.getElementById('ayu').value; 				
 var dur=document.getElementById('dur').value; 				
 var id_titul=document.getElementById('det_tit').value; 		
@@ -420,7 +434,8 @@ temario:temario
 	logout();}	
 
 	
-}}
+}
+}
 
 
 function creaCur(){
@@ -543,7 +558,8 @@ temario:temario
 	logout();}	
 
 	
-}}
+}
+}
 
 
 

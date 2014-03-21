@@ -22,6 +22,32 @@ if(key=="off"){document.getElementById('logE').style.visibility="visible";}
 }
 
 
+
+function swapInnerHTML(objID,newHTML) {
+  var el=document.getElementById(objID);
+  el.outerHTML=el.outerHTML.replace(el.innerHTML+'</select>',newHTML+'</select>');
+  
+}
+
+
+
+function loadC(){$.ajaxSetup({ cache: false });
+var skpUID=getCookie('skpUID');
+if(skpUID){	
+	var url='/ajx/loadC.php?skpUID=' + skpUID;	
+	$.getJSON(url, function(data) {$.each(data, function(key, val) {if(key=="opc"){
+		//document.getElementById('selCentros').innerHTML=val;
+		swapInnerHTML('selCentros',val);
+		}});});
+}else{
+	logout();}	
+
+}
+
+
+
+
+
 function load(skpUID){
 setCookie('skpUID',skpUID,0);	
 window.location="/panel";	
