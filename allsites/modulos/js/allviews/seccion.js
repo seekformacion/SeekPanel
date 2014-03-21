@@ -457,7 +457,10 @@ if(document.getElementById('sede_'+a)){
 if(document.getElementById('sede_'+a).checked){
 sedes=sedes
 +document.getElementById('sede_'+a).value+',';}}	
-}sedes=$.trim(sedes);//console.log(sedes);}
+}sedes=$.trim(sedes);//console.log(sedes);
+}
+
+
 //////// categoria
 var id_cat=window.top.CATSEL;								
 //////// detalles
