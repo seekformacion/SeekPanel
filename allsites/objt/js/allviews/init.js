@@ -39,6 +39,8 @@ if(skpUID){
 	$.getJSON(url, function(data) {$.each(data, function(key, val) {if(key=="opc"){
 		//document.getElementById('selCentros').innerHTML=val;
 		swapInnerHTML('selCentros',val);
+		var idc=getCookie('selC');
+		if(idc){document.getElementById('selCentros').value=idc;}
 		}});});
 }else{
 	logout();}	
