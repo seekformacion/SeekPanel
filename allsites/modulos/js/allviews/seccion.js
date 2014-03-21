@@ -330,7 +330,7 @@ sedes=sedes
 +document.getElementById('sede_'+a).value+',';}}	
 }}
 
-sedes=sedes.trim();//console.log(sedes);}
+sedes=$.trim(sedes);//console.log(sedes);}
 //////// categoria
 var id_cat=window.top.CATSEL;								
 //////// detalles
@@ -361,7 +361,7 @@ var temario=editor.getData();
 
 //// obligatorios
 var error="";
-if(!nom.trim()){error=error + 'Debe especificar un nombre para el curso \n';}
+if(!$.trim(nom)){error=error + 'Debe especificar un nombre para el curso \n';}
 if(id_tipo==0){error=error + 'Debe especificar el tipo de formación \n';}
 
 if(!id_met){error=error + 'Debe especificar el método de enseñanza \n';}else{
@@ -372,9 +372,9 @@ if(!id_cat){error=error + 'Debe especificar la categoría \n';}
 if(id_titul==''){error=error + 'Debe especificar la titulación obtenida \n';}
 if(id_esmin==''){error=error + 'Debe especificar el nivel de estudios requerido \n';}
 
-if(!kyw.trim()){error=error + 'Debe especificar las keywords \n';}
-if(!desc.trim()){error=error + 'Debe incluir una descripción \n';}
-if(!temario.trim()){error=error + 'Debe incluir un temario \n';}
+if(!$.trim(kyw)){error=error + 'Debe especificar las keywords \n';}
+if(!$.trim(desc)){error=error + 'Debe incluir una descripción \n';}
+if(!$.trim(temario)){error=error + 'Debe incluir un temario \n';}
 
 	
 if(error){
@@ -457,7 +457,7 @@ if(document.getElementById('sede_'+a)){
 if(document.getElementById('sede_'+a).checked){
 sedes=sedes
 +document.getElementById('sede_'+a).value+',';}}	
-}sedes=sedes.trim();console.log(sedes);}
+}sedes=$.trim(sedes);//console.log(sedes);}
 //////// categoria
 var id_cat=window.top.CATSEL;								
 //////// detalles
@@ -486,8 +486,8 @@ var temario=editor.getData();
 
 //// obligatorios
 var error="";
-if(!nom.trim()){error=error + 'Debe especificar un nombre para el curso \n';}
-if(!url.trim()){error=error + 'Debe especificar una URL para el curso \n';}
+if(!$.trim(nom)){error=error + 'Debe especificar un nombre para el curso \n';}
+if(!$.trim(url)){error=error + 'Debe especificar una URL para el curso \n';}
 if(id_tipo==0){error=error + 'Debe especificar el tipo de formación \n';}
 
 if(!id_met){error=error + 'Debe especificar el método de enseñanza \n';}else{
@@ -498,9 +498,9 @@ if(!id_cat){error=error + 'Debe especificar la categoría \n';}
 if(id_titul==''){error=error + 'Debe especificar la titulación obtenida \n';}
 if(id_esmin==''){error=error + 'Debe especificar el nivel de estudios requerido \n';}
 
-if(!kyw.trim()){error=error + 'Debe especificar las keywords \n';}
-if(!desc.trim()){error=error + 'Debe incluir una descripción \n';}
-if(!temario.trim()){error=error + 'Debe incluir un temario \n';}
+if(!$.trim(kyw)){error=error + 'Debe especificar las keywords \n';}
+if(!$.trim(desc)){error=error + 'Debe incluir una descripción \n';}
+if(!$.trim(temario)){error=error + 'Debe incluir un temario \n';}
 
 if(error){
 alert(error);	
