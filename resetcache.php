@@ -34,8 +34,25 @@ limpia($dir, $v['path']['httpd'], $dom);
 	
 }
 
+$urls[]="/panel";
+$urls[]="/login";
+$urls[]="/panel/cupones";
+$urls[]="/panel/ad_curso";
+$urls[]="/panel/listcur";
+$urls[]="/panel/editCur";
+$urls[]="/contacto";
+$urls[]="/";
 
-print_r($dir);
+
+
+print_r($urls);
+
+
+foreach ($urls as $key => $value) {
+$url="http://www.seekformacion.com" . $value;	
+refress('www.seekformacion.com',$url,$value);	
+}
+
 
 function limpia($arr, $quito, $dom){
 foreach ($arr as $key => $value) {
