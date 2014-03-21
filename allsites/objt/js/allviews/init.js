@@ -24,12 +24,10 @@ if(key=="off"){document.getElementById('logE').style.visibility="visible";}
 
 
 function swapInnerHTML(objID,newHTML) {
-  //var el=document.getElementById(objID);
-  //el.outerHTML=el.outerHTML.replace(el.innerHTML+'</select>',newHTML+'</select>');
-
+ 
 $("#" + objID).empty();
 $("#" + objID).append(newHTML);  
-console.log('do');
+
 }
 
 
