@@ -91,6 +91,16 @@ if(!no){deblock(2);}
 }
 
 
+function chk_TIP_E(h){
+if(document.getElementById('nom').value){window.top.nom=document.getElementById('nom').value;}else{var no=1;}	
+if(document.getElementById('url').value){window.top.url=document.getElementById('url').value;}else{var no=1;}	
+if(document.getElementById('tipo').value!=0){window.top.tipo=document.getElementById('tipo').value;}else{var no=1;}	
+	
+if(!no){deblock(2);}
+}
+
+
+
 function chk_DET(h){
 	
 if(document.getElementById('det_esmin').value!=''){window.top.det_esmin=document.getElementById('det_esmin').value;}else{var no=1;}	

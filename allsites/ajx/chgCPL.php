@@ -31,7 +31,7 @@ $datestamp=$datestamp+(60*60*6); // 60 seconds times 60 minutes times 13 hours
 
 
 DBUpIns("UPDATE skP_cursos SET CPLA='$cpl' WHERE id=$id;");
-DBUpIns("INSERT INTO skP_actions (accion,act_id,datestamp) VALUES (3,$id,$datestamp);");
+//DBUpIns("INSERT INTO skP_actions (accion,act_id,datestamp) VALUES (3,$id,$datestamp);");
 
 
 
