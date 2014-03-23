@@ -37,10 +37,9 @@ $sesionData['id_acc']=$id_acc;
 $res=DBselect("SELECT id_cent FROM skP_relAccCent WHERE id_acc=$id_acc;"); 
 $cents="";
 if(count($res)>0){foreach($res as $kk => $val){$idcc=$val['id_cent'];;
-//$sesionData['idcs'][]=$idcc; 
-$cents.=$idcc . ",";
+$centros['idcs'][]=$idcc; 
 }};
-$cents=substr($cents,0,-1); $firstC=$sesionData['idcs'][0];
+$firstC=$centros['idcs'][0];
 
 if (!isset($_COOKIE["selC"])){
 $expire=time()+60*60*24*2;
@@ -73,11 +72,13 @@ $datos=json_decode(decryptIt($skpUID), TRUE);
 //print_r($datos);
 if(is_array($datos)){
 //$chkSES=$datos['idSES'];
-$cents="";
-foreach ($datos['idcs'] as $key => $idc) {
-$cents.=$idc . ",";	
-}	
-$cents=substr($cents,0,-1); $firstC=$datos['idcs'][0];
+//$cents="";
+//foreach ($datos['idcs'] as $key => $idc) {
+//$cents.=$idc . ",";	
+//}	
+//$cents=substr($cents,0,-1);
+
+//$firstC=$datos['idcs'][0];
 
 if (!isset($_COOKIE["selC"])){
 $expire=time()+60*60*24*2;
