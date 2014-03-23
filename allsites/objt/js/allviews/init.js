@@ -53,7 +53,7 @@ if(skpUID){
 
 function load(skpUID){
 setCookie('skpUID',skpUID,0);	
-//window.location="/panel";	
+window.location="/panel";	
 }
 
 
@@ -114,12 +114,12 @@ else if(key=="slc"){
 if(!getCookie('selC')){setCookie('selC',val,2);}
 	
 }else{
-	logout();
+	//logout();
 	}
 });
 });		
 }else{
-	logout();
+	//logout();
 	}
 
 
