@@ -72,13 +72,13 @@ $datos=json_decode(decryptIt($skpUID), TRUE);
 //print_r($datos);
 if(is_array($datos)){
 //$chkSES=$datos['idSES'];
-//$cents="";
-//foreach ($datos['idcs'] as $key => $idc) {
-//$cents.=$idc . ",";	
-//}	
-//$cents=substr($cents,0,-1);
+$cents="";
+foreach ($datos['idcs'] as $key => $idc) {
+$cents.=$idc . ",";	
+}	
+$cents=substr($cents,0,-1);
 
-//$firstC=$datos['idcs'][0];
+$firstC=$datos['idcs'][0];
 
 if (!isset($_COOKIE["selC"])){
 $expire=time()+60*60*24*2;
