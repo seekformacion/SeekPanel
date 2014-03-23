@@ -53,7 +53,7 @@ if(skpUID){
 
 function load(skpUID){
 setCookie('skpUID',skpUID,0);	
-window.location="/panel";	
+//window.location="/panel";	
 }
 
 
