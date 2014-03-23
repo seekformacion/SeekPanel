@@ -114,12 +114,12 @@ else if(key=="slc"){
 if(!getCookie('selC')){setCookie('selC',val,2);}
 	
 }else{
-	//logout();
+	logout();
 	}
 });
 });		
 }else{
-	//logout();
+	logout();
 	}
 
 
