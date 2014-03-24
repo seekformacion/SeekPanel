@@ -15,6 +15,7 @@ if(array_key_exists('id', $_GET)){$id=$_GET['id'];}
 
 $err="";
 $err=DBUpInsSDB("UPDATE skP_users SET activo=1, pass='$pass' WHERE id=$id AND user='$user' AND activo=0;","seekpanel");
+echo "UPDATE skP_users SET activo=1, pass='$pass' WHERE id=$id AND user='$user' AND activo=0;";
 
 if(!$err){
 $vars['ok']=1;	
