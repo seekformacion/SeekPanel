@@ -22,7 +22,9 @@ if(key=="off"){document.getElementById('logE').style.visibility="visible";}
 
 }
 
-
+function politica(){
+document.getElementById('poli').style.display="block";	
+}
 
 function activa(){
 	var p1=document.getElementById('p1').value;
