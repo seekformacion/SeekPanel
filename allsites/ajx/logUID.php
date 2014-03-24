@@ -27,9 +27,9 @@ includeCORE('funcs/funcSESSION');
 
 if(($user)&&($pass)){
 
-$res=DBselect("SELECT id, egestora FROM skP_users WHERE user='$user' AND pass='$pass';");	
-if(count($res)>0){$id=$res[1]['id']; $id_acc=$res[1]['egestora'];
-
+$res=DBselect("SELECT id, egestora, activo FROM skP_users WHERE user='$user' AND pass='$pass';");	
+if(count($res)>0){$id=$res[1]['id']; $id_acc=$res[1]['egestora']; $activo=$res[1]['activo'];
+if($activo==1){
 $sesionData['id']=$id;
 //$sesionData['idSES']=$idSES;	
 $sesionData['id_acc']=$id_acc;
@@ -51,13 +51,20 @@ $resu['slc']=$firstC;
 $cod=json_encode($sesionData);
 $cod=encryptIt($cod);
 }else{
+global $datA; 	$datA['id']=$id_acc; $datA['user']=$user; 
+$resu['activar']=loadChild('modulos','activar');
+$cod="";	
+}
+
+
+}else{
 $resu['off']="A ";	
 }
 
 
-if($id){
+if($id){if($cod){
 $resu['on']=$cod;	
-}else{
+}}else{
 $resu['off']="A ";	
 }
 

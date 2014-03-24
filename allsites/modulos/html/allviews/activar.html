@@ -1,0 +1,69 @@
+<!-- activar -->
+
+
+
+<style>
+	
+.formu{ background-color: #C1D7DD; padding:20px;
+    height: 175px;
+    left: 500px;
+    position: relative;
+    top: 40px;
+    width: 340px;}
+
+.formu input{margin-bottom: 7px; width:310px; border:1px solid #888888; padding:5px;}
+    
+.tiTXT {color: #444444;position: absolute; width:385px;
+    font-family: Arial;
+    font-size: 13px;}
+
+.titi {font-family: Arial;
+    font-size: 28px;
+  
+    position: absolute;
+    color:#005C9C}
+    
+.que {  left: 0px;  top: 160px;}
+.tque {  left: 3px;  top: 200px;}  
+.poli {border: 1px solid #888888;
+    margin-left: 2px;
+    margin-top: 75px;}  		
+</style>
+
+
+
+
+
+<img src="/img/seek/settings.jpg" style="position:absolute; top:50px; left:0px; height:90px" />
+
+<div class="titi que">
+Activación de la cuenta.	
+</div>	
+
+<div class="tiTXT tque">
+Su cuenta aún no ha sido activada. Para activar la cuenta debe introducir la contraseña que desea utilizar. Al activar la cuenta esta aceptando la <span style="cursor: pointer; text-decoration: underline; color:#555555;" onclick="politica();">política</span> interna de uso y publicación de contenidos de Seek Formación.
+</div>
+
+
+<div class="formu">
+
+Contraseña:<br>
+<input type="password" id="p1"><br>
+
+Repitir la contraseña:<br>
+<input type="password" id="p2"><br>
+	
+
+<input type="button" value="Activar la cuenta" onclick="activa();" style="width:322px; margin-top:12px;  border:1px solid #888888; padding:5px;">
+
+<input type="hidden" id="id" value="%id%">	
+<input type="hidden" id="user" value="%user%">	
+</div>
+
+
+<iframe width="877" scrolling="auto" height="350" frameborder="0" marginheight="0" border="0" id="poli" src="/ajx/politicaAct.php" class="poli" style="display: block;">
+	
+	
+</iframe>
+
+<!-- fin activar -->

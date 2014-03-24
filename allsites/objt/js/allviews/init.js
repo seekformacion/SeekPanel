@@ -13,6 +13,47 @@ var pass=document.getElementById('pass').value;
 
 var url='/ajx/logUID.php?user=' + user + '&pass=' + pass;	
 $.getJSON(url, function(data) {$.each(data, function(key, val) {
+if(key=="activar"){document.getElementById('contenido').innerHTML=val;}
+if(key=="on"){load(val)}
+if(key=="off"){document.getElementById('logE').style.visibility="visible";}
+});
+});	
+
+
+}
+
+
+
+function activa(){
+	var p1=document.getElementById('p1').value;
+	var p2=document.getElementById('p2').value;	
+	var user=document.getElementById('user').value;
+	var id=document.getElementById('id').value;
+	
+	if (!p1){alert ('Debe introducir una contraseña para activar la cuenta');}
+	if (!p2){alert ('Debe repetir la contraseña por su seguridad');}
+	if (p1!=p2){alert ('Las contraseñas no coinciden');}
+	if((p1)&&(p2)&&(p1==p2)){
+		
+	var url='/ajx/activaAccount.php?user=' + user + '&pass=' + p1 + '&id=' + id;	
+	$.getJSON(url, function(data) {$.each(data, function(key, val) {
+	
+	if(key=='ok'){
+	dologin2(user,p1);	
+	}
+	
+	});
+	});		
+		
+		
+		
+	}	}
+
+
+function dologin2(user,pass){
+var url='/ajx/logUID.php?user=' + user + '&pass=' + pass;	
+$.getJSON(url, function(data) {$.each(data, function(key, val) {
+if(key=="activar"){document.getElementById('contenido').innerHTML=val;}
 if(key=="on"){load(val)}
 if(key=="off"){document.getElementById('logE').style.visibility="visible";}
 });
