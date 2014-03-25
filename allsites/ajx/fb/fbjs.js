@@ -80,7 +80,7 @@ document.getElementById('bases').style.visibility='block';
 function logFB(url){
 var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/ajxNotLog.php?url=' + encodeURIComponent(url);
 $.get(url2, function(data){
-  $("#contenido").replaceWith(data);
+  $("#contenido").html(data);
 });
 
 	
@@ -127,12 +127,12 @@ if(st==2){panel();}
 
 function panel(){
 
-$("#contenido").replaceWith('<div style="position: absolute; top: 150px; left:360px;"><img src="<?php echo $http_met;?>://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>	');
+$("#contenido").html('<div style="position: absolute; top: 150px; left:360px;"><img src="<?php echo $http_met;?>://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>	');
 
 var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/rank.php';
 $.get(url2, function(data){
-  $("#contenido").replaceWith("");	
-  $("#ranking").replaceWith(data);
+  $("#contenido").html("");	
+  $("#ranking").html(data);
   panel2();
 });
 
@@ -141,7 +141,7 @@ $.get(url2, function(data){
 function panel2(){
 var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/friends.php?idp=<?php echo $idp;?>';
 $.get(url2, function(data){
-  $("#2").replaceWith(data);
+  $("#2").html(data);
  });
 
 	
