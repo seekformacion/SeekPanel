@@ -1,4 +1,5 @@
 <?php
+header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 ######### add boton   https://www.facebook.com/dialog/pagetab?api_key=715730281795141&next=https%3A%2F%2Fwww.facebook.com%2F
 ########## params https://www.facebook.com/cursodecursos?v=app_715730281795141&app_data=jajajajaj

@@ -1,5 +1,5 @@
 <?php
-
+header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
