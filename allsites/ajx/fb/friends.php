@@ -16,7 +16,7 @@ $ref=$_COOKIE["seekforFB_PID"];
 
 ?>
 
-<div style="font-family: Arial; font-size: 13px; width:500px;left: 34px;    position: absolute;  top: 61px;">
+<div style="font-family: Arial; font-size: 13px; width:620px;left: 34px;    position: absolute;  top: 61px;">
 Obtienes puntos por tus “Me gusta” y por los que realizan tus amigos y los amigos de tus amigos, siempre y cuando hayan sido invitados por ti. Para que técnicamente podamos contabilizar esto, es importante que invites a tus amigos enviandoles el siguiente enlace:	
 </div>
 
@@ -30,7 +30,7 @@ Obtienes puntos por tus “Me gusta” y por los que realizan tus amigos y los a
     width: 691px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?>&idp=<?php echo $idp;?></div>    
 
 
-<div style="font-family: Arial; font-size: 13px; width:500px; left: 34px;    position: absolute;  top: 241px;">
+<div style="font-family: Arial; font-size: 13px; width:620px; left: 34px;    position: absolute;  top: 191px;">
 
 Puedes enviárselo por el medio que consideres oportuno así como publicarlo en las páginas web que quieras. El único requisito es que no lo modifiques, de lo contrario no podremos contabilizar los puntos. 
 	
