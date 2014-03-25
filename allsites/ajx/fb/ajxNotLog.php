@@ -18,11 +18,11 @@ if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";}
 </div>	
 
 <div style="position:absolute; top:366px; left:49px; font-family: Arial; font-size: 10px; color:#666666;">
-* Al activar el panel de control, estás aceptando las <span style="text-decoration: underline;" onclick="bases();">normas de uso y bases legales</span> del concurso.	
+* Al activar el panel de control, estás aceptando las <span style="text-decoration: underline; cursor:pointer;" onclick="javascript:document.getElementById('bases').style.visibility='block';">normas de uso y bases legales</span> del concurso.	
 </div>
 
 <div style="display:none" id="bases" class="bases">
-<iframe width="500" scrolling="auto" height="350" frameborder="0" style="display: block;" class="poli" src="/ajx/fb/bases.php" id="poli" border="0" marginheight="0">
+<iframe width="711" scrolling="auto" height="250" frameborder="0" style="display: block;" class="poli" src="/ajx/fb/bases.php" id="poli" border="0" marginheight="0">
 
 
 </iframe>
