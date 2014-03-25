@@ -21,7 +21,7 @@ if(isset($response['data'][0]['id'])){$likes[3]=1;$fp=1;}else{$likes[3]=0;$qedan
 $response = $facebook->api("/$user/likes/591979084222922");
 if(isset($response['data'][0]['id'])){$likes[4]=1;$op=1;}else{$likes[4]=0;$qedan++;}
 
-
+$likes[1]=1;$likes[2]=1;$likes[3]=1;$likes[4]=1;
 //$res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;");
 
  //$user_profile = $facebook->api("/$user");
@@ -45,12 +45,15 @@ setcookie("seekforFB_PEM", $PID, $expire, '/');
 */
 
  
+
+ 
+ 
 $inf=DBselect("select 
 sum(cu) as scu, 
 sum(ma) as sma, 
 sum(fp) as sfp, 
 sum(op) as sop 
-FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user');");	
+FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user');");	 
 if(count($inf)>0){	$DA_CU=$inf[1]['scu']; $DA_MA=$inf[1]['sma']; $DA_FP=$inf[1]['sfp']; $DA_OP=$inf[1]['sop']; } 
  
 
