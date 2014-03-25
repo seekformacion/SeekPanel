@@ -5,14 +5,8 @@ if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";}
 
 
 <style>
-.bases {position:absolute; top:380px; left:0px; border: 1px solid #888888; }	
+.bases {position:absolute; top:366px; left:50px; border: 1px solid #888888; }	
 </style>
-
-<script>
-	function bases(){
-	document.getElementById('bases').style.visibility='block';	
-	}
-</script>
 
 <div style="position:relative; top:0px; left:0px">
 <img src="<?php echo $http_met;?>://seekformacion.com/img/global/fb/activapanel.gif" border="0">	
@@ -33,7 +27,7 @@ if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";}
 </div>
 
 
-<div style="position:absolute; top:250px; left:230px; visibility: hidden;" id="timer" >
+<div style="position:absolute; top:400px; left:230px; visibility: hidden;" id="timer" >
 <img src="<?php echo $http_met;?>://seekformacion.com/img/global/fb/timer.gif" border="0">		
 </div>	
 
