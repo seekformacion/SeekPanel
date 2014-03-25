@@ -18,7 +18,7 @@ if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";}
 </div>	
 
 <div style="position:absolute; top:366px; left:49px; font-family: Arial; font-size: 10px; color:#666666;">
-* Al activar el panel de control, estás aceptando las <span style="text-decoration: underline; cursor:pointer;" onclick="javascript:document.getElementById('bases').style.visibility='block';">normas de uso y bases legales</span> del concurso.	
+* Al activar el panel de control, estás aceptando las <span style="text-decoration: underline; cursor:pointer;" onclick="javascript:document.getElementById('bases').style.display='block';">normas de uso y bases legales</span> del concurso.	
 </div>
 
 <div style="display:none" id="bases" class="bases">
