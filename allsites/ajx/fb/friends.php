@@ -15,8 +15,31 @@ $ref=$_COOKIE["seekforFB_PID"];
 }
 
 ?>
-<img src="https://seekformacion.com/img/global/fb/friends.gif" style="float: left;left: 10px;position: absolute;top: 0px; " border="0">
 
+<div style="font-family: Arial; font-size: 13px;">
+Obtienes puntos por tus “Me gusta” y por los que realizan tus amigos y los amigos de tus amigos, siempre y cuando hayan sido invitados por ti. Para que técnicamente podamos contabilizar esto, es importante que invites a tus amigos enviandoles el siguiente enlace:	
+</div>
+
+
+<div style="  color: #0000FF;
+    font-family: Arial;
+    font-size: 13px;
+    left: 34px;
+    position: absolute;
+    top: 241px;
+    width: 691px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?>&idp=<?php echo $idp;?></div>    
+
+
+<div style="font-family: Arial; font-size: 13px;">
+Puedes enviárselo por el medio que consideres oportuno así como publicarlo en las páginas web que quieras. El único requisito es que no lo modifiques, de lo contrario no podremos contabilizar los puntos. 
+	
+</div>
+
+
+
+
+
+<!--
 <div style="  cursor: pointer;
     height: 40px;
     left: 92px;
@@ -49,16 +72,7 @@ $ref=$_COOKIE["seekforFB_PID"];
     top: 114px;
     width: 250px;" onclick="FacebookInviteFriends();"></div>
     
+-->    
     
-    
-<div style="  color: #0000FF;
-    font-family: Arial;
-    font-size: 13px;
-    left: 34px;
-    position: absolute;
-    top: 241px;
-    width: 691px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?>&idp=<?php echo $idp;?></div>    
-
-
 
 
