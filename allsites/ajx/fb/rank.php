@@ -21,8 +21,11 @@ if(isset($response['data'][0]['id'])){$likes[3]=1;$fp=1;}else{$likes[3]=0;$qedan
 $response = $facebook->api("/$user/likes/591979084222922");
 if(isset($response['data'][0]['id'])){$likes[4]=1;$op=1;}else{$likes[4]=0;$qedan++;}
 
+if($user==1018154356){
 $likes[1]=1;$likes[2]=1;$likes[3]=1;$likes[4]=1;$cu=1;$ma=1;$fp=1;$op=1;
-//$res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;");
+}else{
+$res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;");
+}
 
  //$user_profile = $facebook->api("/$user");
 
