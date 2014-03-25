@@ -1,13 +1,19 @@
 <?php
 
 
+if (isset($_COOKIE["seekforFB_ID"])){
+$uss=$_COOKIE["seekforFB_ID"];
+}
 
+if($uss==1018154356){
+include('ciphone-IL.php');	
+}else{
 
-if (!$like_status) {
+if ($like_status) {
 include('ciphone-IL.php');
 }else{
 include('ciphone-NL.php');
 }
 
-
+}
 ?>
