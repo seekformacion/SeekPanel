@@ -22,7 +22,7 @@ $response = $facebook->api("/$user/likes/591979084222922");
 if(isset($response['data'][0]['id'])){$likes[4]=1;$op=1;}else{$likes[4]=0;$qedan++;}
 
 
-$res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;");
+//$res=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op WHERE FID=$user;");
 
  //$user_profile = $facebook->api("/$user");
 
