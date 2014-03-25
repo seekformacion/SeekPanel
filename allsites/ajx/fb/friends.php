@@ -36,7 +36,13 @@ Puedes enviárselo por el medio que consideres oportuno así como publicarlo en 
 </div>
 
 
-
+<div style=" 
+    height: 20px;
+    left: 185px;
+    position: absolute;
+    text-align: center;
+    top: 127px;
+    width: 251px; visibility: hidden;" id="mtim"><img src="http://seekformacion.com/img/global/fb/mtimer.gif"></div>
 
 
 <!--
@@ -47,13 +53,7 @@ Puedes enviárselo por el medio que consideres oportuno así como publicarlo en 
     top: 115px;
     width: 251px;" onclick="postWall();"></div>
 
-<div style=" 
-    height: 20px;
-    left: 185px;
-    position: absolute;
-    text-align: center;
-    top: 127px;
-    width: 251px; visibility: hidden;" id="mtim"><img src="http://seekformacion.com/img/global/fb/mtimer.gif"></div>
+
 
 <div style=" 
      color: #336600;
