@@ -27,7 +27,7 @@ Obtienes puntos por tus “Me gusta” y por los que realizan tus amigos y los a
     left: 34px;
     position: absolute;
     top: 141px;
-    width: 691px;">http://<?php echo $portales[$idp];?>/ajx/cApple.php?ref=<?php echo $ref;?>&idp=<?php echo $idp;?></div>    
+    width: 691px;">http://www.seekformacion.com/ajx/fb/cApple.php?ref=<?php echo $ref;?>&idp=<?php echo $idp;?></div>    
 
 
 <div style="font-family: Arial; font-size: 13px; width:620px; left: 34px;    position: absolute;  top: 191px;">
