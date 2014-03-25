@@ -21,7 +21,7 @@ return $PID;
 }
 
 
-$val['PID']=create_new_user($ref);
+$val['PID']=create_new_user();
 
 echo json_encode($val);
 
