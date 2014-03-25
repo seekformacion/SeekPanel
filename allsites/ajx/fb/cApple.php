@@ -82,7 +82,7 @@ if(!getCookie('seekforFB_REFDE')){
 setCookie('seekforFB_REFDE','<?php echo $ref;?>','2');
 }
 
-//top.location.href = "https://www.facebook.com/<?php echo $portales[$idp]; ?>/app_715730281795141";
+top.location.href = "https://www.facebook.com/<?php echo $portales[$idp]; ?>/app_715730281795141";
 
 </script>
 
