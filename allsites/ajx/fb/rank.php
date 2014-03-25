@@ -4,7 +4,7 @@
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
-if (isset($_COOKIE["seekforFB_ID"])){$user= $_COOKIE["seekforFB_ID"];}else{$user=1018154356;};	
+if (isset($_COOKIE["seekforFB_ID"])){$user= $_COOKIE["seekforFB_ID"];}else{$user=$_GET['usFB'];};	
 
 //echo "/$user/likes/1424213751150594";
 
