@@ -1,5 +1,5 @@
 <?php
-
+header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 $portales[1]="cursodecursos";

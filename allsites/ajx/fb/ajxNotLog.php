@@ -1,4 +1,5 @@
 <?php
+header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 $url=$_GET['url'];
 if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
 ?>

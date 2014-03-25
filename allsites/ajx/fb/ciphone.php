@@ -1,5 +1,5 @@
 <?php
-
+header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 
 if (isset($_COOKIE["seekforFB_ID"])){
 $uss=$_COOKIE["seekforFB_ID"];
