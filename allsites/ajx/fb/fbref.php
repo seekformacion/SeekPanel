@@ -24,6 +24,6 @@ $val['PID']=create_new_user($ref);
 
 echo json_encode($val);
 
-//http://www.seekformacion.com/ajx/fb/cApple.php?ref=5F5F46423609445E310C59A2FEA4CDDB&idp=1
+//http://seekformacion.com/ajx/fb/cApple.php?ref=5F5F46423609445E310C59A2FEA4CDDB&idp=1
 ?>
 
