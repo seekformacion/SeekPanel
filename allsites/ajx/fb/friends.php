@@ -45,6 +45,16 @@ Puedes enviárselo por el medio que consideres oportuno así como publicarlo en 
     width: 251px; visibility: hidden;" id="mtim"><img src="http://seekformacion.com/img/global/fb/mtimer.gif"></div>
 
 
+<div style=" 
+     color: #336600;
+    font-size: 11px;
+    height: 20px;
+    left: 99px;
+    position: absolute;
+    top: 159px;
+    width: 251px;  visibility: hidden;" id="mtim2">!Enlace publicado en tu muro correctamente! </div>
+
+
 <!--
 <div style="  cursor: pointer;
     height: 40px;
@@ -55,14 +65,7 @@ Puedes enviárselo por el medio que consideres oportuno así como publicarlo en 
 
 
 
-<div style=" 
-     color: #336600;
-    font-size: 11px;
-    height: 20px;
-    left: 99px;
-    position: absolute;
-    top: 159px;
-    width: 251px;  visibility: hidden;" id="mtim2">!Enlace publicado en tu muro correctamente! </div>
+
 
 
 <div style="   cursor: pointer;
