@@ -127,10 +127,11 @@ if(st==2){panel();}
 
 
 function panel(){
+var usFB =getCookie('seekforFB_ID');
 
 $("#contenido").html('<div style="position: absolute; top: 150px; left:360px;"><img src="<?php echo $http_met;?>://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>	');
 
-var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/rank.php';
+var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/rank.php?usFB=' + usFB;
 $.get(url2, function(data){
   $("#contenido").html("");	
   $("#ranking").html(data);
