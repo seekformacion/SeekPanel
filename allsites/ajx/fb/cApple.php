@@ -38,12 +38,12 @@ $portales[4]="oposicionesa";
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="Concurso Apple. Iphone 5, IPad, IPad mini"/>
 <meta property="og:description" content="Concurso Apple. Gana un Iphone 5 un IPad o un IPad mini"/>
-<meta property="og:image" content="http://cursodecursos.com/img/global/fb/banerconcurso.jpg"/>
+<meta property="og:image" content="http://seekformacion.com/img/global/fb/banerconcurso.jpg"/>
 
 
 <meta itemprop="name" content="Concurso Apple. Iphone 5, IPad, IPad mini" />
 <meta itemprop="description" content="Concurso Apple. Gana un Iphone 5 un IPad o un IPad mini" />
-<meta itemprop="image" content="http://cursodecursos.com/img/global/fb/banerconcurso.jpg" />
+<meta itemprop="image" content="http://seekformacion.com/img/global/fb/banerconcurso.jpg" />
 
 
 <script type="text/javascript">
@@ -82,7 +82,7 @@ if(!getCookie('seekforFB_REFDE')){
 setCookie('seekforFB_REFDE','<?php echo $ref;?>','2');
 }
 
-top.location.href = "https://www.facebook.com/<?php echo $portales[$idp]; ?>/app_715730281795141";
+//top.location.href = "https://www.facebook.com/<?php echo $portales[$idp]; ?>/app_715730281795141";
 
 </script>
 
