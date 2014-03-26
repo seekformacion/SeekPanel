@@ -6,7 +6,7 @@
 
 
 
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=400" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
 
 <title>Concurso Apple</title>
@@ -26,7 +26,7 @@
 
 <div style="position:relative; text-align: center; font-family: Arial; font-size: 18px; width: 400px;">
 
-Esta promoción no esta disponible en dispositivos móviles.
+Esta promoción no está disponible en dispositivos móviles.
 
 </div>
 </div>
