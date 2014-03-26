@@ -12,7 +12,6 @@ if (isset($_COOKIE["seekforFB_ID"])){$user= $_COOKIE["seekforFB_ID"];}else{$user
 $cu=0;$ma=0;$fp=0;$op=0; $qedan=0;
 $response = $facebook->api("/$user/likes/1424213751150594");
 
-print_r($response);
 if(isset($response['data'][0]['id'])){$likes[1]=1;$cu=1;}else{$likes[1]=0;$qedan++;}
 
 $response = $facebook->api("/$user/likes/432712510165494");
