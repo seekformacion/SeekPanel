@@ -1,6 +1,6 @@
 <?php
 
-$user=$_GET['user'] . "\n";
+$user=$_GET['user'];
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
@@ -8,7 +8,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 
-echo $user;
+echo $user . "\n";
 
 
 $user_permissions = $facebook->api("/$user/permissions");
