@@ -1,17 +1,18 @@
 <?php
 
-require '/home/ebmoya/repositorios/facebook-php-sdk/src/facebook.php';
+require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/fbdata.php';
 
 
+$user=$_GET('user');
+
+$user_permissions = $facebook->api("/$user/permissions");
 
 
-$user_permissions = $facebook->api("/1052060952/permissions");
-$user_profile = $facebook->api('/1052060952/','GET');
-
-$response = $facebook->api("/1052060952/likes/1424213751150594");
+$response = $facebook->api("/$user/likes/1424213751150594");
 
 print_r($user_profile);
-print_r($user_permissions);
+
+
 print_r($response);
 ?>
