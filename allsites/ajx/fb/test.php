@@ -1,10 +1,12 @@
 <?php
 
+$user=$_GET['user'];
+
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
 
-$user=$_GET('user');
+
 
 echo $user;
 
