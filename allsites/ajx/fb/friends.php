@@ -17,7 +17,7 @@ $ref=$_COOKIE["seekforFB_PID"];
 ?>
 
 <div style="font-family: Arial; font-size: 13px; width:620px;left: 34px;    position: absolute;  top: 61px;">
-Obtienes puntos por tus “Me gusta” y por los que realizan tus amigos y los amigos de tus amigos, siempre y cuando hayan sido invitados por ti. Para que técnicamente podamos contabilizar esto, es importante que invites a tus amigos enviandoles el siguiente enlace:	
+Obtienes puntos por tus “Me gusta” y por los que realizan tus amigos y los amigos de tus amigos, siempre y cuando hayan sido invitados por ti. Para que técnicamente podamos contabilizar esto, es importante que invites a tus amigos enviándoles el siguiente enlace:	
 </div>
 
 
