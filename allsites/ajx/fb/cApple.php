@@ -82,7 +82,13 @@ if(!getCookie('seekforFB_REFDE')){
 setCookie('seekforFB_REFDE','<?php echo $ref;?>','2');
 }
 
+
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+top.location.href = "/ajx/fb/nomovil.php";
+}else{
 top.location.href = "https://www.facebook.com/<?php echo $portales[$idp]; ?>/app_715730281795141";
+}
 
 </script>
 
