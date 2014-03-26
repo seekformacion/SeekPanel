@@ -1,6 +1,6 @@
 <?php
 
-$user=$_GET['user'];
+$user=$_GET['user'] . "\n";
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
