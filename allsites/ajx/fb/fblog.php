@@ -76,12 +76,8 @@ if(isset($user_permissions["data"][0]["email"])){
 $res['id']=$user;
 
 
-$inf=DBselect("select PID from Fb_fans WHERE FID='$fid';");
+$inf=DBselect("select PID from Fb_fans WHERE FID='$user';");echo "select PID from Fb_fans WHERE FID='$user';";
 if(count($inf)>0){
-
-echo "select PID from Fb_fans WHERE FID='$fid';";
-	
-
 $res2=DBUpIns("DELETE FROM Fb_fans WHERE PID='$pid';");
 $newPID=$inf[0]['PID'];
 setcookie("seekforFB_PID", $newPID, $expire, '/');
