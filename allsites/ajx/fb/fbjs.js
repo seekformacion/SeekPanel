@@ -104,7 +104,7 @@ document.getElementById('bases').style.visibility='block';
 function logFB(url){
 var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/ajxNotLog.php?url=' + encodeURIComponent(url);
 $.get(url2, function(data){
-document.getElementById("contenido").innerHTML=data;
+document.getElementById('contenido').style.visibility='block';	
 });
 
 	
