@@ -82,6 +82,8 @@ $res2=DBUpIns("DELETE FROM Fb_fans WHERE PID='$pid';");
 $newPID=$inf[0]['PID'];
 setcookie("seekforFB_PID", $newPID, $expire, '/');
 $pid=$newPID;		
+}else{
+setcookie("seekforFB_PID", $pid, $expire, '/');	
 }
 
 $res2=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");
