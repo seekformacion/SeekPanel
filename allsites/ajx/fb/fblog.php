@@ -32,7 +32,6 @@ if($user){
 setcookie("seekforFB_ID", $user, $expire, '/');
 $res['id']=$user;
 $res2=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");
-$res['id-sql']="UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';";
 
 $user_profile = $facebook->api("/$user",'GET'); 
 $prof=json_encode($user_profile); 
