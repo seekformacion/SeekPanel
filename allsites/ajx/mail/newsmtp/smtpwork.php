@@ -35,7 +35,7 @@ echo "dddd";
 	                                       Set to 0 to use the same defined in the timeout variable */
 	$smtp->debug=1;                     /* Set to 1 to output the communication with the SMTP server */
 	$smtp->html_debug=1;                /* Set to 1 to format the debug output as HTML */
-	$smtp->pop3_auth_host="";           /* Set to the POP3 authentication host if your SMTP server requires prior POP3 authentication */
+	$smtp->pop3_auth_host="mrpotato.theservercluster.com";           /* Set to the POP3 authentication host if your SMTP server requires prior POP3 authentication */
 	$smtp->user="contenidos@seekformacion.com";                     /* Set to the user name if the server requires authetication */
 	$smtp->realm="";                    /* Set to the authetication realm, usually the authentication user e-mail domain */
 	$smtp->password="seek2014";                 /* Set to the authetication password */
