@@ -5,7 +5,7 @@
  * @(#) $Header: /home/mlemos/cvsroot/smtp/test_smtp.php,v 1.18 2009/04/11 22:23:24 mlemos Exp $
  *
  */
-
+echo "dddd";
 	require("smtp.php");
 
 	require("sasl.php");
