@@ -12,7 +12,7 @@ if($aT){
 $facebook->setAccessToken($aT);
 }elseif($code){	
 	
-$getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2Ffb%2Ffblog.php%3Fdo%3Dout&client_secret=$app_secret&code=$code";
+$getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2Ffb%2Ffblog.php%3Fdo%3D" . $pid . "&client_secret=$app_secret&code=$code";
 $content = file_get_contents($getaT);
 $datos=explode('&',$content);
 foreach($datos as $key => $valor){ if(strlen($valor) > strlen(str_replace('access_token=','',$valor)) ) { $access_token=str_replace('access_token=','',$valor);} };
@@ -25,7 +25,7 @@ echo "-->" .$getaT . "\n";
 
 $user = $facebook->getUser();
 
-if($do=='out'){if($user){
+if($do){if($user){
 
 print_r($_GET);
 
