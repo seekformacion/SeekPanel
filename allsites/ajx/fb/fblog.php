@@ -39,9 +39,8 @@ if($user){
 	
 setcookie("seekforFB_ID", $user, $expire, '/');
 
-$res2=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");
+$res2=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$do';");
 
-echo "UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';";
 
 $user_profile = $facebook->api("/$user",'GET'); 
 $prof=json_encode($user_profile); 
@@ -61,7 +60,7 @@ setcookie("seekforFB_PEM", 1, $expire, '/');
 	
 	
 	
-//echo "<script>window.close();</script>";	
+echo "<script>window.close();</script>";	
 }else{
 
 $redirect="https://seekformacion.com/ajx/fb/fblog.php?do=$pid";
