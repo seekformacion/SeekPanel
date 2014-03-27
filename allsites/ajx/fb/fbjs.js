@@ -63,7 +63,9 @@ getId();
 }
 
 
-function getId(){$.ajaxSetup({ cache: false });$.ajaxSetup({'async': false});
+function getId(){
+$.ajaxSetup({ cache: false });
+$.ajaxSetup({'async': false});
 var pid =getCookie('seekforFB_PID');	
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fblog.php?aT=<?php echo $aT;?>&pid=' + pid;
 $.getJSON(url, function(data) {
@@ -99,10 +101,10 @@ document.getElementById('bases').style.visibility='block';
 }
 
 
-function logFB(url){$.ajaxSetup({ cache: false });
+function logFB(url){
 var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/ajxNotLog.php?url=' + encodeURIComponent(url);
 $.get(url2, function(data){
-  $("#contenido").html(data);
+$("#contenido").html(data);
 });
 
 	
