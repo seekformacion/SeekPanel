@@ -7,7 +7,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 
-$res2=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");
+$res2=DBUpIns("UPDATE Fb_fans SET FID='$fid' WHERE PID='$pid';");
 
 
 
