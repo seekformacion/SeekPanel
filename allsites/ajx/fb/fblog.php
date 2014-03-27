@@ -18,7 +18,9 @@ $datos=explode('&',$content);
 foreach($datos as $key => $valor){ if(strlen($valor) > strlen(str_replace('access_token=','',$valor)) ) { $access_token=str_replace('access_token=','',$valor);} };
 $facebook->setAccessToken($access_token);
 
-echo $access_token;
+
+echo "-->" .$access_token . "\n";
+echo "-->" .$getaT . "\n";
 }
 
 $user = $facebook->getUser();
