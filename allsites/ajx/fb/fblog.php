@@ -22,6 +22,8 @@ $user = $facebook->getUser();
 
 if($do=='out'){if($user){
 
+print_r($_GET);
+
 //$user_profile = $facebook->api('/' . $user); //user profile
 $user_permissions = $facebook->api("/$user/permissions");	
 
