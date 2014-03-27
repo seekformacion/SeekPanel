@@ -3,7 +3,7 @@ header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 $code="";$do="";$user=0;
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
-
+print_r($_GET);
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
