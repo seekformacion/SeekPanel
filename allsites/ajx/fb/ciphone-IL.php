@@ -14,7 +14,7 @@ header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 
 <div style="position: absolute; width: 808px; top: 80px; left:0px;" id="ranking"></div>
 
-<div style="position: absolute; width: 808px; top: 150px;"  id="contenido">
+<div style="position: absolute; width: 808px; top: 150px;" id="contenido">
 	
 <div style="position: absolute; top: 150px; left:360px;"><img src="<?php echo $http_met;?>://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>	
 	
