@@ -3,7 +3,7 @@ header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
-
+$fid="";$ref="";
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 
@@ -20,8 +20,14 @@ $res=DBUpIns("INSERT INTO Fb_fans (PID,REF) values ('$PID','$REF');");
 return $PID;
 }
 
-
+if(!$fid){
 $val['PID']=create_new_user($ref);
+}else{
+$inf=DBselect("select PID from Fb_fans WHERE FID='$fid';");
+if(count($inf)>0){
+$val['PID']=$inf[0]['PID'];	
+}	
+}
 
 echo json_encode($val);
 
