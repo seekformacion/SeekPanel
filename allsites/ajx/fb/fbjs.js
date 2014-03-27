@@ -41,7 +41,7 @@ function getCookie(w){
 
 
 
-function refer(){
+function refer(){$.ajaxSetup({ cache: false });
 var pid =getCookie('seekforFB_PID');	
 var reff =getCookie('seekforFB_REFDE');
 
@@ -63,7 +63,7 @@ getId();
 }
 
 
-function getId(){
+function getId(){$.ajaxSetup({ cache: false });
 var pid =getCookie('seekforFB_PID');	
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fblog.php?aT=<?php echo $aT;?>&pid=' + pid;
 $.getJSON(url, function(data) {
@@ -78,12 +78,12 @@ if(key=='log'){logFB(val);};
 }
 
 
-function bases(){
+function bases(){$.ajaxSetup({ cache: false });
 document.getElementById('bases').style.visibility='block';	
 }
 
 
-function logFB(url){
+function logFB(url){$.ajaxSetup({ cache: false });
 var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/ajxNotLog.php?url=' + encodeURIComponent(url);
 $.get(url2, function(data){
   $("#contenido").html(data);
@@ -131,7 +131,7 @@ if(st==2){panel();}
 }
 
 
-function panel(){
+function panel(){$.ajaxSetup({ cache: false });
 var usFB =getCookie('seekforFB_ID');
 
 $("#contenido").html('<div style="position: absolute; top: 150px; left:360px;"><img src="<?php echo $http_met;?>://seekformacion.com/img/global/fb/preloader.gif" border="0" /></div>	');
@@ -145,7 +145,7 @@ $.get(url2, function(data){
 
 }
 
-function panel2(){
+function panel2(){$.ajaxSetup({ cache: false });
 var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/friends.php?idp=<?php echo $idp;?>';
 $.get(url2, function(data){
   $("#2").html(data);
@@ -173,7 +173,7 @@ if(v==2){	document.getElementById('1').style.visibility = "hidden";
 
 
 
-function postWall(){
+function postWall(){$.ajaxSetup({ cache: false });
 document.getElementById('mtim').style.visibility = "visible";
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/postwall.php?idp=<?php echo $idp;?>';
 $.getJSON(url, function(data) {
@@ -185,7 +185,7 @@ if(key=='id'){document.getElementById('mtim').style.visibility = "hidden";docume
 
 
 
-function FacebookInviteFriends(){
+function FacebookInviteFriends(){$.ajaxSetup({ cache: false });
 
 var filts="";
 var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/usersNO.php';
@@ -200,7 +200,7 @@ $.each(data, function(key, val) {
 
 
 
-function dialogInv(filts){
+function dialogInv(filts){$.ajaxSetup({ cache: false });
 ref=getCookie('seekforFB_PID');		
 var filt="[{name: 'Aun no juegan', user_ids: [" + filts + "]}]";
 if(filts){
