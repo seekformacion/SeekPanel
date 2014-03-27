@@ -3,21 +3,22 @@ header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 $code="";$do="";$user=0;
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
-print_r($_GET);
+
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
 if($aT){
 $facebook->setAccessToken($aT);
-}elseif($code){
-echo $code;	
+}elseif($code){	
 	
 $getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2Ffb%2Ffblog.php%3Fdo%3Dout&client_secret=$app_secret&code=$code";
 $content = file_get_contents($getaT);
 $datos=explode('&',$content);
 foreach($datos as $key => $valor){ if(strlen($valor) > strlen(str_replace('access_token=','',$valor)) ) { $access_token=str_replace('access_token=','',$valor);} };
 $facebook->setAccessToken($access_token);
+
+echo $access_token;
 }
 
 $user = $facebook->getUser();
