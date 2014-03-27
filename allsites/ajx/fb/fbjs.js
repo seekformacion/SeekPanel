@@ -77,7 +77,7 @@ if(key=='log'){logFB(val);setCookie('seekforFB_DOP',0,400);};
 });});		
 	
 
-if((getCookie('seekforFB_DOP'))&&(getCookie('seekforFB_ID'))&&(getCookie('seekforFB_ID'))){
+if((getCookie('seekforFB_DOP')==1)&&(getCookie('seekforFB_ID'))&&(getCookie('seekforFB_ID'))){
 updFID();
 panel();	
 }
