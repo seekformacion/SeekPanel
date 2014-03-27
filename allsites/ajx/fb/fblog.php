@@ -81,8 +81,10 @@ if(count($inf)>0){
 $res2=DBUpIns("DELETE FROM Fb_fans WHERE PID='$pid';");
 $newPID=$inf[0]['PID'];
 setcookie("seekforFB_PID", $newPID, $expire, '/');
-$pid=$newPID;		
+$pid=$newPID;
+echo "1";		
 }else{
+echo "2";	
 setcookie("seekforFB_PID", $pid, $expire, '/');	
 }
 
