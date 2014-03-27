@@ -3,14 +3,14 @@
 require_once "Mail.php";
 
 
-$from = "Sandra Sender <sender@example.com>";
- $to = "Ramona Recipient <recipient@example.com>";
+ $from = "yo <contenidos@seekformacion.com>";
+ $to = "Eduardo Buenadicha <e.b.moya@gmail.com>";
  $subject = "Hi!";
  $body = "Hi,\n\nHow are you?";
  
- $host = "mail.example.com";
- $username = "smtp_username";
- $password = "smtp_password";
+ $host = "mrpotato.theservercluster.com";
+ $username = "contenidos@seekformacion.com";
+ $password = "seek2014";
  
  $headers = array ('From' => $from,
    'To' => $to,
