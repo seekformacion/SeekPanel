@@ -30,18 +30,14 @@ $user_permissions = $facebook->api("/$user/permissions");
 $expire=time()+60*60*24*2;
 if($user){
 setcookie("seekforFB_ID", $user, $expire, '/');
-
-if (isset($_COOKIE["seekforFB_PID"])){
-$pid= $_COOKIE["seekforFB_PID"];
+$res['id']=$user;
 $res=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");
-
 $user_profile = $facebook->api("/$user",'GET'); 
 $prof=json_encode($user_profile); 
 $ins=DBUpIns("UPDATE Fb_fans SET PROF='$prof' WHERE FID='$user';");	
 	
 }
-		
-}
+
 
 if(isset($user_permissions["data"][0]["publish_actions"])){
 setcookie("seekforFB_PEM", 2, $expire, '/');		
@@ -59,14 +55,14 @@ echo "<script>window.close();</script>";
 
 $redirect="https://seekformacion.com/ajx/fb/fblog.php?do=out";
 //$redirect=urlencode($redirect);
+$login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'email,user_education_history', 'display' => 'popup') );
 
-$login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'email,user_education_history,user_work_history,publish_stream,publish_actions', 'display' => 'popup') );
 
 if(!$user){
 $res['log']= $login_url;
 }else{
 $user_permissions = $facebook->api("/$user/permissions");
-if(isset($user_permissions["data"][0]["publish_actions"])){
+if(isset($user_permissions["data"][0]["email"])){
 $res['id']=$user;
 
 $inf=DBselect("select PID from Fb_fans where FID='$user';");	

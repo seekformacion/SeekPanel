@@ -50,18 +50,22 @@ var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fbref.php?ref=' + re
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
 if(key=='PID'){	setCookie('seekforFB_PID',val,400);
-				//setCookie('seekforFB_REF',ref,400);	
+				getId();		
 				}
 });
 });
+}else{
+getId();		
 }
+
+
 
 }
 
 
 function getId(){
-	
-var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fblog.php?aT=<?php echo $aT;?>';
+var pid =getCookie('seekforFB_PID');	
+var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fblog.php?aT=<?php echo $aT;?>&pid=' + pid;
 $.getJSON(url, function(data) {
 	
 $.each(data, function(key, val) {
@@ -209,5 +213,5 @@ FB.ui({  method: 'apprequests',  data: ref,  message: 'Listado de amigos que no 
 
 refer();	
 	
-getId();	
+
 
