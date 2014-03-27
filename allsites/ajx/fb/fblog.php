@@ -29,6 +29,7 @@ $user_permissions = $facebook->api("/$user/permissions");
 
 $expire=time()+60*60*24*2;
 if($user){
+	
 setcookie("seekforFB_ID", $user, $expire, '/');
 $res['id']=$user;
 $res2=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");
@@ -54,7 +55,7 @@ setcookie("seekforFB_PEM", 1, $expire, '/');
 echo "<script>window.close();</script>";	
 }else{
 
-$redirect="https://seekformacion.com/ajx/fb/fblog.php?do=out";
+$redirect="https://seekformacion.com/ajx/fb/fblog.php?do=out&pid=$pid";
 //$redirect=urlencode($redirect);
 $login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'email,user_education_history', 'display' => 'popup') );
 

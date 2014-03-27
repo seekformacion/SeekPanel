@@ -79,7 +79,7 @@ if(key=='log'){logFB(val);};
 
 if((getCookie('seekforFB_ID'))&&(getCookie('seekforFB_ID'))){
 updFID();
-//panel();	
+panel();	
 }
 	
 }
