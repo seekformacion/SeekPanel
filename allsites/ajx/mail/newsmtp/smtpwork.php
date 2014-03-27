@@ -11,8 +11,8 @@ echo "dddd";
     
 	$to="e.b.moya@gmail.com";
 	$from="contenidos@seekformacion.com";                           /* Change this to your address like "me@mydomain.com"; */ 
-	$message="prueeeba";
-	$subject="test";
+	$message="prueeeba2";
+	$subject="test2";
 	
 	$sender_line=__LINE__;
 	
