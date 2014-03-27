@@ -66,8 +66,9 @@ $user_permissions = $facebook->api("/$user/permissions");
 if(isset($user_permissions["data"][0]["email"])){
 $res['id']=$user;
 
-$inf=DBselect("select PID from Fb_fans where FID='$user';");	
-if(count($inf)>0){$PID=$inf[1]['PID'];$res['PID']=$PID;};
+$res2=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");
+$res['PID']=$pid;
+
 
 $user_profile = $facebook->api("/$user",'GET'); 
 $prof=json_encode($user_profile); 
