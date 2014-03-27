@@ -52,7 +52,7 @@ setcookie("seekforFB_PEM", 1, $expire, '/');
 	
 	
 	
-echo "<script>window.close();</script>";	
+//echo "<script>window.close();</script>";	
 }else{
 
 $redirect="https://seekformacion.com/ajx/fb/fblog.php?do=out&pid=$pid";
