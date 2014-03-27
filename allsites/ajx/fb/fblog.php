@@ -64,7 +64,7 @@ setcookie("seekforFB_PEM", 1, $expire, '/');
 //echo "<script>window.close();</script>";	
 }else{
 
-$redirect="https://seekformacion.com/ajx/fb/fblog.php?do=out&pid=$pid";
+$redirect="https://seekformacion.com/ajx/fb/fblog.php?do=$pid";
 //$redirect=urlencode($redirect);
 $login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'email,user_education_history', 'display' => 'popup') );
 
