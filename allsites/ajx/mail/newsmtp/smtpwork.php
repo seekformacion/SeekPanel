@@ -25,9 +25,9 @@ echo "dddd";
 	$smtp=new smtp_class;
 
 	$smtp->host_name="mrpotato.theservercluster.com"; //IP address       /* Change this variable to the address of the SMTP server to relay, like "smtp.myisp.com" */
-	$smtp->host_port=26;                /* Change this variable to the port of the SMTP server to use, like 465 */
-	$smtp->ssl=0;                       /* Change this variable if the SMTP server requires an secure connection using SSL */
-	$smtp->start_tls=0;                 /* Change this variable if the SMTP server requires security by starting TLS during the connection */
+	$smtp->host_port=465;                /* Change this variable to the port of the SMTP server to use, like 465 */
+	$smtp->ssl=1;                       /* Change this variable if the SMTP server requires an secure connection using SSL */
+	$smtp->start_tls=1;                 /* Change this variable if the SMTP server requires security by starting TLS during the connection */
 	$smtp->localhost="localhost";       /* Your computer address */
 	$smtp->direct_delivery=0;           /* Set to 1 to deliver directly to the recepient SMTP server */
 	$smtp->timeout=10;                  /* Set to the number of seconds wait for a successful connection to the SMTP server */
