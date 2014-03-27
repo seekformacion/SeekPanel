@@ -71,13 +71,13 @@ var url='<?php echo $http_met;?>://seekformacion.com/ajx/fb/fblog.php?aT=<?php e
 $.getJSON(url, function(data) {
 	
 $.each(data, function(key, val) {
-if(key=='id'){setCookie('seekforFB_ID',val,400); window.top.doit=1;};			
-if(key=='PID'){setCookie('seekforFB_PID',val,400);window.top.doit=1;};	
-if(key=='log'){logFB(val);window.top.doit=0;};
+if(key=='id'){setCookie('seekforFB_ID',val,400); setCookie('seekforFB_DOP',1,400);};			
+if(key=='PID'){setCookie('seekforFB_PID',val,400);setCookie('seekforFB_DOP',1,400);};	
+if(key=='log'){logFB(val);setCookie('seekforFB_DOP',0,400);};
 });});		
 	
 
-if((window.top.doit)&&(getCookie('seekforFB_ID'))&&(getCookie('seekforFB_ID'))){
+if((getCookie('seekforFB_DOP'))&&(getCookie('seekforFB_ID'))&&(getCookie('seekforFB_ID'))){
 updFID();
 panel();	
 }
