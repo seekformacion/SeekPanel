@@ -164,13 +164,12 @@ $.get(url2, function(data){
 
 }
 
-function panel2(){$.ajaxSetup({ cache: false });
+function panel2(){
+$.ajaxSetup({ cache: false });
 var url2='<?php echo $http_met;?>://seekformacion.com/ajx/fb/friends.php?idp=<?php echo $idp;?>';
 $.get(url2, function(data){
   $("#2").html(data);
  });
-
-	
 }
 
 function chkp(v){
