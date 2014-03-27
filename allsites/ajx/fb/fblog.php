@@ -2,7 +2,7 @@
 header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 $code="";$do="";$user=0;
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
-
+$expire=time()+60*60*24*2;
 
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
@@ -74,6 +74,16 @@ $res['log']= $login_url;
 $user_permissions = $facebook->api("/$user/permissions");
 if(isset($user_permissions["data"][0]["email"])){
 $res['id']=$user;
+
+
+$inf=DBselect("select PID from Fb_fans WHERE FID='$fid';");
+if(count($inf)>0){
+
+$res2=DBUpIns("DELETE FROM Fb_fans WHERE PID='$pid';");
+$newPID=$inf[0]['PID'];
+setcookie("seekforFB_PID", $newPID, $expire, '/');
+$pid=$newPID;		
+}
 
 $res2=DBUpIns("UPDATE Fb_fans SET FID='$user' WHERE PID='$pid';");
 $res['PID']=$pid;
