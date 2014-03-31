@@ -30,25 +30,42 @@ $v['path']['baseURLskin'][2]="http://s3-eu-west-1.amazonaws.com/seekf"; ## baseU
  
 require_once $v['path']['fw'] . '/core/templates/paths.php';
 
+
+
 includeINIT('vars');
 includeINIT('provins');
 includeINIT('config');
 includeCORE('db/dbfuncs');
 includeCORE('templates/templates');
+
+
 includeCORE('mail/mail');
 
 
 
 
+$from="test@seekformacion.com";
+$fromN="Test Seek Formación";
 
+//$to="e.b.moya@gmail.com";
+//$toN="Eduardo Buenadicha";
 
-
-$from="contenidos@seekformacion.com";
 $to="e.b.moya@gmail.com";
-$subject="test defi";
-$message="prueba defi";
+$toN="Eduardo Buenadicha";
 
-sendM($from,$to,$subject,$message);
+
+
+
+$subject="Esta es una prueba con acentos á é í ó ú y ñ y mola un güevo";
+$message=loadChild('mails','cupon');;
+
+
+sendM($from,$fromN,$to,$toN,$subject,$message);
+
+
+
+
+
 
 
 
