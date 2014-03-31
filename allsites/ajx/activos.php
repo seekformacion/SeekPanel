@@ -14,9 +14,10 @@ $inf=DBselect("select * from skP_users where id > 3 order by activo DESC;");
 echo "Activos <br>"; $f=0;
 foreach ($inf as $ky => $vall){
 
+$user=$vall['user']; $activo=$vall['activo'];
+
 if(($activo==0)&&(!$f)){$f++;echo "<br>Pendientes <br>";}
 
-$user=$vall['user']; $activo=$vall['activo'];
 	
 echo "$user <br>";	
 	
