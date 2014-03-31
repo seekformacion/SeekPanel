@@ -50,13 +50,13 @@ $fromN="Test Seek Formación";
 //$to="e.b.moya@gmail.com";
 //$toN="Eduardo Buenadicha";
 
-$to="natalia_segura@hotmail.com";
-$toN="Natalia Segura";
+$to="e.b.moya@gmail.com";
+$toN="Eduardo Buenadicha";
 
 
 
 
-$subject="Esta es una prueba con acentos á é í ó ú y ñ y mola un güevo";
+$subject="Esta es la prueba definitiva";
 $message=loadChild('mails','cupon');;
 
 
