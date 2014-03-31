@@ -1,4 +1,4 @@
-<?
+<?php
 ################# basico
 $v['where']['view']='panel';
 $v['where']['id']=1; 
@@ -21,3 +21,5 @@ $user=$vall['user']; $activo=$vall['activo'];
 echo "$user <br>";	
 	
 }
+
+?>
