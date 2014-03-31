@@ -50,8 +50,8 @@ $fromN="Test Seek Formación";
 //$to="e.b.moya@gmail.com";
 //$toN="Eduardo Buenadicha";
 
-$to="e.b.moya@gmail.com";
-$toN="Eduardo Buenadicha";
+$to="natalia_segura@hotmail.com";
+$toN="Natalia Segura";
 
 
 
