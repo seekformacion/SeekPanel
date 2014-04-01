@@ -19,6 +19,12 @@ $portales[3]="fp-formacionprofesional.com";
 $portales[4]="oposicionesa.com";
 
 
+$expire=time()+60*60*24*2;
+	
+setcookie("seekforFB_ID",'', $expire, '/');
+setcookie("seekforFB_PID",'', $expire, '/');
+
+
 
 $eqP[1424213751150594]=1;
 $eqP[432712510165494]=2;
