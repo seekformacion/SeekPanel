@@ -195,7 +195,7 @@ position:absolute; top: 80px;}
 
 
 <div class="ftab" style="margin-top:30px;">
-<a href="https://www.facebook.com/cursodecursos/app_715730281795141"><img src="https://seekformacion.com/img/global/fb/miniLog1.png" border="0" class="ilogo"></a>	
+<a href="https://www.facebook.com/cursodecursos/app_715730281795141"  target='_top' ><img src="https://seekformacion.com/img/global/fb/miniLog1.png" border="0" class="ilogo"></a>	
 
 <div style="left:87px;" class="nber"><?php echo $cu;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_CU;?></div>
@@ -204,7 +204,7 @@ position:absolute; top: 80px;}
 </div>	
 	
 <div class="ftab">
-<a href="https://www.facebook.com/masterenmasters/app_715730281795141"><img src="https://seekformacion.com/img/global/fb/miniLog2.png" border="0" class="ilogo"></a>	
+<a href="https://www.facebook.com/masterenmasters/app_715730281795141"  target='_top' ><img src="https://seekformacion.com/img/global/fb/miniLog2.png" border="0" class="ilogo"></a>	
 
 <div style="left:87px;"  class="nber"><?php echo $ma;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_MA;?></div>
@@ -213,7 +213,7 @@ position:absolute; top: 80px;}
 </div>	
 
 <div class="ftab">
-<a href="https://www.facebook.com/fpformacionprofesional/app_715730281795141"><img src="https://seekformacion.com/img/global/fb/miniLog3.png" border="0" class="ilogo"></a>	
+<a href="https://www.facebook.com/fpformacionprofesional/app_715730281795141"  target='_top' ><img src="https://seekformacion.com/img/global/fb/miniLog3.png" border="0" class="ilogo"></a>	
 
 <div style="left:87px;"  class="nber"><?php echo $fp;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_FP;?></div>
@@ -222,7 +222,7 @@ position:absolute; top: 80px;}
 </div>	
 
 <div class="ftab">
-<a href="https://www.facebook.com/oposicionesa/app_715730281795141"><img src="https://seekformacion.com/img/global/fb/miniLog4.png" border="0" class="ilogo"></a>	
+<a href="https://www.facebook.com/oposicionesa/app_715730281795141"  target='_top' ><img src="https://seekformacion.com/img/global/fb/miniLog4.png" border="0" class="ilogo"></a>	
 
 <div style="left:87px;"  class="nber"><?php echo $op;?></div>		
 <div style="left:202px;" class="nber"><?php echo $DA_OP;?></div>
