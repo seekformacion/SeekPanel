@@ -48,7 +48,7 @@ echo("<script>top.location.href='" . $dialog_url . "'</script>");
   // run fql query
   $fql_query_url = 'https://graph.facebook.com/'
     . 'fql?q=SELECT+name+FROM+standard_user_info+WHERE+email=\'e_b_moya@hotmail.com\''
-    . '&access_token=' . $access_token;
+    . '&access_token=' . 'CAAJ4YGTTbHEBAC3W7JpeeqJEHlFhkQNw29qYlamsslIvIk3Jd1FBlrQemaqN0RvqS7kBTcV7tFZASdsUZBqEFaagfwiQN9VPhOZAM7NzZCZAZAab5zaeGrZAvpoX7Xw6wjIdKe3ZCdgJh1K9NhtiIHZC90aiDyyvc0jEjcRfg8WO5N409tE1EmjIupr4f6kh86xoei0rjgUQtigZDZD';
 	
 echo "<br> <br> $fql_query_url  <br> <br>";	
   $fql_query_result = file_get_contents($fql_query_url);
