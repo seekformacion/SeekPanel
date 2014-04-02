@@ -57,7 +57,7 @@ $toN="Eduardo Buenadicha";
 
 
 $subject="Esta es la prueba definitiva del todo";
-$message=loadChild('mails','cupon');;
+$message=loadChild('mails','cupon');
 
 
 sendM($from,$fromN,$to,$toN,$subject,$message);
