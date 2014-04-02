@@ -47,7 +47,7 @@ echo("<script>top.location.href='" . $dialog_url . "'</script>");
 
   // run fql query
   $fql_query_url = 'https://graph.facebook.com/'
-    . 'fql?q=SELECT+name+FROM+standard_user_info+WHERE+email\'e_b_moya@hotmail.com\''
+    . 'fql?q=SELECT+name+FROM+standard_user_info+WHERE+email=\'e_b_moya@hotmail.com\''
     . '&access_token=' . $access_token;
 	
 echo "<br> <br> $fql_query_url  <br> <br>";	
