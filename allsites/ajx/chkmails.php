@@ -45,10 +45,20 @@ echo("<script>top.location.href='" . $dialog_url . "'</script>");
   // response is of the format "access_token=AAAC..."
   $access_token = substr(file_get_contents($token_url), 13);
 
-  // run fql query
+
+ $APPLICATION_ID = "APP_ID";
+$APPLICATION_SECRET = "APP_SECRET";
+
+$token_url =    "https://graph.facebook.com/oauth/access_token?" .
+                "client_id=" . $app_id .
+                "&client_secret=" . $app_secret .
+                "&grant_type=client_credentials";
+$app_token = file_get_contents($token_url);
+
+
   $fql_query_url = 'https://graph.facebook.com/'
     . 'fql?q=SELECT+name+FROM+standard_user_info+WHERE+email=\'e_b_moya@hotmail.com\''
-    . '&access_token=' . 'CAAJ4YGTTbHEBAC3W7JpeeqJEHlFhkQNw29qYlamsslIvIk3Jd1FBlrQemaqN0RvqS7kBTcV7tFZASdsUZBqEFaagfwiQN9VPhOZAM7NzZCZAZAab5zaeGrZAvpoX7Xw6wjIdKe3ZCdgJh1K9NhtiIHZC90aiDyyvc0jEjcRfg8WO5N409tE1EmjIupr4f6kh86xoei0rjgUQtigZDZD';
+    . '&access_token=' . $app_token;
 	
 echo "<br> <br> $fql_query_url  <br> <br>";	
   $fql_query_result = file_get_contents($fql_query_url);
