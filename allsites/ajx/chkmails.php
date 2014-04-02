@@ -4,10 +4,11 @@
   $my_url = 'http://seekformacion.com/ajx/chkmails.php';
 
   
-  print_r($_GET);
   
-  if(array_key_exists('code', $_GET)){
-  $code = $_GET["code"];
+  
+  if(array_key_exists('code', $_REQUEST)){
+  $code = $_REQUEST["code"];
+  
   }else{$code="";}
   
  // auth user
@@ -17,6 +18,8 @@
     echo("<script>top.location.href='" . $dialog_url . "'</script>");
   }
 
+  
+  print_r($_GET);
   // get user access_token
   $token_url = 'https://graph.facebook.com/oauth/access_token?client_id='
     . $app_id . '&redirect_uri=' . urlencode($my_url) 
