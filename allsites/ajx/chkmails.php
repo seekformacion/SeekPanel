@@ -1,7 +1,7 @@
 <?php
   $app_id = '695305357192305';
   $app_secret = '46258d32495f23804a167195a3a4201d';
-  $my_url = 'http://oposicionesa.com/ajx/chkmails.php';
+  $my_url = 'http://seekformacion.com/ajx/chkmails.php';
 
   
   print_r($_GET);
@@ -53,3 +53,8 @@
   print_r($fql_multiquery_obj);
   echo '</pre>';
 ?>
+
+
+
+
+
