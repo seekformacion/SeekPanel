@@ -1,6 +1,17 @@
 <?php
-  $app_id = '695305357192305';
-  $app_secret = '46258d32495f23804a167195a3a4201d';
+
+require '/www/repositorios/facebook-php-sdk/src/facebook.php';
+
+$app_id = "695305357192305";
+$app_secret = "46258d32495f23804a167195a3a4201d";
+$facebook = new Facebook(array(
+'appId' => $app_id,
+'secret' => $app_secret,
+'cookie' => true
+));
+
+
+  
   $my_url = 'http://seekformacion.com/ajx/chkmails.php';
 
   
@@ -13,10 +24,16 @@
   
  // auth user
  if(empty($code)) {
-    $dialog_url = 'https://www.facebook.com/dialog/oauth?client_id=' 
-    . $app_id . '&redirect_uri=' . urlencode($my_url) ;
-    echo("<script>top.location.href='" . $dialog_url . "'</script>");
-  }
+ 	
+	
+$redirect=$my_url;
+//$redirect=urlencode($redirect);
+$login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'email,user_education_history', 'display' => 'popup') );
+	
+	
+echo $login_url;	
+ 
+}
 
   
   print_r($_GET);
