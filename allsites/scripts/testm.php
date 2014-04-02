@@ -44,14 +44,14 @@ includeCORE('mail/mail');
 
 
 
-$from="test@seekformacion.com";
+$from="cupones@seekformacion.com";
 $fromN="Test Seek Formación";
 
 //$to="e.b.moya@gmail.com";
 //$toN="Eduardo Buenadicha";
 
-$to="e.b.moya@gmail.com";
-$toN="Eduardo Buenadicha";
+$to="test@thegoprofamily.com";
+$toN="Gopro info";
 
 
 
