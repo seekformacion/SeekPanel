@@ -28,15 +28,14 @@ $facebook = new Facebook(array(
 	
 $redirect=$my_url;
 //$redirect=urlencode($redirect);
-$login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'email,user_education_history', 'display' => 'popup') );
+$dialog_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'email,user_education_history', 'display' => 'popup') );
 	
 	
-echo $login_url;	
+echo("<script>top.location.href='" . $dialog_url . "'</script>");
  
 }
 
-  
-  print_r($_GET);
+
   // get user access_token
   $token_url = 'https://graph.facebook.com/oauth/access_token?client_id='
     . $app_id . '&redirect_uri=' . urlencode($my_url) 
@@ -48,8 +47,10 @@ echo $login_url;
 
   // run fql query
   $fql_query_url = 'https://graph.facebook.com/'
-    . 'fql?q=SELECT+uid2+FROM+friend+WHERE+uid1=me()'
+    . 'fql?q=SELECT+uid+FROM+users+WHERE+mail=\'e_b_moya@hotmail.com\''
     . '&access_token=' . $access_token;
+	
+echo "<br> <br> $fql_query_url  <br> <br>";	
   $fql_query_result = file_get_contents($fql_query_url);
   $fql_query_obj = json_decode($fql_query_result, true);
 
