@@ -65,14 +65,14 @@ echo "<script>window.close();</script>";
 
 $redirect="https://seekformacion.com/ajx/fb/fblog.php?do=$pid";
 //$redirect=urlencode($redirect);
-$login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'email,user_education_history', 'display' => 'popup') );
+$login_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' => 'user_likes', 'display' => 'popup') );
 
 
 if(!$user){
 $res['log']= $login_url;
 }else{
 $user_permissions = $facebook->api("/$user/permissions");
-if(isset($user_permissions["data"][0]["email"])){
+if(isset($user_permissions["data"][0]["user_likes"])){
 $res['id']=$user;
 
 
