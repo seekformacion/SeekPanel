@@ -49,7 +49,7 @@ $ins=DBUpIns("UPDATE Fb_fans SET PROF='$prof' WHERE FID='$user';");
 }
 
 
-if(isset($user_permissions["data"][0]["email"])){
+if(isset($user_permissions["data"][0]["user_likes"])){
 setcookie("seekforFB_PEM", 2, $expire, '/');		
 }else{
 setcookie("seekforFB_PEM", 1, $expire, '/');	
