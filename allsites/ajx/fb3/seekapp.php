@@ -18,11 +18,16 @@ if((!$user)&&($code)){
 $getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=http%3A%2F%2Fseekformacion.com%2Fajx%2Ffb3%2Fseekapp.php&client_secret=$app_secret&code=$code";
 $content = file_get_contents($getaT);
 
+echo "<a href='$getaT'>$getaT</a> ";
+
+
 $datos=explode('&',$content);
 foreach($datos as $key => $valor){ if(strlen($valor) > strlen(str_replace('access_token=','',$valor)) ) { $access_token=str_replace('access_token=','',$valor);} };
 $facebook->setAccessToken($access_token);
 $user = $facebook->getUser();	
 }
+
+echo $user;
 
 if(!$user){
 	
@@ -57,7 +62,7 @@ if(!$user){
 	
 	function login(){
 	
-	window.location='<?php echo $loginUrl; ?>';	
+	//window.location='<?php echo $loginUrl; ?>';	
 		
 	}
 	
@@ -70,9 +75,7 @@ if(!$user){
 
 <body class="gris1_BG" onload="login();">
 
-<!--
 <a href='<?php echo $loginUrl;?>'><?php echo $loginUrl;?></a> ";
--->
 
 </body>
 </html>
