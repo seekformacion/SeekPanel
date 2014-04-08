@@ -19,7 +19,7 @@ if(isset($user_permissions["data"][0]["user_likes"])){$participa=1;}else{$partic
 //print_r($user_permissions);
 //echo $user;
 
-if(!$participa){include('participa.php');}else{include('noparticipa.php');};
+if($participa){include('participa.php');}else{include('noparticipa.php');};
 
 }
 
