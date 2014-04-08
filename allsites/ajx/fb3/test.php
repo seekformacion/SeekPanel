@@ -14,19 +14,18 @@
     xfbml      : true  // parse XFBML
   });
 
-  FB.Event.subscribe('auth.authResponseChange', function(response) {
-    // Here we specify what we do with the response anytime this event occurs. 
-    if (response.status === 'connected') {
-      
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-     
-      FB.login();
-    } else {
-      
-      FB.login();
+
+FB.login(function(response) {
+    if (response.authResponse) {
+        alert('Logged in and accepted permissions!');
     }
-  });
+}, {scope:'manage_pages,publish_stream'});
+
+
+
+
+
+
   };
 
   // Load the SDK asynchronously
