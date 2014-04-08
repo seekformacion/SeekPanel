@@ -10,7 +10,10 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 $loginUrl = $facebook->getLoginUrl();
+
 $user = $facebook->getUser();
+
+
 if(!$user){
 	
 ?>
