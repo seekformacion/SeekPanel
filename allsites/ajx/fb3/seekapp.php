@@ -18,7 +18,7 @@ if((!$user)&&($code)){
 $getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirect_uri=https%3A%2F%2Fseekformacion.com%2Fajx%2Ffb3%2Fseekapp.php&client_secret=$app_secret&code=$code";
 $content = file_get_contents($getaT);
 
-echo $content;
+echo $getaT;
 $datos=explode('&',$content);
 foreach($datos as $key => $valor){ if(strlen($valor) > strlen(str_replace('access_token=','',$valor)) ) { $access_token=str_replace('access_token=','',$valor);} };
 $facebook->setAccessToken($access_token);
