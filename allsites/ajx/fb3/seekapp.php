@@ -19,6 +19,8 @@ $getaT= "https://graph.facebook.com/oauth/access_token?client_id=$app_id&redirec
 $content = file_get_contents($getaT);
 
 echo "<a href='$getaT'>$getaT</a> ";
+
+
 $datos=explode('&',$content);
 foreach($datos as $key => $valor){ if(strlen($valor) > strlen(str_replace('access_token=','',$valor)) ) { $access_token=str_replace('access_token=','',$valor);} };
 $facebook->setAccessToken($access_token);
@@ -71,7 +73,7 @@ if(!$user){
 
 <body class="gris1_BG" onload="login();">
 
-
+<a href='<?php echo $loginUrl;?>'><?php echo $loginUrl;?></a> ";
 
 </body>
 </html>
