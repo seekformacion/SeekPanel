@@ -6,7 +6,7 @@ foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo .
 $expire=time()+60*60*24*2;
 
 global $_REQUEST;
-print_r($_REQUEST);
+
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
