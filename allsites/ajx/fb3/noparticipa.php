@@ -125,7 +125,7 @@ if(st==2){panel();}
 }
 
 function panel(){
-window.location="/ajx/fb3/seekapp.php";
+window.location="<?php echo $loginUrl;?>";
 }
 	
 </script>
