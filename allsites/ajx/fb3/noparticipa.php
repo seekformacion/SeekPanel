@@ -91,7 +91,7 @@ timer();
 } 
 
 function timer(){
-document.getElementById('timer').style.visibility = "visible" ;
+//document.getElementById('timer').style.visibility = "visible" ;
 setCookie('perm',0,20);
 chk1();	
 }	
@@ -107,7 +107,7 @@ var func='chk2();'
 var st=getperm();
 
 if(st==0){setTimeout(func, 3000);}
-if(st==1){document.getElementById('timer').style.visibility = "hidden" ;}
+if(st==1){}
 if(st==2){panel();}	
 
 
@@ -118,7 +118,7 @@ var func='chk1();'
 var st=getperm();
 
 if(st==0){setTimeout(func, 3000);}
-if(st==1){document.getElementById('timer').style.visibility = "hidden" ;}
+if(st==1){}
 if(st==2){panel();}	
 
 	
@@ -167,7 +167,6 @@ Todos los participantes en el concurso, participareis también en un sorteo con 
 
 <img style="position: relative; float: left; margin-top: 15px; cursor:pointer;" src="/img/global/contest/botParti.png" onclick='PopupCenter("<?php echo $perm_url;?>","",490,400);'>
 
-<img style="visibility: hidden" class="timer" src="/img/global/contest/botParti.png" id="timer" />
 
 <img style="position: absolute; left: 425px; top:-90px  " src="/img/global/contest/premiosG.png">
 </div>
