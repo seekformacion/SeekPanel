@@ -1,7 +1,5 @@
 <?php
-ini_set('session_save_path', '/home/ec2-user/tmp');
-session_name('ec2-user');
-if(@session_start() == false){session_destroy();session_start();}
+session_destroy();
 
 
 header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
