@@ -1,5 +1,11 @@
 <?php
+ini_set('session_save_path', '/home/ec2-user/tmp');
+session_name('ec2-user');
+if(@session_start() == false){session_destroy();session_start();}
+
+
 header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
+
 $code="";$do="";$user=0;
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 $expire=time()+60*60*24*2;
