@@ -1,7 +1,4 @@
 <?php
-session_destroy();
-
-
 header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 
 $code="";$do="";$user=0;
