@@ -36,10 +36,10 @@ if($do=='perm'){ ########## callback de login
 
 }else{
 	
-
+$req_data="";
 
 $signed_request = $facebook->getSignedRequest();
-if($signed_request){
+if(($signed_request)&&(isset($_GET['request_ids']))){
 $request_ids = $_GET['request_ids'];
 $request_ids = explode(",", $request_ids);
 if(count($request_ids)>0){
