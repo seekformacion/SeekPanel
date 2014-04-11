@@ -78,8 +78,25 @@ fjs.parentNode.insertBefore(js, fjs);
 <?php
 
 
+
+
 /*
   
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=695305357192305";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+ * 
+ * 
+ * 
+ * 
+ * 
  $app_data = '';
 if(isset($signed_request["app_data"])){ $app_data = $signed_request["app_data"]; }; 
   

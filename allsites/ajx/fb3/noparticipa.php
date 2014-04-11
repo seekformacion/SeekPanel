@@ -22,7 +22,7 @@ $perm_url = $facebook->getLoginUrl( array( 'redirect_uri' => $redirect, 'scope' 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <style>
-.gris1_BG{  background-color: #EBEBEB !important;}	
+.gris1_BG{  background-color: #FFFFFF !important;}	
 .page {width: 700px; background-color: #ffffff;
     height: 1000px;
     margin: 0 auto;
