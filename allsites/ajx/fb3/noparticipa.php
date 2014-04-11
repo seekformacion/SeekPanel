@@ -141,7 +141,7 @@ window.location="<?php echo $loginUrl;?>";
 <body class="gris1_BG">
 	
 <div class="page" id="page">
-
+<img style="position:absolute; top:150px; left:350px; display: none;" src="/img/global/contest/timer.gif">
 <img style="position: relative; float: left;" src="/img/global/contest/cabeContest.gif">
 
 <div class="textos" style="margin-top: 50px;">
