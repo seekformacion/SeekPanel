@@ -1,5 +1,5 @@
 <?php
-header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
+header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');$idp=1;
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 $portales[1]="cursodecursos";
@@ -85,7 +85,7 @@ setCookie('seekforFB_REFDE','<?php echo $ref;?>','2');
 
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-top.location.href = "/ajx/fb/nomovil.php";
+top.location.href = "https://www.seekformacion.com/ajx/fb3/seekapp.php";
 }else{
 top.location.href = "https://www.facebook.com/<?php echo $portales[$idp]; ?>/app_715730281795141";
 }
