@@ -19,8 +19,8 @@ if($do=='perm'){ ########## callback de login
 
 	$user = $facebook->getUser();
 	if(!$user){
-	$loginUrl = $facebook->getLoginUrl();
-	header("Location: $loginUrl");
+	$loginUrl = $facebook->getLoginUrl(); print_r($_REQUEST);
+	//header("Location: $loginUrl");
 	}else{
 	$user_permissions = $facebook->api("/$user/permissions");
 	if(isset($user_permissions["data"][0]["user_likes"])){
