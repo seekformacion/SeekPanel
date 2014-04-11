@@ -126,7 +126,7 @@ if(st==2){panel();}
 
 function panel(){
 document.getElementById('page').innerHTML='<img style="position:absolute; top:150px; left:350px;" src="/img/global/contest/timer.gif">'	
-window.location="<?php echo $loginUrl;?>";
+setTimeout('window.location="<?php echo $loginUrl;?>"', 1200);';
 }
 	
 </script>
