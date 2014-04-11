@@ -3,7 +3,7 @@
 $ultis="";
 $inf=DBselect("select FID from Fb_fans WHERE FID NOT LIKE '' ORDER BY id DESC limit 4;");
 if(count($inf)>0){ foreach ($inf as $key => $value) {$FID=$value['FID'];
-$ultis .="<a href='http://www.facebook.com/$FID'><img class='imgUlti' src='https://graph.facebook.com/$FID/picture'></a>";	
+$ultis .="<a href='http://www.facebook.com/$FID' target='_top' ><img class='imgUlti' src='https://graph.facebook.com/$FID/picture'></a>";	
 }}
 
 
