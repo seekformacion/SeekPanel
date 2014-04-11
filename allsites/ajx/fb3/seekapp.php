@@ -4,7 +4,7 @@ $expire=time()+60*60*24*500;
 
 if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
 
-$code="";$do="";$user=0;
+$code="";$do="";$user=0;$error="";
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 $expire=time()+60*60*24*2;
 
@@ -19,8 +19,8 @@ if($do=='perm'){ ########## callback de login
 
 	$user = $facebook->getUser();
 	if(!$user){
-	$loginUrl = $facebook->getLoginUrl(); print_r($_REQUEST);
-	//header("Location: $loginUrl");
+	$loginUrl = $facebook->getLoginUrl(); //print_r($_REQUEST);
+	if(!$error){header("Location: $loginUrl");}else{echo "<script>window.close();</script>";};
 	}else{
 	$user_permissions = $facebook->api("/$user/permissions");
 	if(isset($user_permissions["data"][0]["user_likes"])){
