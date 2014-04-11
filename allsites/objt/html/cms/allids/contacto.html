@@ -53,6 +53,13 @@ var url="/ajx/sendF.php?nom=" + nom +
 
 $.getJSON(url, function(data) {
 $.each(data, function(key, val) {
+document.getElementById('nom').value="";
+document.getElementById('mail').value="";
+document.getElementById('tel').value="";
+document.getElementById('cent').value="";
+document.getElementById('web').value="";
+document.getElementById('coment').value="";
+alert('Datos enviados. Muchas gracias');	
 });});	
 	
 }	
