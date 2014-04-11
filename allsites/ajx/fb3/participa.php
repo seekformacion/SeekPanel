@@ -218,13 +218,13 @@ if(key=='stop'){window.stop=1;}
 function chg1(){
 var func='chg2();';
 chklikes();
-if(!window.stop){setTimeout(func, 5000);};
+if(!window.stop){setTimeout(func, 3000);};
 }
 
 function chg2(){
 var func='chg1();';
 chklikes();
-if(!window.stop){setTimeout(func, 5000);};
+if(!window.stop){setTimeout(func, 3000);};
 }
 
 
