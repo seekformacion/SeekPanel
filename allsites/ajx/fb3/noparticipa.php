@@ -106,7 +106,7 @@ function chk1(){
 var func='chk2();'
 var st=getperm();
 
-if(st==0){setTimeout(func, 3000);}
+if(st==0){setTimeout(func, 500);}
 if(st==1){}
 if(st==2){panel();}	
 
@@ -117,7 +117,7 @@ function chk2(){
 var func='chk1();'
 var st=getperm();
 
-if(st==0){setTimeout(func, 3000);}
+if(st==0){setTimeout(func, 500);}
 if(st==1){}
 if(st==2){panel();}	
 
