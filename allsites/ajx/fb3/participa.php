@@ -79,9 +79,9 @@ $ins=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op, puntos='$PTOT' 
 $pos=1;
 $rk=DBselect("select distinct puntos as rk from Fb_fans ORDER BY rk DESC;");
 if(count($rk)>0){foreach($rk as $k => $val){$rank[$val['rk']]=$pos; $pos++;}}
-$ranking=$rank[$PTOT];
+$ranking=$rank[$PTOT] . "º";
 
-
+if($PTOT==0){$ranking="-";}
 
 
 ?>
@@ -346,7 +346,7 @@ fjs.parentNode.insertBefore(js, fjs);
 <div class="ptos" style="margin-left:40px;" id="pp"><?php echo $SUMP;?></div>
 <div class="ptos" style="margin-left:40px;" id="pi"><?php echo $INVI;?></div>
 <div class="ptos" style="margin-left:40px;" id="pt"><?php echo $PTOT;?></div>
-<div class="ptos" style="margin-left:40px;" id="ra"><?php echo $ranking;?>º</div>
+<div class="ptos" style="margin-left:40px;" id="ra"><?php echo $ranking;?></div>
 
 <img style="position: absolute; left: 560px; top:-55px  " src="/img/global/contest/premiosP.png">
 </div>
