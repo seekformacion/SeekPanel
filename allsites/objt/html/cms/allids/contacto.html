@@ -35,6 +35,28 @@ Formulario de contacto
 <div class="tiTXT tque">
 Si desea más información sobre como publicar su oferta de formación en nuestros portales de Internet, rellene el siguiente formulario con los datos de su centro de formación y sus datos de contacto y un asesor se pondrá en contacto con usted.</div>
 
+<script>
+function sendF(){
+var nom=document.getElementById('nom').value;
+var mail=document.getElementById('mail').value;
+var tel=document.getElementById('tel').value;
+var cent=document.getElementById('cent').value;
+var web=document.getElementById('web').value;
+var coment=document.getElementById('coment').value;
+
+var url="/ajx/sendF.php?nom=" + nom + 
+"&mail=" + mail + 
+"&tel=" + tel +  
+"&cent=" + cent + 
+"&web=" + web + 
+"&coment=" + coment;
+
+$.getJSON(url, function(data) {
+$.each(data, function(key, val) {
+});});	
+	
+}	
+</script>
 
 <div class="formu">
 
