@@ -39,6 +39,7 @@ if($do=='perm'){ ########## callback de login
 
 
 $signed_request = $facebook->getSignedRequest();
+if($signed_request){
 $request_ids = $_GET['request_ids'];
 $request_ids = explode(",", $request_ids);
 foreach($request_ids as $request_id)
@@ -53,7 +54,7 @@ if (!isset($_COOKIE["seekforFB_REFDE"])){
 $expire=time()+60*60*24*2;
 setcookie("seekforFB_REFDE", $req_data, $expire, '/');	
 }
-
+}
 
 
 
