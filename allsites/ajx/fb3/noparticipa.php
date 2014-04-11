@@ -134,7 +134,7 @@ window.location="<?php echo $loginUrl;?>";
 
 <meta name="viewport" content="width=736px" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
-<title><?php echo $user;?>	</title>
+<title>Concurso Apple</title>
 </head>
 
 <body class="gris1_BG">
