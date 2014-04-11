@@ -24,6 +24,9 @@ $message.="$cent <br>\n";
 $message.="$web <br>\n";
 $message.="$coment <br>\n";
 
-sendM($from,$fromN,$to,$toN,$subject,$message);
+if(sendM($from,$fromN,$to,$toN,$subject,$message)){
+$do['do']=1;
+echo json_encode($do);		
+};
 
 ?>
