@@ -125,6 +125,7 @@ if(st==2){panel();}
 }
 
 function panel(){
+document.getElementById('page').innerHTML='<img style="position:absolute; top:150px; left:350px;" src="/img/global/contest/timer.gif">'	
 window.location="<?php echo $loginUrl;?>";
 }
 	
@@ -139,7 +140,7 @@ window.location="<?php echo $loginUrl;?>";
 
 <body class="gris1_BG">
 	
-<div class="page">
+<div class="page" id="page">
 
 <img style="position: relative; float: left;" src="/img/global/contest/cabeContest.gif">
 
