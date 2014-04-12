@@ -45,6 +45,16 @@ $portales[4]="oposicionesa";
 <meta itemprop="description" content="Concurso Apple. Gana un IPhone 5 un IPad o un IPad mini" />
 <meta itemprop="image" content="http://seekformacion.com/img/global/fb/banerconcurso.jpg" />
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-36119979-5', 'seekformacion.com');
+  ga('send', 'pageview');
+
+</script>
 
 <script type="text/javascript">
 
