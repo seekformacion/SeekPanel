@@ -54,6 +54,7 @@ $portales[4]="oposicionesa";
   ga('create', 'UA-36119979-5', 'seekformacion.com');
   ga('send', 'pageview');
 
+
 </script>
 
 <script type="text/javascript">

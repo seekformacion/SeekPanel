@@ -134,16 +134,10 @@ if($PTOT==0){$ranking="-";}
 
 <script type="text/javascript" src="<?php echo $http_met;?>://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-36119979-5', 'seekformacion.com');
-  ga('send', 'pageview');
 
-</script>
+
+
 
 
 <script>
@@ -304,10 +298,21 @@ var tops = (screen.height/2)-(h/2);
 var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+tops+', left='+left);
 } 
 
+
 	
 </script>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  var campamia=getCookie('seekforFB_REFDE');
+  ga('create', 'UA-36119979-5', 'seekformacion.com');
+  ga('send', 'pageview', '/ajx/fb3/seekapp.php?paso=Participa&utm_source=' + campamia);
+
+</script>
 
 <meta name="viewport" content="width=736px" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
