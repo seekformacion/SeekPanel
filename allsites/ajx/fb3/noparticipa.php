@@ -145,10 +145,10 @@ window.location="<?php echo $loginUrl;?>";
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  var campamia=getCookie('seekforFB_REFDE');
+  //var campamia=getCookie('seekforFB_REFDE');
   ga('create', 'UA-36119979-5', 'seekformacion.com');
-  ga('send', 'pageview', '/ajx/fb3/seekapp.php?paso=NoParticipa&utm_source=' + campamia);
-
+  ga('send', 'pageview');
+  ga('send', 'event', 'pagina', 'load', 'Participa', 1);
 </script>
 
 <meta name="viewport" content="width=736px" />

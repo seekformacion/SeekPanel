@@ -184,26 +184,26 @@ $.each(data, function(key, val) {
 
 if(key=='1'){
 	if((val==0)&&(document.getElementById('1').style.visibility=='visible')){document.getElementById('1').style.visibility='hidden';}
-	if((val==1)&&(document.getElementById('1').style.visibility=='hidden')){document.getElementById('1').style.visibility='visible';}
+	if((val==1)&&(document.getElementById('1').style.visibility=='hidden')){document.getElementById('1').style.visibility='visible'; ga('send', 'event', 'pagina', 'like', 'click', 1);}
 		}
 
 
 if(key=='2'){
 	if((val==0)&&(document.getElementById('2').style.visibility=='visible')){document.getElementById('2').style.visibility='hidden';}
-	if((val==1)&&(document.getElementById('2').style.visibility=='hidden')){document.getElementById('2').style.visibility='visible';}
+	if((val==1)&&(document.getElementById('2').style.visibility=='hidden')){document.getElementById('2').style.visibility='visible';ga('send', 'event', 'pagina', 'like', 'click', 2);}
 		}
 
 
 if(key=='3'){
 	if((val==0)&&(document.getElementById('3').style.visibility=='visible')){document.getElementById('3').style.visibility='hidden';}
-	if((val==1)&&(document.getElementById('3').style.visibility=='hidden')){document.getElementById('3').style.visibility='visible';}
+	if((val==1)&&(document.getElementById('3').style.visibility=='hidden')){document.getElementById('3').style.visibility='visible';ga('send', 'event', 'pagina', 'like', 'click', 3);}
 		}
 
 
 
 if(key=='4'){
 	if((val==0)&&(document.getElementById('4').style.visibility=='visible')){document.getElementById('4').style.visibility='hidden';}
-	if((val==1)&&(document.getElementById('4').style.visibility=='hidden')){document.getElementById('4').style.visibility='visible';}
+	if((val==1)&&(document.getElementById('4').style.visibility=='hidden')){document.getElementById('4').style.visibility='visible';ga('send', 'event', 'pagina', 'like', 'click', 4);}
 		}
 
 if(key=='pp'){document.getElementById('pp').innerHTML=val;}
@@ -310,8 +310,9 @@ var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directori
 
   var campamia=getCookie('seekforFB_REFDE');
   ga('create', 'UA-36119979-5', 'seekformacion.com');
-  ga('send', 'pageview', '/ajx/fb3/seekapp.php?paso=Participa&utm_source=' + campamia);
-
+  ga('send', 'pageview');
+  ga('send', 'event', 'pagina', 'load', 'Participa', 2);
+ 
 </script>
 
 <meta name="viewport" content="width=736px" />
