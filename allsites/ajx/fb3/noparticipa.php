@@ -163,7 +163,7 @@ window.location="<?php echo $loginUrl;?>";
 <img style="position: relative; float: left;" src="/img/global/contest/cabeContest.gif">
 
 <div class="textos" style="margin-top: 50px;">
-Participa en este concurso y si eres una de las dos personas que más “Me gusta” consigue, ganarás directamente y sin sorteos uno de estros dos productos de Apple: 	
+Participa en este concurso y si eres una de las dos personas que más “Me gusta” consigue, ganarás directamente y sin sorteos uno de estos dos productos de Apple: 	
 </div>
 
 <img style="position: relative; float: left;   left: 211px;  margin-top: 15px;" src="/img/global/contest/premi1.gif">
