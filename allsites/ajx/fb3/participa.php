@@ -254,7 +254,7 @@ FB.ui({  method: 'apprequests',  data: ref,  message: 'Listado de amigos que no 
 }
 
 function comparte(){
-var url='<?php echo urlencode("http://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID");?>';
+var url='<?php echo urlencode("https://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID&utm_source=share&utm_medium=facebook&utm_campaign=promoContest");?>';
 var redirect='<?php echo urlencode("$http_met://www.seekformacion.com/ajx/fb3/shareclose.php?user=$user");?>';
 
 var pageURL='https://www.facebook.com/dialog/feed?app_id=715730281795141&display=popup&link=' + url +  '&redirect_uri=' + redirect;
@@ -267,7 +267,7 @@ PopupCenter(pageURL, title,w,h);
 
 
 function compGog(){
-var url='<?php echo urlencode("http://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID");?>';
+var url='<?php echo urlencode("https://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID&utm_source=share&utm_medium=gplus&utm_campaign=promoContest");?>';
 
 var pageURL="https://plus.google.com/share?url=" + url;
 var title="Publicar en Google+";
@@ -279,7 +279,7 @@ PopupCenter(pageURL, title,w,h);
 
 
 function compTwe(){
-var url='<?php echo urlencode("http://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID");?>';
+var url='<?php echo urlencode("https://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID&utm_source=share&utm_medium=twi&utm_campaign=promoContest");?>';
 
 var pageURL="http://twitter.com/share?text=Ayudadme a ganar un IPhone 5, Un IPad o un IPad mini..&url=" + url;
 var title="Publicar en Google+";
