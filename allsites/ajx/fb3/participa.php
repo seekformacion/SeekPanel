@@ -418,7 +418,7 @@ Consigue <strong>más puntos</strong> invitando a participar a tus amigos. Consi
 
 <div class="franjaAz" style="height: 45px;">
 <div style="position:relative; float:left; text-align:center;  width:650px; height: 15px; font-family: Arial; color: #FFFFFF; font-size: 13px;">Puedes usar este enlace para invitar a tus amigos a participar y así conseguir más puntos</div>	
-<input type="text" style="width: 668px; position: relative; float: left; margin-left: 0px; margin-top: 3px;font-family: Arial; text-align: center " value="<?php echo "http://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID";?>">	
+<input type="text" style="width: 668px; position: relative; float: left; margin-left: 0px; margin-top: 3px;font-family: Arial; text-align: center " value="<?php echo "https://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID";?>">	
 </div>
 
 <div class="opciones">
