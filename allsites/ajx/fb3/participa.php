@@ -281,7 +281,7 @@ PopupCenter(pageURL, title,w,h);
 function compTwe(){
 var url='<?php echo urlencode("http://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID");?>';
 
-var pageURL="http://twitter.com/share?url=" + url;
+var pageURL="http://twitter.com/share?text=Ayudadme a ganar un IPhone 5, Un IPad o un IPad mini..&url=" + url;
 var title="Publicar en Google+";
 var w=400;
 var h=300;
