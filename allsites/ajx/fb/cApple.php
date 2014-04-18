@@ -2,15 +2,11 @@
 header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');$idp=1;
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
+
 $portales[1]="cursodecursos";
 $portales[2]="masterenmasters";
 $portales[3]="fpformacionprofesional";
 $portales[4]="oposicionesa";
-
-
-
-
-
 
 
 ?>

@@ -49,7 +49,7 @@ swapInnerHTML('tipo',val);
 
 
 
-function doURL(){
+function doURL(){$.ajaxSetup({ cache: false });
 	if(document.getElementById('nom').value){
 		
 		var url=slug($('#nom').val()) + ".html";
@@ -122,7 +122,7 @@ if(!no){deblock(6);}
 	
 }
 
-function loadSEDES(){
+function loadSEDES(){$.ajaxSetup({ cache: false });
 var skpUID=getCookie('skpUID');
 var idc=getCookie('selC');
 if(skpUID){	
@@ -133,7 +133,7 @@ if(skpUID){
 }
 
 
-function initLIST(){
+function initLIST(){$.ajaxSetup({ cache: false });
 window.top.opCAT=new Array;
 var skpUID=getCookie('skpUID');
 var idc=getCookie('selC');
@@ -164,7 +164,7 @@ swapInnerHTML('cats',window.top.opCAT[t]);
 loadCurs(0)	
 }
 
-function loadCurs(c){//console.log(window.top.idtipi);
+function loadCurs(c){$.ajaxSetup({ cache: false });
 var skpUID=getCookie('skpUID');
 var idc=getCookie('selC');
 if(skpUID){	
@@ -177,7 +177,7 @@ document.getElementById('listcur').src='/ajx/listaCur.php?skpUID=' + skpUID + '&
 
 
 
-function loadCAT(id){
+function loadCAT(id){$.ajaxSetup({ cache: false });
 	$.ajaxSetup({ cache: false });
 window.top.CATSEL=0;
 var skpUID=getCookie('skpUID');
@@ -191,7 +191,7 @@ if(skpUID){
 
 
 
-function loadCATEDIT(dat){
+function loadCATEDIT(dat){$.ajaxSetup({ cache: false });
 var datos=dat.split('|'); var sup=datos[0]; var cat=datos[1];
 window.top.CATSEL=cat;
 var skpUID=getCookie('skpUID');
@@ -227,7 +227,7 @@ editcur();
 
 
 
-function marcasedes(){
+function marcasedes(){$.ajaxSetup({ cache: false });
 var skpUID=getCookie('skpUID');
 var idc=getCookie('selC');
 if(skpUID){	
@@ -255,7 +255,7 @@ $.getJSON(url, function(data) {$.each(data, function(key, val) {
 
 
 
-function editcur(){
+function editcur(){$.ajaxSetup({ cache: false });
 var skpUID=getCookie('skpUID');
 var idc=getCookie('selC');
 if(skpUID){	
@@ -318,7 +318,7 @@ function InsertHTML(value) {
 }
 
 
-function cambiaCur(){
+function cambiaCur(){$.ajaxSetup({ cache: false });
 
 //////// nom y tip	
 var nom=document.getElementById('nom').value; 	

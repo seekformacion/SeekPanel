@@ -7,7 +7,7 @@ window.top.he[5]=86;
 
 function lK(url){window.location.href =	url;}
 
-function dologin(){
+function dologin(){$.ajaxSetup({ cache: false });
 var user=document.getElementById('user').value;
 var pass=document.getElementById('pass').value;	
 
@@ -26,7 +26,7 @@ function politica(){
 document.getElementById('poli').style.display="block";	
 }
 
-function activa(){
+function activa(){$.ajaxSetup({ cache: false });
 	var p1=document.getElementById('p1').value;
 	var p2=document.getElementById('p2').value;	
 	var user=document.getElementById('user').value;
@@ -52,7 +52,7 @@ function activa(){
 	}	}
 
 
-function dologin2(user,pass){
+function dologin2(user,pass){$.ajaxSetup({ cache: false });
 var url='/ajx/logUID.php?user=' + user + '&pass=' + pass;	
 $.getJSON(url, function(data) {$.each(data, function(key, val) {
 if(key=="activar"){document.getElementById('contenido').innerHTML=val;}
