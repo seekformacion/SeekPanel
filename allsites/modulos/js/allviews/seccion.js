@@ -178,6 +178,7 @@ document.getElementById('listcur').src='/ajx/listaCur.php?skpUID=' + skpUID + '&
 
 
 
+
 function loadCAT(id){$.ajaxSetup({ cache: false });
 	$.ajaxSetup({ cache: false });
 window.top.CATSEL=0;
