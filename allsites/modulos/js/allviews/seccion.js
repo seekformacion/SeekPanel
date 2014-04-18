@@ -165,10 +165,11 @@ loadCurs(0)
 }
 
 function loadCurs(c){$.ajaxSetup({ cache: false });
+var milliseconds = new Date().getTime();
 var skpUID=getCookie('skpUID');
 var idc=getCookie('selC');
 if(skpUID){	
-document.getElementById('listcur').src='/ajx/listaCur.php?skpUID=' + skpUID + '&idcat=' + c + '&idc=' + idc + '&idp=' + window.top.idtipi;	
+document.getElementById('listcur').src='/ajx/listaCur.php?skpUID=' + skpUID + '&idcat=' + c + '&idc=' + idc + '&idp=' + window.top.idtipi + '&ymp=' + milliseconds;	
 }else{
 	logout();}	
 
