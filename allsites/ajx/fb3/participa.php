@@ -96,7 +96,7 @@ if($PTOT==0){$ranking="-";}
 <style>
 .gris1_BG{  background-color: #FFFFFF !important;}	
 .page {width: 700px; background-color: #ffffff;
-    
+  min-height: 780px;
     margin: 0 auto;
     padding: 0px 18px 0px 18px;
     
