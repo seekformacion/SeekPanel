@@ -52,7 +52,7 @@ foreach ($datFCCup as $cmp => $valis) {foreach ($valis as $obli => $muestro){$cc
 ######## si piden edad
 if($cmp==13){
 	if(array_key_exists(12, $datCup)){
-		//$valorF=calculaedad($datCup[12]);	
+		$valorF=calculaedad($datCup[12]);	
 		}else{
 		$valorF="";}	
 }else{
