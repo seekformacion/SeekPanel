@@ -19,8 +19,8 @@ $EqEST[12]="Doctorado";
 $sex[1]="Hombre";
 $sex[2]="Mujer";
 
-$inf2[1]['estudi']=$EqEST[$inf2[1]['estudi']];
-$inf2[1]['sexo']=$sex[$inf2[1]['sexo']];
+//$inf2[1]['estudi']=$EqEST[$inf2[1]['estudi']];
+//$inf2[1]['sexo']=$sex[$inf2[1]['sexo']];
 
 $inf2[1]['cv1C']="";
 $inf2[1]['cv2C']="";
