@@ -37,8 +37,8 @@ var url='/ajx/validacupon.php?valido=1&matricula=1&skpUID=' + skpUID + '&idc=' +
 $.getJSON(url, function(data) {$.each(data, function(key, val) {	
 if(key=='ok'){
 
-parent.document.getElementById('f_uno').src='/ajx/cupPen.php';	
-parent.document.getElementById('f_dos').src='/ajx/cupGest.php';		
+parent.document.getElementById('f_uno').src='/ajx/cupPen.php?nc=' + new Date().getTime();	
+parent.document.getElementById('f_dos').src='/ajx/cupGest.php?nc=' + new Date().getTime();		
 
 document.getElementById('v1').checked=true;	
 document.getElementById('v2').checked=false;	
@@ -60,8 +60,8 @@ var url='/ajx/validacupon.php?skpUID=' + skpUID + '&idc=' + idc + '&idcup=' + id
 $.getJSON(url, function(data) {$.each(data, function(key, val) {	
 if(key=='ok'){
 
-parent.document.getElementById('f_uno').src='/ajx/cupPen.php';	
-parent.document.getElementById('f_dos').src='/ajx/cupGest.php';		
+parent.document.getElementById('f_uno').src='/ajx/cupPen.php?nc=' + new Date().getTime();	
+parent.document.getElementById('f_dos').src='/ajx/cupGest.php?nc=' + new Date().getTime();		
 	
 	
 }
