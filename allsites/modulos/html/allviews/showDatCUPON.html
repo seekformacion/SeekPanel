@@ -1,8 +1,10 @@
 <!-- showDatCUPON -->
 
 <style>
-.titD { color:#005C9C; font-family:Arial; font-size:14px; min-width:20px; margin-left:20px; height: 20px; }
-.valD { color:#444444; font-family:Arial; font-size:14px; min-width:20px; margin-left:10px; height: 20px;}	
+.titD { color:#005C9C; font-family:Arial; font-size:13px; min-width:20px; margin-left:10px; }
+.valD { color:#444444; font-family:Arial; font-size:13px; min-width:20px; margin-left:5px;}	
+.obli { color:red; font-family:Arial; font-size:13px; min-width:10px; margin-left:10px;}	
+
 .cabecup {position:relative; float:left; width:610px; background-color:#EEEEF0; height: 20px; margin-left:20px; margin-bottom: 10px; font-family:Arial; font-size:11px; padding:10px;}
 .radio {margin-top:2px; margin-left:0px; display:block; position: relative; float:left;} 
 .txtR  {margin-top:2px; margin-left:5px; display:block; position: relative; float:left;} 
@@ -81,7 +83,8 @@ parent.document.getElementById('f_dos').src='/ajx/cupGest.php?nc=' + new Date().
 <div style="clear:both;"></div>
 
 <!-- datP -->
-<p>
+<p style="line-height: 1.1">
+<span class="obli">%obli%</span>
 <span class="titD">%campo%:</span> <span class="valD">%valor% </span>
 </p>
 <!-- fin datP -->
