@@ -6,6 +6,7 @@ $v['where']['view']='panel';
 $v['where']['id']=1; 
 require_once ('iniAJX.php');		//$v['conf']['db']="seekformacion"; // cargo otra bd
 includeCORE('funcs/funcSESSION');
+includeCORE('funcs/convertData');
 ##########################
 global $idSES; 
 $idSES = session_id();$id=""; $idcat="";
@@ -36,7 +37,9 @@ if(count($datis)>0){foreach($datis as $kk => $vv){$datCup[$vv['id_campo']]=$vv['
 if(count($datisC)>0){foreach($datisC as $kk => $vv){$datCup[$vv['id_campo']]=$vv['valor'];}};
 
 
-print_r($datCup);
+$PdatCup=cforPanel($datCup,$idc);
+
+print_r($PdatCup);
 
 $nomf="";
 $dinf=DBselect("SELECT id_curso, (SELECT pagTittleC FROM skP_C_urls WHERE t_id=id_curso) as nom FROM skP_cupones WHERE $tip2 AND id_cent=$idc AND id_cupon=$idcup ORDER BY fecha DESC;");
