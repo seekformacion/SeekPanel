@@ -48,7 +48,17 @@ if(count($datfC)>0){foreach($datfC as $kk => $vv){$datFCCup[$vv['idcampo']][$vv[
 #### creo array para html
 global $DatHTML;$ccc=0;
 foreach ($datFCCup as $cmp => $valis) {foreach ($valis as $obli => $muestro){$ccc++;
+
+######## si piden edad
+if($cmp==13){
+	if(array_key_exists(12, $datCup)){
+		$valorF=calculaedad($datCup[12]);	
+		}else{
+		$valorF="";}	
+}else{
 if(array_key_exists($cmp, $PdatCup)){$valorF=$PdatCup[$cmp];}else{$valorF="";};
+}
+
 if($obli==1){$obli="*";}else{$obli="";}
 $DatHTML['datP'][$ccc]['obli']=$obli;
 $DatHTML['datP'][$ccc]['campo']=$muestro;
