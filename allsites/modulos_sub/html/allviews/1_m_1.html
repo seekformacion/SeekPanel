@@ -35,12 +35,18 @@ document.getElementById(alt).className='of pesta ' + alt;	 document.getElementBy
 
 <div style=" border: 1px solid #888888;    float: left;    height: 221px;    margin-top: -2px;    position: relative;    width: 699px;  z-index: 899">
 
-<iframe width="657" scrolling="auto" height="180" class="fram" id="f_uno" frameborder="0" marginheight="0" border="0" src="/ajx/cupPen.php" style="display:block"></iframe>
-<iframe width="657" scrolling="auto" height="180" class="fram" id="f_dos" frameborder="0" marginheight="0" border="0" src="/ajx/cupGest.php" style="display:none"></iframe>
+<iframe width="657" scrolling="auto" height="180" class="fram" id="f_uno" frameborder="0" marginheight="0" border="0" src="" style="display:block"></iframe>
+<iframe width="657" scrolling="auto" height="180" class="fram" id="f_dos" frameborder="0" marginheight="0" border="0" src="" style="display:none"></iframe>
 
 </div>	
 
+<script>
+var url='/ajx/cupPen.php?nc=' + new Date().getTime();
+document.getElementById('f_uno').src=url;	
 
+var url='/ajx/cupGest.php?nc=' + new Date().getTime();
+document.getElementById('f_dos').src=url;	
+</script>
 
 <div style=" border: 1px solid #888888;    float: left;    height: 281px;    margin-top: 30px;    position: relative;    width: 699px;  z-index: 899">
 
