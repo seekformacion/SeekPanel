@@ -42,7 +42,7 @@ $PdatCup=cforPanel($datCup,$idc);
 
 
 ####### recupero datos que quiere el centro
-$datfC= DBselectSDB("SELECT idcampo, muestro, obligado FROM skv_relCampos WHERE id_centro=$idc;",'seekformacion'); 
+$datfC= DBselectSDB("SELECT idcampo, muestro, obligado FROM skv_relCampos WHERE id_centro=$idc ORDER BY FIELD(idcampo,1,2,11,12,4,3,89,10,6,7,15,16,23);",'seekformacion'); 
 if(count($datfC)>0){foreach($datfC as $kk => $vv){$datFCCup[$vv['idcampo']][$vv['obligado']]=$vv['muestro'];}};
 #### creo array para html
 global $DatHTML;$ccc=0;
