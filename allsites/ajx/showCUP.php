@@ -26,8 +26,17 @@ if(count($inf)>0){
 
 global $inf2;	
 
-$inf2=DBselectSDB("SELECT * FROM skf_datCupon WHERE id=$idcup;",'seekformacion'); 
-if(count($inf2)>0){
+$inf2=DBselectSDB("SELECT seekforID FROM skf_datCupon WHERE id=$idcup;",'seekformacion'); 
+if(count($inf2)>0){$skid=$inf2[1]['seekforID'];
+
+#######3 recuperacion de datos del cupon
+$datis= DBselectSDB("SELECT id_campo, valor FROM skv_user_data WHERE seekforID='$skid';",'seekformacion'); 
+$datisC=DBselectSDB("SELECT id_campo, valor FROM skv_user_data_cent WHERE seekforID='$skid' AND id_centro=$idc;",'seekformacion'); 
+if(count($datis)>0){foreach($datis as $kk => $vv){$datCup[$vv['id_campo']]=$vv['valor'];}};
+if(count($datisC)>0){foreach($datisC as $kk => $vv){$datCup[$vv['id_campo']]=$vv['valor'];}};
+
+
+print_r($datCup);
 
 $nomf="";
 $dinf=DBselect("SELECT id_curso, (SELECT pagTittleC FROM skP_C_urls WHERE t_id=id_curso) as nom FROM skP_cupones WHERE $tip2 AND id_cent=$idc AND id_cupon=$idcup ORDER BY fecha DESC;");
