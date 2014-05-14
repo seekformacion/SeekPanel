@@ -28,7 +28,7 @@ function showCUP(idcup){
 var skpUID=getCookie('skpUID');
 var idc=getCookie('selC');
 if(skpUID){	
-var url='/ajx/showCUP.php?tip=0&skpUID=' + skpUID + '&idc=' + idc + '&idcup=' + idcup;
+var url='/ajx/showCUP.php?tip=0&skpUID=' + skpUID + '&idc=' + idc + '&idcup=' + idcup + '&nc=' + new Date().getTime();
 parent.document.getElementById('dcup').src=url;		
 }else{
 	logout();}		
