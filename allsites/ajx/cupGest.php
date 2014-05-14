@@ -29,7 +29,12 @@ if(count($inf)>0){foreach ($inf as $kk => $valor){$idcupon=$valor['id_cupon'];
 $cc++;
 $rDatos['cupones'][$cc]['id']=$idcupon;
 
-$inf2=DBselectSDB("SELECT nombre, apellidos FROM skf_datCupon WHERE id=$idcupon;",'seekformacion'); 
+$inf2=DBselectSDB("SELECT 
+seekforID, 
+(select valor from skv_user_data WHERE id_campo=1 AND skv_user_data.seekforID=skf_datCupon.seekforID) as nombre, 
+(select valor from skv_user_data WHERE id_campo=2 AND skv_user_data.seekforID=skf_datCupon.seekforID) as apellidos 
+FROM skf_datCupon WHERE id=$idcupon;",'seekformacion');
+
 if(count($inf2)>0){
 $rDatos['cupones'][$cc]['dat']=$inf2[1]['nombre'] . " " .  $inf2[1]['apellidos']; 
 }else{
