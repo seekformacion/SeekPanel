@@ -31,7 +31,7 @@ $rDatos['cupones'][$cc]['id']=$idcupon;
 
 $inf2=DBselectSDB("SELECT 
 seekforID, 
-(select valor from skv_user_data WHERE id_campo=1 AND skv_user_data.seekforID=skf_datCupon.seekforID) as nombre 
+(select valor from skv_user_data WHERE id_campo=1 AND skv_user_data.seekforID=skf_datCupon.seekforID) as nombre, 
 (select valor from skv_user_data WHERE id_campo=2 AND skv_user_data.seekforID=skf_datCupon.seekforID) as apellidos 
 FROM skf_datCupon WHERE id=$idcupon;",'seekformacion');
  
