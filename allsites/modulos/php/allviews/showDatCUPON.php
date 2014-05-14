@@ -1,6 +1,6 @@
 <?php
 global $inf2;
-
+global $DatHTML;
 
 
 
@@ -31,7 +31,7 @@ if($inf2[1]['gestion']==2){$inf2[1]['cv2C']="checked";}
 if($inf2[1]['ROI']==1){$inf2[1]['MA']="checked";}
 
 $Datos=$inf2[1];
-
+$rDatos=$DatHTML;
 
 
 

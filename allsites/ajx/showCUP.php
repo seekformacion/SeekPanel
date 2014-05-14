@@ -39,7 +39,21 @@ if(count($datisC)>0){foreach($datisC as $kk => $vv){$datCup[$vv['id_campo']]=$vv
 
 $PdatCup=cforPanel($datCup,$idc);
 
-print_r($PdatCup);
+
+
+####### recupero datos que quiere el centro
+$datfC= DBselectSDB("SELECT idcampo, muestro, obligado FROM skv_relCampos WHERE id_centro=$idc;",'seekformacion'); 
+if(count($datfC)>0){foreach($datfC as $kk => $vv){$datFCCup[$vv['idcampo']][$vv['obligado']]=$vv['muestro'];}};
+#### creo array para html
+global $DatHTML;$ccc=0;
+foreach ($datFCCup as $cmp => $valis) {foreach ($valis as $obli => $muestro){$ccc++;
+if(array_key_exists($cmp, $PdatCup)){$valorF=$PdatCup[$cmp];}else{$valorF="";};
+$DatHTML['datP'][$ccc]['campo']=$muestro;
+$DatHTML['datP'][$ccc]['valor']=$valorF;	
+}}
+
+
+//print_r($PdatCup);
 
 $nomf="";
 $dinf=DBselect("SELECT id_curso, (SELECT pagTittleC FROM skP_C_urls WHERE t_id=id_curso) as nom FROM skP_cupones WHERE $tip2 AND id_cent=$idc AND id_cupon=$idcup ORDER BY fecha DESC;");
