@@ -10,11 +10,11 @@ $portales[3]="fpformacionprofesional";
 $portales[4]="oposicionesa";
 
 
-echo "UPDATE envios SET follow=1 WHERE id_boletin=$bol";
+
 if($bol){
 require '/www/httpd/seekformacion.com/fbdata.php';
-$ii=DBUpIns("UPDATE envios SET follow=1 WHERE id_boletin=$bol");
-
+$ii=DBUpIns("UPDATE envios SET follow=1 WHERE id_boletin=$bol;");
+echo "UPDATE envios SET follow=1 WHERE id_boletin=$bol";
 $ref="BOL_" . $bol;		
 }
 
