@@ -12,7 +12,8 @@ $portales[4]="oposicionesa";
 
 if($bol){
 require '/www/httpd/seekformacion.com/fbdata.php';
-DBUpIns("UPDATE envios SET follow=1 WHERE id_boletin=$bol");
+$ii=DBUpIns("UPDATE envios SET follow=1 WHERE id_boletin=$bol");
+echo "UPDATE envios SET follow=1 WHERE id_boletin=$bol";
 $ref="BOL_" . $bol;		
 }
 
