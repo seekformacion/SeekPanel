@@ -1,5 +1,6 @@
 <?php
 header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');$idp=1;
+$bol="";
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 
@@ -7,6 +8,13 @@ $portales[1]="cursodecursos";
 $portales[2]="masterenmasters";
 $portales[3]="fpformacionprofesional";
 $portales[4]="oposicionesa";
+
+
+if($bol){
+require '/www/httpd/seekformacion.com/fbdata.php';
+DBUpIns("UPDATE envios SET follow=1 WHERE id_boletin=$bol");
+$ref="BOL_" . $bol;		
+}
 
 
 ?>
