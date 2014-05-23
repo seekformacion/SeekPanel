@@ -19,7 +19,7 @@ $v['where']['id']=1;
 require_once ('iniAJX.php');		$v['conf']['db']="SeekforFB"; // cargo otra bd
 includeCORE('funcs/funcSESSION');
 ##########################
-DBUpInsSDB("UPDATE envios SET open=1 WHERE id_boletin=$id_bol AND asunto=$asunto;",'SeekforFB');	
+DBUpInsSDB("UPDATE envios SET open=1 WHERE id_boletin=$id_bol;",'SeekforFB');	
 
 
 $my_img = imagecreate( 650, 1 );
