@@ -12,9 +12,10 @@ $portales[4]="oposicionesa";
 
 
 if($bol){
+require '/www/repositorios/facebook-php-sdk/src/facebook.php';	
 require '/www/httpd/seekformacion.com/fbdata.php';
 $ii=DBUpIns("UPDATE envios SET follow=1 WHERE id_boletin=$bol;");
-echo "UPDATE envios SET follow=1 WHERE id_boletin=$bol";
+
 $ref="BOL_" . $bol;		
 }
 
