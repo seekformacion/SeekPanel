@@ -24,7 +24,9 @@ $message.="$cent <br>\n";
 $message.="$web <br>\n";
 $message.="$coment <br>\n";
 
-if(sendM($from,$fromN,$to,$toN,$subject,$message)){
+$plain="Contacto web";
+
+if(sendM($from,$fromN,$to,$toN,$subject,$message,$plain)){
 $do['do']=1;
 echo json_encode($do);		
 };
