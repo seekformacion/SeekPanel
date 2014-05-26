@@ -47,12 +47,14 @@ DBUpInsSDB("UPDATE envios SET baja=1 WHERE id_boletin=$id AND email = '$bol';",'
 <body class="gris1_BG">
 	
 <div class="page" id="page">
-
+<div style="position:relative; float:left;">
 <img style="position: relative; float: left; width: 200px;" src="/img/pbactive/pbactlogo.png">
 
 <div style="position:absolute; top:100px; left:100px; border:1px solid green;  padding: 10px; width: 500px; font-family: Arial; font-size:12px; color:#888888;">
 Sus datos han sido eliminados de nuestro fichero informático. Muchas Gracias.	
 </div>
+</div>
+
 
 </div>
 </body>
