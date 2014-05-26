@@ -16,5 +16,41 @@ DBUpInsSDB("UPDATE envios SET baja=1 WHERE id_boletin=$id AND email = '$bol';",'
 }
 
 
-echo "$id -- $bol";
 ?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style>
+.gris1_BG{  background-color: #FFFFFF !important;}	
+.page {width: 700px; background-color: #ffffff;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 0px 18px 0px 18px;
+    
+    }
+
+
+</style>
+
+
+
+
+<meta name="viewport" content="width=736px" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<title>Baja del fichero</title>
+</head>
+
+<body class="gris1_BG">
+	
+<div class="page" id="page">
+
+<img style="position: relative; float: left;" src="/img/pbactive/pbactlogo.png">
+
+
+</div>
+</body>
+</html>
