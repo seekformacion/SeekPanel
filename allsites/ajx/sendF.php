@@ -26,7 +26,7 @@ $message.="$coment <br>\n";
 
 $plain="Contacto web";
 
-if(sendM($from,$fromN,$to,$toN,$subject,$message,$plain)){
+if(sendM($from,$fromN,$to,$toN,$subject,$message,$plain,'mail.php')){
 $do['do']=1;
 echo json_encode($do);		
 };
