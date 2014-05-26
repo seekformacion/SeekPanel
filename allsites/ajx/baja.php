@@ -12,12 +12,9 @@ if(array_key_exists('id', $_GET)){$id=$_GET['id'];}
 if(array_key_exists('bol', $_GET)){$bol=$_GET['bol'];}
 
 if(($id)&&($bol)){
-	
-	
-	
-	
+DBUpInsSDB("UPDATE envios SET baja=1 WHERE id_boletin=$id AND email = '$bol';",'SeekforFB');		
 }
 
 
-echo "si";
+echo "$id -- $bol";
 ?>
