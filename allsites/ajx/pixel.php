@@ -1,5 +1,5 @@
 <?php
-header( "Content-type: image/gif" );
+//header( "Content-type: image/gif" );
 
 $sname=$_SERVER['SCRIPT_NAME'];
 $sname=str_replace('/pixel/p_', '', $sname);
