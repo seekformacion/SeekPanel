@@ -10,7 +10,7 @@ $mail=$datos[0];
 $asunto=$datos[1];
 $id_bol=$datos[2];
 
-//echo "$mail $asunto $id_bol";
+echo "$mail $asunto $id_bol";
 
 
 ################# basico
