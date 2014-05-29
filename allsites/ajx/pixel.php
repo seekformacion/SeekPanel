@@ -17,9 +17,9 @@ $id_bol=$datos[2];
 $v['where']['view']='panel';
 $v['where']['id']=1; 
 require_once ('iniAJX.php');		$v['conf']['db']="SeekforFB"; // cargo otra bd
-includeCORE('funcs/funcSESSION');
+//includeCORE('funcs/funcSESSION');
 ##########################
-DBUpInsSDB("UPDATE envios SET open=1 WHERE id_boletin=$id_bol;",'SeekforFB');	
+//DBUpInsSDB("UPDATE envios SET open=1 WHERE id_boletin=$id_bol;",'SeekforFB');	
 
 /*
 $my_img = imagecreate( 650, 1 );
@@ -37,8 +37,8 @@ $im = imagecreatetruecolor(650, 1);
 $red = imagecolorallocate($im, 255, 255, 255);
 imagefill($im, 0, 0, $red);
 
-header('Content-type: image/png');
-imagepng($im);
+header('Content-type: image/gif');
+imagegif($im);
 imagedestroy($im);
 
 
