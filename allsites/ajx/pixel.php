@@ -26,7 +26,7 @@ $my_img = imagecreate( 650, 1 );
 $background = imagecolorallocate( $my_img, 255, 255, 255 );
 
 imagegif( $my_img );
-imagecolordeallocate( $background );
+imagecolordeallocate($my_img,$background);
 imagedestroy( $my_img );
 
 ?>
