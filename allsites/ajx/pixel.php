@@ -1,6 +1,6 @@
 <?php
 
-/*
+
 $sname=$_SERVER['SCRIPT_NAME'];
 $sname=str_replace('/pixel/p_', '', $sname);
 $sname=str_replace('.gif', '', $sname);
@@ -10,9 +10,9 @@ $mail=$datos[0];
 $asunto=$datos[1];
 $id_bol=$datos[2];
 
-echo "$mail $asunto $id_bol";
+//echo "$mail $asunto $id_bol";
 
-
+/*
 ################# basico
 $v['where']['view']='panel';
 $v['where']['id']=1; 
