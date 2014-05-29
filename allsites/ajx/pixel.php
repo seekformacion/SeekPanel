@@ -46,7 +46,7 @@ imagedestroy( $my_img );
  * 
  */
  
-$im = file_get_contents("/www/publiactive.net/mazonlogo.gif");
+$im = file_get_contents("/www/httpd/publiactive.net/amazonlogo.gif");
 //header("Content-type: image/gif");
 echo $im;
 
