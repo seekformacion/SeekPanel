@@ -1,6 +1,6 @@
 <?php
 
-
+/*
 $sname=$_SERVER['SCRIPT_NAME'];
 $sname=str_replace('/pixel/p_', '', $sname);
 $sname=str_replace('.gif', '', $sname);
@@ -21,7 +21,8 @@ require_once ('iniAJX.php');		$v['conf']['db']="SeekforFB"; // cargo otra bd
 ##########################
 //DBUpInsSDB("UPDATE envios SET open=1 WHERE id_boletin=$id_bol;",'SeekforFB');	
 
-/*
+ 
+
 $my_img = imagecreate( 650, 1 );
 $background = imagecolorallocate( $my_img, 255, 255, 255 );
 
@@ -29,7 +30,6 @@ header( "Content-type: image/gif" );
 imagegif( $my_img );
 imagecolordeallocate( $my_img , $background );
 imagedestroy( $my_img );
-*/
 
 //$im = imagecreatetruecolor(650, 1);
 
@@ -40,6 +40,12 @@ imagedestroy( $my_img );
 //header('Content-type: image/gif');
 //imagegif($im);
 //imagedestroy($im);
+
+ * 
+ * 
+ * 
+ */
+ 
 $im = file_get_contents("/www/publiactive.net/mazonlogo.gif");
 header("Content-type: image/gif");
 echo $im;
