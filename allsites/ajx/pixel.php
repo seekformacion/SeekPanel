@@ -12,7 +12,7 @@ $id_bol=$datos[2];
 
 //echo "$mail $asunto $id_bol";
 
-/*
+
 ################# basico
 $v['where']['view']='panel';
 $v['where']['id']=1; 
@@ -21,7 +21,7 @@ require_once ('iniAJX.php');		$v['conf']['db']="SeekforFB"; // cargo otra bd
 ##########################
 //DBUpInsSDB("UPDATE envios SET open=1 WHERE id_boletin=$id_bol;",'SeekforFB');	
 
- 
+/* 
 
 $my_img = imagecreate( 650, 1 );
 $background = imagecolorallocate( $my_img, 255, 255, 255 );
