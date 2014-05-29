@@ -28,5 +28,5 @@ DBUpInsSDB("UPDATE envios SET open=1 WHERE id_boletin=$id_bol;",'SeekforFB');
 //imagegif( $my_img );
 //imagecolordeallocate( $background );
 //imagedestroy( $my_img );
-
+echo "y";
 ?>
