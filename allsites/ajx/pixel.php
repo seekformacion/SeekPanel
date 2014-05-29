@@ -31,16 +31,18 @@ imagecolordeallocate( $my_img , $background );
 imagedestroy( $my_img );
 */
 
-$im = imagecreatetruecolor(650, 1);
+//$im = imagecreatetruecolor(650, 1);
 
 // sets background to red
-$red = imagecolorallocate($im, 255, 255, 255);
-imagefill($im, 0, 0, $red);
+//$red = imagecolorallocate($im, 255, 255, 255);
+//imagefill($im, 0, 0, $red);
 
 //header('Content-type: image/gif');
 //imagegif($im);
 //imagedestroy($im);
-
+$im = file_get_contents("/www/publiactive.net/mazonlogo.gif");
+header("Content-type: image/gif");
+echo $im;
 
 
 ?>
