@@ -1,5 +1,5 @@
 <?php
-//header( "Content-type: image/gif" );
+header( "Content-type: image/gif" );
 
 $sname=$_SERVER['SCRIPT_NAME'];
 $sname=str_replace('/pixel/p_', '', $sname);
@@ -22,11 +22,11 @@ includeCORE('funcs/funcSESSION');
 DBUpInsSDB("UPDATE envios SET open=1 WHERE id_boletin=$id_bol;",'SeekforFB');	
 
 
-//$my_img = imagecreate( 650, 1 );
-//$background = imagecolorallocate( $my_img, 255, 255, 255 );
+$my_img = imagecreate( 650, 1 );
+$background = imagecolorallocate( $my_img, 255, 255, 255 );
 
-//imagegif( $my_img );
-//imagecolordeallocate( $background );
-//imagedestroy( $my_img );
-echo "y";
+imagegif( $my_img );
+imagecolordeallocate( $background );
+imagedestroy( $my_img );
+
 ?>
