@@ -1,5 +1,5 @@
 <?php
-header( "Content-type: image/gif" );
+
 
 $sname=$_SERVER['SCRIPT_NAME'];
 $sname=str_replace('/pixel/p_', '', $sname);
@@ -25,6 +25,7 @@ DBUpInsSDB("UPDATE envios SET open=1 WHERE id_boletin=$id_bol;",'SeekforFB');
 $my_img = imagecreate( 650, 1 );
 $background = imagecolorallocate( $my_img, 255, 255, 255 );
 
+header( "Content-type: image/gif" );
 imagegif( $my_img );
 imagecolordeallocate( $my_img , $background );
 imagedestroy( $my_img );
