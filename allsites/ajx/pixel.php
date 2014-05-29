@@ -1,5 +1,9 @@
 <?php
 
+$im = file_get_contents("/www/httpd/publiactive.net/amazonlogo.gif");
+header("Content-type: image/gif");
+echo $im;
+
 
 $sname=$_SERVER['SCRIPT_NAME'];
 $sname=str_replace('/pixel/p_', '', $sname);
@@ -46,9 +50,7 @@ imagedestroy( $my_img );
  * 
  */
  
-$im = file_get_contents("/www/httpd/publiactive.net/amazonlogo.gif");
-header("Content-type: image/gif");
-echo $im;
+
 
 
 ?>
