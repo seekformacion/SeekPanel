@@ -37,8 +37,8 @@ $im = imagecreatetruecolor(650, 1);
 $red = imagecolorallocate($im, 255, 255, 255);
 imagefill($im, 0, 0, $red);
 
-header('Content-type: image/gif');
-imagegif($im);
+header('Content-type: image/png');
+imagepng($im);
 imagedestroy($im);
 
 
