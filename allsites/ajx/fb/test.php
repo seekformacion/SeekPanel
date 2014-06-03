@@ -14,7 +14,7 @@ echo $user . "\n";
 $user_permissions = $facebook->api("/$user/permissions");
 
 
-$response = $facebook->api("/$user/likes/1424213751150594");
+$response = $facebook->api("/$user/likes");
 
 print_r($user_permissions);
 
