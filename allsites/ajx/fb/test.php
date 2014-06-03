@@ -18,6 +18,7 @@ $response = $facebook->api("/$user/likes");
 
 print_r($user_permissions);
 
+$graphObject = $response->getGraphObject();
 
-print_r($response);
+print_r($graphObject);
 ?>
