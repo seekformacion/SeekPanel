@@ -18,7 +18,16 @@ $response = $facebook->api("/$user/likes");
 
 print_r($user_permissions);
 
-$graphObject = $response->getGraphObject();
 
-print_r($graphObject);
+
+$fql = "SELECT  name FROM user WHERE uid=$user";
+$response = $facebook->api(array(
+  'method' => 'fql.query',
+  'query' =>$fql,
+));
+
+print_r($response);
+
+
+
 ?>
