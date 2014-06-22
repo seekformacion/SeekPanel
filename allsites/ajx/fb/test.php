@@ -11,16 +11,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 echo $user . "\n";
 
 
-$user_permissions = $facebook->api("/$user/permissions");
-
-
-$response = $facebook->api("/$user/likes");
-
-print_r($user_permissions);
-
-
-
-$fql = "SELECT  name FROM user WHERE uid=$user";
+$fql = "SELECT user_id FROM url_like WHERE url='http://cursodecursos.com/cursos-de-informatica.html';";
 $response = $facebook->api(array(
   'method' => 'fql.query',
   'query' =>$fql,
