@@ -369,6 +369,11 @@ fjs.parentNode.insertBefore(js, fjs);
 <img style="position: absolute; left: 560px; top:-55px  " src="/img/global/contest/premiosP.png">
 </div>
 
+
+<?php 
+if($user != 100007329815113){
+?>
+
 <div class="textos" style="margin-top: 20px; text-align: center">
 Consigue <strong>100 puntos</strong> por cada <strong>“Me gusta”</strong> en las páginas del grupo
 </div>
@@ -410,6 +415,13 @@ Consigue <strong>100 puntos</strong> por cada <strong>“Me gusta”</strong> en
 </div>
 
 </div>
+
+
+
+<?php
+}
+?>
+
 
 
 <div class="textos" style="margin-top: 20px; text-align: center">
