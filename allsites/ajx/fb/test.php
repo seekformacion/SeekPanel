@@ -7,11 +7,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 
-
-echo $user . "\n";
-
-
-$fql = "SELECT user_id FROM url_like WHERE url='http://cursodecursos.com/cursos-de-informatica.html' AND user_id = $user;";
+$fql = "SELECT user_id FROM url_like WHERE url='http://masterenmasters.com/obs/direccion-de-sistemas.html' AND user_id = $user;";
 $response = $facebook->api(array(
   'method' => 'fql.query',
   'query' =>$fql,
