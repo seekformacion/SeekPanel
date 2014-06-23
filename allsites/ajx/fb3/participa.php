@@ -434,7 +434,7 @@ Consigue <strong>100 puntos</strong> por cada <strong>“Me gusta”</strong> en
 }else{
 
 $amiF=($topR - $PTOT)/120;
-$amiF=$amiF/1.5;
+$amiF=$amiF/1.8;
 $amiF=round($amiF);
 
 if($rank[$PTOT]>2){
