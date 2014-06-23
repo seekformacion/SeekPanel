@@ -496,7 +496,7 @@ Nueva forma de obtener puntos
 
 
 
-<div class="textos" style="margin-top: 20px; text-align: center; font-size: 11px;">
+<div class="textos" style="margin-top: 10px; text-align: center; font-size: 11px;">
 Consigue <strong>más puntos</strong> invitando a participar a tus amigos. Consigues <strong>30 puntos</strong> por los “Me gusta” de cada persona que participe invitada por ti y a su vez recibiras <strong>5 puntos</strong> por los de los participantes invitados por ellos.
 </div>
 
