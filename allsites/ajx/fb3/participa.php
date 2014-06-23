@@ -149,7 +149,7 @@ if($PTOT==0){$ranking="-";}
     height: 25px;
     margin-bottom: 15px;
     padding: 5px;
-    width: 265px;}
+    width: 265px; text-transform: uppercase;}
 
 
 </style>
@@ -477,6 +477,7 @@ Nueva forma de obtener puntos
 <li>curso1</li>	
 <li>curso 2 tititi</li>	
 <li>curso 3 tititititi jij ijijij ijijij </li>	
+<li>curso 4 okokd ookok dokok tititititi jij ijijij ijijij </li>	
 	
 </ul>    
     
