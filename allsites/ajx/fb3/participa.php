@@ -383,7 +383,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 
 <?php 
-if($test){
+if(!$test){
 ?>
 
 <div class="textos" style="margin-top: 20px; text-align: center">
