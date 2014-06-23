@@ -441,7 +441,7 @@ if($rank[$PTOT]>2){
 ?>
 
 <div class="textos" style="margin-top: 20px; text-align: center">
-Te faltan aproximadamente <strong><?php echo $amiF;?> amigos</strong> haciendo "LIKE" en nuestras páginas para tener premio asegurado.  
+Te faltan aproximadamente los puntos de <strong><?php echo $amiF;?> amigos</strong> haciendo "LIKE" en nuestras páginas para tener premio asegurado.  
 </div>
 
 
