@@ -70,7 +70,7 @@ if(!$op){$DA_OP="-"; $DAS_OP=0; $DAAS_OP=0; $DAA_OP="-";$contL++;}else{$DAS_OP=$
 $SUMA=($DAS_CU + $DAS_MA + $DAS_FP + $DAS_OP)*30; 
 $SUMAA=($DAAS_CU + $DAAS_MA + $DAAS_FP + $DAAS_OP)*5; 
 $INVI=$SUMA+$SUMAA;
-$PTOT=$SUMP+$SUMA+$SUMAA+$url_likes;
+$PTOT=$SUMP+$SUMA+$SUMAA;
 
 
 
@@ -86,7 +86,7 @@ $ins=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op, puntos='$PTOT' 
 }
 
 
-
+$PTOT=$SUMP+$SUMA+$SUMAA+$url_likes;
 
 $pos=1;
 $rk=DBselect("select distinct (puntos + url_likes) as rk from Fb_fans ORDER BY rk DESC;");
