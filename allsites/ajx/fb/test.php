@@ -16,5 +16,16 @@ $response = $facebook->api(array(
 print_r($response);
 
 
+$response = $facebook->api( "/$user/notifications", 'POST', array(
+
+                'template' => 'You have received a new message.',
+
+                'href' => 'https://www.facebook.com/cursodecursos/app_715730281795141'
+
+                
+            ) );    
+
+print_r($response);
+
 
 ?>
