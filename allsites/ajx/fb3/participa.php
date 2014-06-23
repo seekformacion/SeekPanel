@@ -449,13 +449,13 @@ Te faltan aproximadamente los puntos de <strong><?php echo $amiF;?> amigos</stro
 }
 ?>
 
-<div style="background-color: #617087; position:relative; float:left; height: 40px; width:693px; color:#ffffff;font-family: Arial;font-size: 13px; text-align: center;  ">
+<div style="margin-top:20px; background-color: #617087; position:relative; float:left; padding-top:15px; height: 20px; width:693px; color:#ffffff;font-family: Arial;font-size: 13px; text-align: center;  ">
 Nueva forma de obtener puntos	
 </div>
 <div style=" border: 1px solid #888888;
     float: left;
     height: 240px;
-    margin: 18px 0;
+    margin: 0 0 18px 0;
     position: relative;
     width: 693px;">
     
