@@ -20,9 +20,9 @@ $app_access_token = $app_id . '|' . $app_secret;
 
 $response = $facebook->api( "/$user/notifications", 'POST', array(
 
-                'template' => 'You have received a new message.',
+                'template' => 'Nueva forma de obtener puntos',
 
-                'href' => 'https://www.facebook.com/cursodecursos/app_715730281795141',
+                'href' => 'newpuntos',
 
                 'access_token' => $app_access_token
 
