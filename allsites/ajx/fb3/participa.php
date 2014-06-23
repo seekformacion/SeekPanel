@@ -141,6 +141,9 @@ if($PTOT==0){$ranking="-";}
     
 .cien {position: absolute; left: 15px; top:6px; z-index:999; background-color:#FFFFFF  }
 .opciones {position:relative; }
+
+.lks ul{}
+.lks li{border:1px solid #88888; width:200px; height:30px; margin-bottom:15px; font-family: Arial; font-size:12px;}
 </style>
 
 
@@ -449,19 +452,25 @@ Te faltan aproximadamente los puntos de <strong><?php echo $amiF;?> amigos</stro
 }
 ?>
 
-<div style="margin-top:20px; background-color: #617087; position:relative; float:left; padding-top:15px; height: 20px; width:693px; color:#ffffff;font-family: Arial;font-size: 13px; text-align: center;  ">
+<div style="margin-top:20px; background-color: #617087; position:relative; float:left; padding-top:10px; height: 25px; width:693px; color:#ffffff;font-family: Arial;font-size: 13px; text-align: center;  ">
 Nueva forma de obtener puntos	
 </div>
 <div style=" border: 1px solid #888888;
     float: left;
     height: 240px;
-    margin: 0 0 18px 0;
+    margin: 0 0 10px 0;
     position: relative;
     width: 693px;">
     
 <img src="/img/global/fb/newP.gif" style="position:relative; float: left; margin-top:10px;">    
     
-    
+<ul id="links" class="lks" style="position:relative; float:left;">
+	
+<li>curso1</li>	
+<li>curso 2 tititi</li>	
+<li>curso 3 tititititi jij ijijij ijijij </li>	
+	
+</ul>    
     
     
 </div>
