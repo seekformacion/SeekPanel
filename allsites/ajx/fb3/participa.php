@@ -1,5 +1,12 @@
 <?php
 
+$test=0;
+
+if($user==100007329815113){
+$user=100004975744663;
+$test=1;		
+}
+
 $user_profile = $facebook->api("/$user");
 //$friends = $facebook->api("/$user/friends");
 $name=$user_profile['name'];
@@ -376,7 +383,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 
 <?php 
-if($user != 100007329815113){
+if($test){
 ?>
 
 <div class="textos" style="margin-top: 20px; text-align: center">
@@ -432,7 +439,7 @@ if($rank[$PTOT]>2){
 ?>
 
 <div class="textos" style="margin-top: 20px; text-align: center">
-Te faltan aproximadamente <strong><?php echo $amiF;?> amigos</strong> para tener premio asegurado.  
+Te faltan aproximadamente <strong><?php echo $amiF;?> amigos</strong> haciendo "LIKE" en nuestras páginas para tener premio asegurado.  
 </div>
 
 
