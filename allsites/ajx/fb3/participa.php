@@ -457,7 +457,7 @@ Te faltan aproximadamente los puntos de <strong><?php echo $amiF;?> amigos</stro
     position: relative;
     width: 693px;">
     
-    
+<img src="/img/global/fb/newP.gif" style="position:relative; float: left;">    
     
     
     
