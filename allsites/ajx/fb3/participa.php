@@ -477,7 +477,8 @@ Nueva forma de obtener puntos
 	
 <li>curso1</li>	
 <li>curso 2 tititi</li>	
-<li>curso 3 tititititi jij ijijij ijijij </li>	
+<li>curso 3 tititititi jij ijijij ijijij </li>	<img class="likeU" src="/img/global/fb/like.png">
+
 <li><a href="#" target="_new">curso 4 okokd ookok dokok tititititi jij ijijij ijijij </a></li>	
 	
 </ul>    
