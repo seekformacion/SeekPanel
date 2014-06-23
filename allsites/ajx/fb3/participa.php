@@ -142,8 +142,16 @@ if($PTOT==0){$ranking="-";}
 .cien {position: absolute; left: 15px; top:6px; z-index:999; background-color:#FFFFFF  }
 .opciones {position:relative; }
 
-.lks ul{ list-style:none; padding:0px; }
-.lks li{  border: 1px solid #888888; width:200px; height:30px; margin-bottom:15px; font-family: Arial; font-size:12px;}
+.lks ul{  float: left;    list-style: none outside none;    margin-left: 10px;    padding: 0;    position: relative;}
+.lks li{  border: 1px solid #888888;
+    font-family: Arial;
+    font-size: 12px;
+    height: 25px;
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 265px;}
+
+
 </style>
 
 
@@ -460,7 +468,7 @@ Nueva forma de obtener puntos
     height: 240px;
     margin: 0 0 10px 0;
     position: relative;
-    width: 693px;">
+    width: 691px;">
     
 <img src="/img/global/fb/newP.gif" style="position:relative; float: left; margin-top:10px;">    
     
