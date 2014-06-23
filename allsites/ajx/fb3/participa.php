@@ -150,7 +150,10 @@ if($PTOT==0){$ranking="-";}
     height: 25px;
     margin-bottom: 15px;
     padding: 5px;
-    width: 265px; text-transform: uppercase;}
+    width: 265px; text-transform: uppercase;position:relative; float:left;}
+    
+.likeU {position:relative; float:left; margin-left:5px;}    
+    
 .lks a{color:#617087; text-decoration: none;}
 
 </style>
