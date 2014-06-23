@@ -450,7 +450,7 @@ Te faltan aproximadamente los puntos de <strong><?php echo $amiF;?> amigos</stro
 ?>
 
 
-
+<div style="border:1px solid #888888; width:300px; height:200px;"></div>
 
 
 <?php
