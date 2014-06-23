@@ -16,11 +16,15 @@ $response = $facebook->api(array(
 print_r($response);
 
 
+$app_access_token = $app_id . '|' . $app_secret;
+
 $response = $facebook->api( "/$user/notifications", 'POST', array(
 
                 'template' => 'You have received a new message.',
 
-                'href' => 'https://www.facebook.com/cursodecursos/app_715730281795141'
+                'href' => 'https://www.facebook.com/cursodecursos/app_715730281795141',
+
+                'access_token' => $app_access_token
 
                 
             ) );    
