@@ -455,7 +455,7 @@ $amiF=round($amiF);
 if($rank[$PTOT]>2){
 ?>
 
-<div class="textos" style="margin-top: 20px; text-align: center">
+<div class="textos" style="margin-top: 10px; text-align: center">
 Te faltan aproximadamente los puntos de <strong><?php echo $amiF;?> amigos</strong> haciendo "LIKE" en nuestras páginas para tener premio asegurado.  
 </div>
 
@@ -464,7 +464,7 @@ Te faltan aproximadamente los puntos de <strong><?php echo $amiF;?> amigos</stro
 }
 ?>
 
-<div style="margin-top:20px; background-color: #617087; position:relative; float:left; padding-top:10px; height: 25px; width:693px; color:#ffffff;font-family: Arial;font-size: 13px; text-align: center;  ">
+<div style="margin-top:10px; background-color: #617087; position:relative; float:left; padding-top:10px; height: 25px; width:693px; color:#ffffff;font-family: Arial;font-size: 13px; text-align: center;  ">
 Nueva forma de obtener puntos	
 </div>
 <div style=" border: 1px solid #888888;
@@ -496,7 +496,7 @@ Nueva forma de obtener puntos
 
 
 
-<div class="textos" style="margin-top: 10px; text-align: center; font-size: 11px;">
+<div class="textos" style="margin-top: 10px; text-align: center; font-size: 13px;">
 Consigue <strong>más puntos</strong> invitando a participar a tus amigos. Consigues <strong>30 puntos</strong> por los “Me gusta” de cada persona que participe invitada por ti y a su vez recibiras <strong>5 puntos</strong> por los de los participantes invitados por ellos.
 </div>
 
