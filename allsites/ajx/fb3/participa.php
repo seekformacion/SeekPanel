@@ -83,7 +83,7 @@ $ins=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op, puntos='$PTOT' 
 
 $pos=1;
 $rk=DBselect("select distinct (puntos + url_likes) as rk from Fb_fans ORDER BY rk DESC;");
-if(count($rk)>0){foreach($rk as $k => $val){$rank[$val['rk']]=$pos; $pos++;}}
+if(count($rk)>0){foreach($rk as $k => $val){$rank[$val['rk']]=$pos;if($pos==2){$topR=$val['rk'];}; $pos++;}}
 $ranking=$rank[$PTOT] . "º";
 
 if($PTOT==0){$ranking="-";}
@@ -420,6 +420,27 @@ Consigue <strong>100 puntos</strong> por cada <strong>“Me gusta”</strong> en
 </div>
 
 </div>
+
+
+
+<?php
+}else{
+
+$amiF=($topR - $PTOT)/120; $amiF=round($amiF);
+
+if($rank[$PTOT]>2){
+?>
+
+<div class="textos" style="margin-top: 20px; text-align: center">
+Te faltan aproximadamente <strong><?php echo $amiF;?> amigos</strong> para tener premio asegurado.  
+</div>
+
+
+<?php	
+}
+?>
+
+
 
 
 
