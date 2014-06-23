@@ -2,6 +2,8 @@
 header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 $expire=time()+60*60*24*500;
 
+echo "<img style='position:absolute; top:50px; left:300px;' src='/img/global/fb/timer.gif'>";
+
 if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
 
 $code="";$do="";$user=0;$error="";
