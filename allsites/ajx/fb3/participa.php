@@ -476,7 +476,7 @@ Nueva forma de obtener puntos
     
 <img src="/img/global/fb/newP.gif" style="position:relative; float: left; margin-top:10px;">    
     
-<ul id="links" class="lks" style="position:relative; float:left;">
+<ul id="links" class="lks">
 	
 <li>curso1</li>	
 <li>curso 2 tititi</li>	
