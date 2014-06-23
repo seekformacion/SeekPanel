@@ -142,7 +142,7 @@ if($PTOT==0){$ranking="-";}
 .cien {position: absolute; left: 15px; top:6px; z-index:999; background-color:#FFFFFF  }
 .opciones {position:relative; }
 
-.lks { position: relative; float: left; margin-left: 10px; padding: 0px;}
+.lks { position: relative; float: left; margin-left: 10px; padding: 0px; list-style:none;}
 
 .lks li{  border: 1px solid #888888;
     font-family: Arial;
