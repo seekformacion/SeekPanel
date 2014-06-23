@@ -142,7 +142,7 @@ if($PTOT==0){$ranking="-";}
 .cien {position: absolute; left: 15px; top:6px; z-index:999; background-color:#FFFFFF  }
 .opciones {position:relative; }
 
-.lks { position: relative; float: left; margin-left: 10px; padding: 0px; list-style:none;}
+.lks { position: relative; float: left; margin-left: 10px; padding: 0px; list-style:none; width: 310px;}
 
 .lks li{  border: 1px solid #888888;
     font-family: Arial;
@@ -152,7 +152,7 @@ if($PTOT==0){$ranking="-";}
     padding: 5px;
     width: 265px; text-transform: uppercase;position:relative; float:left;}
     
-.likeU {position:relative; float:left; margin-left:5px;}    
+.likeU {position:relative; float:left; margin-left:5px; margin-top:5px;}    
     
 .lks a{color:#617087; text-decoration: none;}
 
