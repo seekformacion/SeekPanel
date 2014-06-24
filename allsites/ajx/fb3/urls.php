@@ -50,7 +50,6 @@ $idp++;}
 }	
 	
 $html="";$chk=0;
-print_r($urls);
 
 foreach ($urls as $key => $uval) {
 			
@@ -67,26 +66,32 @@ foreach ($urls as $key => $uval) {
 					$response=array();
 						
 					$fql = "SELECT user_id FROM url_like WHERE url='$curU' AND user_id = $user;";
+					echo $fql . "\n";
 					$response = $facebook->api(array(
 					  'method' => 'fql.query',
 					  'query' =>$fql,
 					));	
 					
 					print_r($response);
-					if(array_key_exists('success', $response)){$done=TRUE;}else{$done=FALSE;}		
-					if($done){$chk=1;};
+					if(array_key_exists('success', $response)){
+					$done=TRUE;
+					$chk=1;
+					DBUpIns("UPDATE urls SET count=count+1 where id=$id;");	
+					DBUpIns("UPDATE fid_urls SET done=1 where idURL=$id AND FID=$user;");
+					}else{$done=FALSE;}		
+				
 			
 			  }
 			
 			if($done){$img='<img class="likeU" src="/img/global/fb/like.png">';}else{$img="";}
 			
-			$resp['chk']=$chk;
-			$resp['html']="<li><a href='$catU' target='_new'>$nom</a></li> $img";
+			
+			$html .="<li><a href='$catU' target='_new'>$nom</a></li> $img \n";
 
 
 
-$html .=$resp['html'];	
-$chk=$chk+$resp['chk'];	
+
+
 }
 
 echo $html;	
@@ -111,8 +116,6 @@ return $resp;
 
 function chkLike($id,$curU,$user){
 
-//DBUpIns("UPDATE urls SET count=count+1 where id=$id;");	
-//DBUpIns("UPDATE fid_urls SET done=1 where idURL=$id AND FID=$user;");	
 	
 }
 
