@@ -50,6 +50,8 @@ $idp++;}
 }	
 	
 $html="";$chk=0;
+print_r($urls);
+
 foreach ($urls as $key => $uval) {
 $resp=chkURLL($uval['idURL'],$uval['done'],$user);
 $html .=$resp['html'];	
