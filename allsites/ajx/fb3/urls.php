@@ -49,7 +49,7 @@ $idp++;}
 	
 }	
 	
-$html="";$chk=0;
+$html="";$chk=0;$dones=0;
 
 foreach ($urls as $key => $uval) {
 			
@@ -85,7 +85,7 @@ foreach ($urls as $key => $uval) {
 			
 			  }
 			
-			if($done){$img='<img class="likeU" src="/img/global/fb/like.png">';}else{$img="";}
+			if($done){$img='<img class="likeU" src="/img/global/fb/like.png">';$dones++;}else{$img="";}
 			
 			
 			$html .="<li><a href='$catU' target='_new'>$nom</a></li> $img \n";
@@ -109,7 +109,7 @@ DBUpIns("UPDATE Fb_fans SET url_likes=$plikes  WHERE FID=$user;");
 }
 
 
-
+if($dones==4){$res['stop']=1;}
 $res['html']=$html;
 echo json_encode($res);	
 	
