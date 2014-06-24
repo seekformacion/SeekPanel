@@ -24,9 +24,13 @@ $urls=DBselect("SELECT * FROM fid_urls WHERE FID=$user AND date=$hoy;");
 if(count($urls)==0){
 $idp=1;	
 while ($idp <= 4){	
-$nurls=DBselect("SELECT id FROM urls WHERE idp=$idp ORDER BY count ASC, peso DESC limit 20;");	### busco nuevas
+## busco nuevas
+$nurls=getURLL($idp,$user);
 $nc=count($nurls);
-if($nc>0){$get=rand(1, $nc);
+
+if($nc==0){$nurls=getURLL(1,$user);$nc=count($nurls);}
+if($nc>0){
+$get=rand(1, $nc);
 $id=$nurls[$get]['id'];
 DBUpIns("INSERT INTO fid_urls (FID,idURL,date) VALUES ('$user',$id,'$hoy');");	
 	
@@ -46,7 +50,10 @@ $idp++;}
 }
 
 
-
+function getURLL($idp,$user){
+$nurls=DBselect("SELECT id FROM urls WHERE id NOT IN (SELECT idURL FROM fid_urls WHERE FID=$user) AND idp=$idp ORDER BY count ASC, peso DESC limit 20;");
+return $nurls;	
+}
 
 
 ?>
