@@ -2,7 +2,7 @@
 
 $test=0;
 
-if($user==100007329815113001){
+if($user==100007329815113){
 
 $test=1;		
 }
@@ -85,8 +85,8 @@ $ins=DBUpIns("INSERT INTO Fb_fans (PID,FID,REF,cu,ma,fp,op,puntos) VALUES ('$PID
 $ins=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op, puntos='$PTOT' WHERE id=$id;");		
 }
 
-
-$PTOT=$SUMP+$SUMA+$SUMAA+$url_likes;
+$SUMP=$SUMP+$url_likes;
+$PTOT=$SUMP+$SUMA+$SUMAA;
 
 $pos=1;
 $rk=DBselect("select distinct (puntos + url_likes) as rk from Fb_fans ORDER BY rk DESC;");
