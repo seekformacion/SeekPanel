@@ -246,6 +246,27 @@ if(key=='stop'){window.stop=1;}
 	
 }
 
+
+function chklikes2(){$.ajaxSetup({ cache: false });
+var url='<?php echo $http_met;?>://www.seekformacion.com/ajx/fb3/chklikes.php?user=<?php echo $user;?>';
+$.getJSON(url, function(data) {
+$.each(data, function(key, val) {
+
+if(key=='pp'){document.getElementById('pp').innerHTML=val;}
+if(key=='pi'){document.getElementById('pi').innerHTML=val;}
+if(key=='pt'){document.getElementById('pt').innerHTML=val;}
+if(key=='ra'){document.getElementById('ra').innerHTML=val;}
+
+});
+});	
+	
+	
+}
+
+
+
+
+
 function likes1(){
 var func='likes2();';
 chkUlikes();
@@ -270,7 +291,7 @@ $.each(data, function(key, val) {
 
 if(key=='html'){document.getElementById('links').innerHTML=val;}
 if(key=='stop'){window.stopLK=0;}
-if(key=='chk'){chklikes();}
+if(key=='chk'){chklikes2();}
 
 });
 });	
