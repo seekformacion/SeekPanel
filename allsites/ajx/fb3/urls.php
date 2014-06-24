@@ -16,7 +16,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 
-$idu=DBselectSDB("SELECT id FROM Fb_fans WHERE FID=$user;",'SeekforFB'); 
+$idu=DBselect("SELECT id FROM Fb_fans WHERE FID=$user;"); 
 print_r($idu);
 if(array_key_exists(1, $idu)){
 	
