@@ -13,7 +13,7 @@ $hoy=date('Y') . date('m') . date('d');
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
-echo $user;
+echo "SELECT id FROM Fb_fans WHERE FID=$user;";
 
 
 $idu=DBselectSDB("SELECT id FROM Fb_fans WHERE FID=$user;",'SeekforFB'); 
