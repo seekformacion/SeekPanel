@@ -53,7 +53,38 @@ $html="";$chk=0;
 print_r($urls);
 
 foreach ($urls as $key => $uval) {
-$resp=chkURLL($uval['idURL'],$uval['done'],$user);
+			
+			$id=$uval['id'];
+			$done=$uval['done'];
+							
+			$dat=DBselect("SELECT * FROM urls where id=$id;");	
+			$catU=$dat[1]['urlca'];
+			$curU=$dat[1]['urlcu'];
+			$nom =$dat[1]['nom'];
+			 
+			 if(!$done){
+					
+					$response=array();
+						
+					$fql = "SELECT user_id FROM url_like WHERE url='$curU' AND user_id = $user;";
+					$response = $facebook->api(array(
+					  'method' => 'fql.query',
+					  'query' =>$fql,
+					));	
+					
+					print_r($response);
+					if(array_key_exists('success', $response)){$done=TRUE;}else{$done=FALSE;}		
+					if($done){$chk=1;};
+			
+			  }
+			
+			if($done){$img='<img class="likeU" src="/img/global/fb/like.png">';}else{$img="";}
+			
+			$resp['chk']=$chk;
+			$resp['html']="<li><a href='$catU' target='_new'>$nom</a></li> $img";
+
+
+
 $html .=$resp['html'];	
 $chk=$chk+$resp['chk'];	
 }
@@ -62,36 +93,27 @@ echo $html;
 	
 }
 
+
+
+
+
+
+
 function chkURLL($id,$done,$user){
-$ckk=0;	
-$dat=DBselect("SELECT * FROM urls where id=$id;");	
-$catU=$dat[1]['urlca'];
-$curU=$dat[1]['urlcu'];
-$nom =$dat[1]['nom'];
-if(!$done){$done=chkLike($id,$curU,$user); if($done){$chk=1;};}
-
-if($done){$img='<img class="likeU" src="/img/global/fb/like.png">';}else{$img="";}
-
-$resp['chk']=$chk;
-$resp['html']="<li><a href='$catU' target='_new'>$nom</a></li> $img";	
+	
 
 return $resp;
 }
 
+
+
+
+
+
+
 function chkLike($id,$curU,$user){
-require_once('/www/repositorios/facebook-php-sdk/src/facebook.php');
-require_once('/www/httpd/seekformacion.com/fbdata.php');	
-$response=array();
 	
-$fql = "SELECT user_id FROM url_like WHERE url='$curU' AND user_id = $user;";
-$response = $facebook->api(array(
-  'method' => 'fql.query',
-  'query' =>$fql,
-));	
 
-print_r($response);
-
-if(array_key_exists('success', $response)){
 
 //DBUpIns("UPDATE urls SET count=count+1 where id=$id;");	
 //DBUpIns("UPDATE fid_urls SET done=1 where idURL=$id AND FID=$user;");	
