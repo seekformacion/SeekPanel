@@ -91,8 +91,8 @@ print_r($response);
 
 if(array_key_exists('success', $response)){
 
-DBUpIns("UPDATE urls SET count=count+1 where id=$id;");	
-DBUpIns("UPDATE fid_urls SET done=1 where idURL=$id AND FID=$user;");	
+//DBUpIns("UPDATE urls SET count=count+1 where id=$id;");	
+//DBUpIns("UPDATE fid_urls SET done=1 where idURL=$id AND FID=$user;");	
 
 return TRUE;	
 }else{
