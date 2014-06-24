@@ -20,7 +20,7 @@ $app_access_token = $app_id . '|' . $app_secret;
 $ap=DBselect("SELECT FID FROM Fb_fans WHERE puntos >= 400 AND FID > 100;");
 foreach ($ap as $key => $value) {$user=$value['FID'];
 
-/*
+
 $response = $facebook->api( "/$user/notifications", 'POST', array(
 
                 'template' => 'Nueva forma de obtener puntos',
@@ -33,7 +33,7 @@ $response = $facebook->api( "/$user/notifications", 'POST', array(
             ) );    
 
 print_r($response);
-*/
+
 
 echo $user . " <br>\n";
 	
