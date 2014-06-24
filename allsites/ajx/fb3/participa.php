@@ -270,6 +270,7 @@ $.each(data, function(key, val) {
 
 if(key=='html'){document.getElementById('links').innerHTML=val;}
 if(key=='stop'){window.stopLK=0;}
+if(key=='chk'){chklikes();}
 
 });
 });	
