@@ -7,7 +7,7 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 
 
 
-$fql = "SELECT user_id FROM url_like WHERE url='http://masterenmasters.com/masters-en-direccion-de-operaciones.html' AND user_id = $user;";
+$fql = 'SELECT user_id FROM url_like WHERE url="http://cursodecursos.com/eae-deusto/direccion-de-recursos-humanos-semipresencial-en-barcelona.html" AND user_id = 100007329815113;';
 $response = $facebook->api(array(
   'method' => 'fql.query',
   'query' =>$fql,
@@ -15,7 +15,7 @@ $response = $facebook->api(array(
 
 print_r($response);
 
-
+/*
 $app_access_token = $app_id . '|' . $app_secret;
 
 $response = $facebook->api( "/$user/notifications", 'POST', array(
@@ -31,5 +31,5 @@ $response = $facebook->api( "/$user/notifications", 'POST', array(
 
 print_r($response);
 
-
+*/
 ?>

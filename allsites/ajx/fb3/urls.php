@@ -79,6 +79,7 @@ return $resp;
 }
 
 function chkLike($id,$curU,$user){
+require '/www/httpd/seekformacion.com/fbdata.php';	
 echo "SELECT user_id FROM url_like WHERE url='$curU' AND user_id = $user;";
 	
 $fql = "SELECT user_id FROM url_like WHERE url='$curU' AND user_id = $user;";
