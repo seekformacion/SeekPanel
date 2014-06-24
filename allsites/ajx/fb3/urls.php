@@ -53,7 +53,7 @@ $html="";$chk=0;
 
 foreach ($urls as $key => $uval) {
 			
-			$id=$uval['id'];
+			$id=$uval['idURL'];
 			$done=$uval['done'];
 							
 			$dat=DBselect("SELECT * FROM urls where id=$id;");	
