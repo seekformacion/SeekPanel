@@ -79,6 +79,8 @@ return $resp;
 }
 
 function chkLike($id,$curU,$user){
+require_once('/www/repositorios/facebook-php-sdk/src/facebook.php');
+require_once('/www/httpd/seekformacion.com/fbdata.php');	
 $response=array();
 	
 $fql = "SELECT user_id FROM url_like WHERE url='$curU' AND user_id = $user;";
