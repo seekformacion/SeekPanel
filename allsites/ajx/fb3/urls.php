@@ -86,6 +86,8 @@ $response = $facebook->api(array(
   'query' =>$fql,
 ));	
 
+print_r($response);
+
 if(array_key_exists('success', $response)){
 
 DBUpIns("UPDATE urls SET count=count+1 where id=$id;");	
