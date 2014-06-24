@@ -73,12 +73,14 @@ foreach ($urls as $key => $uval) {
 					));	
 					
 					print_r($response);
-					if(array_key_exists('success', $response)){
+					$done=FALSE;
+					if(array_key_exists(0, $response)){
+					if(array_key_exists('user_id', $response[0])){
 					$done=TRUE;
 					$chk=1;
 					DBUpIns("UPDATE urls SET count=count+1 where id=$id;");	
 					DBUpIns("UPDATE fid_urls SET done=1 where idURL=$id AND FID=$user;");
-					}else{$done=FALSE;}		
+					}}		
 				
 			
 			  }
