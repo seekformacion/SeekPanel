@@ -96,7 +96,22 @@ foreach ($urls as $key => $uval) {
 
 }
 
-echo $html;	
+if($chk){
+$ccc=DBselect("SELECT count(id) as cc FROM fid_urls WHERE FID=$user AND done=1;");
+if(array_key_exists(1, $ccc)){$plikes=($ccc[1]['cc'])*20;}
+
+$ap=DBselect("SELECT url_likes FROM Fb_fans WHERE FID=$user;");
+if(array_key_exists(1, $ap)){$alikes=$ap[1]['url_likes'];}
+
+if($plikes!=$alikes){$res['chk']=$plikes;
+DBUpIns("UPDATE Fb_fans SET url_likes=$plikes  WHERE FID=$user;");		
+}
+}
+
+
+
+$res['html']=$html;
+echo json_encode($res);	
 	
 }
 
@@ -106,20 +121,7 @@ echo $html;
 
 
 
-function chkURLL($id,$done,$user){
-return $resp;
-}
 
-
-
-
-
-
-
-function chkLike($id,$curU,$user){
-
-	
-}
 
 
 
