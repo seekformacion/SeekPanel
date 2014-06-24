@@ -1,4 +1,8 @@
 <?php
+
+
+
+
 header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 $expire=time()+60*60*24*500;
 
@@ -13,13 +17,16 @@ $hoy=date('Y') . date('m') . date('d');
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
 
-
+function getURLL($idp,$user){
+$nurls=DBselect("SELECT id FROM urls WHERE id NOT IN (SELECT idURL FROM fid_urls WHERE FID=$user) AND idp=$idp ORDER BY count ASC, peso DESC limit 20;");
+return $nurls;	
+}
 
 
 $idu=DBselect("SELECT id FROM Fb_fans WHERE FID=$user;"); 
 if(array_key_exists(1, $idu)){
 	
-
+$k=1;
 $urls=DBselect("SELECT * FROM fid_urls WHERE FID=$user AND date=$hoy;");	
 if(count($urls)==0){
 $idp=1;	
@@ -27,33 +34,29 @@ while ($idp <= 4){
 ## busco nuevas
 $nurls=getURLL($idp,$user);
 $nc=count($nurls);
-
-if($nc==0){$nurls=getURLL(1,$user);$nc=count($nurls);}
-if($nc>0){
-$get=rand(1, $nc);
-$id=$nurls[$get]['id'];
-DBUpIns("INSERT INTO fid_urls (FID,idURL,date) VALUES ('$user',$id,'$hoy');");	
+	if($nc==0){$nurls=getURLL(1,$user);$nc=count($nurls);}
+	if($nc>0){
+	$get=rand(1, $nc);
+	$id=$nurls[$get]['id'];
+	DBUpIns("INSERT INTO fid_urls (FID,idURL,date) VALUES ('$user',$id,'$hoy');");	
 	
-}
-
-
-
+	$urls[$k]['idURL']=$id;
+	$urls[$k]['done']=0;
+	
+	$k++;}
 $idp++;}
 
 	
-}else{
-	
 }	
 	
+
+print_r($urls);
 	
 	
 }
 
 
-function getURLL($idp,$user){
-$nurls=DBselect("SELECT id FROM urls WHERE id NOT IN (SELECT idURL FROM fid_urls WHERE FID=$user) AND idp=$idp ORDER BY count ASC, peso DESC limit 20;");
-return $nurls;	
-}
+
 
 
 ?>
