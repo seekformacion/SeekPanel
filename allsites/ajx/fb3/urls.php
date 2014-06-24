@@ -14,8 +14,8 @@ $expire=time()+60*60*24*2;
 
 $hoy=date('Y') . date('m') . date('d');
 
-require '/www/repositorios/facebook-php-sdk/src/facebook.php';
-require '/www/httpd/seekformacion.com/fbdata.php';
+require_once('/www/repositorios/facebook-php-sdk/src/facebook.php');
+require_once('/www/httpd/seekformacion.com/fbdata.php');
 
 function getURLL($idp,$user){
 $nurls=DBselect("SELECT id FROM urls WHERE id NOT IN (SELECT idURL FROM fid_urls WHERE FID=$user) AND idp=$idp ORDER BY count ASC, peso DESC limit 20;");
