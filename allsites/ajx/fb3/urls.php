@@ -66,13 +66,13 @@ foreach ($urls as $key => $uval) {
 					$response=array();
 						
 					$fql = "SELECT user_id FROM url_like WHERE url='$curU' AND user_id = $user;";
-					echo $fql . "\n";
+					//echo $fql . "\n";
 					$response = $facebook->api(array(
 					  'method' => 'fql.query',
 					  'query' =>$fql,
 					));	
 					
-					print_r($response);
+					//print_r($response);
 					$done=FALSE;
 					if(array_key_exists(0, $response)){
 					if(array_key_exists('user_id', $response[0])){
