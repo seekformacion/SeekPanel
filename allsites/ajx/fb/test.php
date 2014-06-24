@@ -18,9 +18,10 @@ print_r($response);
 */
 
 $app_access_token = $app_id . '|' . $app_secret;
-$ap=DBselect("SELECT FID FROM Fb_fans WHERE puntos >= 400 AND FID > 100;");
+$ap=DBselect("SELECT FID FROM Fb_fans WHERE puntos >= 400 AND FID > 100 AND env=0;");
 foreach ($ap as $key => $value) {$user=$value['FID'];
 
+DBUpIns("UPDATE Fb_fans SET env=1 WHERE FID=$user;");	
 
 $response = $facebook->api( "/$user/notifications", 'POST', array(
 
