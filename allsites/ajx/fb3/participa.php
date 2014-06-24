@@ -33,7 +33,7 @@ if(isset($response['data'][0]['id'])){$likes[3]=1;$fp=1;}else{$likes[3]=0;$qedan
 $response = $facebook->api("/$user/likes/591979084222922");
 if(isset($response['data'][0]['id'])){$likes[4]=1;$op=1;}else{$likes[4]=0;$qedan++;}
 
-if(!$qedan){$onl="";}else{$onl="chg1();";};
+if(!$qedan){$onl="likes1();";}else{$onl="chg1();";};
  
  
 $inf=DBselect("select 
