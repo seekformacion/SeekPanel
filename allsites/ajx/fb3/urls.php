@@ -79,7 +79,8 @@ return $resp;
 }
 
 function chkLike($id,$curU,$user){
-echo "SELECT user_id FROM url_like WHERE url='$curU' AND user_id = $user;";	
+echo "SELECT user_id FROM url_like WHERE url='$curU' AND user_id = $user;";
+	
 $fql = "SELECT user_id FROM url_like WHERE url='$curU' AND user_id = $user;";
 $response = $facebook->api(array(
   'method' => 'fql.query',
