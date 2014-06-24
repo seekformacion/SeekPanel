@@ -54,7 +54,7 @@ if(count($inf)>0){$url_likes=$inf[1]['url_likes'];}
  
 $SUMP=($cu + $ma + $fp + $op)*100;
 
-$likes['pp']=$SUMP;
+$likes['pp']=$SUMP+$url_likes;;
  
 $contL=0;  
 if(!$cu){$DA_CU="-"; $DAS_CU=0; $DAAS_CU=0; $DAA_CU="-";$contL++;}else{$DAS_CU=$DA_CU;$DAAS_CU=$DAA_CU;};
@@ -69,7 +69,7 @@ $PTOT=$SUMP+$SUMA+$SUMAA;
 
 
 $likes['pi']=$INVI;
-$likes['pt']=$PTOT;
+$likes['pt']=$PTOT+$url_likes;;
 
 
 $id="";
