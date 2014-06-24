@@ -100,8 +100,6 @@ echo $html;
 
 
 function chkURLL($id,$done,$user){
-	
-
 return $resp;
 }
 
@@ -112,16 +110,9 @@ return $resp;
 
 
 function chkLike($id,$curU,$user){
-	
-
 
 //DBUpIns("UPDATE urls SET count=count+1 where id=$id;");	
 //DBUpIns("UPDATE fid_urls SET done=1 where idURL=$id AND FID=$user;");	
-
-return TRUE;	
-}else{
-return FALSE;	
-}
 	
 }
 
