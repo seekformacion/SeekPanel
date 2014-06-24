@@ -8,7 +8,7 @@ if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";}
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 $expire=time()+60*60*24*2;
 
-
+$hoy=date('Y') . date('m') . date('d');
 
 require '/www/repositorios/facebook-php-sdk/src/facebook.php';
 require '/www/httpd/seekformacion.com/fbdata.php';
@@ -16,8 +16,15 @@ require '/www/httpd/seekformacion.com/fbdata.php';
 echo $user;
 
 
-
-
+$idu=DBselectSDB("SELECT id FROM Fb_fans WHERE FID=$user;",'SeekforFB'); 
+if(array_key_exists(1, $idu)){
+	
+echo $hoy;	
+	
+	
+	
+	
+}
 
 
 
