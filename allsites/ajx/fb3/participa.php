@@ -246,6 +246,38 @@ if(key=='stop'){window.stop=1;}
 	
 }
 
+function likes1(){
+var func='likes2();';
+chkUlikes();
+if(window.stopLK){setTimeout(func, 7000);};	
+}
+
+
+function likes2(){
+var func='likes1();';
+chkUlikes();
+if(window.stopLK){setTimeout(func, 7000);};		
+}
+
+
+
+
+
+function chkUlikes(){$.ajaxSetup({ cache: false });
+var url='<?php echo $http_met;?>://www.seekformacion.com/ajx/fb3/urls.php?user=<?php echo $user;?>';
+$.getJSON(url, function(data) {
+$.each(data, function(key, val) {
+
+if(key=='html'){document.getElementById('links').innerHTML=val;}
+if(key=='stop'){window.stopLK=0;}
+
+});
+});	
+}
+
+
+
+
 
 
 function chg1(){
@@ -443,7 +475,9 @@ Consigue <strong>100 puntos</strong> por cada <strong>“Me gusta”</strong> en
 
 </div>
 
-
+<script>
+window.stopLK=0;	
+</script>
 
 <?php
 }else{
@@ -464,6 +498,9 @@ Te faltan aproximadamente los puntos de <strong><?php echo $amiF;?> amigos</stro
 }
 ?>
 
+<script>
+window.stopLK=1;	
+</script>
 <div style="margin-top:10px; background-color: #617087; position:relative; float:left; padding-top:10px; height: 25px; width:693px; color:#ffffff;font-family: Arial;font-size: 13px; text-align: center;  ">
 Nueva forma de obtener puntos	
 </div>
@@ -478,11 +515,7 @@ Nueva forma de obtener puntos
     
 <ul id="links" class="lks">
 	
-<li>curso1</li>	
-<li>curso 2 tititi</li>	
-<li>curso 3 tititititi jij ijijij ijijij </li>	<img class="likeU" src="/img/global/fb/like.png">
-
-<li><a href="#" target="_new">curso 4 okokd ookok dokok tititititi jij ijijij ijijij </a></li>	
+	
 	
 </ul>    
     
