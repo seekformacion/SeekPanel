@@ -36,7 +36,7 @@ $mens="Tienes muy pocos puntos. Cuantos más puntos, más posibilidades en el so
 
 $response = $facebook->api( "/$user/notifications", 'POST', array(
 
-                'template' => 'Nueva forma de obtener puntos',
+                'template' => $mens,
 
                 'href' => 'newpuntos',
 
