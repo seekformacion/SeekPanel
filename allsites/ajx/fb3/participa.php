@@ -515,6 +515,7 @@ $amiF=$amiF/1.8;
 $amiF=round($amiF);
 
 if($rank[$PTOT]>2){
+if($amiF<=0){$amiF=1;}	
 ?>
 
 <div class="textos" style="margin-top: 10px; text-align: center">
