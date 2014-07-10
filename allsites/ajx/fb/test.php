@@ -23,8 +23,9 @@ foreach ($ap as $key => $value) {$user=$value['FID'];
 
 $permissions = $facebook->api("/$user/permissions");	
 
-print_r($permissions);
-
+//print_r($permissions);
+if(count($permissions['data'])>0){
+DBUpIns("UPDATE Fb_fans SET env='2' WHERE FID=$user;");	
 
 $response = $facebook->api( "/$user/notifications", 'POST', array(
 
@@ -39,8 +40,7 @@ $response = $facebook->api( "/$user/notifications", 'POST', array(
 
 print_r($response);
 
-if(count($response)>0){
-DBUpIns("UPDATE Fb_fans SET env='2' WHERE FID=$user;");		
+	
 }else{
 DBUpIns("UPDATE Fb_fans SET env='n' WHERE FID=$user;");	
 }
