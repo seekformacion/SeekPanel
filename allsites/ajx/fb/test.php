@@ -18,14 +18,14 @@ print_r($response);
 */
 
 $app_access_token = $app_id . '|' . $app_secret;
-$ap=DBselect("SELECT FID FROM Fb_fans WHERE puntos >= 400 AND FID > 100 AND env=0;");
+$ap=DBselect("SELECT FID FROM Fb_fans WHERE puntos >= 400 AND url_likes=0 AND FID > 100 AND env=1;");
 foreach ($ap as $key => $value) {$user=$value['FID'];
 
-DBUpIns("UPDATE Fb_fans SET env=1 WHERE FID=$user;");	
+DBUpIns("UPDATE Fb_fans SET env=2 WHERE FID=$user;");	
 
 $response = $facebook->api( "/$user/notifications", 'POST', array(
 
-                'template' => 'Nueva forma de obtener puntos',
+                'template' => 'Te recordamos que existe una nueva forma de obtener puntos.',
 
                 'href' => 'newpuntos',
 
