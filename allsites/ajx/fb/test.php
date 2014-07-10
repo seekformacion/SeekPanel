@@ -16,7 +16,7 @@ $response = $facebook->api(array(
 
 print_r($response);
 */
-
+$response=array();
 $app_access_token = $app_id . '|' . $app_secret;
 $ap=DBselect("SELECT FID FROM Fb_fans WHERE puntos >= 400 AND url_likes=0 AND FID > 100 AND env=1;");
 foreach ($ap as $key => $value) {$user=$value['FID'];
@@ -36,7 +36,9 @@ $response = $facebook->api( "/$user/notifications", 'POST', array(
 
 print_r($response);
 
-
+if(count($response)>0){
+DBUpIns("UPDATE Fb_fans SET env=2 WHERE FID=$user;");		
+}
 echo $user . " <br>\n";
 	
 }
