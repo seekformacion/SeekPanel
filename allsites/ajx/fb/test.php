@@ -18,11 +18,14 @@ print_r($response);
 */
 $response=array();
 $app_access_token = $app_id . '|' . $app_secret;
-$ap=DBselect("SELECT FID FROM Fb_fans WHERE puntos >= 400 AND url_likes=0 AND FID > 100 AND env=1;");
+$ap=DBselect("SELECT FID FROM Fb_fans WHERE puntos >= 400 AND url_likes=0 AND FID > 100 AND env='1';");
 foreach ($ap as $key => $value) {$user=$value['FID'];
 
-DBUpIns("UPDATE Fb_fans SET env=2 WHERE FID=$user;");	
+$permissions = $facebook->api("/$user/permissions");	
 
+print_($permissions);
+
+/*
 $response = $facebook->api( "/$user/notifications", 'POST', array(
 
                 'template' => 'Te recordamos que existe una nueva forma de obtener puntos.',
@@ -37,8 +40,15 @@ $response = $facebook->api( "/$user/notifications", 'POST', array(
 print_r($response);
 
 if(count($response)>0){
-DBUpIns("UPDATE Fb_fans SET env=2 WHERE FID=$user;");		
+DBUpIns("UPDATE Fb_fans SET env='2' WHERE FID=$user;");		
+}else{
+DBUpIns("UPDATE Fb_fans SET env='n' WHERE FID=$user;");	
 }
+ */
+ 
+  
+ 
+
 echo $user . " <br>\n";
 	
 }
