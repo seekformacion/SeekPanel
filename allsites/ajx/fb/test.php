@@ -25,7 +25,7 @@ $permissions = $facebook->api("/$user/permissions");
 
 print_r($permissions);
 
-/*
+
 $response = $facebook->api( "/$user/notifications", 'POST', array(
 
                 'template' => 'Te recordamos que existe una nueva forma de obtener puntos.',
@@ -44,7 +44,7 @@ DBUpIns("UPDATE Fb_fans SET env='2' WHERE FID=$user;");
 }else{
 DBUpIns("UPDATE Fb_fans SET env='n' WHERE FID=$user;");	
 }
- */
+
  
   
  
