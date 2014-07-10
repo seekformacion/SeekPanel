@@ -23,7 +23,7 @@ foreach ($ap as $key => $value) {$user=$value['FID'];
 
 $permissions = $facebook->api("/$user/permissions");	
 
-print_($permissions);
+print_r($permissions);
 
 /*
 $response = $facebook->api( "/$user/notifications", 'POST', array(
