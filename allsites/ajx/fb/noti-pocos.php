@@ -18,7 +18,7 @@ print_r($response);
 */
 
 $app_access_token = $app_id . '|' . $app_secret;
-$ap=DBselect("SELECT FID, puntos FROM Fb_fans WHERE puntos < 400 AND env=0;");
+$ap=DBselect("SELECT FID, puntos FROM Fb_fans WHERE puntos < 800 AND env=0;");
 
 
 /*
@@ -35,7 +35,7 @@ DBUpIns("UPDATE Fb_fans SET env=1 WHERE FID=$user;");
 if($puntos==0){
 $mens="Para participar en el sorteo necesitas tener algún punto.";	
 }else{
-$mens="Tienes muy pocos puntos. Cuantos más puntos, más posibilidades tendrás en el sorteo.";		
+$mens="Recuerda, cuantos más puntos obtengas más posibilidades tendrás en el sorteo.";		
 }
 
 $response = $facebook->api( "/$user/notifications", 'POST', array(
