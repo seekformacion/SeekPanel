@@ -18,7 +18,7 @@ print_r($response);
 */
 
 $app_access_token = $app_id . '|' . $app_secret;
-$ap=DBselect("SELECT FID, puntos FROM Fb_fans WHERE puntos < 800 AND env=0;");
+$ap=DBselect("SELECT FID, puntos FROM Fb_fans WHERE puntos < 1001 AND env=0;");
 
 
 /*
