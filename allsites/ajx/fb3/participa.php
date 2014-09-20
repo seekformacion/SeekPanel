@@ -85,8 +85,9 @@ $inf=DBselect("select id, PID from Fb_fans WHERE FID=$user;");
 if(count($inf)>0){$id=$inf[1]['id']; $PID=$inf[1]['PID'];};
 
 if(!$id){
+$ippp=$_SERVER['REMOTE_ADDR'];	
 $PID=strtoupper(getUniqueCode(9));
-$ins=DBUpIns("INSERT INTO Fb_fans (PID,FID,REF,cu,ma,fp,op,puntos) VALUES ('$PID',$user,'$REF',$cu,$ma,$fp,$op,'$PTOT');");	
+$ins=DBUpIns("INSERT INTO Fb_fans (PID,FID,REF,cu,ma,fp,op,puntos,accTK) VALUES ('$PID',$user,'$REF',$cu,$ma,$fp,$op,'$PTOT','$ippp');");	
 }else{
 $ins=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op, puntos='$PTOT' WHERE id=$id;");		
 }
