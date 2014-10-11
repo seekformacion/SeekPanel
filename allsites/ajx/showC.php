@@ -16,7 +16,7 @@ if(array_key_exists('id', $_GET)){$id=$_GET['id'];}
 if(array_key_exists('showC', $_GET)){$showC=$_GET['showC'];}
 
 if($skpUID){
-$datos=getDatSKUID($skpUID); //print_r($datos);
+$datos=getDatSKUID($skpUID); print_r($datos);
 if(($datos)&&($datos['cent_sel']==$idc)){			
 ##########################
 $inf=DBselect("SELECT id_centro FROM skP_cursos WHERE id=$id;");
