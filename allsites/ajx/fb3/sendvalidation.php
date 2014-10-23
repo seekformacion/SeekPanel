@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
 ################# basico
@@ -13,7 +16,11 @@ includeCORE('mail/mail');
 
 $user="15254451551"; $email="e.b.moya@gmail.com"; $PID="668B968EE7C191492D50900075863805";
 
-$sed=DBUpIns("UPDATE Fb_fans SET v_email='$email' WHERE PID='$PID';");
+if(array_key_exists('vCOD', $_COOKIE)){$valcod2=$_COOKIE['vCOD'];$sospechoso=1;}else{$valcod2=0;$sospechoso=0;}
+
+$valcod=getUniqueCode(9);
+setcookie("vCOD", $valcod, time() + (120 * 24 * 60 * 60), "/");
+
 
 $from="concurso@publiactive.es";
 $fromN="Validación";
@@ -28,6 +35,14 @@ $plain="Este mensaje es para validar el perfil";
 
 $vconf=array();
 
-echo sendM($from,$fromN,$to,$toN,$subject,$message,$plain,'mailCDC.php',$vconf);
+if(sendM($from,$fromN,$to,$toN,$subject,$message,$plain,'mailCDC.php',$vconf)==1){
+$sed=DBUpIns("UPDATE Fb_fans SET v_email='$email', v_valcode='$valcod', v_sospechoso='$valcod2' WHERE PID='$PID';");
+
+
+
+
+    
+}
+
 
 ?>
