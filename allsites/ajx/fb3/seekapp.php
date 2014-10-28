@@ -3,7 +3,11 @@ header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 $expire=time()+60*60*24*500;
 
 
-if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
+#######################3##################
+##########################################
+#if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
+$http_met= "http";
+
 
 $code="";$do="";$user=0;$error="";
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
@@ -67,6 +71,32 @@ $loginUrl = $facebook->getLoginUrl();
 $user = $facebook->getUser();
 
 
+
+#######################3##################
+##########################################
+$finpromo=FALSE;
+$user=100007329815113;
+
+
+$users_ban[10000732981511300000]=1;
+$user_test[100007329815113]=1;
+
+
+ $ppar="participa.php";
+ $pnopar="noparticipa.php";
+
+if((array_key_exists($user, $user_test))||($finpromo)){
+ $ppar="participa_fin.php";
+ $pnopar="noparticipa_fin.php";   
+    
+}
+
+if((array_key_exists($user, $users_ban))&&($finpromo)){
+$ppar="ban_participa_fin.php";
+$pnopar="noparticipa_fin.php";     
+}
+
+
 if(!$user){
 
 if(isset($_COOKIE["perm"])){
@@ -76,20 +106,23 @@ if(isset($_COOKIE["perm"])){
 		header("Location: $loginUrl");
 	
 		}else{
-		include('noparticipa.php');		
+		include($pnopar);		
 		}	
 
 	}else{
-	include('noparticipa.php');		
+	include($pnopar);		
 	}
 
 }else{
 	
 $user_permissions = $facebook->api("/$user/permissions");
 if(isset($user_permissions["data"][0]["user_likes"])){
-		include('participa.php');
+		 
+       
+        include($ppar);    
+           
 }else{
-		include('noparticipa.php');
+		include($pnopar);
 }	
 	
 
