@@ -30,10 +30,16 @@ $v['where']['pagTittle']="Validación del perfil";
 $code2= decryptItS($cod);
 global $cod;
 
+$code2=$code2*1;
+if(!is_numeric($code2)){$code2="-1";}
+if($code2==0){$code2="-1";}
+
 $id="";$vali="";
 $inf=DBselect("select id, v_sospechoso, v_vali FROM Fb_fans WHERE FID='$code2';");     
 if(count($inf)>0){  $id=$inf[1]['id']; $sospe=$inf[1]['v_sospechoso']; $vali=$inf[1]['v_vali'];  } 
 global $sospe;
+
+//echo "-- $id --"; echo "select id, v_sospechoso, v_vali FROM Fb_fans WHERE FID='$code2';";
 
 if(!$submit){
 
