@@ -39,8 +39,15 @@ if(isset($response['data'][0]['id'])){$likes[3]=1;$fp=1;}else{$likes[3]=0;$qedan
 $response = $facebook->api("/$user/likes/591979084222922");
 if(isset($response['data'][0]['id'])){$likes[4]=1;$op=1;}else{$likes[4]=0;$qedan++;}
 
+//$cu=1; $ma=1; $fp=1; $op=1;
+
 if(!$qedan){$onl="";$test=1;}else{$onl="chg1();";};
 #$onl="";$test=1; 
+ 
+$v_vali=""; 
+$inf=DBselect("select v_sospechoso, v_vali, v_vp FROM Fb_fans WHERE FID='$user';");     
+if(count($inf)>0){  $v_vp=$inf[1]['v_vp']; $v_sospechoso=$inf[1]['v_sospechoso']; $v_vali=$inf[1]['v_vali'];  }  
+
  
 $inf=DBselect("select 
 sum(cu) as scu, 
@@ -49,6 +56,15 @@ sum(fp) as sfp,
 sum(op) as sop 
 FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user');");     
 if(count($inf)>0){  $DA_CU=$inf[1]['scu']; $DA_MA=$inf[1]['sma']; $DA_FP=$inf[1]['sfp']; $DA_OP=$inf[1]['sop']; } 
+
+$inf=DBselect("select 
+sum(cu) as scu, 
+sum(ma) as sma, 
+sum(fp) as sfp, 
+sum(op) as sop 
+FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user' AND v_sospechoso=1 AND v_vali=1 AND v_vp=1);");     
+if(count($inf)>0){  $V_DA_CU=$inf[1]['scu']; $V_DA_MA=$inf[1]['sma']; $V_DA_FP=$inf[1]['sfp']; $V_DA_OP=$inf[1]['sop']; } 
+
  
 
 $inf=DBselect("select 
@@ -58,6 +74,17 @@ sum(fp) as sfp,
 sum(op) as sop 
 FROM Fb_fans WHERE REF IN (SELECT PID FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user'));"); 
 if(count($inf)>0){  $DAA_CU=$inf[1]['scu']; $DAA_MA=$inf[1]['sma']; $DAA_FP=$inf[1]['sfp']; $DAA_OP=$inf[1]['sop']; } 
+
+
+$inf=DBselect("select 
+sum(cu) as scu, 
+sum(ma) as sma, 
+sum(fp) as sfp, 
+sum(op) as sop 
+FROM Fb_fans WHERE REF IN (SELECT PID FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user' AND v_sospechoso=1 AND v_vali=1 AND v_vp=1) AND v_sospechoso=1 AND v_vali=1 AND v_vp=1);"); 
+if(count($inf)>0){  $V_DAA_CU=$inf[1]['scu']; $V_DAA_MA=$inf[1]['sma']; $V_DAA_FP=$inf[1]['sfp']; $V_DAA_OP=$inf[1]['sop']; } 
+ 
+
  
  
 $inf=DBselect("select url_likes FROM Fb_fans WHERE FID='$user';");  
@@ -65,19 +92,37 @@ if(count($inf)>0){$url_likes=$inf[1]['url_likes'];}
  
  
 $SUMP=($cu + $ma + $fp + $op)*100;
-
+$V_SUMP=($cu + $ma + $fp + $op)*100;
  
-$contL=0;  
+$contL=0; $V_contL=0;  
 if(!$cu){$DA_CU="-"; $DAS_CU=0; $DAAS_CU=0; $DAA_CU="-";$contL++;}else{$DAS_CU=$DA_CU;$DAAS_CU=$DAA_CU;};
 if(!$ma){$DA_MA="-"; $DAS_MA=0; $DAAS_MA=0; $DAA_MA="-";$contL++;}else{$DAS_MA=$DA_MA;$DAAS_MA=$DAA_MA;};
 if(!$fp){$DA_FP="-"; $DAS_FP=0; $DAAS_FP=0; $DAA_FP="-";$contL++;}else{$DAS_FP=$DA_FP;$DAAS_FP=$DAA_FP;};
 if(!$op){$DA_OP="-"; $DAS_OP=0; $DAAS_OP=0; $DAA_OP="-";$contL++;}else{$DAS_OP=$DA_OP;$DAAS_OP=$DAA_OP;};
+
+if(!$cu){$V_DA_CU="-"; $V_DAS_CU=0; $V_DAAS_CU=0; $V_DAA_CU="-";$V_contL++;}else{$V_DAS_CU=$V_DA_CU;$V_DAAS_CU=$V_DAA_CU;};
+if(!$ma){$V_DA_MA="-"; $V_DAS_MA=0; $V_DAAS_MA=0; $V_DAA_MA="-";$V_contL++;}else{$V_DAS_MA=$V_DA_MA;$V_DAAS_MA=$V_DAA_MA;};
+if(!$fp){$V_DA_FP="-"; $V_DAS_FP=0; $V_DAAS_FP=0; $V_DAA_FP="-";$V_contL++;}else{$V_DAS_FP=$V_DA_FP;$V_DAAS_FP=$V_DAA_FP;};
+if(!$op){$V_DA_OP="-"; $V_DAS_OP=0; $V_DAAS_OP=0; $V_DAA_OP="-";$V_contL++;}else{$V_DAS_OP=$V_DA_OP;$V_DAAS_OP=$V_DAA_OP;};
+
+
 
 $SUMA=($DAS_CU + $DAS_MA + $DAS_FP + $DAS_OP)*30; 
 $SUMAA=($DAAS_CU + $DAAS_MA + $DAAS_FP + $DAAS_OP)*5; 
 $INVI=$SUMA+$SUMAA;
 $PTOT=$SUMP+$SUMA+$SUMAA;
 
+$V_SUMA=($V_DAS_CU + $V_DAS_MA + $V_DAS_FP + $V_DAS_OP)*30; 
+$V_SUMAA=($V_DAAS_CU + $V_DAAS_MA + $V_DAAS_FP + $V_DAAS_OP)*5; 
+$V_INVI=$V_SUMA+$V_SUMAA;
+$V_PTOT=$V_SUMP+$V_SUMA+$V_SUMAA;
+
+
+
+$V_SUMP=$V_SUMP+$url_likes;
+$V_PTOT=$V_SUMP+$V_SUMA+$V_SUMAA;
+
+if(!$v_vali){$V_PTOT=0;}
 
 
 $id="";
@@ -87,20 +132,19 @@ if(count($inf)>0){$id=$inf[1]['id']; $PID=$inf[1]['PID'];};
 if(!$id){
 $ippp=$_SERVER['REMOTE_ADDR'];  
 $PID=strtoupper(getUniqueCode(9));
-$ins=DBUpIns("INSERT INTO Fb_fans (PID,FID,REF,cu,ma,fp,op,puntos,accTK) VALUES ('$PID',$user,'$REF',$cu,$ma,$fp,$op,'$PTOT','$ippp');");   
+$ins=DBUpIns("INSERT INTO Fb_fans (PID,FID,REF,cu,ma,fp,op,puntos,accTK,v_puntos) VALUES ('$PID',$user,'$REF',$cu,$ma,$fp,$op,'$PTOT','$ippp','$V_PTOT');");   
 }else{
-$ins=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op, puntos='$PTOT' WHERE id=$id;");        
+$ins=DBUpIns("UPDATE Fb_fans SET cu=$cu, ma=$ma, fp=$fp, op=$op, puntos='$PTOT', v_puntos='$V_PTOT' WHERE id=$id;");        
 }
+
 
 $SUMP=$SUMP+$url_likes;
 $PTOT=$SUMP+$SUMA+$SUMAA;
 
 $pos=1;
-$rk=DBselect("select distinct (puntos + url_likes) as rk from Fb_fans ORDER BY rk DESC;");
-if(count($rk)>0){foreach($rk as $k => $val){$rank[$val['rk']]=$pos;if($pos==2){$topR=$val['rk'];}; $pos++;}}
-$ranking=$rank[$PTOT] . "º";
 
-if($PTOT==0){$ranking="-";}
+
+
 
 
 ?>
@@ -220,7 +264,7 @@ function validateEmail(email) {
     return re.test(email);
 } 
 
-function senV(){$.ajaxSetup({ cache: false });
+function senV(){ $.ajaxSetup({ cache: false });
 
 var email=document.getElementById('emailv').value;
 
@@ -243,183 +287,7 @@ document.getElementById('emailv').style.background="yellow";
 
 }
 
-function chklikes(){$.ajaxSetup({ cache: false });
 
-var url='<?php echo $http_met;?>://www.seekformacion.com/ajx/fb3/chklikes.php?user=<?php echo $user;?>';
-$.getJSON(url, function(data) {
-$.each(data, function(key, val) {
-
-if(key=='1'){
-    if((val==0)&&(document.getElementById('1').style.visibility=='visible')){document.getElementById('1').style.visibility='hidden';}
-    if((val==1)&&(document.getElementById('1').style.visibility=='hidden')){document.getElementById('1').style.visibility='visible'; ga('send', 'event', 'pagina', 'like', 'click', 1);}
-        }
-
-
-if(key=='2'){
-    if((val==0)&&(document.getElementById('2').style.visibility=='visible')){document.getElementById('2').style.visibility='hidden';}
-    if((val==1)&&(document.getElementById('2').style.visibility=='hidden')){document.getElementById('2').style.visibility='visible';ga('send', 'event', 'pagina', 'like', 'click', 2);}
-        }
-
-
-if(key=='3'){
-    if((val==0)&&(document.getElementById('3').style.visibility=='visible')){document.getElementById('3').style.visibility='hidden';}
-    if((val==1)&&(document.getElementById('3').style.visibility=='hidden')){document.getElementById('3').style.visibility='visible';ga('send', 'event', 'pagina', 'like', 'click', 3);}
-        }
-
-
-
-if(key=='4'){
-    if((val==0)&&(document.getElementById('4').style.visibility=='visible')){document.getElementById('4').style.visibility='hidden';}
-    if((val==1)&&(document.getElementById('4').style.visibility=='hidden')){document.getElementById('4').style.visibility='visible';ga('send', 'event', 'pagina', 'like', 'click', 4);}
-        }
-
-if(key=='pp'){document.getElementById('pp').innerHTML=val;}
-if(key=='pi'){document.getElementById('pi').innerHTML=val;}
-if(key=='pt'){document.getElementById('pt').innerHTML=val;}
-if(key=='ra'){document.getElementById('ra').innerHTML=val;}
-
-if(key=='stop'){window.stop=1;}
-
-});
-}); 
-    
-    
-}
-
-function chklikes2(){$.ajaxSetup({ cache: false });
-var url='<?php echo $http_met;?>://www.seekformacion.com/ajx/fb3/chklikes.php?user=<?php echo $user;?>';
-$.getJSON(url, function(data) {
-$.each(data, function(key, val) {
-
-if(key=='pp'){document.getElementById('pp').innerHTML=val;}
-if(key=='pi'){document.getElementById('pi').innerHTML=val;}
-if(key=='pt'){document.getElementById('pt').innerHTML=val;}
-if(key=='ra'){document.getElementById('ra').innerHTML=val;}
-
-});
-}); 
-    
-    
-}
-
-
-
-
-
-function likes1(){
-var func='likes2();';
-chkUlikes();
-if(window.stopLK){setTimeout(func, 7000);}; 
-}
-
-
-function likes2(){
-var func='likes1();';
-chkUlikes();
-if(window.stopLK){setTimeout(func, 7000);};     
-}
-
-
-
-
-
-function chkUlikes(){$.ajaxSetup({ cache: false });
-var url='<?php echo $http_met;?>://www.seekformacion.com/ajx/fb3/urls.php?user=<?php echo $user;?>';
-$.getJSON(url, function(data) {
-$.each(data, function(key, val) {
-
-if(key=='html'){document.getElementById('links').innerHTML=val;}
-if(key=='stop'){window.stopLK=0;}
-if(key=='chk'){chklikes2();}
-
-});
-}); 
-}
-
-
-
-
-
-
-function chg1(){
-var func='chg2();';
-chklikes();
-if(!window.stop){setTimeout(func, 3000);};
-}
-
-function chg2(){
-var func='chg1();';
-chklikes();
-if(!window.stop){setTimeout(func, 3000);};
-}
-
-
-function FacebookInviteFriends(){$.ajaxSetup({ cache: false });
-var filts="";
-var url='<?php echo $http_met;?>://www.seekformacion.com/ajx/fb3/usersNO.php?user=<?php echo $user;?>';
-$.getJSON(url, function(data) {
-$.each(data, function(key, val) {
-    if(key=="filter"){dialogInv(val)};
-    if(key=="nomore"){};
-});
-});
-}
-
-function dialogInv(filts){$.ajaxSetup({ cache: false });
-ref='<?php echo $PID;?>';       
-var filt="[{name: 'Aun no juegan', user_ids: [" + filts + "]}]";
-if(filts){
-FB.ui({  method: 'apprequests',  data: ref,  message: 'Listado de amigos que no estan participando aun en el concurso.',  filters: filt });
-}   
-}
-
-function comparte(){
-var url='<?php echo urlencode("https://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID&utm_source=share&utm_medium=facebook&utm_campaign=promoContest");?>';
-var redirect='<?php echo urlencode("$http_met://www.seekformacion.com/ajx/fb3/shareclose.php?user=$user");?>';
-
-var pageURL='https://www.facebook.com/dialog/feed?app_id=715730281795141&display=popup&link=' + url +  '&redirect_uri=' + redirect;
-var title="Publicar en Facebook";
-var w=400;
-var h=300;
-console.log(pageURL);
-PopupCenter(pageURL, title,w,h);    
-}
-
-
-function compGog(){
-var url='<?php echo urlencode("https://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID&utm_source=share&utm_medium=gplus&utm_campaign=promoContest");?>';
-
-var pageURL="https://plus.google.com/share?url=" + url;
-var title="Publicar en Google+";
-var w=400;
-var h=300;
-console.log(pageURL);
-PopupCenter(pageURL, title,w,h);    
-}
-
-
-function compTwe(){
-var url='<?php echo urlencode("https://www.seekformacion.com/ajx/fb/cApple.php?ref=$PID&utm_source=share&utm_medium=twi&utm_campaign=promoContest");?>';
-
-var pageURL="http://twitter.com/share?text=Ayudadme a ganar un IPhone 5, Un IPad o un IPad mini..&url=" + url;
-var title="Publicar en Google+";
-var w=400;
-var h=300;
-console.log(pageURL);
-PopupCenter(pageURL, title,w,h);    
-}
-
-
-
-
-function PopupCenter(pageURL, title,w,h) {
-var left = (screen.width/2)-(w/2);
-var tops = (screen.height/2)-(h/2);
-var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+tops+', left='+left);
-} 
-
-
-    
 </script>
 
 <script>
@@ -442,30 +310,6 @@ var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directori
 
 <body class="gris1_BG" onload="<?php echo $onl;?>">
 
-
-    
-    
-<div id="fb-root"></div>
-
-<script type="text/javascript">
-window.fbAsyncInit = function() {
-FB.init({
-appId      : '715730281795141',
-status     : true,
-xfbml      : true
-});
-};
-
-(function(d, s, id){
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) {return;}
-js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/es_LA/all/debug.js";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-   
-</script>   
-    
     
     
 <div class="page">
@@ -481,29 +325,15 @@ La promoción ha finalizado
 <p style="font-family: Arial; font-size: 14px; color:#444444;">
 Tras haber comprobado el intento de fraude por algunos participantes utilizando perfiles falsos y con el objeto de poder designar a los justos ganadores, se va a proceder a solicitar la validación de los perfiles. Para ello le enviaremos un enlace al correo electrónico que nos indique. 
 <br><br>
-Tal y como figura en las bases del concurso, los perfiles falsos o que no cumplan los requisitos establecidos en las mismas, serán anulados y retirados los puntos a aquellos que hubieran sumado puntos por la invitación de estos usuarios.  
+Tal y como figura en las <a href="http://cursodecursos.com/concurso_apple/bases.html" target="_new">bases del concurso</a>, los perfiles falsos o que no cumplan los requisitos establecidos en las mismas, serán anulados y retirados los puntos a aquellos que hubieran sumado puntos por la invitación de estos usuarios.  
 <br><br>
-Este proceso de validación finalizará el próximo 30 de Noviembre, dándose por no validos aquellos perfiles no validados antes de dicha fecha. 
+Este proceso de validación finalizará el próximo 30 de Noviembre, dándose por no válidos aquellos perfiles no validados antes de dicha fecha. 
 <br><br>
 Una vez terminado este proceso de validación se procederá a publicar el listado definitivo de ganadores así como el ganador del sorteo.        
 <br>
 <br>
 
 </p>
-
-<?php
-
-
-$amiF=($topR - $PTOT)/120;
-$amiF=$amiF/1.8;
-$amiF=round($amiF);
-
-if($rank[$PTOT]>2){
-if($amiF<=0){$amiF=1;}  
-?>
-
-
-
 
 
 
@@ -516,8 +346,11 @@ Validación de usuario.
 <div style=" border: 1px solid #888888; float: left; margin: 0 0 25px 0; position: relative;  width: 691px;">
     
   
-    
+  
 <div id="links" class="lks">
+<?php
+if(!$v_vali){
+ ?>  
     
 Indiquenos la dirección de correo electrónico donde desea recibir el enlace de validación.   
 
@@ -528,7 +361,14 @@ Indiquenos la dirección de correo electrónico donde desea recibir el enlace de
 <input type="text" name="email" id="emailv" style=""> <input type="button" value="Enviar" id="sendB" onclick="senV();"/>
 </div>
 </div>  
+
+<?php }else{ ?>
+
+Sus datos de validación han sido recibidos correctamente.
+
+<?php } ?>
 </div>
+
 
 <div id="txtOK" style="font-family: Arial; font-size: 14px; position:relative;float:left; padding: 5px; width:100%; text-align: center;  margin-bottom: 10px; color:green;"></div> 
 
@@ -537,9 +377,7 @@ Indiquenos la dirección de correo electrónico donde desea recibir el enlace de
 
 
 
-<?php
-}
-?>
+
 
 
 
@@ -553,7 +391,7 @@ Indiquenos la dirección de correo electrónico donde desea recibir el enlace de
 
 
 <div class="ptos" style="margin-left:200px;" id="pt"><?php echo $PTOT;?></div>
-<div class="ptos" style="margin-left:40px;" id="ra"><?php echo $ranking;?></div>
+<div class="ptos" style="margin-left:40px;" id="ra"><?php echo $V_PTOT;?></div>
 
 <img style="position: absolute; left: 560px; top:-55px  " src="/img/global/contest/premiosP.png">
 </div>

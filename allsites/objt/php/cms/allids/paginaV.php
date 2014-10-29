@@ -10,7 +10,7 @@ global $cod; global $sospe;
 
 $Datos['sos']="";
 if($sospe){
-$Datos['sos']='<input type="hidden" name="sos" value="1">';    
+$Datos['sos']='<input type="hidden" name="sos" value="0">';    
 }
 
 $Datos['cod']=$cod;

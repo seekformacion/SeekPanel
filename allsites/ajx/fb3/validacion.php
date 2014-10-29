@@ -5,7 +5,7 @@ $output = rtrim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, md5($cryptKey), $string, MCR
 return $output;
 }
 
-$submit=""; $sos=0;
+$submit=""; $sos=1;
 
 foreach($_GET as $nombre_campo => $valor){  $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";   eval($asignacion);};
 
@@ -69,7 +69,7 @@ $vp=0;
 }    
 
 
-$ins=DBUpIns("update Fb_fans set v_vali='1', v_vp='$vp', v_sospechoso='$sos', v_nombre='$nombre', v_pais='$pais', v_provincia='$prov', c_postal='$cp'  WHERE FID = '$code2';");   
+$ins=DBUpIns("update Fb_fans set v_vali='1', v_vp='$vp', v_sospechoso='$sos', v_nombre='$nombre', v_tel='$tel', v_pais='$pais', v_provincia='$prov', c_postal='$cp'  WHERE FID = '$code2';");   
    
 echo loadChild('objt','paginaV_ok');    
 }
