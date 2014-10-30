@@ -5,8 +5,8 @@ $expire=time()+60*60*24*500;
 
 #######################3##################
 ##########################################
-#if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
-$http_met= "http";
+if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
+//$http_met= "http";
 
 
 $code="";$do="";$user=0;$error="";
