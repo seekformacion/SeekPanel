@@ -31,7 +31,7 @@ $ap=array();
 $ap[1]['FID']=100007329815113;
 $ap[1]['puntos']=10;
 $ap[2]['FID']=545870963;
-$ap[1]['puntos']=10;
+$ap[2]['puntos']=10;
 
 
 
@@ -50,7 +50,7 @@ $response = $facebook->api( "/$user/notifications", 'POST', array(
 print_r($response);
 echo $user . " \n";
 }else{
-echo $user . " \n";    
+echo $user . " BAN \n";    
 }
 
 
