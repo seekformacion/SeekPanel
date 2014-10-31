@@ -26,13 +26,13 @@ $app_access_token = $app_id . '|' . $app_secret;
 $ap=DBselect("SELECT FID, puntos FROM Fb_fans WHERE puntos > 0 AND env=0;");
 
 
-
+/*
 $ap=array();
 $ap[1]['FID']=100007329815113;
 $ap[1]['puntos']=10;
 $ap[2]['FID']=545870963;
 $ap[2]['puntos']=10;
-
+*/
 
 
 foreach ($ap as $key => $value) {$user=$value['FID']; $puntos=$value['puntos'];
