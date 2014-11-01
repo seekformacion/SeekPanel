@@ -62,7 +62,7 @@ sum(cu) as scu,
 sum(ma) as sma, 
 sum(fp) as sfp, 
 sum(op) as sop 
-FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user' AND v_sospechoso=1 AND v_vali=1 AND v_vp=1);");     
+FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user') AND v_sospechoso=1 AND v_vali=1 AND v_vp=1;");
 if(count($inf)>0){  $V_DA_CU=$inf[1]['scu']; $V_DA_MA=$inf[1]['sma']; $V_DA_FP=$inf[1]['sfp']; $V_DA_OP=$inf[1]['sop']; } 
 
  
@@ -76,12 +76,15 @@ FROM Fb_fans WHERE REF IN (SELECT PID FROM Fb_fans WHERE REF = (SELECT PID FROM 
 if(count($inf)>0){  $DAA_CU=$inf[1]['scu']; $DAA_MA=$inf[1]['sma']; $DAA_FP=$inf[1]['sfp']; $DAA_OP=$inf[1]['sop']; } 
 
 
-$inf=DBselect("select 
-sum(cu) as scu, 
-sum(ma) as sma, 
-sum(fp) as sfp, 
-sum(op) as sop 
-FROM Fb_fans WHERE REF IN (SELECT PID FROM Fb_fans WHERE REF = (SELECT PID FROM Fb_fans WHERE FID='$user' AND v_sospechoso=1 AND v_vali=1 AND v_vp=1) AND v_sospechoso=1 AND v_vali=1 AND v_vp=1);"); 
+$inf=DBselect("
+select
+sum(cu) as scu,
+sum(ma) as sma,
+sum(fp) as sfp,
+sum(op) as sop
+FROM Fb_fans WHERE
+REF IN (SELECT PID FROM Fb_fans WHERE
+REF = (SELECT PID FROM Fb_fans WHERE FID='$user') AND v_sospechoso=1 AND v_vali=1 AND v_vp=1) AND v_sospechoso=1 AND v_vali=1 AND v_vp=1;");
 if(count($inf)>0){  $V_DAA_CU=$inf[1]['scu']; $V_DAA_MA=$inf[1]['sma']; $V_DAA_FP=$inf[1]['sfp']; $V_DAA_OP=$inf[1]['sop']; } 
  
 
