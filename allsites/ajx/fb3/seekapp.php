@@ -3,10 +3,7 @@ header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 $expire=time()+60*60*24*500;
 
 
-#######################3##################
-##########################################
-if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";} 
-//$http_met= "http";
+
 
 
 $code="";$do="";$user=0;$error="";
@@ -70,27 +67,28 @@ setcookie("seekforFB_REFDE", $req_data, $expire, '/');
 $loginUrl = $facebook->getLoginUrl();
 $user = $facebook->getUser();
 
-
+#######################3##################
+##########################################
+//if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";}
+    $http_met= "http";
 
 #######################3##################
 ##########################################
 $finpromo=TRUE;
-//$user=100007329815113;
+$user=100007329815113;
 
 
 $users_ban[545870963]=1;
 $users_ban[100001770109514]=1;
 $users_ban[638135366]=1;
-
-
-//$user_test[100007329815113]=1;
+$user_test[100007329815113]=1;
 
 
  $ppar="participa.php";
  $pnopar="noparticipa.php";
 
 if((array_key_exists($user, $user_test))||($finpromo)){
- $ppar="participa_fin.php";
+ $ppar="participa_fintotal.php";
  $pnopar="noparticipa_fin.php";   
     
 }
