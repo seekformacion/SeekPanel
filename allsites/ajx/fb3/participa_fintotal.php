@@ -171,6 +171,7 @@ h3 {position: relative; float:left; width: 100%;  margin-top: 5px; padding:10px;
 
 
 
+
         <h2> Personas reserva </h2>
         <h3> (En el caso de no poder contactar con alguno de los ganadores o no cumplir estos con las normas del concurso) </h3>
         <div class="users">

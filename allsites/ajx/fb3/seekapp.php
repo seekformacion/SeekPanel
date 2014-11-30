@@ -69,14 +69,17 @@ $user = $facebook->getUser();
 
 #######################3##################
 ##########################################
-//if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";}
-    $http_met= "http";
+if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";}
+//    $http_met= "http";
 
 #######################3##################
 ##########################################
-$finpromo=TRUE;
-$user=100007329815113;
 
+    $finpromo=TRUE;
+    $finpromo2=FALSE;
+//$user=100007329815113;
+
+$user_test[1000073298151131]=1;
 
 $users_ban[545870963]=1;
 $users_ban[100001770109514]=1;
@@ -88,10 +91,19 @@ $user_test[100007329815113]=1;
  $pnopar="noparticipa.php";
 
 if((array_key_exists($user, $user_test))||($finpromo)){
- $ppar="participa_fintotal.php";
+ $ppar="participa_fin.php";
  $pnopar="noparticipa_fin.php";   
     
 }
+
+    if((array_key_exists($user, $user_test))||($finpromo2)){
+        $ppar="participa_fintotal.php";
+        $pnopar="noparticipa_fin.php";
+
+    }
+
+
+
 
 if((array_key_exists($user, $users_ban))&&($finpromo)){
 $ppar="ban_participa_fin.php";
