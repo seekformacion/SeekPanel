@@ -76,7 +76,7 @@ if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";}
 ##########################################
 
     $finpromo=TRUE;
-    $finpromo2=FALSE;
+    $finpromo2=TRUE;
 //$user=100007329815113;
 
 
@@ -84,7 +84,7 @@ if($_SERVER['HTTPS']=='on'){$http_met= "https";}else{$http_met= "http";}
 $users_ban[545870963]=1;
 $users_ban[100001770109514]=1;
 $users_ban[638135366]=1;
-$user_test[100007329815113]=1;
+$user_test[1000073298151131]=1;
 
 
  $ppar="participa.php";
